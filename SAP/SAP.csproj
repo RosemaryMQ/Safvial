@@ -1,0 +1,1572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2B5DB56-7B45-4783-BF8C-F21EFBB4F3ED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAP</RootNamespace>
+    <AssemblyName>SAP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\Alexis\Desktop\SAP2020DIC\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>https://FTP.SITE4NOW.NET/actualizaciones/</UpdateUrl>
+    <ProductName>SAFVIAL</ProductName>
+    <PublisherName>SAFVIAL</PublisherName>
+    <SuiteName>SAFVIAL</SuiteName>
+    <MinimumRequiredVersion>1.7.0.26</MinimumRequiredVersion>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>80</ApplicationRevision>
+    <ApplicationVersion>1.8.0.80</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>261F448E7BE38C87068B94CC349A9A067A7F2356</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SAP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>SAP.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Design, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonWinFormControls.4.4.1.0\lib\net40\ComponentFactory.Krypton.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonWinFormControls.4.4.1.0\lib\net40\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonWinFormControls.4.4.1.0\lib\net40\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonWinFormControls.4.4.1.0\lib\net40\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonWinFormControls.4.4.1.0\lib\net40\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.4.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\KryptonWinFormControls.4.4.1.0\lib\net40\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cobradores\Controles\Avance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Avance.Designer.cs">
+      <DependentUpon>Avance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Contraseña.Designer.cs">
+      <DependentUpon>Contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Efectivo\PagoEfectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Efectivo\PagoEfectivo.Designer.cs">
+      <DependentUpon>PagoEfectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Exonerados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Exonerados.Designer.cs">
+      <DependentUpon>Exonerados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\FacturaV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\FacturaV2.Designer.cs">
+      <DependentUpon>FacturaV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\PuntoVenta\PuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\PuntoVenta\PuntoVenta.Designer.cs">
+      <DependentUpon>PuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Aviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Aviso.Designer.cs">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\AvisoError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\AvisoError.Designer.cs">
+      <DependentUpon>AvisoError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\AvisoSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\AvisoSaldo.Designer.cs">
+      <DependentUpon>AvisoSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Bloqueada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Bloqueada.Designer.cs">
+      <DependentUpon>Bloqueada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\FacturaPorCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\FacturaPorCobrar.Designer.cs">
+      <DependentUpon>FacturaPorCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\FacturaPrepagada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\FacturaPrepagada.Designer.cs">
+      <DependentUpon>FacturaPrepagada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\FacturaSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\FacturaSaldo.Designer.cs">
+      <DependentUpon>FacturaSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Invalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Invalida.Designer.cs">
+      <DependentUpon>Invalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Reportada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\Reportada.Designer.cs">
+      <DependentUpon>Reportada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\SaldoPrepagado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\SaldoPrepagado\SaldoPrepagado.Designer.cs">
+      <DependentUpon>SaldoPrepagado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Confirmacion.Designer.cs">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Efectivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Efectivo.Designer.cs">
+      <DependentUpon>Efectivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Especial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Especial.Designer.cs">
+      <DependentUpon>Especial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\FacturaPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\FacturaPromo.Designer.cs">
+      <DependentUpon>FacturaPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\FormaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\FormaPago.Designer.cs">
+      <DependentUpon>FormaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\PagoIncompleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\PagoIncompleto.Designer.cs">
+      <DependentUpon>PagoIncompleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\PDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\PDV.Designer.cs">
+      <DependentUpon>PDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Prepagado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Prepagado.Designer.cs">
+      <DependentUpon>Prepagado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\TarjetaElectronica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\TarjetaElectronica.Designer.cs">
+      <DependentUpon>TarjetaElectronica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Transferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Controles\V2\Transferencia.Designer.cs">
+      <DependentUpon>Transferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\RecaudacionV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\RecaudacionV2.Designer.cs">
+      <DependentUpon>RecaudacionV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobradores\Recaudadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobradores\Recaudadores.Designer.cs">
+      <DependentUpon>Recaudadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Enums\TypeUser.cs" />
+    <Compile Include="Common\LibreriaComun.cs" />
+    <Compile Include="Common\TabulacionGeneralUsuario.cs" />
+    <Compile Include="Common\TabulacionTipoPrepagado.cs" />
+    <Compile Include="Common\TabulacionUsuarioPrepagado.cs" />
+    <Compile Include="Common\WinForms\Autorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\WinForms\Autorizacion.designer.cs">
+      <DependentUpon>Autorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\ClaveSupervisores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\ClaveSupervisores.Designer.cs">
+      <DependentUpon>ClaveSupervisores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\Configurador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\Configurador.Designer.cs">
+      <DependentUpon>Configurador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\Contraseñas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\Contraseñas.Designer.cs">
+      <DependentUpon>Contraseñas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\OperacionesContraseña\AgregarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\OperacionesContraseña\AgregarContraseña.Designer.cs">
+      <DependentUpon>AgregarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\OperacionesContraseña\EditarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\OperacionesContraseña\EditarContraseña.Designer.cs">
+      <DependentUpon>EditarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\Interfaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\Interfaz.Designer.cs">
+      <DependentUpon>Interfaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\MenuConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\MenuConfiguracion.Designer.cs">
+      <DependentUpon>MenuConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\TarjetasSupervisores\AgregarTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\TarjetasSupervisores\AgregarTarjeta.Designer.cs">
+      <DependentUpon>AgregarTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configurador\TarjetasSupervisores\EditarTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configurador\TarjetasSupervisores\EditarTarjeta.Designer.cs">
+      <DependentUpon>EditarTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="PrepagadoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrepagadoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recaudadores\Controles\Afiliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Afiliacion.Designer.cs">
+      <DependentUpon>Afiliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\AfiliacionV3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\AfiliacionV3.Designer.cs">
+      <DependentUpon>AfiliacionV3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\AnularOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\AnularOperacion.Designer.cs">
+      <DependentUpon>AnularOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\AsignarTarjetasEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\AsignarTarjetasEmpresa.Designer.cs">
+      <DependentUpon>AsignarTarjetasEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Buscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Buscador.Designer.cs">
+      <DependentUpon>Buscador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\BuscadorReferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\BuscadorReferencia.Designer.cs">
+      <DependentUpon>BuscadorReferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Cargar\CargaTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Cargar\CargaTarjeta.Designer.cs">
+      <DependentUpon>CargaTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ConsolidadoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ConsolidadoCliente.Designer.cs">
+      <DependentUpon>ConsolidadoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ConsultaCliente.Designer.cs">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ConsumoTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ConsumoTarjeta.Designer.cs">
+      <DependentUpon>ConsumoTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ControlUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ControlUsuarios.Designer.cs">
+      <DependentUpon>ControlUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\EditarOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\EditarOperacion.Designer.cs">
+      <DependentUpon>EditarOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\NuevoUsuario.Designer.cs">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Operaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Operaciones.Designer.cs">
+      <DependentUpon>Operaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\OperacionesDiarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\OperacionesDiarias.Designer.cs">
+      <DependentUpon>OperacionesDiarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\PromocionesPrepagado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\PromocionesPrepagado.Designer.cs">
+      <DependentUpon>PromocionesPrepagado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\PromocionesSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\PromocionesSaldo.Designer.cs">
+      <DependentUpon>PromocionesSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\RecargaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\RecargaCliente.Designer.cs">
+      <DependentUpon>RecargaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\RecargaV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\RecargaV2.Designer.cs">
+      <DependentUpon>RecargaV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ReporteDiaro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ReporteDiaro.Designer.cs">
+      <DependentUpon>ReporteDiaro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ReporteSaldosN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\ReporteSaldosN.Designer.cs">
+      <DependentUpon>ReporteSaldosN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Reportes\ReporteTarjetaExpress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Reportes\ReporteTarjetaExpress.Designer.cs">
+      <DependentUpon>ReporteTarjetaExpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\TarjetasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\TarjetasCliente.Designer.cs">
+      <DependentUpon>TarjetasCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\AnularRecarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\AnularRecarga.Designer.cs">
+      <DependentUpon>AnularRecarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\AprobarRecarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\AprobarRecarga.Designer.cs">
+      <DependentUpon>AprobarRecarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\MenuWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\MenuWeb.Designer.cs">
+      <DependentUpon>MenuWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\Model\ArchivoAdjunto.cs" />
+    <Compile Include="Recaudadores\SafvialWeb\RecargasAnuladas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\RecargasAnuladas.Designer.cs">
+      <DependentUpon>RecargasAnuladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\RecargasAprobadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\RecargasAprobadas.Designer.cs">
+      <DependentUpon>RecargasAprobadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\ReporteAprobadasV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\ReporteAprobadasV2.Designer.cs">
+      <DependentUpon>ReporteAprobadasV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\ReporteOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\ReporteOperaciones.Designer.cs">
+      <DependentUpon>ReporteOperaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\ResultadosTransf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\ResultadosTransf.Designer.cs">
+      <DependentUpon>ResultadosTransf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\Transferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\Transferencias.Designer.cs">
+      <DependentUpon>Transferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\VerOperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\SafvialWeb\VerOperacion.Designer.cs">
+      <DependentUpon>VerOperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SafvialWeb.cs">
+      <DependentUpon>SafvialWeb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SafvialWeb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SafvialWeb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSet.cs">
+      <DependentUpon>SAPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SAPDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSet2.cs">
+      <DependentUpon>SAPDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SAPDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSet3.cs">
+      <DependentUpon>SAPDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TarjetaExpressDataSet.cs">
+      <DependentUpon>TarjetaExpressDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TarjetaExpressDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TarjetaExpressDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Auditoria\HistorialCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Auditoria\HistorialCanal.Designer.cs">
+      <DependentUpon>HistorialCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Auditoria\ListaDeclaracionesV1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Auditoria\ListaDeclaracionesV1.Designer.cs">
+      <DependentUpon>ListaDeclaracionesV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Auditoria\RecordCierres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Auditoria\RecordCierres.Designer.cs">
+      <DependentUpon>RecordCierres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\AuditorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\AuditorUsuario.Designer.cs">
+      <DependentUpon>AuditorUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Autorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Autorizacion.designer.cs">
+      <DependentUpon>Autorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurno.Designer.cs">
+      <DependentUpon>CierreTurno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.designer.cs">
+      <DependentUpon>DeclaracionParametrizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\AvanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\AvanceReport.Designer.cs">
+      <DependentUpon>AvanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Avances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Avances.Designer.cs">
+      <DependentUpon>Avances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesRealizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesRealizados.Designer.cs">
+      <DependentUpon>AvancesRealizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesReporte.Designer.cs">
+      <DependentUpon>AvancesReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Bitacora.Designer.cs">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\EditarAvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\EditarAvance.Designer.cs">
+      <DependentUpon>EditarAvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\GenerarCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\GenerarCierre.Designer.cs">
+      <DependentUpon>GenerarCierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Motivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Motivo.Designer.cs">
+      <DependentUpon>Motivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Operacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Operacion.Designer.cs">
+      <DependentUpon>Operacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\TabulacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\TabulacionUsuario.Designer.cs">
+      <DependentUpon>TabulacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceBuzon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceBuzon.Designer.cs">
+      <DependentUpon>AvanceBuzon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvancesEditados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvancesEditados.Designer.cs">
+      <DependentUpon>AvancesEditados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceUser.Designer.cs">
+      <DependentUpon>AvanceUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\FlujoVehicularV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\FlujoVehicularV2.Designer.cs">
+      <DependentUpon>FlujoVehicularV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\Controles\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\PrepagadoV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\PrepagadoV2.Designer.cs">
+      <DependentUpon>PrepagadoV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recaudadores\RecargaV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recaudadores\RecargaV2.Designer.cs">
+      <DependentUpon>RecargaV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SAPDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\AperturaV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\AperturaV2.Designer.cs">
+      <DependentUpon>AperturaV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Cierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Cierre.Designer.cs">
+      <DependentUpon>Cierre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\Avances.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\Avances.Designer.cs">
+      <DependentUpon>Avances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\AvancesResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\AvancesResumen.Designer.cs">
+      <DependentUpon>AvancesResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\AvancesV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\AvancesV2.Designer.cs">
+      <DependentUpon>AvancesV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\Declaracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\Declaracion.designer.cs">
+      <DependentUpon>Declaracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\MenuAvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\MenuAvance.Designer.cs">
+      <DependentUpon>MenuAvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\EditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\EditarUsuario.Designer.cs">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Lista.Designer.cs">
+      <DependentUpon>Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ListaDeclaraciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ListaDeclaraciones.designer.cs">
+      <DependentUpon>ListaDeclaraciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionPeajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionPeajes.designer.cs">
+      <DependentUpon>RecaudacionPeajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionTipoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionTipoPago.Designer.cs">
+      <DependentUpon>RecaudacionTipoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionFlujoVolumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionFlujoVolumen.Designer.cs">
+      <DependentUpon>RecaudacionFlujoVolumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionTiposSC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\RecaudacionTiposSC.Designer.cs">
+      <DependentUpon>RecaudacionTiposSC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ReportePeajes\RecaudacionPeajesMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ReportePeajes\RecaudacionPeajesMensual.Designer.cs">
+      <DependentUpon>RecaudacionPeajesMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ReporteTesoreros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ReporteTesoreros.Designer.cs">
+      <DependentUpon>ReporteTesoreros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ReporteVehicular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\ReporteVehicular.Designer.cs">
+      <DependentUpon>ReporteVehicular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\RemesasTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\RemesasTipos.Designer.cs">
+      <DependentUpon>RemesasTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\TesoreriaV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\TesoreriaV2.Designer.cs">
+      <DependentUpon>TesoreriaV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tesoreria\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cobradores\Controles\Avance.rdlc" />
+    <EmbeddedResource Include="Cobradores\Controles\Avance.resx">
+      <DependentUpon>Avance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\Contraseña.resx">
+      <DependentUpon>Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\Efectivo\PagoEfectivo.resx">
+      <DependentUpon>PagoEfectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\Exonerados.resx">
+      <DependentUpon>Exonerados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\FacturaV2.rdlc" />
+    <EmbeddedResource Include="Cobradores\Controles\FacturaV2.resx">
+      <DependentUpon>FacturaV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\PuntoVenta\PuntoVenta.resx">
+      <DependentUpon>PuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\Aviso.resx">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\AvisoError.resx">
+      <DependentUpon>AvisoError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\AvisoSaldo.resx">
+      <DependentUpon>AvisoSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\Bloqueada.resx">
+      <DependentUpon>Bloqueada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\Factura.rdlc" />
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\FacturaPorCobrar.rdlc" />
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\FacturaPorCobrar.resx">
+      <DependentUpon>FacturaPorCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\FacturaPrepagada.resx">
+      <DependentUpon>FacturaPrepagada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\FacturaSaldo.rdlc" />
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\FacturaSaldo.resx">
+      <DependentUpon>FacturaSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\Invalida.resx">
+      <DependentUpon>Invalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\Reportada.resx">
+      <DependentUpon>Reportada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\SaldoPrepagado.resx">
+      <DependentUpon>SaldoPrepagado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\Confirmacion.resx">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\Efectivo.resx">
+      <DependentUpon>Efectivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\Especial.resx">
+      <DependentUpon>Especial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\FacturaPromo.resx">
+      <DependentUpon>FacturaPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\FormaPago.resx">
+      <DependentUpon>FormaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\PagoIncompleto.resx">
+      <DependentUpon>PagoIncompleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\PDV.resx">
+      <DependentUpon>PDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\Prepagado.resx">
+      <DependentUpon>Prepagado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\PromoTarjeta.rdlc" />
+    <EmbeddedResource Include="Cobradores\Controles\V2\TarjetaElectronica.resx">
+      <DependentUpon>TarjetaElectronica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Controles\V2\Transferencia.resx">
+      <DependentUpon>Transferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\RecaudacionV2.resx">
+      <DependentUpon>RecaudacionV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobradores\Recaudadores.resx">
+      <DependentUpon>Recaudadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WinForms\Autorizacion.resx">
+      <DependentUpon>Autorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\ClaveSupervisores.resx">
+      <DependentUpon>ClaveSupervisores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\Configurador.resx">
+      <DependentUpon>Configurador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\Contraseñas.resx">
+      <DependentUpon>Contraseñas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\OperacionesContraseña\AgregarContraseña.resx">
+      <DependentUpon>AgregarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\OperacionesContraseña\EditarContraseña.resx">
+      <DependentUpon>EditarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\Interfaz.resx">
+      <DependentUpon>Interfaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\MenuConfiguracion.resx">
+      <DependentUpon>MenuConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\TarjetasSupervisores\AgregarTarjeta.resx">
+      <DependentUpon>AgregarTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurador\TarjetasSupervisores\EditarTarjeta.resx">
+      <DependentUpon>EditarTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\obj\Debug\SAP.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Recaudadores\Controles\Afiliacion.resx">
+      <DependentUpon>Afiliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\AfiliacionV3.resx">
+      <DependentUpon>AfiliacionV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\AnularOperacion.resx">
+      <DependentUpon>AnularOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\AsignarTarjetasEmpresa.resx">
+      <DependentUpon>AsignarTarjetasEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Buscador.resx">
+      <DependentUpon>Buscador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\BuscadorReferencia.resx">
+      <DependentUpon>BuscadorReferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Cargar\CargaTarjeta.resx">
+      <DependentUpon>CargaTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\ConsolidadoCliente.resx">
+      <DependentUpon>ConsolidadoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\ConsultaCliente.resx">
+      <DependentUpon>ConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\ConsumoTarjeta.resx">
+      <DependentUpon>ConsumoTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\ControlUsuarios.resx">
+      <DependentUpon>ControlUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\EditarOperacion.resx">
+      <DependentUpon>EditarOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Operaciones.resx">
+      <DependentUpon>Operaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\OperacionesDiarias.resx">
+      <DependentUpon>OperacionesDiarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\PromocionesPrepagado.resx">
+      <DependentUpon>PromocionesPrepagado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\PromocionesSaldo.resx">
+      <DependentUpon>PromocionesSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\RecargaCliente.resx">
+      <DependentUpon>RecargaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\RecargaV2.resx">
+      <DependentUpon>RecargaV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\ReporteDiaro.resx">
+      <DependentUpon>ReporteDiaro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\ReporteSaldosN.resx">
+      <DependentUpon>ReporteSaldosN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\ConsumoTarjeta.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\HistorialVentas.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\HistoriaVenta.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\Recargas.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\ReporteCuenta.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\ReporteTarjetaExpress.resx">
+      <DependentUpon>ReporteTarjetaExpress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\SaldosNegativos.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\TarjetasExpress.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\VentasV2 - Copia.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\VentasV2.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\TarjetasCliente.resx">
+      <DependentUpon>TarjetasCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\AnularRecarga.resx">
+      <DependentUpon>AnularRecarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\AprobarRecarga.resx">
+      <DependentUpon>AprobarRecarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\MenuWeb.resx">
+      <DependentUpon>MenuWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\RecargasAnuladas.resx">
+      <DependentUpon>RecargasAnuladas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\RecargasAprobadas.resx">
+      <DependentUpon>RecargasAprobadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\ReporteAprobadasV2.resx">
+      <DependentUpon>ReporteAprobadasV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\ReporteOperaciones.resx">
+      <DependentUpon>ReporteOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\Reportes\OperacionesPendientes - Copia.rdlc" />
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\Reportes\OperacionesPendientes.rdlc" />
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\Reportes\ReportePendiente.rdlc" />
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\ResultadosTransf.resx">
+      <DependentUpon>ResultadosTransf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\Transferencias.resx">
+      <DependentUpon>Transferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\SafvialWeb\VerOperacion.resx">
+      <DependentUpon>VerOperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Auditoria\HistorialCanal.resx">
+      <DependentUpon>HistorialCanal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Auditoria\ListaDeclaracionesV1.resx">
+      <DependentUpon>ListaDeclaracionesV1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Auditoria\RecordCierres.resx">
+      <DependentUpon>RecordCierres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\AuditorUsuario.resx">
+      <DependentUpon>AuditorUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Autorizacion.resx">
+      <DependentUpon>Autorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.resx">
+      <DependentUpon>DeclaracionParametrizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\Tabulacion.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\AvanceReport.resx">
+      <DependentUpon>AvanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Avances.resx">
+      <DependentUpon>Avances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesRealizados.resx">
+      <DependentUpon>AvancesRealizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesReporte.resx">
+      <DependentUpon>AvancesReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesUsuarios.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Bitacora.resx">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurno.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\CierreTurno.resx">
+      <DependentUpon>CierreTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\EditarAvance.resx">
+      <DependentUpon>EditarAvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\GenerarCierre.resx">
+      <DependentUpon>GenerarCierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Motivo.resx">
+      <DependentUpon>Motivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Operacion.resx">
+      <DependentUpon>Operacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\TabulacionUsuario.resx">
+      <DependentUpon>TabulacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceBuzon.resx">
+      <DependentUpon>AvanceBuzon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvancesEditados.resx">
+      <DependentUpon>AvancesEditados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceUser.resx">
+      <DependentUpon>AvanceUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\FlujoVehicularV2.resx">
+      <DependentUpon>FlujoVehicularV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\Controles\Reportes\VentasDiarias.rdlc" />
+    <EmbeddedResource Include="Recaudadores\Controles\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\PrepagadoV2.resx">
+      <DependentUpon>PrepagadoV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recaudadores\RecargaV2.resx">
+      <DependentUpon>RecargaV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\AperturaV2.resx">
+      <DependentUpon>AperturaV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Cierre.resx">
+      <DependentUpon>Cierre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\Avances.resx">
+      <DependentUpon>Avances.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\AvancesResumen.resx">
+      <DependentUpon>AvancesResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\AvancesV2.resx">
+      <DependentUpon>AvancesV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\Declaracion.resx">
+      <DependentUpon>Declaracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\DeclaracionJurada.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizada.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\MenuAvance.resx">
+      <DependentUpon>MenuAvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\EditarUsuario.resx">
+      <DependentUpon>EditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\GeneralReporte.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\Lista.resx">
+      <DependentUpon>Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\ListaDeclaraciones.resx">
+      <DependentUpon>ListaDeclaraciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\RecaudacionPeajes.resx">
+      <DependentUpon>RecaudacionPeajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\RecaudacionTipoPago.resx">
+      <DependentUpon>RecaudacionTipoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\RecaudacionFlujoVolumen.resx">
+      <DependentUpon>RecaudacionFlujoVolumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\RecaudacionTiposSC.resx">
+      <DependentUpon>RecaudacionTiposSC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\RemesasTipos.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\ReportePeajes\FlujoVehicularV4.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\ReportePeajes\RecaudacionPeaje.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\ReportePeajes\RecaudacionPeajesMensual.resx">
+      <DependentUpon>RecaudacionPeajesMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\ReporteRecaudacion - Copia.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\ReporteRecaudacion.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\ReporteTesoreros.resx">
+      <DependentUpon>ReporteTesoreros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\ReporteVehicular.resx">
+      <DependentUpon>ReporteVehicular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Tesoreros.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\FlujoVehicularV2.rdlc" />
+    <EmbeddedResource Include="Tesoreria\RemesasTipos.resx">
+      <DependentUpon>RemesasTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\RecaudacionPeaje.rdlc" />
+    <EmbeddedResource Include="Tesoreria\TesoreriaV2.resx">
+      <DependentUpon>TesoreriaV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="obj\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\obj\Debug\SAP.csproj.GenerateResource.Cache" />
+    <None Include="obj\obj\Debug\SAP.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="PrepagadoDataSet.xsc">
+      <DependentUpon>PrepagadoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrepagadoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrepagadoDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PrepagadoDataSet.xss">
+      <DependentUpon>PrepagadoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\SAP.Common.TabulacionGeneralUsuario.datasource" />
+    <None Include="Properties\DataSources\SAP.Common.TabulacionTipoPrepagado.datasource" />
+    <None Include="Properties\DataSources\SAP.Common.TabulacionUsuarioPrepagado.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SafvialWeb.xsc">
+      <DependentUpon>SafvialWeb.xsd</DependentUpon>
+    </None>
+    <None Include="SafvialWeb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SafvialWeb.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SafvialWeb.xss">
+      <DependentUpon>SafvialWeb.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSet.xsc">
+      <DependentUpon>SAPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SAPDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SAPDataSet.xss">
+      <DependentUpon>SAPDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSet2.xsc">
+      <DependentUpon>SAPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SAPDataSet21.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SAPDataSet2.xss">
+      <DependentUpon>SAPDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSet3.xsc">
+      <DependentUpon>SAPDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SAPDataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SAPDataSet3.xss">
+      <DependentUpon>SAPDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TarjetaExpressDataSet.xsc">
+      <DependentUpon>TarjetaExpressDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TarjetaExpressDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TarjetaExpressDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TarjetaExpressDataSet.xss">
+      <DependentUpon>TarjetaExpressDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoConfig.txt" />
+    <Content Include="Logo2.ico" />
+    <Content Include="obj\obj\Debug\SAP.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\obj\Debug\TempPE\Facturas.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet1.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet2.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet3.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\SAPDataSet.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\SAPDataSet1.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\SAPDataSet2.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\SAPDataSet21.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\SAPDataSet22.Designer.cs.dll" />
+    <Content Include="obj\obj\Debug\TempPE\SAPDataSet3.Designer.cs.dll" />
+    <None Include="Resources\002-question-mark.png" />
+    <Content Include="Resources\compliant.png" />
+    <Content Include="Resources\Configurador.bmp" />
+    <Content Include="Resources\Image1.bmp" />
+    <Content Include="Resources\Image1.png" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\SAFVIAL-2.png" />
+    <Content Include="Resources\SAFVIAL-4.png" />
+    <Content Include="Resources\SAFVIAL-5.png" />
+    <Content Include="Resources\SAFVIAL-51.png" />
+    <Content Include="Resources\SAFVIAL-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administradores\" />
+    <Folder Include="obj\obj\x86\Debug\TempPE\" />
+    <Folder Include="Recaudadores\Controles\Operaciones\" />
+    <Folder Include="Tesoreria\Controles\Remesas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.12.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2014 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Runtime de Microsoft Visual Studio 2010 Tools para Office %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

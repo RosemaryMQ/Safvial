@@ -1,0 +1,2 @@
+20/03/2023 16:11:24 - Ya hay un DataReader abierto asociado a este Command, debe cerrarlo primero.
+06/11/2023 17:02:36 - La configuración para obtener acceso a la impresora 'POS58' no es válida.12/01/2024 18:24:06 - Se ha producido un error durante el procesamiento local de informes.

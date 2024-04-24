@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SafvialWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="RecargasWEB">
+    <Key>
+      <PropertyRef Name="ID_Operacion" />
+    </Key>
+    <Property Name="ID_Operacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DNI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Monto" Type="Double" Nullable="false" />
+    <Property Name="FormaPago" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Referencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Observacion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Adjunto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Sincronizado" Type="Boolean" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Condicion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Banco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NombreReal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SafvialWebEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RecargasWEB" EntityType="Self.RecargasWEB" />
+  </EntityContainer>
+</Schema>

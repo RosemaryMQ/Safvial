@@ -1,0 +1,151 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SAP.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SAP" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;Persist Security Info=True;User ID=sap;Password=sap1234&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;Persist Security Info=True;User ID=sap;Password=sap1234</Value>
+    </Setting>
+    <Setting Name="SafvialWeb" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=sql5103.site4now.net;Initial Catalog=DB_A49549_safvialGuarico;Persist Security Info=True;User ID=DB_A49549_safvialGuarico_admin;Password=s0p0rt3m;MultipleActiveResultSets=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=sql5103.site4now.net;Initial Catalog=DB_A49549_safvialGuarico;Persist Security Info=True;User ID=DB_A49549_safvialGuarico_admin;Password=s0p0rt3m;MultipleActiveResultSets=True</Value>
+    </Setting>
+    <Setting Name="Canal" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Sede" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Tipo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Cobrador</Value>
+    </Setting>
+    <Setting Name="IP1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">safvialcasetejacorp.ddns.net</Value>
+    </Setting>
+    <Setting Name="IP2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">safvialcasetejacorp.ddns.net</Value>
+    </Setting>
+    <Setting Name="IP3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">safvialcasetejacorp.ddns.net</Value>
+    </Setting>
+    <Setting Name="IP4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">safvialhatoviejocorp.ddns.net</Value>
+    </Setting>
+    <Setting Name="dbo1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SAP</Value>
+    </Setting>
+    <Setting Name="dbo2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SafvialPrepago</Value>
+    </Setting>
+    <Setting Name="dbo3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SafvialWeb</Value>
+    </Setting>
+    <Setting Name="dbo4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SAP</Value>
+    </Setting>
+    <Setting Name="User1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap</Value>
+    </Setting>
+    <Setting Name="User2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap</Value>
+    </Setting>
+    <Setting Name="User3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap</Value>
+    </Setting>
+    <Setting Name="User4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap</Value>
+    </Setting>
+    <Setting Name="Pass1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap1234</Value>
+    </Setting>
+    <Setting Name="Pass2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap1234</Value>
+    </Setting>
+    <Setting Name="Pass3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap1234</Value>
+    </Setting>
+    <Setting Name="Pass4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap1234</Value>
+    </Setting>
+    <Setting Name="Master" Type="System.String" Scope="User">
+      <Value Profile="(Default)">s0p0rt3m</Value>
+    </Setting>
+    <Setting Name="IP5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">safvialcasetejacorp.ddns.net</Value>
+    </Setting>
+    <Setting Name="dbo5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SAP</Value>
+    </Setting>
+    <Setting Name="User5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap</Value>
+    </Setting>
+    <Setting Name="Pass5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sap1234</Value>
+    </Setting>
+    <Setting Name="Arduino" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SAP2P" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=safvialhatoviejocorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=safvialhatoviejocorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234</Value>
+    </Setting>
+    <Setting Name="ConexionPSC" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=safvialhatoviejocorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234;Connect Timeout=2&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=safvialhatoviejocorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234;Connect Timeout=2</Value>
+    </Setting>
+    <Setting Name="Logo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Alexis\Dropbox\Carabobo\SAP\SAP\bin</Value>
+    </Setting>
+    <Setting Name="Factura" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SAP2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;Persist Security Info=True;User ID=sap;Password=sap1234&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;Persist Security Info=True;User ID=sap;Password=sap1234</Value>
+    </Setting>
+    <Setting Name="Sede1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;Persist Security Info=True;User ID=sap;Password=sap1234&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;Persist Security Info=True;User ID=sap;Password=sap1234</Value>
+    </Setting>
+    <Setting Name="SafvialWebEntities" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;metadata=res://*/Recaudadores.SafvialWeb.Model.DbWeb.csdl|res://*/Recaudadores.SafvialWeb.Model.DbWeb.ssdl|res://*/Recaudadores.SafvialWeb.Model.DbWeb.msl;provider=System.Data.SqlClient;provider connection string="data source=sql5103.site4now.net;initial catalog=DB_A49549_safvialGuarico;persist security info=True;user id=DB_A49549_safvialGuarico_admin;password=s0p0rt3m;MultipleActiveResultSets=True;App=EntityFramework"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.EntityClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">metadata=res://*/Recaudadores.SafvialWeb.Model.DbWeb.csdl|res://*/Recaudadores.SafvialWeb.Model.DbWeb.ssdl|res://*/Recaudadores.SafvialWeb.Model.DbWeb.msl;provider=System.Data.SqlClient;provider connection string="data source=sql5103.site4now.net;initial catalog=DB_A49549_safvialGuarico;persist security info=True;user id=DB_A49549_safvialGuarico_admin;password=s0p0rt3m;MultipleActiveResultSets=True;App=EntityFramework"</Value>
+    </Setting>
+    <Setting Name="Prepagado" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=safvialcentercorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=safvialcentercorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
