@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SAP.exe.manifest" size="32352">
+    <dependentAssembly dependencyType="install" codebase="SAP.exe.manifest" size="30919">
       <assemblyIdentity name="SAP.exe" version="1.8.0.80" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dj/TQrfeg25r7IHJBTWPsO5Ii0PQNCSHqRfRhTwQv90=</dsig:DigestValue>
+        <dsig:DigestValue>SUOmJG+3bkCwV5km/e3IORIfUwqVBmMwrbtcisBxUuM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

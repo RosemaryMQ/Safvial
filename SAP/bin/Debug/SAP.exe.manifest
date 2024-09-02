@@ -146,7 +146,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4/bZjfJ9GHc2ajdKgtvfpSlAUpchdiSxMJpXM51X1N0=</dsig:DigestValue>
+        <dsig:DigestValue>vcSo8vbS8rtEuRaSuxROVYOlPFQANZ4QTPANArsftYo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -158,7 +158,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6eobgv17x2bHIxgfHNAdm6fcl1TTTDpeTLEmAdBZsfw=</dsig:DigestValue>
+        <dsig:DigestValue>fHbC0GBIQGJGzYGAcCkJ9B3j7hHlTc/irLFPqm3WKlU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,31 +170,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LpolCbXnnGiux4/oTflcUrotVjWbHiSSBHm9FDQQ4qU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.WebForms.dll" size="1695424">
-      <assemblyIdentity name="Microsoft.ReportViewer.WebForms" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fPi19YoERDQv0VDasgbxlsbASIbXnU1OZM3Gx71wmTo=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.WinForms.dll" size="563392">
-      <assemblyIdentity name="Microsoft.ReportViewer.WinForms" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sQraLWiB7q2Q3DGfeRq9DV1vAo41MrfXZBrd0AGvuTw=</dsig:DigestValue>
+        <dsig:DigestValue>fRnfTgYLvRYXJaA2UzZf/J0+0cSWBihyPtrrOkeMpRQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -331,24 +307,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="28413440">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="28519936">
       <assemblyIdentity name="SAP" version="1.9.0.76" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aE4MIDGkB4U7q06mnF0Kx9vDJepshpu6oGViWoxN+XE=</dsig:DigestValue>
+        <dsig:DigestValue>YSU3eM2zMIA6g4pt+HkBonHic17uPFr+FCtKmVkaQnw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AutoConfig.txt" size="521">
+  <file name="AutoConfig.txt" size="546">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>N82eFi4F3pbLuLPeHvRmbR8L1OxCsC+6DbAXCRBv4x0=</dsig:DigestValue>
+      <dsig:DigestValue>eURkiURicGvDqAy0wD8LgOqlSJcG+iz0fHHqIrnvUQs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo2.ico" size="185702">
@@ -360,13 +336,13 @@
       <dsig:DigestValue>MDZNJt1zRxqPhuHEi1ROz94ceJX3YI75Z7u7gkpDfrY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="obj\obj\Debug\SAP.csproj.FileListAbsolute.txt" size="21243">
+  <file name="obj\obj\Debug\SAP.csproj.FileListAbsolute.txt" size="21519">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MOrQHrhywqRl7B4hd5ZbNCbLS6+9w97snpeNueMMSrg=</dsig:DigestValue>
+      <dsig:DigestValue>Ewc5dbbt0254uU5cKgy5eer4gev63FWIFsBBkZWAyUM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="obj\obj\Debug\TempPE\Facturas.Designer.cs.dll" size="79872">
@@ -567,13 +543,13 @@
       <dsig:DigestValue>g68w7mLnhBnnikgd0XeDegtLpRftWcSU7LkInrUNt88=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SAP.exe.config" size="7021">
+  <file name="SAP.exe.config" size="7139">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>H49J/rH6UYjMyakzfHcBl+uohWJfjQK86J5Z093bvFY=</dsig:DigestValue>
+      <dsig:DigestValue>d/wKv2otyEyyFvxntchHa8lmUQ8JeJqrU1KWb+tvmkY=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

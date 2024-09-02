@@ -19,7 +19,7 @@
 (USERSEDE2)sap
 (PASSSEDE2)sap1234
 (CANAL)1
-(INTERFACE)Recaudador
+(INTERFACE)Administrador
 (SEDE)1
 (ARDUINO)0
 (LOGO)C://
