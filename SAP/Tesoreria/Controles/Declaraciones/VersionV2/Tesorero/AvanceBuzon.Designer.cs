@@ -58,6 +58,8 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BD200 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BD500 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminado2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.BolivarSoberano = new System.Windows.Forms.TabPage();
@@ -136,7 +138,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1166, 705);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1555, 868);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -149,12 +151,13 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.tabControl1, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.Recaudador, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(383, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(511, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.415585F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.87013F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(780, 699);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1040, 860);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // tabControl1
@@ -164,20 +167,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.BolivarDigital);
             this.tabControl1.Controls.Add(this.BolivarSoberano);
-            this.tabControl1.Location = new System.Drawing.Point(6, 81);
+            this.tabControl1.Location = new System.Drawing.Point(7, 99);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(768, 612);
+            this.tabControl1.Size = new System.Drawing.Size(1026, 754);
             this.tabControl1.TabIndex = 1;
             // 
             // BolivarDigital
             // 
             this.BolivarDigital.Controls.Add(this.BDLista);
             this.BolivarDigital.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BolivarDigital.Location = new System.Drawing.Point(4, 22);
+            this.BolivarDigital.Location = new System.Drawing.Point(4, 25);
+            this.BolivarDigital.Margin = new System.Windows.Forms.Padding(4);
             this.BolivarDigital.Name = "BolivarDigital";
-            this.BolivarDigital.Padding = new System.Windows.Forms.Padding(3);
-            this.BolivarDigital.Size = new System.Drawing.Size(760, 586);
+            this.BolivarDigital.Padding = new System.Windows.Forms.Padding(4);
+            this.BolivarDigital.Size = new System.Drawing.Size(1018, 725);
             this.BolivarDigital.TabIndex = 0;
             this.BolivarDigital.Text = "Bolivar Digital";
             this.BolivarDigital.UseVisualStyleBackColor = true;
@@ -207,6 +212,8 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
+            this.BD200,
+            this.BD500,
             this.Eliminado2,
             this.dataGridViewButtonColumn1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -218,7 +225,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.BDLista.DefaultCellStyle = dataGridViewCellStyle2;
             this.BDLista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BDLista.Location = new System.Drawing.Point(3, 3);
+            this.BDLista.Location = new System.Drawing.Point(4, 4);
+            this.BDLista.Margin = new System.Windows.Forms.Padding(4);
             this.BDLista.Name = "BDLista";
             this.BDLista.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -233,13 +241,14 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
             this.BDLista.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.BDLista.Size = new System.Drawing.Size(754, 580);
+            this.BDLista.Size = new System.Drawing.Size(1010, 717);
             this.BDLista.TabIndex = 110;
             this.BDLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BDLista_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn1.HeaderText = "#";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -248,20 +257,25 @@
             // BilleteBD025
             // 
             this.BilleteBD025.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BilleteBD025.FillWeight = 27.12154F;
             this.BilleteBD025.HeaderText = "0,25";
+            this.BilleteBD025.MinimumWidth = 6;
             this.BilleteBD025.Name = "BilleteBD025";
             this.BilleteBD025.ReadOnly = true;
             // 
             // BilleteBD05
             // 
             this.BilleteBD05.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BilleteBD05.FillWeight = 27.12154F;
             this.BilleteBD05.HeaderText = "0,50";
+            this.BilleteBD05.MinimumWidth = 6;
             this.BilleteBD05.Name = "BilleteBD05";
             this.BilleteBD05.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn3.HeaderText = "1,00";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -270,6 +284,7 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn5.HeaderText = "5,00";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -278,6 +293,7 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn6.HeaderText = "10,00";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -286,6 +302,7 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn7.HeaderText = "20,00";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
@@ -294,6 +311,7 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn8.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn8.HeaderText = "50,00";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -302,10 +320,29 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.FillWeight = 27.12154F;
             this.dataGridViewTextBoxColumn9.HeaderText = "100,00";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // BD200
+            // 
+            this.BD200.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BD200.FillWeight = 26.01776F;
+            this.BD200.HeaderText = "200,00";
+            this.BD200.MinimumWidth = 6;
+            this.BD200.Name = "BD200";
+            this.BD200.ReadOnly = true;
+            // 
+            // BD500
+            // 
+            this.BD500.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BD500.FillWeight = 27.12154F;
+            this.BD500.HeaderText = "500,00";
+            this.BD500.MinimumWidth = 6;
+            this.BD500.Name = "BD500";
+            this.BD500.ReadOnly = true;
             // 
             // Eliminado2
             // 
@@ -319,6 +356,7 @@
             // dataGridViewButtonColumn1
             // 
             this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewButtonColumn1.FillWeight = 27.12154F;
             this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dataGridViewButtonColumn1.HeaderText = "";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
@@ -329,10 +367,11 @@
             // 
             this.BolivarSoberano.Controls.Add(this.AvancesUser);
             this.BolivarSoberano.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BolivarSoberano.Location = new System.Drawing.Point(4, 22);
+            this.BolivarSoberano.Location = new System.Drawing.Point(4, 25);
+            this.BolivarSoberano.Margin = new System.Windows.Forms.Padding(4);
             this.BolivarSoberano.Name = "BolivarSoberano";
-            this.BolivarSoberano.Padding = new System.Windows.Forms.Padding(3);
-            this.BolivarSoberano.Size = new System.Drawing.Size(760, 586);
+            this.BolivarSoberano.Padding = new System.Windows.Forms.Padding(4);
+            this.BolivarSoberano.Size = new System.Drawing.Size(1018, 725);
             this.BolivarSoberano.TabIndex = 1;
             this.BolivarSoberano.Text = "Bolivar Soberano";
             this.BolivarSoberano.UseVisualStyleBackColor = true;
@@ -381,7 +420,8 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.AvancesUser.DefaultCellStyle = dataGridViewCellStyle6;
             this.AvancesUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AvancesUser.Location = new System.Drawing.Point(3, 3);
+            this.AvancesUser.Location = new System.Drawing.Point(4, 4);
+            this.AvancesUser.Margin = new System.Windows.Forms.Padding(4);
             this.AvancesUser.Name = "AvancesUser";
             this.AvancesUser.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -396,7 +436,7 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
             this.AvancesUser.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.AvancesUser.Size = new System.Drawing.Size(754, 580);
+            this.AvancesUser.Size = new System.Drawing.Size(1010, 717);
             this.AvancesUser.TabIndex = 109;
             this.AvancesUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AvancesUser_CellContentClick);
             // 
@@ -563,9 +603,10 @@
             this.Recaudador.BackColor = System.Drawing.Color.White;
             this.Recaudador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.Recaudador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.Recaudador.Location = new System.Drawing.Point(6, 3);
+            this.Recaudador.Location = new System.Drawing.Point(7, 3);
+            this.Recaudador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Recaudador.Name = "Recaudador";
-            this.Recaudador.Size = new System.Drawing.Size(768, 72);
+            this.Recaudador.Size = new System.Drawing.Size(1026, 89);
             this.Recaudador.TabIndex = 110;
             this.Recaudador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -581,14 +622,15 @@
             this.kryptonDockableNavigator1.Header.HeaderValuesPrimary.MapHeading = ComponentFactory.Krypton.Navigator.MapKryptonPageText.Title;
             this.kryptonDockableNavigator1.Header.HeaderValuesPrimary.MapImage = ComponentFactory.Krypton.Navigator.MapKryptonPageImage.SmallMediumLarge;
             this.kryptonDockableNavigator1.Header.HeaderVisibleSecondary = false;
-            this.kryptonDockableNavigator1.Location = new System.Drawing.Point(3, 3);
+            this.kryptonDockableNavigator1.Location = new System.Drawing.Point(4, 4);
+            this.kryptonDockableNavigator1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDockableNavigator1.Name = "kryptonDockableNavigator1";
             this.kryptonDockableNavigator1.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.StackCheckButtonHeaderGroup;
             this.kryptonDockableNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.kryptonPage2});
             this.kryptonDockableNavigator1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
             this.kryptonDockableNavigator1.SelectedIndex = 0;
-            this.kryptonDockableNavigator1.Size = new System.Drawing.Size(374, 699);
+            this.kryptonDockableNavigator1.Size = new System.Drawing.Size(499, 860);
             this.kryptonDockableNavigator1.TabIndex = 2;
             this.kryptonDockableNavigator1.Text = "RESUMEN RECAUDADOR";
             // 
@@ -598,9 +640,10 @@
             this.kryptonPage2.Controls.Add(this.tableLayoutPanel5);
             this.kryptonPage2.Flags = 65534;
             this.kryptonPage2.LastVisibleSet = true;
-            this.kryptonPage2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.kryptonPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonPage2.MinimumSize = new System.Drawing.Size(67, 62);
             this.kryptonPage2.Name = "kryptonPage2";
-            this.kryptonPage2.Size = new System.Drawing.Size(372, 642);
+            this.kryptonPage2.Size = new System.Drawing.Size(497, 793);
             this.kryptonPage2.Text = "Cargar Buzon";
             this.kryptonPage2.TextTitle = "Control de buzon";
             this.kryptonPage2.ToolTipTitle = "Page ToolTip";
@@ -619,15 +662,16 @@
             this.tableLayoutPanel5.Controls.Add(this.Recaudador1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.button2, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.439641F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.93902F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.23898F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.38237F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(367, 637);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(490, 787);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // tabControl2
@@ -637,19 +681,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(6, 55);
+            this.tabControl2.Location = new System.Drawing.Point(7, 67);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(355, 404);
+            this.tabControl2.Size = new System.Drawing.Size(476, 501);
             this.tabControl2.TabIndex = 4;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.Avance);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(347, 378);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(468, 472);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Bolivar Digital";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -681,10 +727,11 @@
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Avance.DefaultCellStyle = dataGridViewCellStyle12;
             this.Avance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Avance.Location = new System.Drawing.Point(3, 3);
+            this.Avance.Location = new System.Drawing.Point(4, 4);
+            this.Avance.Margin = new System.Windows.Forms.Padding(4);
             this.Avance.Name = "Avance";
             this.Avance.RowHeadersWidth = 51;
-            this.Avance.Size = new System.Drawing.Size(341, 372);
+            this.Avance.Size = new System.Drawing.Size(460, 464);
             this.Avance.TabIndex = 108;
             this.Avance.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Avance_CellValueChanged);
             this.Avance.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Avance_EditingControlShowing);
@@ -720,10 +767,11 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.BolivaresSS);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(347, 378);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Size = new System.Drawing.Size(468, 472);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Bolivar Soberano";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -755,10 +803,11 @@
             dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.BolivaresSS.DefaultCellStyle = dataGridViewCellStyle16;
             this.BolivaresSS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BolivaresSS.Location = new System.Drawing.Point(3, 3);
+            this.BolivaresSS.Location = new System.Drawing.Point(4, 4);
+            this.BolivaresSS.Margin = new System.Windows.Forms.Padding(4);
             this.BolivaresSS.Name = "BolivaresSS";
             this.BolivaresSS.RowHeadersWidth = 51;
-            this.BolivaresSS.Size = new System.Drawing.Size(341, 372);
+            this.BolivaresSS.Size = new System.Drawing.Size(460, 464);
             this.BolivaresSS.TabIndex = 109;
             this.BolivaresSS.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Avance_CellValueChanged);
             this.BolivaresSS.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.BolivaresSS_EditingControlShowing);
@@ -799,9 +848,10 @@
             this.Recaudador1.AutoSize = true;
             this.Recaudador1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.Recaudador1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.Recaudador1.Location = new System.Drawing.Point(6, 3);
+            this.Recaudador1.Location = new System.Drawing.Point(7, 3);
+            this.Recaudador1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Recaudador1.Name = "Recaudador1";
-            this.Recaudador1.Size = new System.Drawing.Size(355, 46);
+            this.Recaudador1.Size = new System.Drawing.Size(476, 57);
             this.Recaudador1.TabIndex = 104;
             this.Recaudador1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -816,9 +866,10 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 534);
+            this.button2.Location = new System.Drawing.Point(7, 661);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(355, 97);
+            this.button2.Size = new System.Drawing.Size(476, 119);
             this.button2.TabIndex = 106;
             this.button2.Text = "CARGAR BUZON";
             this.button2.UseVisualStyleBackColor = false;
@@ -834,11 +885,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.85492F));
             this.tableLayoutPanel2.Controls.Add(this.Cargar, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 468);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 579);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 57);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(476, 71);
             this.tableLayoutPanel2.TabIndex = 109;
             // 
             // Cargar
@@ -849,9 +901,10 @@
             this.Cargar.AutoSize = true;
             this.Cargar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cargar.ForeColor = System.Drawing.Color.Black;
-            this.Cargar.Location = new System.Drawing.Point(195, 0);
+            this.Cargar.Location = new System.Drawing.Point(261, 0);
+            this.Cargar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cargar.Name = "Cargar";
-            this.Cargar.Size = new System.Drawing.Size(157, 57);
+            this.Cargar.Size = new System.Drawing.Size(211, 71);
             this.Cargar.TabIndex = 108;
             this.Cargar.Text = "0,00 Bs.";
             this.Cargar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -866,11 +919,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.Codigo, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(186, 51);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(249, 63);
             this.tableLayoutPanel3.TabIndex = 109;
             // 
             // Codigo
@@ -880,10 +934,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Codigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Codigo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Codigo.Location = new System.Drawing.Point(96, 3);
+            this.Codigo.Location = new System.Drawing.Point(128, 4);
+            this.Codigo.Margin = new System.Windows.Forms.Padding(4);
             this.Codigo.MaxLength = 12;
             this.Codigo.Name = "Codigo";
-            this.Codigo.Size = new System.Drawing.Size(87, 31);
+            this.Codigo.Size = new System.Drawing.Size(117, 37);
             this.Codigo.TabIndex = 112;
             this.Codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -896,20 +951,21 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 51);
+            this.label1.Size = new System.Drawing.Size(116, 63);
             this.label1.TabIndex = 111;
             this.label1.Text = "Codigo Tesorero:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AvanceBuzon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 697);
+            this.ClientSize = new System.Drawing.Size(1549, 858);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AvanceBuzon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buzon";
@@ -996,6 +1052,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BD200;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BD500;
         private System.Windows.Forms.DataGridViewTextBoxColumn Eliminado2;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
     }

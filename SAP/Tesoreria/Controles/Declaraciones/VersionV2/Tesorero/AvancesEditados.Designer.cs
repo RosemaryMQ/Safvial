@@ -81,7 +81,8 @@
             this.tableLayoutPanel5.Controls.Add(this.Recaudador1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.button2, 0, 4);
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(-5, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(-7, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 5;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.600583F));
@@ -89,8 +90,8 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.22449F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.45481F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.51604F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(492, 689);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(656, 848);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // tabControl2
@@ -100,19 +101,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Location = new System.Drawing.Point(6, 132);
+            this.tabControl2.Location = new System.Drawing.Point(7, 162);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(480, 409);
+            this.tabControl2.Size = new System.Drawing.Size(642, 505);
             this.tabControl2.TabIndex = 111;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.Avance);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(472, 383);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(634, 476);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Bolivar Digital";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -144,10 +147,11 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Avance.DefaultCellStyle = dataGridViewCellStyle4;
             this.Avance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Avance.Location = new System.Drawing.Point(3, 3);
+            this.Avance.Location = new System.Drawing.Point(4, 4);
+            this.Avance.Margin = new System.Windows.Forms.Padding(4);
             this.Avance.Name = "Avance";
             this.Avance.RowHeadersWidth = 51;
-            this.Avance.Size = new System.Drawing.Size(466, 377);
+            this.Avance.Size = new System.Drawing.Size(626, 468);
             this.Avance.TabIndex = 108;
             this.Avance.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Avance_CellValueChanged);
             this.Avance.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.Avance_EditingControlShowing);
@@ -183,10 +187,11 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.BolivaresSS);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(472, 383);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Size = new System.Drawing.Size(634, 476);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Bolivar Soberano";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -218,10 +223,11 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.BolivaresSS.DefaultCellStyle = dataGridViewCellStyle8;
             this.BolivaresSS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BolivaresSS.Location = new System.Drawing.Point(3, 3);
+            this.BolivaresSS.Location = new System.Drawing.Point(4, 4);
+            this.BolivaresSS.Margin = new System.Windows.Forms.Padding(4);
             this.BolivaresSS.Name = "BolivaresSS";
             this.BolivaresSS.RowHeadersWidth = 51;
-            this.BolivaresSS.Size = new System.Drawing.Size(466, 377);
+            this.BolivaresSS.Size = new System.Drawing.Size(626, 468);
             this.BolivaresSS.TabIndex = 109;
             this.BolivaresSS.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Avance_CellValueChanged);
             this.BolivaresSS.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.BolivaresSS_EditingControlShowing);
@@ -266,11 +272,12 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.Cargar, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.checkBox1, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 550);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 678);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(480, 51);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(642, 62);
             this.tableLayoutPanel2.TabIndex = 109;
             // 
             // tableLayoutPanel3
@@ -283,11 +290,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.88745F));
             this.tableLayoutPanel3.Controls.Add(this.CodigoT, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(214, 45);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(286, 54);
             this.tableLayoutPanel3.TabIndex = 109;
             // 
             // CodigoT
@@ -297,10 +305,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CodigoT.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CodigoT.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodigoT.Location = new System.Drawing.Point(118, 3);
+            this.CodigoT.Location = new System.Drawing.Point(158, 4);
+            this.CodigoT.Margin = new System.Windows.Forms.Padding(4);
             this.CodigoT.MaxLength = 12;
             this.CodigoT.Name = "CodigoT";
-            this.CodigoT.Size = new System.Drawing.Size(93, 31);
+            this.CodigoT.Size = new System.Drawing.Size(124, 37);
             this.CodigoT.TabIndex = 2;
             this.CodigoT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -313,9 +322,10 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 45);
+            this.label1.Size = new System.Drawing.Size(146, 54);
             this.label1.TabIndex = 111;
             this.label1.Text = "Codigo Tesorero:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,9 +338,10 @@
             this.Cargar.AutoSize = true;
             this.Cargar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cargar.ForeColor = System.Drawing.Color.Black;
-            this.Cargar.Location = new System.Drawing.Point(223, 0);
+            this.Cargar.Location = new System.Drawing.Point(298, 0);
+            this.Cargar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cargar.Name = "Cargar";
-            this.Cargar.Size = new System.Drawing.Size(136, 51);
+            this.Cargar.Size = new System.Drawing.Size(182, 62);
             this.Cargar.TabIndex = 108;
             this.Cargar.Text = "0,00 Bs.";
             this.Cargar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -342,9 +353,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.checkBox1.Location = new System.Drawing.Point(365, 3);
+            this.checkBox1.Location = new System.Drawing.Point(488, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 45);
+            this.checkBox1.Size = new System.Drawing.Size(150, 54);
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Buzon";
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -358,9 +370,10 @@
             this.Recaudador1.AutoSize = true;
             this.Recaudador1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.Recaudador1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.Recaudador1.Location = new System.Drawing.Point(6, 64);
+            this.Recaudador1.Location = new System.Drawing.Point(7, 78);
+            this.Recaudador1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Recaudador1.Name = "Recaudador1";
-            this.Recaudador1.Size = new System.Drawing.Size(480, 62);
+            this.Recaudador1.Size = new System.Drawing.Size(642, 77);
             this.Recaudador1.TabIndex = 104;
             this.Recaudador1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -375,9 +388,10 @@
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 610);
+            this.button2.Location = new System.Drawing.Point(7, 751);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(480, 73);
+            this.button2.Size = new System.Drawing.Size(642, 90);
             this.button2.TabIndex = 4;
             this.button2.Text = "CARGAR AVANCE";
             this.button2.UseVisualStyleBackColor = false;
@@ -392,10 +406,10 @@
             this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(7, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(8, 3);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(478, 58);
+            this.label2.Size = new System.Drawing.Size(640, 72);
             this.label2.TabIndex = 110;
             this.label2.Text = "Agregar Nuevo Avance";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -410,17 +424,18 @@
             this.Codigo.Location = new System.Drawing.Point(139, 3);
             this.Codigo.MaxLength = 12;
             this.Codigo.Name = "Codigo";
-            this.Codigo.Size = new System.Drawing.Size(131, 31);
+            this.Codigo.Size = new System.Drawing.Size(131, 37);
             this.Codigo.TabIndex = 112;
             this.Codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AvancesEditados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 686);
+            this.ClientSize = new System.Drawing.Size(645, 844);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AvancesEditados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Avances Editados";
