@@ -11763,8 +11763,6 @@ namespace SAP {
             
             private global::System.Data.DataColumn columnBilleteBD025;
             
-            private global::System.Data.DataColumn columnBilleteS10000001;
-            
             private global::System.Data.DataColumn columnBilleteBD200;
             
             private global::System.Data.DataColumn columnBilleteBD500;
@@ -12060,14 +12058,6 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS10000001Column {
-                get {
-                    return this.columnBilleteS10000001;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn BilleteBD200Column {
                 get {
                     return this.columnBilleteBD200;
@@ -12151,7 +12141,6 @@ namespace SAP {
                         int BilleteBD100, 
                         int BilleteBD05, 
                         int BilleteBD025, 
-                        long BilleteS10000001, 
                         int BilleteBD200, 
                         int BilleteBD500) {
                 CierreBalanceV2Row rowCierreBalanceV2Row = ((CierreBalanceV2Row)(this.NewRow()));
@@ -12188,7 +12177,6 @@ namespace SAP {
                         BilleteBD100,
                         BilleteBD05,
                         BilleteBD025,
-                        BilleteS10000001,
                         BilleteBD200,
                         BilleteBD500};
                 rowCierreBalanceV2Row.ItemArray = columnValuesArray;
@@ -12252,7 +12240,6 @@ namespace SAP {
                 this.columnBilleteBD100 = base.Columns["BilleteBD100"];
                 this.columnBilleteBD05 = base.Columns["BilleteBD05"];
                 this.columnBilleteBD025 = base.Columns["BilleteBD025"];
-                this.columnBilleteS10000001 = base.Columns["BilleteS10000001"];
                 this.columnBilleteBD200 = base.Columns["BilleteBD200"];
                 this.columnBilleteBD500 = base.Columns["BilleteBD500"];
             }
@@ -12324,8 +12311,6 @@ namespace SAP {
                 base.Columns.Add(this.columnBilleteBD05);
                 this.columnBilleteBD025 = new global::System.Data.DataColumn("BilleteBD025", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD025);
-                this.columnBilleteS10000001 = new global::System.Data.DataColumn("BilleteS10000001", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS10000001);
                 this.columnBilleteBD200 = new global::System.Data.DataColumn("BilleteBD200", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD200);
                 this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
@@ -12342,7 +12327,6 @@ namespace SAP {
                 this.columnNombre.MaxLength = 50;
                 this.columnApellido.AllowDBNull = false;
                 this.columnApellido.MaxLength = 50;
-                this.columnBilleteS10000001.Caption = "BilleteS1000000";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17201,8 +17185,6 @@ namespace SAP {
             
             private global::System.Data.DataColumn columnBilleteBD025;
             
-            private global::System.Data.DataColumn columnBilleteS10000001;
-            
             private global::System.Data.DataColumn columnBilleteBD500;
             
             private global::System.Data.DataColumn columnBilleteBD200;
@@ -17514,14 +17496,6 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS10000001Column {
-                get {
-                    return this.columnBilleteS10000001;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn BilleteBD500Column {
                 get {
                     return this.columnBilleteBD500;
@@ -17607,7 +17581,6 @@ namespace SAP {
                         int BilleteBD100, 
                         int BilleteBD05, 
                         int BilleteBD025, 
-                        long BilleteS10000001, 
                         int BilleteBD500, 
                         int BilleteBD200) {
                 CierresParcialesRow rowCierresParcialesRow = ((CierresParcialesRow)(this.NewRow()));
@@ -17646,7 +17619,6 @@ namespace SAP {
                         BilleteBD100,
                         BilleteBD05,
                         BilleteBD025,
-                        BilleteS10000001,
                         BilleteBD500,
                         BilleteBD200};
                 rowCierresParcialesRow.ItemArray = columnValuesArray;
@@ -17712,7 +17684,6 @@ namespace SAP {
                 this.columnBilleteBD100 = base.Columns["BilleteBD100"];
                 this.columnBilleteBD05 = base.Columns["BilleteBD05"];
                 this.columnBilleteBD025 = base.Columns["BilleteBD025"];
-                this.columnBilleteS10000001 = base.Columns["BilleteS10000001"];
                 this.columnBilleteBD500 = base.Columns["BilleteBD500"];
                 this.columnBilleteBD200 = base.Columns["BilleteBD200"];
             }
@@ -17788,8 +17759,6 @@ namespace SAP {
                 base.Columns.Add(this.columnBilleteBD05);
                 this.columnBilleteBD025 = new global::System.Data.DataColumn("BilleteBD025", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD025);
-                this.columnBilleteS10000001 = new global::System.Data.DataColumn("BilleteS10000001", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS10000001);
                 this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD500);
                 this.columnBilleteBD200 = new global::System.Data.DataColumn("BilleteBD200", typeof(int), null, global::System.Data.MappingType.Element);
@@ -17804,7 +17773,6 @@ namespace SAP {
                 this.columnID_Cierre.Unique = true;
                 this.columnID_Usuario.AllowDBNull = false;
                 this.columnFecha.AllowDBNull = false;
-                this.columnBilleteS10000001.Caption = "BilleteS1000000";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18009,8 +17977,6 @@ namespace SAP {
             private global::System.Data.DataColumn columnBilleteBD05;
             
             private global::System.Data.DataColumn columnBilleteBD025;
-            
-            private global::System.Data.DataColumn columnBilleteS10000001;
             
             private global::System.Data.DataColumn columnBilleteBD200;
             
@@ -18339,14 +18305,6 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS10000001Column {
-                get {
-                    return this.columnBilleteS10000001;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn BilleteBD200Column {
                 get {
                     return this.columnBilleteBD200;
@@ -18434,7 +18392,6 @@ namespace SAP {
                         int BilleteBD100, 
                         int BilleteBD05, 
                         int BilleteBD025, 
-                        long BilleteS10000001, 
                         int BilleteBD200, 
                         int BilleteBD500) {
                 CierreTurnoV1Row rowCierreTurnoV1Row = ((CierreTurnoV1Row)(this.NewRow()));
@@ -18475,7 +18432,6 @@ namespace SAP {
                         BilleteBD100,
                         BilleteBD05,
                         BilleteBD025,
-                        BilleteS10000001,
                         BilleteBD200,
                         BilleteBD500};
                 rowCierreTurnoV1Row.ItemArray = columnValuesArray;
@@ -18543,7 +18499,6 @@ namespace SAP {
                 this.columnBilleteBD100 = base.Columns["BilleteBD100"];
                 this.columnBilleteBD05 = base.Columns["BilleteBD05"];
                 this.columnBilleteBD025 = base.Columns["BilleteBD025"];
-                this.columnBilleteS10000001 = base.Columns["BilleteS10000001"];
                 this.columnBilleteBD200 = base.Columns["BilleteBD200"];
                 this.columnBilleteBD500 = base.Columns["BilleteBD500"];
             }
@@ -18623,8 +18578,6 @@ namespace SAP {
                 base.Columns.Add(this.columnBilleteBD05);
                 this.columnBilleteBD025 = new global::System.Data.DataColumn("BilleteBD025", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD025);
-                this.columnBilleteS10000001 = new global::System.Data.DataColumn("BilleteS10000001", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS10000001);
                 this.columnBilleteBD200 = new global::System.Data.DataColumn("BilleteBD200", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD200);
                 this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
@@ -18642,7 +18595,6 @@ namespace SAP {
                 this.columnNombre.MaxLength = 50;
                 this.columnApellido.AllowDBNull = false;
                 this.columnApellido.MaxLength = 50;
-                this.columnBilleteS10000001.Caption = "BilleteS1000000";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -28442,23 +28394,6 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public long BilleteS10000001 {
-                get {
-                    try {
-                        return ((long)(this[this.tableCierreBalanceV2.BilleteS10000001Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000001\' de la tabla \'CierreBalanceV2\' es DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreBalanceV2.BilleteS10000001Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int BilleteBD200 {
                 get {
                     try {
@@ -28835,18 +28770,6 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBilleteBD025Null() {
                 this[this.tableCierreBalanceV2.BilleteBD025Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS10000001Null() {
-                return this.IsNull(this.tableCierreBalanceV2.BilleteS10000001Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS10000001Null() {
-                this[this.tableCierreBalanceV2.BilleteS10000001Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -31291,23 +31214,6 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public long BilleteS10000001 {
-                get {
-                    try {
-                        return ((long)(this[this.tableCierresParciales.BilleteS10000001Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000001\' de la tabla \'CierresParciales\' es DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierresParciales.BilleteS10000001Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int BilleteBD500 {
                 get {
                     try {
@@ -31708,18 +31614,6 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBilleteBD025Null() {
                 this[this.tableCierresParciales.BilleteBD025Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS10000001Null() {
-                return this.IsNull(this.tableCierresParciales.BilleteS10000001Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS10000001Null() {
-                this[this.tableCierresParciales.BilleteS10000001Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -32319,22 +32213,6 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public long BilleteS10000001 {
-                get {
-                    try {
-                        return ((long)(this[this.tableCierreTurnoV1.BilleteS10000001Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000001\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS10000001Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int BilleteBD200 {
                 get {
                     try {
@@ -32747,18 +32625,6 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBilleteBD025Null() {
                 this[this.tableCierreTurnoV1.BilleteBD025Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS10000001Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS10000001Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS10000001Null() {
-                this[this.tableCierreTurnoV1.BilleteS10000001Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -44323,7 +44189,6 @@ WHERE        (Pagos.FormaPago IN ('Punto de Venta', 'Transferencia')) AND (Pagos
             tableMapping.ColumnMappings.Add("BilleteBD100", "BilleteBD100");
             tableMapping.ColumnMappings.Add("BilleteBD05", "BilleteBD05");
             tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
-            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS10000001");
             tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
             tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
             this._adapter.TableMappings.Add(tableMapping);
@@ -47464,55 +47329,53 @@ ORDER BY Fecha1;
             tableMapping.ColumnMappings.Add("BilleteBD100", "BilleteBD100");
             tableMapping.ColumnMappings.Add("BilleteBD05", "BilleteBD05");
             tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
-            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS10000001");
             tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
             tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [CierreBalanceV2] WHERE (([ID_Cierre] = @Original_ID_Cierre) AND ((@I" +
-                "sNull_BilleteS05 = 1 AND [BilleteS05] IS NULL) OR ([BilleteS05] = @Original_Bill" +
-                "eteS05)) AND ((@IsNull_BilleteS1 = 1 AND [BilleteS1] IS NULL) OR ([BilleteS1] = " +
-                "@Original_BilleteS1)) AND ((@IsNull_BilleteS2 = 1 AND [BilleteS2] IS NULL) OR ([" +
-                "BilleteS2] = @Original_BilleteS2)) AND ((@IsNull_BilleteS5 = 1 AND [BilleteS5] I" +
-                "S NULL) OR ([BilleteS5] = @Original_BilleteS5)) AND ((@IsNull_BilleteS10 = 1 AND" +
-                " [BilleteS10] IS NULL) OR ([BilleteS10] = @Original_BilleteS10)) AND ((@IsNull_B" +
-                "illeteS20 = 1 AND [BilleteS20] IS NULL) OR ([BilleteS20] = @Original_BilleteS20)" +
-                ") AND ((@IsNull_BilleteS50 = 1 AND [BilleteS50] IS NULL) OR ([BilleteS50] = @Ori" +
-                "ginal_BilleteS50)) AND ((@IsNull_BilleteS100 = 1 AND [BilleteS100] IS NULL) OR (" +
-                "[BilleteS100] = @Original_BilleteS100)) AND ((@IsNull_BilleteS200 = 1 AND [Bille" +
-                "teS200] IS NULL) OR ([BilleteS200] = @Original_BilleteS200)) AND ((@IsNull_Bille" +
-                "teS500 = 1 AND [BilleteS500] IS NULL) OR ([BilleteS500] = @Original_BilleteS500)" +
-                ") AND ((@IsNull_Tickets = 1 AND [Tickets] IS NULL) OR ([Tickets] = @Original_Tic" +
-                "kets)) AND ((@IsNull_Efectivo = 1 AND [Efectivo] IS NULL) OR ([Efectivo] = @Orig" +
-                "inal_Efectivo)) AND ((@IsNull_PDV = 1 AND [PDV] IS NULL) OR ([PDV] = @Original_P" +
-                "DV)) AND ((@IsNull_Incidencia = 1 AND [Incidencia] IS NULL) OR ([Incidencia] = @" +
-                "Original_Incidencia)) AND ([ID_Usuario] = @Original_ID_Usuario) AND ([Fecha] = @" +
-                "Original_Fecha) AND ((@IsNull_BilleteS10000 = 1 AND [BilleteS10000] IS NULL) OR " +
-                "([BilleteS10000] = @Original_BilleteS10000)) AND ((@IsNull_BilleteS20000 = 1 AND" +
-                " [BilleteS20000] IS NULL) OR ([BilleteS20000] = @Original_BilleteS20000)) AND ((" +
-                "@IsNull_BilleteS50000 = 1 AND [BilleteS50000] IS NULL) OR ([BilleteS50000] = @Or" +
-                "iginal_BilleteS50000)) AND ((@IsNull_Transferencia = 1 AND [Transferencia] IS NU" +
-                "LL) OR ([Transferencia] = @Original_Transferencia)) AND ((@IsNull_Eliminado = 1 " +
-                "AND [Eliminado] IS NULL) OR ([Eliminado] = @Original_Eliminado)) AND ((@IsNull_B" +
-                "uzon = 1 AND [Buzon] IS NULL) OR ([Buzon] = @Original_Buzon)) AND ((@IsNull_Bill" +
-                "eteS200000 = 1 AND [BilleteS200000] IS NULL) OR ([BilleteS200000] = @Original_Bi" +
-                "lleteS200000)) AND ((@IsNull_BilleteS500000 = 1 AND [BilleteS500000] IS NULL) OR" +
-                " ([BilleteS500000] = @Original_BilleteS500000)) AND ((@IsNull_BilleteS1000000 = " +
-                "1 AND [BilleteS1000000] IS NULL) OR ([BilleteS1000000] = @Original_BilleteS10000" +
-                "00)) AND ((@IsNull_BilleteBD1 = 1 AND [BilleteBD1] IS NULL) OR ([BilleteBD1] = @" +
-                "Original_BilleteBD1)) AND ((@IsNull_BilleteBD5 = 1 AND [BilleteBD5] IS NULL) OR " +
-                "([BilleteBD5] = @Original_BilleteBD5)) AND ((@IsNull_BilleteBD10 = 1 AND [Billet" +
-                "eBD10] IS NULL) OR ([BilleteBD10] = @Original_BilleteBD10)) AND ((@IsNull_Billet" +
-                "eBD20 = 1 AND [BilleteBD20] IS NULL) OR ([BilleteBD20] = @Original_BilleteBD20))" +
-                " AND ((@IsNull_BilleteBD50 = 1 AND [BilleteBD50] IS NULL) OR ([BilleteBD50] = @O" +
-                "riginal_BilleteBD50)) AND ((@IsNull_BilleteBD100 = 1 AND [BilleteBD100] IS NULL)" +
-                " OR ([BilleteBD100] = @Original_BilleteBD100)) AND ((@IsNull_BilleteBD05 = 1 AND" +
-                " [BilleteBD05] IS NULL) OR ([BilleteBD05] = @Original_BilleteBD05)) AND ((@IsNul" +
-                "l_BilleteBD025 = 1 AND [BilleteBD025] IS NULL) OR ([BilleteBD025] = @Original_Bi" +
-                "lleteBD025)) AND ((@IsNull_BilleteBD200 = 1 AND [BilleteBD200] IS NULL) OR ([Bil" +
-                "leteBD200] = @Original_BilleteBD200)) AND ((@IsNull_BilleteBD500 = 1 AND [Billet" +
-                "eBD500] IS NULL) OR ([BilleteBD500] = @Original_BilleteBD500)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[CierreBalanceV2] WHERE (([ID_Cierre] = @Original_ID_Cierre) AN" +
+                "D ((@IsNull_BilleteS05 = 1 AND [BilleteS05] IS NULL) OR ([BilleteS05] = @Origina" +
+                "l_BilleteS05)) AND ((@IsNull_BilleteS1 = 1 AND [BilleteS1] IS NULL) OR ([Billete" +
+                "S1] = @Original_BilleteS1)) AND ((@IsNull_BilleteS2 = 1 AND [BilleteS2] IS NULL)" +
+                " OR ([BilleteS2] = @Original_BilleteS2)) AND ((@IsNull_BilleteS5 = 1 AND [Billet" +
+                "eS5] IS NULL) OR ([BilleteS5] = @Original_BilleteS5)) AND ((@IsNull_BilleteS10 =" +
+                " 1 AND [BilleteS10] IS NULL) OR ([BilleteS10] = @Original_BilleteS10)) AND ((@Is" +
+                "Null_BilleteS20 = 1 AND [BilleteS20] IS NULL) OR ([BilleteS20] = @Original_Bille" +
+                "teS20)) AND ((@IsNull_BilleteS50 = 1 AND [BilleteS50] IS NULL) OR ([BilleteS50] " +
+                "= @Original_BilleteS50)) AND ((@IsNull_BilleteS100 = 1 AND [BilleteS100] IS NULL" +
+                ") OR ([BilleteS100] = @Original_BilleteS100)) AND ((@IsNull_BilleteS200 = 1 AND " +
+                "[BilleteS200] IS NULL) OR ([BilleteS200] = @Original_BilleteS200)) AND ((@IsNull" +
+                "_BilleteS500 = 1 AND [BilleteS500] IS NULL) OR ([BilleteS500] = @Original_Billet" +
+                "eS500)) AND ((@IsNull_Tickets = 1 AND [Tickets] IS NULL) OR ([Tickets] = @Origin" +
+                "al_Tickets)) AND ((@IsNull_Efectivo = 1 AND [Efectivo] IS NULL) OR ([Efectivo] =" +
+                " @Original_Efectivo)) AND ((@IsNull_PDV = 1 AND [PDV] IS NULL) OR ([PDV] = @Orig" +
+                "inal_PDV)) AND ((@IsNull_Incidencia = 1 AND [Incidencia] IS NULL) OR ([Incidenci" +
+                "a] = @Original_Incidencia)) AND ([ID_Usuario] = @Original_ID_Usuario) AND ([Fech" +
+                "a] = @Original_Fecha) AND ((@IsNull_BilleteS10000 = 1 AND [BilleteS10000] IS NUL" +
+                "L) OR ([BilleteS10000] = @Original_BilleteS10000)) AND ((@IsNull_BilleteS20000 =" +
+                " 1 AND [BilleteS20000] IS NULL) OR ([BilleteS20000] = @Original_BilleteS20000)) " +
+                "AND ((@IsNull_BilleteS50000 = 1 AND [BilleteS50000] IS NULL) OR ([BilleteS50000]" +
+                " = @Original_BilleteS50000)) AND ((@IsNull_Transferencia = 1 AND [Transferencia]" +
+                " IS NULL) OR ([Transferencia] = @Original_Transferencia)) AND ((@IsNull_Eliminad" +
+                "o = 1 AND [Eliminado] IS NULL) OR ([Eliminado] = @Original_Eliminado)) AND ((@Is" +
+                "Null_Buzon = 1 AND [Buzon] IS NULL) OR ([Buzon] = @Original_Buzon)) AND ((@IsNul" +
+                "l_BilleteS200000 = 1 AND [BilleteS200000] IS NULL) OR ([BilleteS200000] = @Origi" +
+                "nal_BilleteS200000)) AND ((@IsNull_BilleteS500000 = 1 AND [BilleteS500000] IS NU" +
+                "LL) OR ([BilleteS500000] = @Original_BilleteS500000)) AND ((@IsNull_BilleteBD1 =" +
+                " 1 AND [BilleteBD1] IS NULL) OR ([BilleteBD1] = @Original_BilleteBD1)) AND ((@Is" +
+                "Null_BilleteBD5 = 1 AND [BilleteBD5] IS NULL) OR ([BilleteBD5] = @Original_Bille" +
+                "teBD5)) AND ((@IsNull_BilleteBD10 = 1 AND [BilleteBD10] IS NULL) OR ([BilleteBD1" +
+                "0] = @Original_BilleteBD10)) AND ((@IsNull_BilleteBD20 = 1 AND [BilleteBD20] IS " +
+                "NULL) OR ([BilleteBD20] = @Original_BilleteBD20)) AND ((@IsNull_BilleteBD50 = 1 " +
+                "AND [BilleteBD50] IS NULL) OR ([BilleteBD50] = @Original_BilleteBD50)) AND ((@Is" +
+                "Null_BilleteBD100 = 1 AND [BilleteBD100] IS NULL) OR ([BilleteBD100] = @Original" +
+                "_BilleteBD100)) AND ((@IsNull_BilleteBD05 = 1 AND [BilleteBD05] IS NULL) OR ([Bi" +
+                "lleteBD05] = @Original_BilleteBD05)) AND ((@IsNull_BilleteBD025 = 1 AND [Billete" +
+                "BD025] IS NULL) OR ([BilleteBD025] = @Original_BilleteBD025)) AND ((@IsNull_Bill" +
+                "eteBD200 = 1 AND [BilleteBD200] IS NULL) OR ([BilleteBD200] = @Original_BilleteB" +
+                "D200)) AND ((@IsNull_BilleteBD500 = 1 AND [BilleteBD500] IS NULL) OR ([BilleteBD" +
+                "500] = @Original_BilleteBD500)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Cierre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Cierre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteS05", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS05", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -47561,8 +47424,6 @@ ORDER BY Fecha1;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteS200000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS200000", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteS500000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS500000", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteS500000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS500000", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteS1000000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS1000000", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteS1000000", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS1000000", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteBD1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteBD1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteBD5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -47585,68 +47446,66 @@ ORDER BY Fecha1;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteBD500", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD500", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [CierreBalanceV2] SET [BilleteS05] = @BilleteS05, [BilleteS1] = @BilleteS1" +
-                ", [BilleteS2] = @BilleteS2, [BilleteS5] = @BilleteS5, [BilleteS10] = @BilleteS10" +
-                ", [BilleteS20] = @BilleteS20, [BilleteS50] = @BilleteS50, [BilleteS100] = @Bille" +
-                "teS100, [BilleteS200] = @BilleteS200, [BilleteS500] = @BilleteS500, [Tickets] = " +
-                "@Tickets, [Efectivo] = @Efectivo, [PDV] = @PDV, [Incidencia] = @Incidencia, [ID_" +
-                "Usuario] = @ID_Usuario, [Fecha] = @Fecha, [BilleteS10000] = @BilleteS10000, [Bil" +
-                "leteS20000] = @BilleteS20000, [BilleteS50000] = @BilleteS50000, [Transferencia] " +
-                "= @Transferencia, [Eliminado] = @Eliminado, [Buzon] = @Buzon, [BilleteS200000] =" +
-                " @BilleteS200000, [BilleteS500000] = @BilleteS500000, [BilleteS1000000] = @Bille" +
-                "teS1000000, [BilleteBD1] = @BilleteBD1, [BilleteBD5] = @BilleteBD5, [BilleteBD10" +
-                "] = @BilleteBD10, [BilleteBD20] = @BilleteBD20, [BilleteBD50] = @BilleteBD50, [B" +
-                "illeteBD100] = @BilleteBD100, [BilleteBD05] = @BilleteBD05, [BilleteBD025] = @Bi" +
-                "lleteBD025, [BilleteBD200] = @BilleteBD200, [BilleteBD500] = @BilleteBD500 WHERE" +
-                " (([ID_Cierre] = @Original_ID_Cierre) AND ((@IsNull_BilleteS05 = 1 AND [BilleteS" +
-                "05] IS NULL) OR ([BilleteS05] = @Original_BilleteS05)) AND ((@IsNull_BilleteS1 =" +
-                " 1 AND [BilleteS1] IS NULL) OR ([BilleteS1] = @Original_BilleteS1)) AND ((@IsNul" +
-                "l_BilleteS2 = 1 AND [BilleteS2] IS NULL) OR ([BilleteS2] = @Original_BilleteS2))" +
-                " AND ((@IsNull_BilleteS5 = 1 AND [BilleteS5] IS NULL) OR ([BilleteS5] = @Origina" +
-                "l_BilleteS5)) AND ((@IsNull_BilleteS10 = 1 AND [BilleteS10] IS NULL) OR ([Billet" +
-                "eS10] = @Original_BilleteS10)) AND ((@IsNull_BilleteS20 = 1 AND [BilleteS20] IS " +
-                "NULL) OR ([BilleteS20] = @Original_BilleteS20)) AND ((@IsNull_BilleteS50 = 1 AND" +
-                " [BilleteS50] IS NULL) OR ([BilleteS50] = @Original_BilleteS50)) AND ((@IsNull_B" +
-                "illeteS100 = 1 AND [BilleteS100] IS NULL) OR ([BilleteS100] = @Original_BilleteS" +
-                "100)) AND ((@IsNull_BilleteS200 = 1 AND [BilleteS200] IS NULL) OR ([BilleteS200]" +
-                " = @Original_BilleteS200)) AND ((@IsNull_BilleteS500 = 1 AND [BilleteS500] IS NU" +
-                "LL) OR ([BilleteS500] = @Original_BilleteS500)) AND ((@IsNull_Tickets = 1 AND [T" +
-                "ickets] IS NULL) OR ([Tickets] = @Original_Tickets)) AND ((@IsNull_Efectivo = 1 " +
-                "AND [Efectivo] IS NULL) OR ([Efectivo] = @Original_Efectivo)) AND ((@IsNull_PDV " +
-                "= 1 AND [PDV] IS NULL) OR ([PDV] = @Original_PDV)) AND ((@IsNull_Incidencia = 1 " +
-                "AND [Incidencia] IS NULL) OR ([Incidencia] = @Original_Incidencia)) AND ([ID_Usu" +
-                "ario] = @Original_ID_Usuario) AND ([Fecha] = @Original_Fecha) AND ((@IsNull_Bill" +
-                "eteS10000 = 1 AND [BilleteS10000] IS NULL) OR ([BilleteS10000] = @Original_Bille" +
-                "teS10000)) AND ((@IsNull_BilleteS20000 = 1 AND [BilleteS20000] IS NULL) OR ([Bil" +
-                "leteS20000] = @Original_BilleteS20000)) AND ((@IsNull_BilleteS50000 = 1 AND [Bil" +
-                "leteS50000] IS NULL) OR ([BilleteS50000] = @Original_BilleteS50000)) AND ((@IsNu" +
-                "ll_Transferencia = 1 AND [Transferencia] IS NULL) OR ([Transferencia] = @Origina" +
-                "l_Transferencia)) AND ((@IsNull_Eliminado = 1 AND [Eliminado] IS NULL) OR ([Elim" +
-                "inado] = @Original_Eliminado)) AND ((@IsNull_Buzon = 1 AND [Buzon] IS NULL) OR (" +
-                "[Buzon] = @Original_Buzon)) AND ((@IsNull_BilleteS200000 = 1 AND [BilleteS200000" +
-                "] IS NULL) OR ([BilleteS200000] = @Original_BilleteS200000)) AND ((@IsNull_Bille" +
-                "teS500000 = 1 AND [BilleteS500000] IS NULL) OR ([BilleteS500000] = @Original_Bil" +
-                "leteS500000)) AND ((@IsNull_BilleteS1000000 = 1 AND [BilleteS1000000] IS NULL) O" +
-                "R ([BilleteS1000000] = @Original_BilleteS1000000)) AND ((@IsNull_BilleteBD1 = 1 " +
-                "AND [BilleteBD1] IS NULL) OR ([BilleteBD1] = @Original_BilleteBD1)) AND ((@IsNul" +
-                "l_BilleteBD5 = 1 AND [BilleteBD5] IS NULL) OR ([BilleteBD5] = @Original_BilleteB" +
-                "D5)) AND ((@IsNull_BilleteBD10 = 1 AND [BilleteBD10] IS NULL) OR ([BilleteBD10] " +
-                "= @Original_BilleteBD10)) AND ((@IsNull_BilleteBD20 = 1 AND [BilleteBD20] IS NUL" +
-                "L) OR ([BilleteBD20] = @Original_BilleteBD20)) AND ((@IsNull_BilleteBD50 = 1 AND" +
-                " [BilleteBD50] IS NULL) OR ([BilleteBD50] = @Original_BilleteBD50)) AND ((@IsNul" +
-                "l_BilleteBD100 = 1 AND [BilleteBD100] IS NULL) OR ([BilleteBD100] = @Original_Bi" +
-                "lleteBD100)) AND ((@IsNull_BilleteBD05 = 1 AND [BilleteBD05] IS NULL) OR ([Bille" +
-                "teBD05] = @Original_BilleteBD05)) AND ((@IsNull_BilleteBD025 = 1 AND [BilleteBD0" +
-                "25] IS NULL) OR ([BilleteBD025] = @Original_BilleteBD025)) AND ((@IsNull_Billete" +
-                "BD200 = 1 AND [BilleteBD200] IS NULL) OR ([BilleteBD200] = @Original_BilleteBD20" +
-                "0)) AND ((@IsNull_BilleteBD500 = 1 AND [BilleteBD500] IS NULL) OR ([BilleteBD500" +
-                "] = @Original_BilleteBD500)));\r\nSELECT ID_Cierre, BilleteS05, BilleteS1, Billete" +
-                "S2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, Bil" +
-                "leteS500, Tickets, Efectivo, PDV, Incidencia, ID_Usuario, Fecha, BilleteS10000, " +
-                "BilleteS20000, BilleteS50000, Transferencia, Eliminado, Buzon, BilleteS200000, B" +
-                "illeteS500000, BilleteS1000000, BilleteBD1, BilleteBD5, BilleteBD10, BilleteBD20" +
-                ", BilleteBD50, BilleteBD100, BilleteBD05, BilleteBD025, BilleteBD200, BilleteBD5" +
-                "00 FROM dbo.CierreBalanceV2 WHERE (ID_Cierre = @ID_Cierre)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[CierreBalanceV2] SET [BilleteS05] = @BilleteS05, [BilleteS1] = @Bil" +
+                "leteS1, [BilleteS2] = @BilleteS2, [BilleteS5] = @BilleteS5, [BilleteS10] = @Bill" +
+                "eteS10, [BilleteS20] = @BilleteS20, [BilleteS50] = @BilleteS50, [BilleteS100] = " +
+                "@BilleteS100, [BilleteS200] = @BilleteS200, [BilleteS500] = @BilleteS500, [Ticke" +
+                "ts] = @Tickets, [Efectivo] = @Efectivo, [PDV] = @PDV, [Incidencia] = @Incidencia" +
+                ", [ID_Usuario] = @ID_Usuario, [Fecha] = @Fecha, [BilleteS10000] = @BilleteS10000" +
+                ", [BilleteS20000] = @BilleteS20000, [BilleteS50000] = @BilleteS50000, [Transfere" +
+                "ncia] = @Transferencia, [Eliminado] = @Eliminado, [Buzon] = @Buzon, [BilleteS200" +
+                "000] = @BilleteS200000, [BilleteS500000] = @BilleteS500000, [BilleteBD1] = @Bill" +
+                "eteBD1, [BilleteBD5] = @BilleteBD5, [BilleteBD10] = @BilleteBD10, [BilleteBD20] " +
+                "= @BilleteBD20, [BilleteBD50] = @BilleteBD50, [BilleteBD100] = @BilleteBD100, [B" +
+                "illeteBD05] = @BilleteBD05, [BilleteBD025] = @BilleteBD025, [BilleteBD200] = @Bi" +
+                "lleteBD200, [BilleteBD500] = @BilleteBD500 WHERE (([ID_Cierre] = @Original_ID_Ci" +
+                "erre) AND ((@IsNull_BilleteS05 = 1 AND [BilleteS05] IS NULL) OR ([BilleteS05] = " +
+                "@Original_BilleteS05)) AND ((@IsNull_BilleteS1 = 1 AND [BilleteS1] IS NULL) OR (" +
+                "[BilleteS1] = @Original_BilleteS1)) AND ((@IsNull_BilleteS2 = 1 AND [BilleteS2] " +
+                "IS NULL) OR ([BilleteS2] = @Original_BilleteS2)) AND ((@IsNull_BilleteS5 = 1 AND" +
+                " [BilleteS5] IS NULL) OR ([BilleteS5] = @Original_BilleteS5)) AND ((@IsNull_Bill" +
+                "eteS10 = 1 AND [BilleteS10] IS NULL) OR ([BilleteS10] = @Original_BilleteS10)) A" +
+                "ND ((@IsNull_BilleteS20 = 1 AND [BilleteS20] IS NULL) OR ([BilleteS20] = @Origin" +
+                "al_BilleteS20)) AND ((@IsNull_BilleteS50 = 1 AND [BilleteS50] IS NULL) OR ([Bill" +
+                "eteS50] = @Original_BilleteS50)) AND ((@IsNull_BilleteS100 = 1 AND [BilleteS100]" +
+                " IS NULL) OR ([BilleteS100] = @Original_BilleteS100)) AND ((@IsNull_BilleteS200 " +
+                "= 1 AND [BilleteS200] IS NULL) OR ([BilleteS200] = @Original_BilleteS200)) AND (" +
+                "(@IsNull_BilleteS500 = 1 AND [BilleteS500] IS NULL) OR ([BilleteS500] = @Origina" +
+                "l_BilleteS500)) AND ((@IsNull_Tickets = 1 AND [Tickets] IS NULL) OR ([Tickets] =" +
+                " @Original_Tickets)) AND ((@IsNull_Efectivo = 1 AND [Efectivo] IS NULL) OR ([Efe" +
+                "ctivo] = @Original_Efectivo)) AND ((@IsNull_PDV = 1 AND [PDV] IS NULL) OR ([PDV]" +
+                " = @Original_PDV)) AND ((@IsNull_Incidencia = 1 AND [Incidencia] IS NULL) OR ([I" +
+                "ncidencia] = @Original_Incidencia)) AND ([ID_Usuario] = @Original_ID_Usuario) AN" +
+                "D ([Fecha] = @Original_Fecha) AND ((@IsNull_BilleteS10000 = 1 AND [BilleteS10000" +
+                "] IS NULL) OR ([BilleteS10000] = @Original_BilleteS10000)) AND ((@IsNull_Billete" +
+                "S20000 = 1 AND [BilleteS20000] IS NULL) OR ([BilleteS20000] = @Original_BilleteS" +
+                "20000)) AND ((@IsNull_BilleteS50000 = 1 AND [BilleteS50000] IS NULL) OR ([Billet" +
+                "eS50000] = @Original_BilleteS50000)) AND ((@IsNull_Transferencia = 1 AND [Transf" +
+                "erencia] IS NULL) OR ([Transferencia] = @Original_Transferencia)) AND ((@IsNull_" +
+                "Eliminado = 1 AND [Eliminado] IS NULL) OR ([Eliminado] = @Original_Eliminado)) A" +
+                "ND ((@IsNull_Buzon = 1 AND [Buzon] IS NULL) OR ([Buzon] = @Original_Buzon)) AND " +
+                "((@IsNull_BilleteS200000 = 1 AND [BilleteS200000] IS NULL) OR ([BilleteS200000] " +
+                "= @Original_BilleteS200000)) AND ((@IsNull_BilleteS500000 = 1 AND [BilleteS50000" +
+                "0] IS NULL) OR ([BilleteS500000] = @Original_BilleteS500000)) AND ((@IsNull_Bill" +
+                "eteBD1 = 1 AND [BilleteBD1] IS NULL) OR ([BilleteBD1] = @Original_BilleteBD1)) A" +
+                "ND ((@IsNull_BilleteBD5 = 1 AND [BilleteBD5] IS NULL) OR ([BilleteBD5] = @Origin" +
+                "al_BilleteBD5)) AND ((@IsNull_BilleteBD10 = 1 AND [BilleteBD10] IS NULL) OR ([Bi" +
+                "lleteBD10] = @Original_BilleteBD10)) AND ((@IsNull_BilleteBD20 = 1 AND [BilleteB" +
+                "D20] IS NULL) OR ([BilleteBD20] = @Original_BilleteBD20)) AND ((@IsNull_BilleteB" +
+                "D50 = 1 AND [BilleteBD50] IS NULL) OR ([BilleteBD50] = @Original_BilleteBD50)) A" +
+                "ND ((@IsNull_BilleteBD100 = 1 AND [BilleteBD100] IS NULL) OR ([BilleteBD100] = @" +
+                "Original_BilleteBD100)) AND ((@IsNull_BilleteBD05 = 1 AND [BilleteBD05] IS NULL)" +
+                " OR ([BilleteBD05] = @Original_BilleteBD05)) AND ((@IsNull_BilleteBD025 = 1 AND " +
+                "[BilleteBD025] IS NULL) OR ([BilleteBD025] = @Original_BilleteBD025)) AND ((@IsN" +
+                "ull_BilleteBD200 = 1 AND [BilleteBD200] IS NULL) OR ([BilleteBD200] = @Original_" +
+                "BilleteBD200)) AND ((@IsNull_BilleteBD500 = 1 AND [BilleteBD500] IS NULL) OR ([B" +
+                "illeteBD500] = @Original_BilleteBD500)));\r\nSELECT ID_Cierre, BilleteS05, Billete" +
+                "S1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, Bille" +
+                "teS200, BilleteS500, Tickets, Efectivo, PDV, Incidencia, ID_Usuario, Fecha, Bill" +
+                "eteS10000, BilleteS20000, BilleteS50000, Transferencia, Eliminado, Buzon, Billet" +
+                "eS200000, BilleteS500000, BilleteBD1, BilleteBD5, BilleteBD10, BilleteBD20, Bill" +
+                "eteBD50, BilleteBD100, BilleteBD05, BilleteBD025, BilleteBD200, BilleteBD500 FRO" +
+                "M dbo.CierreBalanceV2 WHERE (ID_Cierre = @ID_Cierre)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteS05", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS05", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteS1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -47672,7 +47531,6 @@ ORDER BY Fecha1;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Buzon", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Buzon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteS200000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS200000", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteS500000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS500000", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteS1000000", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS1000000", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteBD1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteBD5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD5", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BilleteBD10", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD10", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -47730,8 +47588,6 @@ ORDER BY Fecha1;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteS200000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS200000", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteS500000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS500000", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteS500000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS500000", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteS1000000", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS1000000", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteS1000000", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteS1000000", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteBD1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BilleteBD1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BilleteBD5", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BilleteBD5", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -47768,10 +47624,7 @@ ORDER BY Fecha1;
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, Tickets, Efectivo, PDV, Incidencia, ID_Usuario, Fecha, BilleteS10000, BilleteS20000, BilleteS50000,
-                         Transferencia, Eliminado,Buzon,  BilleteS200000, BilleteS500000,BilleteS1000000,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD025,BilleteBD200,BilleteBD500
-FROM            CierreBalanceV2
-WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
+            this._commandCollection[0].CommandText = @"SELECT ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, Tickets, Efectivo, PDV, Incidencia, ID_Usuario, Fecha, BilleteS10000, BilleteS20000, BilleteS50000, Transferencia, Eliminado, Buzon, BilleteS200000, BilleteS500000, BilleteBD1, BilleteBD5, BilleteBD10, BilleteBD20, BilleteBD50, BilleteBD100, BilleteBD05, BilleteBD025, BilleteBD200, BilleteBD500 FROM dbo.CierreBalanceV2 WHERE (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -47867,7 +47720,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                     global::System.Nullable<bool> Original_Buzon, 
                     global::System.Nullable<int> Original_BilleteS200000, 
                     global::System.Nullable<int> Original_BilleteS500000, 
-                    global::System.Nullable<long> Original_BilleteS1000000, 
                     global::System.Nullable<int> Original_BilleteBD1, 
                     global::System.Nullable<int> Original_BilleteBD5, 
                     global::System.Nullable<int> Original_BilleteBD10, 
@@ -48057,93 +47909,85 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                 this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteS1000000.HasValue == true)) {
+            if ((Original_BilleteBD1.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((long)(Original_BilleteS1000000.Value));
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((int)(Original_BilleteBD1.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD1.HasValue == true)) {
+            if ((Original_BilleteBD5.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((int)(Original_BilleteBD1.Value));
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((int)(Original_BilleteBD5.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD5.HasValue == true)) {
+            if ((Original_BilleteBD10.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_BilleteBD5.Value));
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_BilleteBD10.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD10.HasValue == true)) {
+            if ((Original_BilleteBD20.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((int)(Original_BilleteBD10.Value));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((int)(Original_BilleteBD20.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD20.HasValue == true)) {
+            if ((Original_BilleteBD50.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[56].Value = ((int)(Original_BilleteBD20.Value));
+                this.Adapter.DeleteCommand.Parameters[56].Value = ((int)(Original_BilleteBD50.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD50.HasValue == true)) {
+            if ((Original_BilleteBD100.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[58].Value = ((int)(Original_BilleteBD50.Value));
+                this.Adapter.DeleteCommand.Parameters[58].Value = ((int)(Original_BilleteBD100.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD100.HasValue == true)) {
+            if ((Original_BilleteBD05.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((int)(Original_BilleteBD100.Value));
+                this.Adapter.DeleteCommand.Parameters[60].Value = ((int)(Original_BilleteBD05.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD05.HasValue == true)) {
+            if ((Original_BilleteBD025.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[62].Value = ((int)(Original_BilleteBD05.Value));
+                this.Adapter.DeleteCommand.Parameters[62].Value = ((int)(Original_BilleteBD025.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[61].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD025.HasValue == true)) {
+            if ((Original_BilleteBD200.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[64].Value = ((int)(Original_BilleteBD025.Value));
+                this.Adapter.DeleteCommand.Parameters[64].Value = ((int)(Original_BilleteBD200.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[63].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[64].Value = global::System.DBNull.Value;
             }
-            if ((Original_BilleteBD200.HasValue == true)) {
+            if ((Original_BilleteBD500.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[66].Value = ((int)(Original_BilleteBD200.Value));
+                this.Adapter.DeleteCommand.Parameters[66].Value = ((int)(Original_BilleteBD500.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[65].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[66].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BilleteBD500.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[68].Value = ((int)(Original_BilleteBD500.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[68].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -48190,7 +48034,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                     global::System.Nullable<bool> Buzon, 
                     global::System.Nullable<int> BilleteS200000, 
                     global::System.Nullable<int> BilleteS500000, 
-                    global::System.Nullable<long> BilleteS1000000, 
                     global::System.Nullable<int> BilleteBD1, 
                     global::System.Nullable<int> BilleteBD5, 
                     global::System.Nullable<int> BilleteBD10, 
@@ -48226,7 +48069,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                     global::System.Nullable<bool> Original_Buzon, 
                     global::System.Nullable<int> Original_BilleteS200000, 
                     global::System.Nullable<int> Original_BilleteS500000, 
-                    global::System.Nullable<long> Original_BilleteS1000000, 
                     global::System.Nullable<int> Original_BilleteBD1, 
                     global::System.Nullable<int> Original_BilleteBD5, 
                     global::System.Nullable<int> Original_BilleteBD10, 
@@ -48372,340 +48214,326 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((BilleteS1000000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((long)(BilleteS1000000.Value));
+            if ((BilleteBD1.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(BilleteBD1.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(BilleteBD1.Value));
+            if ((BilleteBD5.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(BilleteBD5.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD5.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(BilleteBD5.Value));
+            if ((BilleteBD10.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(BilleteBD10.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD10.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(BilleteBD10.Value));
+            if ((BilleteBD20.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(BilleteBD20.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD20.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(BilleteBD20.Value));
+            if ((BilleteBD50.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(BilleteBD50.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD50.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(BilleteBD50.Value));
+            if ((BilleteBD100.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(BilleteBD100.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD100.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(BilleteBD100.Value));
+            if ((BilleteBD05.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(BilleteBD05.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD05.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(BilleteBD05.Value));
+            if ((BilleteBD025.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(BilleteBD025.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD025.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(BilleteBD025.Value));
+            if ((BilleteBD200.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(BilleteBD200.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD200.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(BilleteBD200.Value));
+            if ((BilleteBD500.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(BilleteBD500.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
-            if ((BilleteBD500.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(BilleteBD500.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_ID_Cierre));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_ID_Cierre));
             if ((Original_BilleteS05.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_BilleteS05.Value));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_BilleteS05.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_BilleteS1.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_BilleteS1.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_BilleteS2.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_BilleteS2.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS5.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_BilleteS5.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_BilleteS5.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS10.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_BilleteS10.Value));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_BilleteS10.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS20.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(Original_BilleteS20.Value));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_BilleteS20.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS50.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Original_BilleteS50.Value));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_BilleteS50.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS100.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(Original_BilleteS100.Value));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_BilleteS100.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS200.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((int)(Original_BilleteS200.Value));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Original_BilleteS200.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS500.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((int)(Original_BilleteS500.Value));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_BilleteS500.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             if ((Original_Tickets.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((double)(Original_Tickets.Value));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((double)(Original_Tickets.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             if ((Original_Efectivo.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((double)(Original_Efectivo.Value));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((double)(Original_Efectivo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             if ((Original_PDV.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((double)(Original_PDV.Value));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((double)(Original_PDV.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
             if ((Original_Incidencia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((double)(Original_Incidencia.Value));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((double)(Original_Incidencia.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[64].Value = ((int)(Original_ID_Usuario));
-            this.Adapter.UpdateCommand.Parameters[65].Value = ((System.DateTime)(Original_Fecha));
+            this.Adapter.UpdateCommand.Parameters[63].Value = ((int)(Original_ID_Usuario));
+            this.Adapter.UpdateCommand.Parameters[64].Value = ((System.DateTime)(Original_Fecha));
             if ((Original_BilleteS10000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((int)(Original_BilleteS10000.Value));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((int)(Original_BilleteS10000.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS20000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((int)(Original_BilleteS20000.Value));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((int)(Original_BilleteS20000.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[69].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS50000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((int)(Original_BilleteS50000.Value));
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((int)(Original_BilleteS50000.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[71].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
             }
             if ((Original_Transferencia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((double)(Original_Transferencia.Value));
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((double)(Original_Transferencia.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
             }
             if ((Original_Eliminado.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((bool)(Original_Eliminado.Value));
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((bool)(Original_Eliminado.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[75].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
             }
             if ((Original_Buzon.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((bool)(Original_Buzon.Value));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((bool)(Original_Buzon.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS200000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((int)(Original_BilleteS200000.Value));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((int)(Original_BilleteS200000.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteS500000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((int)(Original_BilleteS500000.Value));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((int)(Original_BilleteS500000.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[81].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BilleteS1000000.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((long)(Original_BilleteS1000000.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[83].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((int)(Original_BilleteBD1.Value));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((int)(Original_BilleteBD1.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[85].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD5.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[86].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((int)(Original_BilleteBD5.Value));
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((int)(Original_BilleteBD5.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[86].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[87].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD10.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[88].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((int)(Original_BilleteBD10.Value));
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[86].Value = ((int)(Original_BilleteBD10.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[88].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[89].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD20.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((int)(Original_BilleteBD20.Value));
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_BilleteBD20.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[91].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD50.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[92].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[93].Value = ((int)(Original_BilleteBD50.Value));
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((int)(Original_BilleteBD50.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[92].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[93].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD100.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[95].Value = ((int)(Original_BilleteBD100.Value));
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[92].Value = ((int)(Original_BilleteBD100.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[95].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[92].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD05.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[96].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[97].Value = ((int)(Original_BilleteBD05.Value));
+                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[94].Value = ((int)(Original_BilleteBD05.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[96].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[97].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[94].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD025.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[98].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[99].Value = ((int)(Original_BilleteBD025.Value));
+                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[96].Value = ((int)(Original_BilleteBD025.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[98].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[99].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[96].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD200.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[100].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[101].Value = ((int)(Original_BilleteBD200.Value));
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[98].Value = ((int)(Original_BilleteBD200.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[100].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[101].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[98].Value = global::System.DBNull.Value;
             }
             if ((Original_BilleteBD500.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[102].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[103].Value = ((int)(Original_BilleteBD500.Value));
+                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[100].Value = ((int)(Original_BilleteBD500.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[102].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[103].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[100].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(ID_Cierre));
+            this.Adapter.UpdateCommand.Parameters[101].Value = ((int)(ID_Cierre));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -48751,7 +48579,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                     global::System.Nullable<bool> Buzon, 
                     global::System.Nullable<int> BilleteS200000, 
                     global::System.Nullable<int> BilleteS500000, 
-                    global::System.Nullable<long> BilleteS1000000, 
                     global::System.Nullable<int> BilleteBD1, 
                     global::System.Nullable<int> BilleteBD5, 
                     global::System.Nullable<int> BilleteBD10, 
@@ -48787,7 +48614,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                     global::System.Nullable<bool> Original_Buzon, 
                     global::System.Nullable<int> Original_BilleteS200000, 
                     global::System.Nullable<int> Original_BilleteS500000, 
-                    global::System.Nullable<long> Original_BilleteS1000000, 
                     global::System.Nullable<int> Original_BilleteBD1, 
                     global::System.Nullable<int> Original_BilleteBD5, 
                     global::System.Nullable<int> Original_BilleteBD10, 
@@ -48798,7 +48624,7 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
                     global::System.Nullable<int> Original_BilleteBD025, 
                     global::System.Nullable<int> Original_BilleteBD200, 
                     global::System.Nullable<int> Original_BilleteBD500) {
-            return this.Update(BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, Tickets, Efectivo, PDV, Incidencia, ID_Usuario, Fecha, BilleteS10000, BilleteS20000, BilleteS50000, Transferencia, Eliminado, Buzon, BilleteS200000, BilleteS500000, BilleteS1000000, BilleteBD1, BilleteBD5, BilleteBD10, BilleteBD20, BilleteBD50, BilleteBD100, BilleteBD05, BilleteBD025, BilleteBD200, BilleteBD500, Original_ID_Cierre, Original_BilleteS05, Original_BilleteS1, Original_BilleteS2, Original_BilleteS5, Original_BilleteS10, Original_BilleteS20, Original_BilleteS50, Original_BilleteS100, Original_BilleteS200, Original_BilleteS500, Original_Tickets, Original_Efectivo, Original_PDV, Original_Incidencia, Original_ID_Usuario, Original_Fecha, Original_BilleteS10000, Original_BilleteS20000, Original_BilleteS50000, Original_Transferencia, Original_Eliminado, Original_Buzon, Original_BilleteS200000, Original_BilleteS500000, Original_BilleteS1000000, Original_BilleteBD1, Original_BilleteBD5, Original_BilleteBD10, Original_BilleteBD20, Original_BilleteBD50, Original_BilleteBD100, Original_BilleteBD05, Original_BilleteBD025, Original_BilleteBD200, Original_BilleteBD500, Original_ID_Cierre);
+            return this.Update(BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, Tickets, Efectivo, PDV, Incidencia, ID_Usuario, Fecha, BilleteS10000, BilleteS20000, BilleteS50000, Transferencia, Eliminado, Buzon, BilleteS200000, BilleteS500000, BilleteBD1, BilleteBD5, BilleteBD10, BilleteBD20, BilleteBD50, BilleteBD100, BilleteBD05, BilleteBD025, BilleteBD200, BilleteBD500, Original_ID_Cierre, Original_BilleteS05, Original_BilleteS1, Original_BilleteS2, Original_BilleteS5, Original_BilleteS10, Original_BilleteS20, Original_BilleteS50, Original_BilleteS100, Original_BilleteS200, Original_BilleteS500, Original_Tickets, Original_Efectivo, Original_PDV, Original_Incidencia, Original_ID_Usuario, Original_Fecha, Original_BilleteS10000, Original_BilleteS20000, Original_BilleteS50000, Original_Transferencia, Original_Eliminado, Original_Buzon, Original_BilleteS200000, Original_BilleteS500000, Original_BilleteBD1, Original_BilleteBD5, Original_BilleteBD10, Original_BilleteBD20, Original_BilleteBD50, Original_BilleteBD100, Original_BilleteBD05, Original_BilleteBD025, Original_BilleteBD200, Original_BilleteBD500, Original_ID_Cierre);
         }
     }
     
@@ -48958,7 +48784,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
             tableMapping.ColumnMappings.Add("BilleteBD100", "BilleteBD100");
             tableMapping.ColumnMappings.Add("BilleteBD05", "BilleteBD05");
             tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
-            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS10000001");
             tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
             tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
             this._adapter.TableMappings.Add(tableMapping);
@@ -48977,13 +48802,28 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        CierreBalanceV2.ID_Cierre, CierreBalanceV2.BilleteS05, CierreBalanceV2.BilleteS1, CierreBalanceV2.BilleteS2, CierreBalanceV2.BilleteS5, CierreBalanceV2.BilleteS10, CierreBalanceV2.BilleteS20, CierreBalanceV2.BilleteS50, 
-                         CierreBalanceV2.BilleteS100, CierreBalanceV2.BilleteS200, CierreBalanceV2.BilleteS500, CierreBalanceV2.Tickets, CierreBalanceV2.Efectivo, CierreBalanceV2.PDV, CierreBalanceV2.Incidencia, CierreBalanceV2.Fecha, 
-                         CierreBalanceV2.TesoreroC, CierreBalanceV2.Turno, Usuarios.Nombre, Usuarios.Apellido, CierreBalanceV2.BilleteS10000, CierreBalanceV2.BilleteS20000, CierreBalanceV2.BilleteS50000, CierreBalanceV2.BilleteS200000, CierreBalanceV2.BilleteS500000, CierreBalanceV2.BilleteS1000000, CierreBalanceV2.Transferencia, CierreBalanceV2.Buzon, CierreBalanceV2.BilleteBD1, CierreBalanceV2.BilleteBD5, CierreBalanceV2.BilleteBD10, CierreBalanceV2.BilleteBD20, CierreBalanceV2.BilleteBD50, CierreBalanceV2.BilleteBD100,CierreBalanceV2.BilleteBD05,CierreBalanceV2.BilleteBD025, CierreBalanceV2.BilleteBD200, CierreBalanceV2.BilleteBD500
-FROM            CierreBalanceV2 INNER JOIN
-                         Usuarios ON CierreBalanceV2.ID_Usuario = Usuarios.ID_Usuario
-WHERE        (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanceV2.Turno = @turno) AND (CierreBalanceV2.Eliminado<>1)
-ORDER BY Usuarios.ID_Usuario";
+            this._commandCollection[0].CommandText = "SELECT   dbo.CierreBalanceV2.ID_Cierre, dbo.CierreBalanceV2.BilleteS05, dbo.Cierr" +
+                "eBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS2, dbo.CierreBalanceV2.Billete" +
+                "S5, \r\n                         dbo.CierreBalanceV2.BilleteS10, dbo.CierreBalance" +
+                "V2.BilleteS20, dbo.CierreBalanceV2.BilleteS50, dbo.CierreBalanceV2.BilleteS100, " +
+                "dbo.CierreBalanceV2.BilleteS200, \r\n                         dbo.CierreBalanceV2." +
+                "BilleteS500, dbo.CierreBalanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.Cier" +
+                "reBalanceV2.PDV, dbo.CierreBalanceV2.Incidencia, dbo.CierreBalanceV2.Fecha, \r\n  " +
+                "                       dbo.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Turno," +
+                " dbo.Usuarios.Nombre, dbo.Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS10000, " +
+                "dbo.CierreBalanceV2.BilleteS20000, \r\n                         dbo.CierreBalanceV" +
+                "2.BilleteS50000, dbo.CierreBalanceV2.BilleteS200000, dbo.CierreBalanceV2.Billete" +
+                "S500000, dbo.CierreBalanceV2.Transferencia, dbo.CierreBalanceV2.Buzon, \r\n       " +
+                "                  dbo.CierreBalanceV2.BilleteBD1, dbo.CierreBalanceV2.BilleteBD5" +
+                ", dbo.CierreBalanceV2.BilleteBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.CierreBa" +
+                "lanceV2.BilleteBD50, \r\n                         dbo.CierreBalanceV2.BilleteBD100" +
+                ", dbo.CierreBalanceV2.BilleteBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.CierreB" +
+                "alanceV2.BilleteBD200, dbo.CierreBalanceV2.BilleteBD500, \r\n                     " +
+                "    dbo.CierreBalanceV2.BilleteS1000000\r\nFROM         dbo.CierreBalanceV2 INNER " +
+                "JOIN\r\n                         dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuario = " +
+                "dbo.Usuarios.ID_Usuario\r\nWHERE     (dbo.CierreBalanceV2.Fecha BETWEEN @fecha AND" +
+                " @fecha1) AND (dbo.CierreBalanceV2.Turno = @turno) AND (dbo.CierreBalanceV2.Elim" +
+                "inado <> 1)\r\nORDER BY dbo.Usuarios.ID_Usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

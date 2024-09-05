@@ -488,10 +488,6 @@
           <DataField>BilleteBD025</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BilleteS10000001">
-          <DataField>BilleteS1000000</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
         <Field Name="BilleteBD200">
           <DataField>BilleteBD200</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -603,8 +599,6 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  
-    
       <Body>
         <ReportItems>
           <Image Name="Image1">
@@ -6086,7 +6080,7 @@
             <Top>11.38391cm</Top>
             <Left>0.58386cm</Left>
             <Height>0.42796cm</Height>
-            <Width>3.97448cm</Width>
+            <Width>3.97449cm</Width>
             <ZIndex>49</ZIndex>
             <Style>
               <Border>
@@ -6109,8 +6103,6 @@
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>
-    
-  
   <ReportParameters>
     <ReportParameter Name="acta">
       <DataType>String</DataType>

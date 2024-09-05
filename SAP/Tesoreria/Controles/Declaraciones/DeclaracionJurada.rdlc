@@ -488,10 +488,6 @@
           <DataField>BilleteBD025</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BilleteS10000001">
-          <DataField>BilleteS1000000</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
         <Field Name="BilleteBD200">
           <DataField>BilleteBD200</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -603,8 +599,6 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  
-    
       <Body>
         <ReportItems>
           <Image Name="Image1">
@@ -6073,8 +6067,6 @@
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>
-    
-  
   <ReportParameters>
     <ReportParameter Name="FechaInicio">
       <DataType>String</DataType>

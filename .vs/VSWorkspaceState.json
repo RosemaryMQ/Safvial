@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\SAP",
-    "\\SAP\\Cobradores",
-    "\\SAP\\Cobradores\\Controles",
+    "\\SAP\\Recaudadores",
+    "\\SAP\\Recaudadores\\Controles",
+    "\\SAP\\Recaudadores\\Controles\\Reportes",
     "\\SAP\\Tesoreria",
     "\\SAP\\Tesoreria\\Controles",
     "\\SAP\\Tesoreria\\Controles\\Declaraciones",
     "\\SAP\\Tesoreria\\Controles\\Declaraciones\\VersionV2",
     "\\SAP\\Tesoreria\\Controles\\Declaraciones\\VersionV2\\Tesorero"
   ],
-  "SelectedNode": "\\SAP.sln",
+  "SelectedNode": "\\SAP\\Tesoreria\\Controles\\Declaraciones\\VersionV2\\CierreTurno.rdlc",
   "PreviewInSolutionExplorer": false
 }

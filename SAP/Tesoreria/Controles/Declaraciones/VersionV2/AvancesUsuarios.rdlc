@@ -153,10 +153,6 @@
           <DataField>BilleteBD025</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BilleteS10000001">
-          <DataField>BilleteS1000000</DataField>
-          <rd:TypeName>System.Int64</rd:TypeName>
-        </Field>
         <Field Name="BilleteBD500">
           <DataField>BilleteBD500</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -176,8 +172,6 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
-  
-    
       <Body>
         <ReportItems>
           <Tablix Name="Tablix2">
@@ -3795,7 +3789,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -4276,8 +4269,6 @@
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>
-    
-  
   <ReportParameters>
     <ReportParameter Name="Recaudador">
       <DataType>String</DataType>
