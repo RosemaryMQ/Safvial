@@ -175,14 +175,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="28703232">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="28742656">
       <assemblyIdentity name="SAP" version="1.9.0.76" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+FBYKk5ZsDG3vFynIVzDQmDJuFNAmteT3ATkdQyEq/w=</dsig:DigestValue>
+        <dsig:DigestValue>WZE1eJ2JlWyf6hlNnDVgTGPFydVEPLc8HEAwEz1FCfU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

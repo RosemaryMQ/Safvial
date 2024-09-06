@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.EfectivoS = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.sAPDataSet2 = new SAP.SAPDataSet2();
             this.cierresParcialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sAPDataSet2 = new SAP.SAPDataSet2();
             this.cierresParcialesTableAdapter = new SAP.SAPDataSet2TableAdapters.CierresParcialesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierresParcialesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // EfectivoS
@@ -50,15 +50,15 @@
             this.EfectivoS.Size = new System.Drawing.Size(609, 455);
             this.EfectivoS.TabIndex = 0;
             // 
-            // sAPDataSet2
-            // 
-            this.sAPDataSet2.DataSetName = "SAPDataSet2";
-            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cierresParcialesBindingSource
             // 
             this.cierresParcialesBindingSource.DataMember = "CierresParciales";
             this.cierresParcialesBindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // sAPDataSet2
+            // 
+            this.sAPDataSet2.DataSetName = "SAPDataSet2";
+            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cierresParcialesTableAdapter
             // 
@@ -74,8 +74,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AvancesReporte";
             this.Load += new System.EventHandler(this.AvancesReporte_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierresParcialesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -161,6 +161,10 @@
           <DataField>BilleteBD200</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="BS1M">
+          <DataField>BS1M</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
@@ -226,7 +230,7 @@
                   <Width>1.44167cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.71683cm</Width>
+                  <Width>1.65791cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.34735cm</Width>
@@ -3210,14 +3214,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="BilleteS1000000">
+                        <Textbox Name="BS1M">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!BilleteS1000000.Value</Value>
+                                  <Value>=Fields!BS1M.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -3228,7 +3232,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>BilleteS1000000</rd:DefaultName>
+                          <rd:DefaultName>BS1M</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -3259,6 +3263,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3837,6 +3842,7 @@
                                   <Value>=Fields!Transferencia.Value</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3978,7 +3984,7 @@
             <Top>4.73883cm</Top>
             <Left>0.7213cm</Left>
             <Height>1.72917cm</Height>
-            <Width>48.61108cm</Width>
+            <Width>48.55216cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>

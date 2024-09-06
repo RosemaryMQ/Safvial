@@ -3890,3 +3890,4 @@ C:\Users\alexis.espejo\Source\Repos\elliotrobe\Invialca-master-facturaOk\SAP\obj
 C:\Users\alexis.espejo\Source\Repos\elliotrobe\Invialca-master-facturaOk\SAP\obj\Debug\SAP.exe
 C:\Users\alexis.espejo\Source\Repos\elliotrobe\Invialca-master-facturaOk\SAP\obj\Debug\SAP.pdb
 C:\Users\alexis.espejo\Source\Repos\elliotrobe\Invialca-master-facturaOk\SAP\bin\Debug\SAP.pdb
+C:\Users\alexis.espejo\Source\Repos\elliotrobe\Invialca-master-facturaOk\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache
