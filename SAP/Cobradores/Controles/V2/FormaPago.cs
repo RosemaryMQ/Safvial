@@ -176,6 +176,14 @@ namespace SAP.Cobradores.Controles.V2
                 frm.ShowDialog();
                 this.Close();
             }
+            if (e.KeyCode == Keys.NumPad6)
+            {
+                Forma = "Biopago";
+                SAP.Cobradores.Controles.V2.Biopago frm = new SAP.Cobradores.Controles.V2.Biopago();
+                frm.ShowDialog();
+                this.Close();
+
+            }
             if (e.KeyCode == Keys.Escape)
             {
                 this.Close();
@@ -224,6 +232,15 @@ namespace SAP.Cobradores.Controles.V2
             SAP.Cobradores.Controles.V2.Especial frm = new SAP.Cobradores.Controles.V2.Especial();
             this.Close();
             frm.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Forma = "Biopago";
+            SAP.Cobradores.Controles.V2.Biopago frm = new SAP.Cobradores.Controles.V2.Biopago();
+            frm.ShowDialog();
+            this.Close();
+
         }
     }
 }

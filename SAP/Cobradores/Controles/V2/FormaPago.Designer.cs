@@ -48,6 +48,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.Arduino8 = new System.IO.Ports.SerialPort(this.components);
+            this.button8 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -71,22 +72,23 @@
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.button6, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.button5, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.button8, 0, 9);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.904191F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.826347F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.54491F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.65868F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.820359F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41916F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41916F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.2994F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.700599F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.263474F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(407, 835);
+            this.tableLayoutPanel1.RowCount = 11;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.99604F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.000046F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.000352F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0005F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.000052F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(407, 742);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             this.tableLayoutPanel1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.button1_PreviewKeyDown);
@@ -103,11 +105,11 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.27451F));
             this.tableLayoutPanel6.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.Tarifa, 1, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 136);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 113);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(401, 62);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(401, 45);
             this.tableLayoutPanel6.TabIndex = 14;
             // 
             // label4
@@ -123,7 +125,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label4.Location = new System.Drawing.Point(6, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 56);
+            this.label4.Size = new System.Drawing.Size(145, 39);
             this.label4.TabIndex = 2;
             this.label4.Text = "MONTO A PAGAR:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,7 +142,7 @@
             this.Tarifa.ForeColor = System.Drawing.Color.Black;
             this.Tarifa.Location = new System.Drawing.Point(160, 3);
             this.Tarifa.Name = "Tarifa";
-            this.Tarifa.Size = new System.Drawing.Size(235, 56);
+            this.Tarifa.Size = new System.Drawing.Size(235, 39);
             this.Tarifa.TabIndex = 15;
             this.Tarifa.Text = "0.00 Bs.S";
             this.Tarifa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,11 +160,11 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.27451F));
             this.tableLayoutPanel5.Controls.Add(this.Tipo, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 74);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 62);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(401, 56);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(401, 45);
             this.tableLayoutPanel5.TabIndex = 12;
             // 
             // Tipo
@@ -176,7 +178,7 @@
             this.Tipo.ForeColor = System.Drawing.Color.Black;
             this.Tipo.Location = new System.Drawing.Point(160, 3);
             this.Tipo.Name = "Tipo";
-            this.Tipo.Size = new System.Drawing.Size(235, 50);
+            this.Tipo.Size = new System.Drawing.Size(235, 39);
             this.Tipo.TabIndex = 16;
             this.Tipo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Tipo.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.button1_PreviewKeyDown);
@@ -194,7 +196,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 50);
+            this.label1.Size = new System.Drawing.Size(145, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "TIPO DE VEHICULO:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,7 +218,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(401, 65);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(401, 53);
             this.tableLayoutPanel3.TabIndex = 11;
             this.tableLayoutPanel3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.button1_PreviewKeyDown);
             // 
@@ -228,7 +230,7 @@
             this.pictureBox1.Image = global::SAP.Properties.Resources.SAFVIAL_6;
             this.pictureBox1.Location = new System.Drawing.Point(6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(97, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -247,7 +249,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label3.Location = new System.Drawing.Point(112, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(283, 59);
+            this.label3.Size = new System.Drawing.Size(283, 47);
             this.label3.TabIndex = 2;
             this.label3.Text = "FORMA DE PAGO";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,9 +270,9 @@
             this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(3, 204);
+            this.button7.Location = new System.Drawing.Point(3, 164);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(401, 90);
+            this.button7.Size = new System.Drawing.Size(401, 68);
             this.button7.TabIndex = 1;
             this.button7.Text = "EXONERADO \r\n[NUM 0]";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -293,9 +295,9 @@
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(3, 300);
+            this.button1.Location = new System.Drawing.Point(3, 238);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(401, 83);
+            this.button1.Size = new System.Drawing.Size(401, 68);
             this.button1.TabIndex = 2;
             this.button1.Text = "   EFECTIVO  \r\n[ NUM 1 ]";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -318,9 +320,9 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(3, 389);
+            this.button2.Location = new System.Drawing.Point(3, 312);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(401, 88);
+            this.button2.Size = new System.Drawing.Size(401, 68);
             this.button2.TabIndex = 3;
             this.button2.Text = "  PUNTO DE VENTA \r\n[ NUM 2 ]";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -343,9 +345,9 @@
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(3, 483);
+            this.button3.Location = new System.Drawing.Point(3, 386);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(401, 88);
+            this.button3.Size = new System.Drawing.Size(401, 68);
             this.button3.TabIndex = 4;
             this.button3.Text = "  SALDO PREPAGADO  \r\n  [ NUM 3 ]";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -368,9 +370,9 @@
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(3, 577);
+            this.button6.Location = new System.Drawing.Point(3, 460);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(401, 87);
+            this.button6.Size = new System.Drawing.Size(401, 68);
             this.button6.TabIndex = 5;
             this.button6.Text = "  PAGO INCOMPLETO \r\n  [ NUM 4 ]";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -393,9 +395,9 @@
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(3, 670);
+            this.button5.Location = new System.Drawing.Point(3, 534);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(401, 82);
+            this.button5.Size = new System.Drawing.Size(401, 68);
             this.button5.TabIndex = 6;
             this.button5.Text = "TRANSFERENCIA \r\n[ NUM 5 ]";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -417,20 +419,44 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(3, 758);
+            this.button4.Location = new System.Drawing.Point(3, 682);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(401, 74);
+            this.button4.Size = new System.Drawing.Size(401, 57);
             this.button4.TabIndex = 8;
             this.button4.Text = "CANCELAR [ESC]";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.button1_PreviewKeyDown);
             // 
+            // button8
+            // 
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.AutoEllipsis = true;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(248)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.button8.FlatAppearance.BorderSize = 4;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button8.Location = new System.Drawing.Point(3, 608);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(401, 68);
+            this.button8.TabIndex = 15;
+            this.button8.Text = "  BIOPAGO  \r\n[ NUM 6 ]";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // FormaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 835);
+            this.ClientSize = new System.Drawing.Size(411, 742);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(411, 900);
@@ -471,5 +497,6 @@
         private System.Windows.Forms.Label Tarifa;
         private System.Windows.Forms.Button button7;
         private System.IO.Ports.SerialPort Arduino8;
+        private System.Windows.Forms.Button button8;
     }
 }
