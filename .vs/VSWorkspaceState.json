@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SAP",
-    "\\SAP\\Recaudadores",
-    "\\SAP\\Recaudadores\\Controles",
-    "\\SAP\\Recaudadores\\Controles\\Reportes",
-    "\\SAP\\Tesoreria",
-    "\\SAP\\Tesoreria\\Controles",
-    "\\SAP\\Tesoreria\\Controles\\Declaraciones",
-    "\\SAP\\Tesoreria\\Controles\\Declaraciones\\VersionV2",
-    "\\SAP\\Tesoreria\\Controles\\Declaraciones\\VersionV2\\Tesorero"
+    "\\SAP"
   ],
-  "SelectedNode": "\\SAP\\Tesoreria\\Controles\\Declaraciones\\CierreTurno.cs",
   "PreviewInSolutionExplorer": false
 }

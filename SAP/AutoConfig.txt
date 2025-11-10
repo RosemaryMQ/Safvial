@@ -14,13 +14,13 @@
 (DBOSEDE1)SAP
 (USERSEDE1)sap
 (PASSSEDE1)sap1234
-(URLSEDE2)safvialcenter2.ddns.net
+(URLSEDE2)safvialcentercorp.ddns.net
 (DBOSEDE2)SAP
 (USERSEDE2)sap
 (PASSSEDE2)sap1234
 (CANAL)15
-(INTERFACE)Administrador
+(INTERFACE)Recaudador
 (SEDE)1
 (ARDUINO)0002
-(LOGO)C://
+(LOGO)C:\SAFVIAL2.0\LogoFNT2.bmp
 (SAFVIAL)

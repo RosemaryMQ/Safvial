@@ -6,7 +6,7 @@
         <Source>External</Source>
         <Value>=Parameters!Logo.Value</Value>
         <MIMEType>image/bmp</MIMEType>
-        <Sizing>Fit</Sizing>
+        <Sizing>AutoSize</Sizing>
         <Left>0.31612cm</Left>
         <Height>0.67028cm</Height>
         <Width>3.86608cm</Width>
@@ -79,7 +79,7 @@
                             <TextRun>
                               <Value>=Parameters!Vehiculo.Value</Value>
                               <Style>
-                                <FontSize>4pt</FontSize>
+                                <FontSize>6pt</FontSize>
                                 <Format>#,0.00'Bs. F.';(#,0.00'Bs. F.')</Format>
                               </Style>
                             </TextRun>
@@ -115,7 +115,7 @@
                             <TextRun>
                               <Value>Nro Ticket:</Value>
                               <Style>
-                                <FontSize>4.5pt</FontSize>
+                                <FontSize>4pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -230,8 +230,7 @@
                             <TextRun>
                               <Value>=Parameters!Tarifa.Value</Value>
                               <Style>
-                                <FontSize>4.5pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
+                                <FontSize>6pt</FontSize>
                                 <Format>#,0.00;(#,0.00)</Format>
                               </Style>
                             </TextRun>
@@ -266,7 +265,7 @@
                             <TextRun>
                               <Value>=Fields!ID.Value</Value>
                               <Style>
-                                <FontSize>4pt</FontSize>
+                                <FontSize>6pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -375,7 +374,7 @@
                             <TextRun>
                               <Value>=Parameters!Fecha.Value</Value>
                               <Style>
-                                <FontSize>5pt</FontSize>
+                                <FontSize>6pt</FontSize>
                                 <Format>g</Format>
                               </Style>
                             </TextRun>
@@ -484,7 +483,7 @@
                             <TextRun>
                               <Value>=Parameters!Canal.Value</Value>
                               <Style>
-                                <FontSize>5pt</FontSize>
+                                <FontSize>6pt</FontSize>
                                 <Format>0;(0)</Format>
                               </Style>
                             </TextRun>
@@ -595,7 +594,7 @@
                             <TextRun>
                               <Value>=Parameters!Forma.Value</Value>
                               <Style>
-                                <FontSize>5pt</FontSize>
+                                <FontSize>6pt</FontSize>
                                 <Format>0;(0)</Format>
                               </Style>
                             </TextRun>
@@ -796,10 +795,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>SAFVIAL     SAFVIAL     SAFVIAL </Value>
+                <Value>MPPT Fondo Nacional del Transporte</Value>
                 <Style>
-                  <FontSize>6pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontSize>4pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
