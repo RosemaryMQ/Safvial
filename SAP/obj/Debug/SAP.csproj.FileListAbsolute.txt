@@ -4232,7 +4232,6 @@ D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\bin\Debug\pt\Microsoft.SqlServ
 D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache
 D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\obj\Debug\SAP.Cobradores.Controles.Avance.resources
 D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\obj\Debug\SAP.Cobradores.Controles.Biopago.Biopago.resources
 D:\Invialca-master-facturaOk_TicketCabina_v90\SAP\obj\Debug\SAP.Cobradores.Controles.Contraseña.resources
