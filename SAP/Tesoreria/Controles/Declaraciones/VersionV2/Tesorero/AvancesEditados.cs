@@ -9,8 +9,12 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
         int indice = 0;
         double bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27;
 
+        private void AvancesEditados_Load(object sender, EventArgs e)
+        {
 
-        double pd = 0, credito = 0, debito = 0, efectiv = 0, incidenci = 0, Transferencia = 0, total = 0;
+        }
+
+        double Bio = 0, pd = 0, credito = 0, debito = 0, efectiv = 0, incidenci = 0, Transferencia = 0, total = 0;
         public AvancesEditados()
         {
             InitializeComponent();
@@ -39,6 +43,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             Avance.Rows.Add("Credito", "0");
             Avance.Rows.Add("Debito", "0");
             Avance.Rows.Add("Transferencia", "0");
+            Avance.Rows.Add("BIOPAGO", "0");
         }
         private bool EsValido(string usuario)
         {
@@ -63,10 +68,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                     {
                         pd = 0;
                         Transferencia = 0;
+                        Bio = 0;
                     }
                     efectiv = 0;
                     efectiv = ((0.50 * bt1) / 1000000) + ((1 * bt2) / 1000000) + ((2 * bt3) / 1000000) + ((5 * bt4) / 1000000) + ((10 * bt5) / 1000000) + ((20 * bt6) / 1000000) + ((50 * bt7) / 1000000) + ((100 * bt8) / 1000000) + ((200 * bt9) / 1000000) + ((500 * bt10) / 1000000) + ((10000 * bt11) / 1000000) + ((20000 * bt12) / 1000000) + ((50000 * bt13) / 1000000) + ((200000 * bt14) / 1000000) + ((500000 * bt15) / 1000000) + ((1000000 * bt16) / 1000000) + (1 * bt17) + (5 * bt18) + (10 * bt19) + (20 * bt20) + (50 * bt21) + (100 * bt22) + (0.20 * bt23) + (0.50 * bt24) + (0.25 * bt25) + (200 * bt26) + (500 * bt27);
-                    AgregarDeclaracion1(bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, 0, efectiv, pd, incidenci, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(CodigoT.Text), Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno), bt11, bt12, bt13, Transferencia, bt14, bt15, bt16, checkBox1.Checked, bt17, bt18, bt19, bt20, bt21, bt22,bt23,bt24,bt25,bt26,bt27);
+                    AgregarDeclaracion1(bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, 0, efectiv, pd, incidenci, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(CodigoT.Text), Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno), bt11, bt12, bt13, Transferencia, bt14, bt15, bt16, checkBox1.Checked, bt17, bt18, bt19, bt20, bt21, bt22,bt23,bt24,bt25,bt26,bt27, Bio);
                     Avance.Rows.Clear();
                     Denominaciones();
                     CodigoT.Text = "";
@@ -82,9 +88,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 Codigo.Text = "";
             }
         }
-        private void AgregarDeclaracion1(double centimos, double uno, double dos, double cinco, double diez, double veinte, double cincuenta, double cien, double doscientos, double quinientos, double tickets, double efectivo2, double pdv, double incidencia, int id, int id2, int tesorero, int turno, double diezmil1, double veintemil1, double cincuentamil1, double transf, double docientosmil, double quinientosmil, double unmillion, Boolean Buzon, double bd1, double bd5, double bd10, double bd20, double bd50, double bd100, double bd02, double bd05, double bd025, double bd200, double bd500)
+        private void AgregarDeclaracion1(double centimos, double uno, double dos, double cinco, double diez, double veinte, double cincuenta, double cien, double doscientos, double quinientos, double tickets, double efectivo2, double pdv, double incidencia, int id, int id2, int tesorero, int turno, double diezmil1, double veintemil1, double cincuentamil1, double transf, double docientosmil, double quinientosmil, double unmillion, Boolean Buzon, double bd1, double bd5, double bd10, double bd20, double bd50, double bd100, double bd02, double bd05, double bd025, double bd200, double bd500, double biop)
         {
-            string sql = "Insert into CierreBalanceV2 (BilleteS05,BilleteS1,BilleteS2,BilleteS5,BilleteS10,BilleteS20,BilleteS50,BilleteS100,BilleteS200,BilleteS500,Tickets,Efectivo,PDV,Incidencia,ID_Usuario,Fecha,Responsable,TesoreroC,Turno,BilleteS10000,BilleteS20000,BilleteS50000,Transferencia,Eliminado,Buzon,BilleteS200000,BilleteS500000,BilleteS1000000,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500) Values (@centimos,@uno,@dos,@cinco,@diez,@veinte,@cincuenta,@cien,@doscientos,@quinientos,@tickets,@efectivo,@pdv,@incidencia,@id,@fecha,@id2,@tesorero,@turno,@diezmil,@veintemil,@cincuentamil,@transf,0,@buzon,@docientosmil,@quinientosmil, @unmillon, @bd1,@bd5,@bd10,@bd20,@bd50,@bd100,@bd05,@bd02,@bd025,@bd200,@bd500)";
+            string sql = "Insert into CierreBalanceV2 (BilleteS05,BilleteS1,BilleteS2,BilleteS5,BilleteS10,BilleteS20,BilleteS50,BilleteS100,BilleteS200,BilleteS500,Tickets,Efectivo,PDV,Incidencia,ID_Usuario,Fecha,Responsable,TesoreroC,Turno,BilleteS10000,BilleteS20000,BilleteS50000,Transferencia,Eliminado,Buzon,BilleteS200000,BilleteS500000,BilleteS1000000,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500,BIO) Values (@centimos,@uno,@dos,@cinco,@diez,@veinte,@cincuenta,@cien,@doscientos,@quinientos,@tickets,@efectivo,@pdv,@incidencia,@id,@fecha,@id2,@tesorero,@turno,@diezmil,@veintemil,@cincuentamil,@transf,0,@buzon,@docientosmil,@quinientosmil, @unmillon, @bd1,@bd5,@bd10,@bd20,@bd50,@bd100,@bd05,@bd02,@bd025,@bd200,@bd500,@biop)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -127,6 +133,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 cmd.Parameters.AddWithValue("bd025", bd025);
                 cmd.Parameters.AddWithValue("bd200", bd200);
                 cmd.Parameters.AddWithValue("bd500", bd500);
+                cmd.Parameters.AddWithValue("biop", biop);
                 cmd.ExecuteReader();
                 return;
             }
@@ -196,6 +203,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                         case "Buzon":
                             incidenci = Cantidad;
                             break;
+                        case "Biopago":
+                            Bio = Cantidad;
+                            break;
                         default:
                             break;
                     }
@@ -263,7 +273,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 efectiv = 0;
                 efectiv = ((0.50 * bt1) / 1000000) + ((1 * bt2) / 1000000) + ((2 * bt3) / 1000000) + ((5 * bt4) / 1000000) + ((10 * bt5) / 1000000) + ((20 * bt6) / 1000000) + ((50 * bt7) / 1000000) + ((100 * bt8) / 1000000) + ((200 * bt9) / 1000000) + ((500 * bt10) / 1000000) + ((10000 * bt11) / 1000000) + ((20000 * bt12) / 1000000) + ((50000 * bt13) / 1000000) + ((200000 * bt14) / 1000000) + ((500000 * bt15) / 1000000) + ((1000000 * bt16) / 1000000) + (1 * bt17) + (5 * bt18) + (10 * bt19) + (20 * bt20) + (50 * bt21) + (100 * bt22) + (0.20 * bt23) + (0.50 * bt24) + (0.25 * bt25) + (200 * bt26) + (500 * bt27);
                 pd = credito + debito;
-                total = (efectiv + pd + Transferencia);
+                total = (efectiv + pd + Bio + Transferencia);
                 Cargar.Text = total.ToString("N6") + " Bs.";
 
             }

@@ -111,7 +111,7 @@
             this.tabPage3.Controls.Add(this.Avance);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(472, 383);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Bolivar Digital";
@@ -185,8 +185,8 @@
             this.tabPage4.Controls.Add(this.BolivaresSS);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage4.Size = new System.Drawing.Size(474, 384);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(472, 383);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Bolivar Soberano";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
             this.BolivaresSS.Location = new System.Drawing.Point(3, 3);
             this.BolivaresSS.Name = "BolivaresSS";
             this.BolivaresSS.RowHeadersWidth = 51;
-            this.BolivaresSS.Size = new System.Drawing.Size(468, 378);
+            this.BolivaresSS.Size = new System.Drawing.Size(466, 377);
             this.BolivaresSS.TabIndex = 109;
             this.BolivaresSS.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Avance_CellValueChanged);
             this.BolivaresSS.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.BolivaresSS_EditingControlShowing);
@@ -424,6 +424,7 @@
             this.Name = "AvancesEditados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Avances Editados";
+            this.Load += new System.EventHandler(this.AvancesEditados_Load);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tabControl2.ResumeLayout(false);

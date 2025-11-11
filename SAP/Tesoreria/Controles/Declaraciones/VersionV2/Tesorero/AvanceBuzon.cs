@@ -9,7 +9,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
     {
         int indice = 0;
         double bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17,bt18,bt19,bt20,bt21,bt22,bt23,bt24,bt25,bt26,bt27;
-        double pd = 0, credito = 0, debito = 0, efectiv = 0, incidenci = 0, Transferencia = 0, total = 0;
+        double pd = 0, credito = 0, debito = 0, efectiv = 0, incidenci = 0, Transferencia = 0, total = 0; 
         public AvanceBuzon()
         {
             InitializeComponent();

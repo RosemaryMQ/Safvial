@@ -47,6 +47,7 @@ namespace SAP.Tesoreria
                 this.Operadores();
                 this.Efectivo(fecha1, hora2);
                 this.PDV(fecha1, hora2);
+                this.Biopago(fecha1, hora2);
                 this.Tickets(fecha1, hora2);
                 this.Incompletos(fecha1, hora2);
                 this.Total(fecha1, hora2);
@@ -165,6 +166,39 @@ namespace SAP.Tesoreria
                     else
                     {
                         Balance17.Text = string.Format("{0:n}", pagos) + " Bs.";
+                    }
+                }
+                dr.Close();
+                cn.Close();
+                return;
+            }
+        }
+
+
+        private async void Biopago(String fechas, String fechas2)
+        {
+            string sql = "SELECT SUM(TipoVehiculos.Tarifa) as Biopago from Pagos inner join TipoVehiculos on Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo where Pagos.FormaPago='Biopago' and Pagos.Fecha between @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000';";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                await cn.OpenAsync();
+                SqlDataReader dr;
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(fechas));
+                cmd.Parameters.AddWithValue("fecha2", Convert.ToDateTime(fechas2));
+                dr = await cmd.ExecuteReaderAsync();
+                while (await dr.ReadAsync())
+                {
+                    pagos = "";
+                    pagos2 = 0;
+                    pagos = dr["Biopago"].ToString();
+                    if (pagos != "")
+                    {
+                        pagos2 = Convert.ToDouble(pagos);
+                        Balance21.Text = string.Format("{0:n}", pagos2) + " Bs.";
+                    }
+                    else
+                    {
+                        Balance21.Text = string.Format("{0:n}", pagos) + " Bs.";
                     }
                 }
                 dr.Close();
@@ -1327,6 +1361,7 @@ namespace SAP.Tesoreria
                 ConsultaCOA();
                 this.Efectivo(fecha1, hora2);
                 this.PDV(fecha1, hora2);
+                this.Biopago(fecha1, hora2);
                 this.Tickets(fecha1, hora2);
                 this.Incompletos(fecha1, hora2);
                 this.Total(fecha1, hora2);
@@ -1343,6 +1378,7 @@ namespace SAP.Tesoreria
             {
                 this.Efectivo(date1.Text, date2.Text);
                 this.PDV(date1.Text, date2.Text);
+                this.Biopago(date1.Text, date2.Text);
                 this.Tickets(date1.Text, date2.Text);
                 this.Incompletos(date1.Text, date2.Text);
                 this.Total(date1.Text, date2.Text);
@@ -1759,6 +1795,11 @@ namespace SAP.Tesoreria
             {
                 Application.Exit();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
