@@ -43,7 +43,9 @@ namespace SAP.Tesoreria.Controles
         }
         private void buscardor(int usuario)
         {
-            string sql = "Select Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno,Turno.Fecha from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.ID_Usuario=@usuario AND Turno.Finalizado=0 ORDER BY Turno.Fecha DESC";
+            //string sql = "Select Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno,Turno.Fecha from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.ID_Usuario=@usuario AND Turno.Finalizado=0 ORDER BY Turno.Fecha DESC";
+            string sql = "Select Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno,Turno.Fecha from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.ID=@usuario AND Turno.Finalizado=0 ORDER BY Turno.Fecha DESC";
+
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -82,7 +84,9 @@ namespace SAP.Tesoreria.Controles
         }
         private void Consulta()
         {
-            string sql = "Select Distinct Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.Finalizado=0";
+            //string sql = "Select Distinct Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.Finalizado=0";
+            string sql = "Select Distinct Turno.ID,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.Finalizado=0";
+
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -91,7 +95,9 @@ namespace SAP.Tesoreria.Controles
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    usuario.Items.Add(dr["ID_Usuario"].ToString() + "      " + dr["Nombre"].ToString() + " " + dr["Apellido"].ToString());
+                    //usuario.Items.Add(dr["ID_Usuario"].ToString() + "      " + dr["Nombre"].ToString() + " " + dr["Apellido"].ToString());
+                    usuario.Items.Add(dr["ID"].ToString() + "      " + dr["Nombre"].ToString() + " " + dr["Apellido"].ToString() + "   (Turno:" + dr["Turno"].ToString() + " )");
+
                 }
                 dr.Close();
                 return;

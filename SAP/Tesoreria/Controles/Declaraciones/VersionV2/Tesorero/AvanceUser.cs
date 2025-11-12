@@ -127,14 +127,19 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             {
                 try
                 {
-                        AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0);
-                        FinJornada(Convert.ToString(SAP.Tesoreria.TesoreriaV2.Identificador));
-                        FinJornada1(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
-                        CargarDeclaracion(SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta, Convert.ToInt32(SAP.Inicio.ID));
+                        AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                        //AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                        FinJornada(Convert.ToString(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToString(SAP.Tesoreria.TesoreriaV2.turno));
+                        FinJornada1(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
+                        CargarDeclaracion(SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta, Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
                         MessageBox.Show("Declaracion cargado correctamente", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         SAP.Tesoreria.Controles.Declaraciones.Declaracion frm = new SAP.Tesoreria.Controles.Declaraciones.Declaracion();
                         frm.ShowDialog();
                         this.Close();
+
+
+
+
                 }
                 catch
                 {
@@ -142,26 +147,28 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 }
             }
             }
-        private void FinJornada1(int usuario)
+        private void FinJornada1(int usuario, int turno)
         {
-            string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and Finalizado=0";
+            string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and turno=@turno and Finalizado=0";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("turno", turno);
                 cmd.ExecuteReader();
                 return;
             }
         }
-        private void FinJornada(string usuario)
+        private void FinJornada(string usuario, string turno)
         {
-            string sql = "Update Recaudadore Set FechaFin=SYSDATETIME(),Estatus='Finalizado' Where ID_Usuario=@usuario and Estatus='Pendiente' or Estatus='Activo'";
+            string sql = "Update Recaudadore Set FechaFin=SYSDATETIME(),Estatus='Finalizado' Where ID_Usuario=@usuario and turno=@turno and Estatus='Pendiente' or Estatus='Activo'";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", Convert.ToInt32(usuario));
+                cmd.Parameters.AddWithValue("turno", Convert.ToInt32(turno));
                 cmd.ExecuteReader();
                 return;
             }
@@ -186,9 +193,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 return;
             }
         }
-        private void CargarDeclaracion(int declaracion, int responsable)
+        private void CargarDeclaracion(int declaracion, int responsable, int turno)
         {
-            string sql = "UPDATE Declaraciones SET FechaInicial=@fecha,FechaFinal=DATEADD(HOUR, 2,GETDATE()), Responsable=@tesorero WHERE ID_Declaracion=@declaracion";
+            string sql = "UPDATE Declaraciones SET FechaInicial=@fecha,FechaFinal=DATEADD(HOUR, 2,GETDATE()), Responsable=@tesorero, Turno=@turno WHERE ID_Declaracion=@declaracion";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -196,6 +203,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(SAP.Tesoreria.TesoreriaV2.Apertura));
                 cmd.Parameters.AddWithValue("declaracion", declaracion);
                 cmd.Parameters.AddWithValue("tesorero", responsable);
+                cmd.Parameters.AddWithValue("turno", turno);
                 cmd.ExecuteReader();
                 return;
             }
