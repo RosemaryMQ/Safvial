@@ -83,7 +83,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 74);
+            this.label3.Size = new System.Drawing.Size(134, 74);
             this.label3.TabIndex = 666;
             this.label3.Text = "CEDULA:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -167,9 +167,9 @@
             this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(346, 3);
+            this.button3.Location = new System.Drawing.Point(345, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(191, 68);
+            this.button3.Size = new System.Drawing.Size(192, 68);
             this.button3.TabIndex = 3;
             this.button3.Text = "BUSCAR";
             this.button3.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.01796F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.98204F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
@@ -315,7 +315,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.Cedula, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(144, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(143, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.26866F));

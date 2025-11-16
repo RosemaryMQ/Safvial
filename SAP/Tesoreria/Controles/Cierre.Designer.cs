@@ -103,11 +103,12 @@
             this.usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.usuario.ForeColor = System.Drawing.SystemColors.WindowText;
             this.usuario.FormattingEnabled = true;
-            this.usuario.Location = new System.Drawing.Point(205, 3);
+            this.usuario.Location = new System.Drawing.Point(204, 3);
             this.usuario.Name = "usuario";
             this.usuario.Size = new System.Drawing.Size(334, 27);
             this.usuario.TabIndex = 1;
             this.usuario.Tag = "Seleccione Cuenta";
+            this.usuario.SelectedIndexChanged += new System.EventHandler(this.usuario_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -119,7 +120,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(196, 33);
+            this.label8.Size = new System.Drawing.Size(195, 33);
             this.label8.TabIndex = 1038;
             this.label8.Text = "SELECCIONE OPERADOR:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +167,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.251F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.749F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.usuario, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);

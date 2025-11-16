@@ -307,24 +307,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="28768256">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="28792320">
       <assemblyIdentity name="SAP" version="1.9.0.90" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X3Gm7KFrByV+GkpbFKSEpCQttBst1c6NTm/dqF7luHk=</dsig:DigestValue>
+        <dsig:DigestValue>baFC93SkhTyhq7UzkrGxgDYdMjp6Dz8HeITHYAg5kQI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AutoConfig.txt" size="570">
+  <file name="AutoConfig.txt" size="567">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MIjsjsnG3wHowxGK4qWTLj1QKGHDKIxAF6gv5680UOc=</dsig:DigestValue>
+      <dsig:DigestValue>5JEhspC7PvTXrxCwcrf/1Fn49YvJXpFKuYnYwPYnO0c=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo2.ico" size="185702">
@@ -543,13 +543,13 @@
       <dsig:DigestValue>g68w7mLnhBnnikgd0XeDegtLpRftWcSU7LkInrUNt88=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SAP.exe.config" size="7139">
+  <file name="SAP.exe.config" size="7377">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>d/wKv2otyEyyFvxntchHa8lmUQ8JeJqrU1KWb+tvmkY=</dsig:DigestValue>
+      <dsig:DigestValue>+FXUIz/w+KP55GLToFy9RtCiivBiQQnR+M7umWKn9Qw=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -415,6 +415,11 @@
     <Compile Include="Configurador\TarjetasSupervisores\EditarTarjeta.Designer.cs">
       <DependentUpon>EditarTarjeta.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1393,6 +1398,17 @@
     <EmbeddedResource Include="Tesoreria\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="obj\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\obj\Debug\SAP.csproj.GenerateResource.Cache" />

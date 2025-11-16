@@ -18,6 +18,7 @@ namespace SAP.Tesoreria.Controles
         String CanalP="";
         string fecha4 = DateTime.Now.AddDays(-1).ToString("d") + " 00:00:00";
         int turnos=0;
+        int idUser = 0;
         string control;
         public AperturaV2()
         {
@@ -55,6 +56,50 @@ namespace SAP.Tesoreria.Controles
                 return;
             }
         }
+
+
+        public int NewAperturaUser(int usuario, int turno)
+        {
+            // 1. Modificar la consulta SQL:
+            //    Agregar "; SELECT SCOPE_IDENTITY();" al final
+            //    Esto hará que la consulta devuelva el ID recién insertado.
+            string sql = "INSERT INTO Turno (ID_Usuario, Turno, Finalizado, Fecha) " +
+                         "VALUES (@usuario, @turno, 0, CONVERT(DATETIME2(0), SYSDATETIME()));" +
+                         "SELECT SCOPE_IDENTITY();";
+
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+
+                cmd.Parameters.AddWithValue("@usuario", usuario);
+                cmd.Parameters.AddWithValue("@turno", turno);
+
+                // 2. Usar ExecuteScalar() en lugar de ExecuteReader():
+                //    ExecuteScalar() es ideal cuando se espera un solo valor (como un ID).
+                //    Devuelve el valor de la primera columna de la primera fila.
+                object result = cmd.ExecuteScalar();
+
+                // 3. Verificar el resultado y convertirlo a entero (int):
+                if (result != null && result != DBNull.Value)
+                {
+                    // SCOPE_IDENTITY() devuelve un tipo decimal, así que lo convertimos a int.
+                    return Convert.ToInt32(result);
+                }
+                else
+                {
+                    // En caso de que el insert falle o no se obtenga el ID
+                    throw new Exception("No se pudo obtener el ID de la fila insertada.");
+                    // O puedes retornar 0 o -1 si prefieres un valor que indique error/falla.
+                    // return -1;
+                }
+            }
+        }
+
+
+
+
+
         private bool ValidarApertura(int usuario, int turno)
         {
             string sql = "SELECT * FROM Turno WHERE ID_Usuario = @usuario AND Turno=@turno AND Finalizado=0";
@@ -87,8 +132,8 @@ namespace SAP.Tesoreria.Controles
                         {
                             if (!ValidarApertura(Convert.ToInt32(ID_Usuario), turnos))
                             {
-                                CargarDeclaracion(Convert.ToInt32(ID_Usuario));
-                                AperturaUser(Convert.ToInt32(ID_Usuario), turnos);
+                                int idUser = NewAperturaUser(Convert.ToInt32(ID_Usuario), turnos);
+                                CargarDeclaracion(Convert.ToInt32(ID_Usuario), turnos,idUser);
                                 MessageBox.Show("Usuario Aperturado Satisfactoriamente,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
@@ -310,14 +355,17 @@ namespace SAP.Tesoreria.Controles
                 return;
             }
         }
-        private void CargarDeclaracion(int usuario)
+        private void CargarDeclaracion(int usuario, int turno, int idUser)
         {
-            string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable) Values (DATEADD(HOUR, -2,GETDATE()),SYSDATETIME(),@usuario,0)";
+            //rm-->string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable) Values (DATEADD(HOUR, -2,GETDATE()),SYSDATETIME(),@usuario,0)";
+            string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable,Turno,IDUser) Values (SYSDATETIME(),SYSDATETIME(),@usuario,0,@turno,@idUser)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("idUser", idUser);
                 cmd.ExecuteReader();
                 return;
             }

@@ -109,9 +109,6 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=safvialhatoviejocorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234;Connect Timeout=2</Value>
     </Setting>
-    <Setting Name="Logo" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Alexis\Dropbox\Carabobo\SAP\SAP\bin</Value>
-    </Setting>
     <Setting Name="Factura" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
@@ -146,6 +143,17 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=safvialcentercorp.ddns.net;Initial Catalog=SafvialPrepago;Persist Security Info=True;User ID=sap;Password=sap1234</Value>
+    </Setting>
+    <Setting Name="Logo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\SAFVIAL2.0</Value>
+    </Setting>
+    <Setting Name="SAPConnectionString_Local" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=DESKTOP-8RN94Q0\CANDIL;Initial Catalog=SAP;User ID=sa&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=DESKTOP-8RN94Q0\CANDIL;Initial Catalog=SAP;User ID=sa</Value>
     </Setting>
   </Settings>
 </SettingsFile>

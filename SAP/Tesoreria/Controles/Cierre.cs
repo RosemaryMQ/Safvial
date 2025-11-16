@@ -43,7 +43,7 @@ namespace SAP.Tesoreria.Controles
         }
         private void buscardor(int usuario)
         {
-            //string sql = "Select Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno,Turno.Fecha from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.ID_Usuario=@usuario AND Turno.Finalizado=0 ORDER BY Turno.Fecha DESC";
+            //rm-->string sql = "Select Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno,Turno.Fecha from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.ID_Usuario=@usuario AND Turno.Finalizado=0 ORDER BY Turno.Fecha DESC";
             string sql = "Select Turno.ID_Usuario,Usuarios.Nombre,Usuarios.Apellido,Turno.Turno,Turno.Fecha from Turno inner join Usuarios on Turno.ID_Usuario = Usuarios.ID_Usuario WHERE Turno.ID=@usuario AND Turno.Finalizado=0 ORDER BY Turno.Fecha DESC";
 
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
@@ -66,7 +66,8 @@ namespace SAP.Tesoreria.Controles
         }
         private void buscarCataporte(int usuario)
         {
-            string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (ID_Usuario = @usuario) AND (Responsable = 0)";
+            //rm-->string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (ID_Usuario = @usuario) AND (Responsable = 0)";
+            string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (IDUser = @usuario) AND (Responsable = 0)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -122,6 +123,11 @@ namespace SAP.Tesoreria.Controles
         }
 
         private void Cierre_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
