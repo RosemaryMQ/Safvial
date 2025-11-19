@@ -1529,6 +1529,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administradores\" />
+    <Folder Include="Cobradores\Controles\Reporte\" />
     <Folder Include="obj\obj\x86\Debug\TempPE\" />
     <Folder Include="Recaudadores\Controles\Operaciones\" />
     <Folder Include="Tesoreria\Controles\Remesas\" />
