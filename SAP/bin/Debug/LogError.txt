@@ -39,4 +39,5 @@ Nombre del parámetro: portName19/11/2025 17:04:42 - El nombre de puerto proporc
 Nombre del parámetro: portName19/11/2025 17:04:50 - El nombre de puerto proporcionado no empieza por COM o com, o no se resuelve en un puerto serie válido.
 Nombre del parámetro: portName19/11/2025 17:04:58 - El nombre de puerto proporcionado no empieza por COM o com, o no se resuelve en un puerto serie válido.
 Nombre del parámetro: portName19/11/2025 17:05:03 - El nombre de puerto proporcionado no empieza por COM o com, o no se resuelve en un puerto serie válido.
+Nombre del parámetro: portName19/11/2025 18:06:40 - El nombre de puerto proporcionado no empieza por COM o com, o no se resuelve en un puerto serie válido.
 Nombre del parámetro: portName
