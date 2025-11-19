@@ -154,14 +154,54 @@ namespace SAP.Cobradores.Controles
             {
                 Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Canal", Convert.ToString((int)Settings.Default["Canal"]));
                 this.reportViewer1.LocalReport.SetParameters(frm);
+
                 this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(SAP.Inicio.ID),Convert.ToDateTime(fecha), system, "Efectivo");
                 this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Punto de Venta");
                 //this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4);
                 this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Pago Incompleto");
                 //this.exoneradosCierreTableAdapter.Exonerados(this.sAPDataSet.ExoneradosCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma6);
                 this.resumenTransfTableAdapter.Fill(this.sAPDataSet2.ResumenTransf, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Transferencia");
+                this.resumenBiopagoTableAdapter.Fill(this.sAPDataSet2.ResumenBiopago, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Biopago");
                 this.tarjetaExpressReporte11TableAdapter.Fill(this.tarjetaExpressDataSet.TarjetaExpressReporte11, Convert.ToDateTime(fecha), system,SAP.Inicio.sede, Convert.ToInt32(SAP.Inicio.ID));
                 this.usuariosTableAdapter.Usuario(this.sAPDataSet2.Usuarios, Convert.ToInt32(SAP.Inicio.ID));
+
+
+                // --------------------------------------------------------------------------------
+                // 3. AGREGAR ESTO: ASIGNACIÓN EXPLÍCITA DE FUENTES DE DATOS
+                // (Esto conecta lo que llenaste arriba con los nombres de la imagen que subiste)
+                // --------------------------------------------------------------------------------
+
+                // Limpiamos cualquier basura anterior
+                this.reportViewer1.LocalReport.DataSources.Clear();
+
+                // Agregamos UNO POR UNO coincidiendo con los nombres de tu imagen:
+
+                // Nombre "Efectivo" en la imagen -> DataTable EfectivoCierre
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("Efectivo", (System.Data.DataTable)this.sAPDataSet.EfectivoCierre));
+
+                // Nombre "PDV" en la imagen
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("PDV", (System.Data.DataTable)this.sAPDataSet.PDVCierre));
+
+                // Nombre "Incompleto" en la imagen -> DataTable NoPagoCierre
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("Incompleto", (System.Data.DataTable)this.sAPDataSet.NoPagoCierre));
+
+                // Nombre "Usuario" en la imagen
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("Usuario", (System.Data.DataTable)this.sAPDataSet2.Usuarios));
+
+                // OJO: En tu imagen dice "Transfencia" (sin la 'r' después de la f). 
+                // Debe ser idéntico a la imagen o fallará.
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("Transfencia", (System.Data.DataTable)this.sAPDataSet2.ResumenTransf));
+
+                // Nombre "TarjetasVendidas" en la imagen
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("TarjetasVendidas", (System.Data.DataTable)this.tarjetaExpressDataSet.TarjetaExpressReporte11));
+
+                // Nombre "Biopago" en la imagen (El nuevo)
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("Biopago", (System.Data.DataTable)this.sAPDataSet2.ResumenBiopago));
+
+                // --------------------------------------------------------------------------------
+
+
+
                 this.reportViewer1.RefreshReport();
                 Export(reportViewer1.LocalReport);
                 m_currentPageIndex = 0;
@@ -172,7 +212,8 @@ namespace SAP.Cobradores.Controles
             catch
             {
                 MessageBox.Show("¡Error al generar el reporte!", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                //this.Close();
+                throw;
             }
         }
         private void avances(int usuario, int canal)
@@ -204,5 +245,8 @@ namespace SAP.Cobradores.Controles
                 return;
             }
         }
+
+
+
     }
 }

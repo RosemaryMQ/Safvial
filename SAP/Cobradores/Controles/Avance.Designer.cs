@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.efectivoCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sAPDataSet = new SAP.SAPDataSet();
             this.pDVCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,9 +45,12 @@
             this.pDVCierreTableAdapter = new SAP.SAPDataSetTableAdapters.PDVCierreTableAdapter();
             this.noPagoCierreTableAdapter = new SAP.SAPDataSetTableAdapters.NoPagoCierreTableAdapter();
             this.efectivoCierreTableAdapter = new SAP.SAPDataSetTableAdapters.EfectivoCierreTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
             this.resumenTransfTableAdapter = new SAP.SAPDataSet2TableAdapters.ResumenTransfTableAdapter();
             this.tarjetaExpressReporte11TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte11TableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.resumenBiopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.resumenBiopagoTableAdapter = new SAP.SAPDataSet2TableAdapters.ResumenBiopagoTableAdapter();
+            this.tableAdapterManager = new SAP.SAPDataSet2TableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.efectivoCierreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDVCierreBindingSource)).BeginInit();
@@ -64,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte11BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioCanalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resumenBiopagoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // efectivoCierreBindingSource
@@ -114,28 +112,11 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource7.Name = "Efectivo";
-            reportDataSource7.Value = this.efectivoCierreBindingSource;
-            reportDataSource8.Name = "PDV";
-            reportDataSource8.Value = this.pDVCierreBindingSource;
-            reportDataSource9.Name = "Incompleto";
-            reportDataSource9.Value = this.noPagoCierreBindingSource;
-            reportDataSource10.Name = "Usuario";
-            reportDataSource10.Value = this.usuariosBindingSource;
-            reportDataSource11.Name = "Transfencia";
-            reportDataSource11.Value = this.resumenTransfBindingSource;
-            reportDataSource12.Name = "TarjetasVendidas";
-            reportDataSource12.Value = this.tarjetaExpressReporte11BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource9);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource10);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource12);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Cobradores.Controles.Avance.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(519, 446);
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(519, 466);
             this.reportViewer1.TabIndex = 0;
             // 
             // usuariosTableAdapter
@@ -163,14 +144,6 @@
             // 
             this.efectivoCierreTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 334);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 1;
-            // 
             // resumenTransfTableAdapter
             // 
             this.resumenTransfTableAdapter.ClearBeforeFill = true;
@@ -179,11 +152,37 @@
             // 
             this.tarjetaExpressReporte11TableAdapter.ClearBeforeFill = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(171, 334);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 1;
+            // 
+            // resumenBiopagoBindingSource
+            // 
+            this.resumenBiopagoBindingSource.DataMember = "ResumenBiopago";
+            this.resumenBiopagoBindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // resumenBiopagoTableAdapter
+            // 
+            this.resumenBiopagoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CierresParcialesTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.PeajeTableAdapter = null;
+            this.tableAdapterManager.ReporteUserTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SAP.SAPDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Avance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 446);
+            this.ClientSize = new System.Drawing.Size(519, 466);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Avance";
@@ -199,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte11BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioCanalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resumenBiopagoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,11 +219,14 @@
         private SAPDataSet2TableAdapters.UsuarioCanalTableAdapter usuarioCanalTableAdapter;
         private System.Windows.Forms.BindingSource efectivoCierreBindingSource;
         private SAPDataSetTableAdapters.EfectivoCierreTableAdapter efectivoCierreTableAdapter;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource resumenTransfBindingSource;
         private System.Windows.Forms.BindingSource tarjetaExpressReporte11BindingSource;
         private TarjetaExpressDataSet tarjetaExpressDataSet;
         private SAPDataSet2TableAdapters.ResumenTransfTableAdapter resumenTransfTableAdapter;
         private TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte11TableAdapter tarjetaExpressReporte11TableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource resumenBiopagoBindingSource;
+        private SAPDataSet2TableAdapters.ResumenBiopagoTableAdapter resumenBiopagoTableAdapter;
+        private SAPDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

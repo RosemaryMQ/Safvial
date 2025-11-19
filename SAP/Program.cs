@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SqlServerTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading; // Necesario para ThreadExceptionEventHandler
@@ -23,6 +24,9 @@ namespace SAP
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
+
             Application.Run(new Inicio());
         }
 
