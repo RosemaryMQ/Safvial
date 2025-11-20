@@ -1679,6 +1679,7 @@ namespace SAP.Tesoreria
             timer3.Enabled = false;
             timer4.Enabled = true;
         }
+
         // FECHA FIN
         private async Task<string> Control(int turno, string horas1, string horas2)
         {

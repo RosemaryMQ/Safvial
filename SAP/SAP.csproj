@@ -228,12 +228,6 @@
     <Compile Include="Cobradores\Controles\PuntoVenta\PuntoVenta.Designer.cs">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cobradores\Controles\Reporte\AvanceCabina.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cobradores\Controles\Reporte\AvanceCabina.Designer.cs">
-      <DependentUpon>AvanceCabina.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cobradores\Controles\SaldoPrepagado\Aviso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1027,10 +1021,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cobradores\Controles\PuntoVenta\PuntoVenta.resx">
       <DependentUpon>PuntoVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cobradores\Controles\Reporte\AvanceCabina.rdlc" />
-    <EmbeddedResource Include="Cobradores\Controles\Reporte\AvanceCabina.resx">
-      <DependentUpon>AvanceCabina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cobradores\Controles\SaldoPrepagado\Aviso.resx">
       <DependentUpon>Aviso.cs</DependentUpon>

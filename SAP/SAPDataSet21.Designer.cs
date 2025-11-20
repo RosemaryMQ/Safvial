@@ -166,6 +166,8 @@ namespace SAP {
         
         private ResumenBiopagoDataTable tableResumenBiopago;
         
+        private CierreBiopagoDataTable tableCierreBiopago;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -406,6 +408,9 @@ namespace SAP {
                 }
                 if ((ds.Tables["ResumenBiopago"] != null)) {
                     base.Tables.Add(new ResumenBiopagoDataTable(ds.Tables["ResumenBiopago"]));
+                }
+                if ((ds.Tables["CierreBiopago"] != null)) {
+                    base.Tables.Add(new CierreBiopagoDataTable(ds.Tables["CierreBiopago"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1137,6 +1142,16 @@ namespace SAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreBiopagoDataTable CierreBiopago {
+            get {
+                return this.tableCierreBiopago;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -1414,6 +1429,9 @@ namespace SAP {
                 }
                 if ((ds.Tables["ResumenBiopago"] != null)) {
                     base.Tables.Add(new ResumenBiopagoDataTable(ds.Tables["ResumenBiopago"]));
+                }
+                if ((ds.Tables["CierreBiopago"] != null)) {
+                    base.Tables.Add(new CierreBiopagoDataTable(ds.Tables["CierreBiopago"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1874,6 +1892,12 @@ namespace SAP {
                     this.tableResumenBiopago.InitVars();
                 }
             }
+            this.tableCierreBiopago = ((CierreBiopagoDataTable)(base.Tables["CierreBiopago"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreBiopago != null)) {
+                    this.tableCierreBiopago.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2026,6 +2050,8 @@ namespace SAP {
             base.Tables.Add(this.tableTipoVehiculosTarifas);
             this.tableResumenBiopago = new ResumenBiopagoDataTable();
             base.Tables.Add(this.tableResumenBiopago);
+            this.tableCierreBiopago = new CierreBiopagoDataTable();
+            base.Tables.Add(this.tableCierreBiopago);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2456,6 +2482,12 @@ namespace SAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreBiopago() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -2721,6 +2753,9 @@ namespace SAP {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void ResumenBiopagoRowChangeEventHandler(object sender, ResumenBiopagoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreBiopagoRowChangeEventHandler(object sender, CierreBiopagoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -11802,6 +11837,8 @@ namespace SAP {
             
             private global::System.Data.DataColumn columnBilleteBD500;
             
+            private global::System.Data.DataColumn columnBIO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CierreBalanceV2DataTable() {
@@ -12109,6 +12146,14 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BIOColumn {
+                get {
+                    return this.columnBIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -12177,7 +12222,8 @@ namespace SAP {
                         int BilleteBD05, 
                         int BilleteBD025, 
                         int BilleteBD200, 
-                        int BilleteBD500) {
+                        int BilleteBD500, 
+                        string BIO) {
                 CierreBalanceV2Row rowCierreBalanceV2Row = ((CierreBalanceV2Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -12213,7 +12259,8 @@ namespace SAP {
                         BilleteBD05,
                         BilleteBD025,
                         BilleteBD200,
-                        BilleteBD500};
+                        BilleteBD500,
+                        BIO};
                 rowCierreBalanceV2Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCierreBalanceV2Row);
                 return rowCierreBalanceV2Row;
@@ -12277,6 +12324,7 @@ namespace SAP {
                 this.columnBilleteBD025 = base.Columns["BilleteBD025"];
                 this.columnBilleteBD200 = base.Columns["BilleteBD200"];
                 this.columnBilleteBD500 = base.Columns["BilleteBD500"];
+                this.columnBIO = base.Columns["BIO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12350,6 +12398,8 @@ namespace SAP {
                 base.Columns.Add(this.columnBilleteBD200);
                 this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD500);
+                this.columnBIO = new global::System.Data.DataColumn("BIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBIO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Cierre}, true));
                 this.columnID_Cierre.AutoIncrement = true;
@@ -18032,6 +18082,10 @@ namespace SAP {
             
             private global::System.Data.DataColumn columnBilleteBD500;
             
+            private global::System.Data.DataColumn columnBilleteS10000001;
+            
+            private global::System.Data.DataColumn columnBIO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public CierreTurnoV1DataTable() {
@@ -18371,6 +18425,22 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS10000001Column {
+                get {
+                    return this.columnBilleteS10000001;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BIOColumn {
+                get {
+                    return this.columnBIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -18443,7 +18513,9 @@ namespace SAP {
                         int BilleteBD05, 
                         int BilleteBD025, 
                         int BilleteBD200, 
-                        int BilleteBD500) {
+                        int BilleteBD500, 
+                        long BilleteS10000001, 
+                        double BIO) {
                 CierreTurnoV1Row rowCierreTurnoV1Row = ((CierreTurnoV1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -18483,7 +18555,9 @@ namespace SAP {
                         BilleteBD05,
                         BilleteBD025,
                         BilleteBD200,
-                        BilleteBD500};
+                        BilleteBD500,
+                        BilleteS10000001,
+                        BIO};
                 rowCierreTurnoV1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCierreTurnoV1Row);
                 return rowCierreTurnoV1Row;
@@ -18551,6 +18625,8 @@ namespace SAP {
                 this.columnBilleteBD025 = base.Columns["BilleteBD025"];
                 this.columnBilleteBD200 = base.Columns["BilleteBD200"];
                 this.columnBilleteBD500 = base.Columns["BilleteBD500"];
+                this.columnBilleteS10000001 = base.Columns["BilleteS10000001"];
+                this.columnBIO = base.Columns["BIO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18632,6 +18708,10 @@ namespace SAP {
                 base.Columns.Add(this.columnBilleteBD200);
                 this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBilleteBD500);
+                this.columnBilleteS10000001 = new global::System.Data.DataColumn("BilleteS10000001", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS10000001);
+                this.columnBIO = new global::System.Data.DataColumn("BIO", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBIO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_Cierre}, true));
                 this.columnID_Cierre.AutoIncrement = true;
@@ -18645,6 +18725,7 @@ namespace SAP {
                 this.columnNombre.MaxLength = 50;
                 this.columnApellido.AllowDBNull = false;
                 this.columnApellido.MaxLength = 50;
+                this.columnBilleteS10000001.Caption = "BilleteS1000000";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25603,6 +25684,285 @@ namespace SAP {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreBiopagoDataTable : global::System.Data.TypedTableBase<CierreBiopagoRow> {
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTarifa;
+            
+            private global::System.Data.DataColumn columnTabulado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoDataTable() {
+                this.TableName = "CierreBiopago";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreBiopagoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreBiopagoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TarifaColumn {
+                get {
+                    return this.columnTarifa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TabuladoColumn {
+                get {
+                    return this.columnTabulado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoRow this[int index] {
+                get {
+                    return ((CierreBiopagoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoRowChangeEventHandler CierreBiopagoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoRowChangeEventHandler CierreBiopagoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoRowChangeEventHandler CierreBiopagoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoRowChangeEventHandler CierreBiopagoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreBiopagoRow(CierreBiopagoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoRow AddCierreBiopagoRow(string Nombre, double Tarifa, int Tabulado) {
+                CierreBiopagoRow rowCierreBiopagoRow = ((CierreBiopagoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nombre,
+                        Tarifa,
+                        Tabulado};
+                rowCierreBiopagoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreBiopagoRow);
+                return rowCierreBiopagoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreBiopagoDataTable cln = ((CierreBiopagoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreBiopagoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTarifa = base.Columns["Tarifa"];
+                this.columnTabulado = base.Columns["Tabulado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarifa);
+                this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabulado);
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 20;
+                this.columnTarifa.ReadOnly = true;
+                this.columnTabulado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoRow NewCierreBiopagoRow() {
+                return ((CierreBiopagoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreBiopagoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreBiopagoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreBiopagoRowChanged != null)) {
+                    this.CierreBiopagoRowChanged(this, new CierreBiopagoRowChangeEvent(((CierreBiopagoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreBiopagoRowChanging != null)) {
+                    this.CierreBiopagoRowChanging(this, new CierreBiopagoRowChangeEvent(((CierreBiopagoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreBiopagoRowDeleted != null)) {
+                    this.CierreBiopagoRowDeleted(this, new CierreBiopagoRowChangeEvent(((CierreBiopagoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreBiopagoRowDeleting != null)) {
+                    this.CierreBiopagoRowDeleting(this, new CierreBiopagoRowChangeEvent(((CierreBiopagoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreBiopagoRow(CierreBiopagoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSet2 ds = new SAPDataSet2();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreBiopagoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DeclaracionV2Row : global::System.Data.DataRow {
@@ -28723,6 +29083,22 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string BIO {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierreBalanceV2.BIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BIO\' de la tabla \'CierreBalanceV2\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBalanceV2.BIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBilleteS05Null() {
                 return this.IsNull(this.tableCierreBalanceV2.BilleteS05Column);
             }
@@ -29091,6 +29467,18 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBilleteBD500Null() {
                 this[this.tableCierreBalanceV2.BilleteBD500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBIONull() {
+                return this.IsNull(this.tableCierreBalanceV2.BIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBIONull() {
+                this[this.tableCierreBalanceV2.BIOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -32570,6 +32958,38 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public long BilleteS10000001 {
+                get {
+                    try {
+                        return ((long)(this[this.tableCierreTurnoV1.BilleteS10000001Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000001\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS10000001Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double BIO {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.BIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BIO\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBilleteS05Null() {
                 return this.IsNull(this.tableCierreTurnoV1.BilleteS05Column);
             }
@@ -32974,6 +33394,30 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBilleteBD500Null() {
                 this[this.tableCierreTurnoV1.BilleteBD500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS10000001Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS10000001Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS10000001Null() {
+                this[this.tableCierreTurnoV1.BilleteS10000001Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBIONull() {
+                return this.IsNull(this.tableCierreTurnoV1.BIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBIONull() {
+                this[this.tableCierreTurnoV1.BIOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -36284,6 +36728,88 @@ namespace SAP {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreBiopagoRow : global::System.Data.DataRow {
+            
+            private CierreBiopagoDataTable tableCierreBiopago;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreBiopagoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreBiopago = ((CierreBiopagoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    return ((string)(this[this.tableCierreBiopago.NombreColumn]));
+                }
+                set {
+                    this[this.tableCierreBiopago.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tarifa {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreBiopago.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'CierreBiopago\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBiopago.TarifaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Tabulado {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreBiopago.TabuladoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tabulado\' de la tabla \'CierreBiopago\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBiopago.TabuladoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableCierreBiopago.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableCierreBiopago.TarifaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTabuladoNull() {
+                return this.IsNull(this.tableCierreBiopago.TabuladoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTabuladoNull() {
+                this[this.tableCierreBiopago.TabuladoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -38683,6 +39209,40 @@ namespace SAP {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ResumenBiopagoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreBiopagoRowChangeEvent : global::System.EventArgs {
+            
+            private CierreBiopagoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoRowChangeEvent(CierreBiopagoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -49211,6 +49771,8 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
             tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
             tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
             tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
+            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS10000001");
+            tableMapping.ColumnMappings.Add("BIO", "BIO");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -49227,28 +49789,28 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT   dbo.CierreBalanceV2.ID_Cierre, dbo.CierreBalanceV2.BilleteS05, dbo.Cierr" +
-                "eBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS2, dbo.CierreBalanceV2.Billete" +
-                "S5, \r\n                         dbo.CierreBalanceV2.BilleteS10, dbo.CierreBalance" +
-                "V2.BilleteS20, dbo.CierreBalanceV2.BilleteS50, dbo.CierreBalanceV2.BilleteS100, " +
-                "dbo.CierreBalanceV2.BilleteS200, \r\n                         dbo.CierreBalanceV2." +
-                "BilleteS500, dbo.CierreBalanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.Cier" +
-                "reBalanceV2.PDV, dbo.CierreBalanceV2.Incidencia, dbo.CierreBalanceV2.Fecha, \r\n  " +
-                "                       dbo.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Turno," +
-                " dbo.Usuarios.Nombre, dbo.Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS10000, " +
-                "dbo.CierreBalanceV2.BilleteS20000, \r\n                         dbo.CierreBalanceV" +
-                "2.BilleteS50000, dbo.CierreBalanceV2.BilleteS200000, dbo.CierreBalanceV2.Billete" +
-                "S500000, dbo.CierreBalanceV2.Transferencia, dbo.CierreBalanceV2.Buzon, \r\n       " +
-                "                  dbo.CierreBalanceV2.BilleteBD1, dbo.CierreBalanceV2.BilleteBD5" +
-                ", dbo.CierreBalanceV2.BilleteBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.CierreBa" +
-                "lanceV2.BilleteBD50, \r\n                         dbo.CierreBalanceV2.BilleteBD100" +
-                ", dbo.CierreBalanceV2.BilleteBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.CierreB" +
-                "alanceV2.BilleteBD200, dbo.CierreBalanceV2.BilleteBD500, \r\n                     " +
-                "    dbo.CierreBalanceV2.BilleteS1000000\r\nFROM         dbo.CierreBalanceV2 INNER " +
-                "JOIN\r\n                         dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuario = " +
-                "dbo.Usuarios.ID_Usuario\r\nWHERE     (dbo.CierreBalanceV2.Fecha BETWEEN @fecha AND" +
-                " @fecha1) AND (dbo.CierreBalanceV2.Turno = @turno) AND (dbo.CierreBalanceV2.Elim" +
-                "inado <> 1)\r\nORDER BY dbo.Usuarios.ID_Usuario";
+            this._commandCollection[0].CommandText = "SELECT       dbo.CierreBalanceV2.ID_Cierre, dbo.CierreBalanceV2.BilleteS05, dbo.C" +
+                "ierreBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS2, dbo.CierreBalanceV2.Bil" +
+                "leteS5, dbo.CierreBalanceV2.BilleteS10, dbo.CierreBalanceV2.BilleteS20, \r\n      " +
+                "                   dbo.CierreBalanceV2.BilleteS50, dbo.CierreBalanceV2.BilleteS1" +
+                "00, dbo.CierreBalanceV2.BilleteS200, dbo.CierreBalanceV2.BilleteS500, dbo.Cierre" +
+                "BalanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.CierreBalanceV2.PDV, \r\n    " +
+                "                     dbo.CierreBalanceV2.Incidencia, dbo.CierreBalanceV2.Fecha, " +
+                "dbo.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Turno, dbo.Usuarios.Nombre, d" +
+                "bo.Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS10000, \r\n                     " +
+                "    dbo.CierreBalanceV2.BilleteS20000, dbo.CierreBalanceV2.BilleteS50000, dbo.Ci" +
+                "erreBalanceV2.BilleteS200000, dbo.CierreBalanceV2.BilleteS500000, dbo.CierreBala" +
+                "nceV2.Transferencia, dbo.CierreBalanceV2.Buzon, \r\n                         dbo.C" +
+                "ierreBalanceV2.BilleteBD1, dbo.CierreBalanceV2.BilleteBD5, dbo.CierreBalanceV2.B" +
+                "illeteBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.CierreBalanceV2.BilleteBD50, db" +
+                "o.CierreBalanceV2.BilleteBD100, \r\n                         dbo.CierreBalanceV2.B" +
+                "illeteBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.CierreBalanceV2.BilleteBD200, " +
+                "dbo.CierreBalanceV2.BilleteBD500, dbo.CierreBalanceV2.BilleteS1000000, dbo.Cierr" +
+                "eBalanceV2.BIO\r\nFROM            dbo.CierreBalanceV2 INNER JOIN\r\n                " +
+                "         dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuario = dbo.Usuarios.ID_Usuari" +
+                "o\r\nWHERE        (dbo.CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (dbo." +
+                "CierreBalanceV2.Turno = @turno) AND (dbo.CierreBalanceV2.Eliminado <> 1)\r\nORDER " +
+                "BY dbo.Usuarios.ID_Usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -53595,6 +54157,198 @@ WHERE        (dbo.Pagos.ID_Usuario = @usuario) AND (dbo.Pagos.Fecha BETWEEN @fec
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreBiopagoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreBiopagoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreBiopago";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
+            tableMapping.ColumnMappings.Add("Tabulado", "Tabulado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAP;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fecha AND @fecha1) AND (Pagos.FormaPago = 'Transferencia') AND (Pagos.Turno = @turno)
+GROUP BY TipoVehiculos.Nombre, TipoVehiculos.Tarifa, Pagos.FormaPago";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turno", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSet2.CierreBiopagoDataTable dataTable, System.DateTime fecha, System.DateTime fecha1, global::System.Nullable<int> turno) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            if ((turno.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turno.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSet2.CierreBiopagoDataTable GetData(System.DateTime fecha, System.DateTime fecha1, global::System.Nullable<int> turno) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            if ((turno.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turno.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            SAPDataSet2.CierreBiopagoDataTable dataTable = new SAPDataSet2.CierreBiopagoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -53742,21 +54496,21 @@ WHERE        (dbo.Pagos.ID_Usuario = @usuario) AND (dbo.Pagos.Fecha BETWEEN @fec
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._peajeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Peaje.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._peajeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._reporteUserTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ReporteUser.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._reporteUserTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._peajeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Peaje.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._peajeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -53778,19 +54532,19 @@ WHERE        (dbo.Pagos.ID_Usuario = @usuario) AND (dbo.Pagos.Fecha BETWEEN @fec
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._peajeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Peaje.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._peajeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._reporteUserTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ReporteUser.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._reporteUserTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._peajeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Peaje.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._peajeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -53804,19 +54558,19 @@ WHERE        (dbo.Pagos.ID_Usuario = @usuario) AND (dbo.Pagos.Fecha BETWEEN @fec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(SAPDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._reporteUserTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ReporteUser.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._reporteUserTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._peajeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Peaje.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._peajeTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._reporteUserTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ReporteUser.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._reporteUserTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

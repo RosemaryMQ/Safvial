@@ -212,8 +212,8 @@ namespace SAP.Cobradores.Controles
             catch
             {
                 MessageBox.Show("¡Error al generar el reporte!", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //this.Close();
-                throw;
+                this.Close();
+                //throw;
             }
         }
         private void avances(int usuario, int canal)
