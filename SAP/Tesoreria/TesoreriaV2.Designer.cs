@@ -120,6 +120,13 @@
             this.Turn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.date2 = new System.Windows.Forms.DateTimePicker();
+            this.date1 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -133,17 +140,12 @@
             this.Balance19 = new System.Windows.Forms.Label();
             this.Balance18 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.Balance20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Balance21 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.date2 = new System.Windows.Forms.DateTimePicker();
-            this.date1 = new System.Windows.Forms.DateTimePicker();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Balance20 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Balance22 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -163,9 +165,9 @@
             this.kryptonPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Usuario)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1828,8 +1830,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel10, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(736, 4);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -1838,331 +1840,6 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.04545F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(436, 635);
             this.tableLayoutPanel5.TabIndex = 1;
-            // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel11.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.90675F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.09325F));
-            this.tableLayoutPanel11.Controls.Add(this.label26, 0, 1);
-            this.tableLayoutPanel11.Controls.Add(this.label21, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.sed, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.Balance15, 1, 1);
-            this.tableLayoutPanel11.Controls.Add(this.label5, 0, 2);
-            this.tableLayoutPanel11.Controls.Add(this.Balance16, 1, 2);
-            this.tableLayoutPanel11.Controls.Add(this.label28, 0, 3);
-            this.tableLayoutPanel11.Controls.Add(this.Balance17, 1, 3);
-            this.tableLayoutPanel11.Controls.Add(this.label32, 0, 5);
-            this.tableLayoutPanel11.Controls.Add(this.Balance19, 1, 5);
-            this.tableLayoutPanel11.Controls.Add(this.Balance18, 1, 4);
-            this.tableLayoutPanel11.Controls.Add(this.label30, 0, 4);
-            this.tableLayoutPanel11.Controls.Add(this.label34, 0, 7);
-            this.tableLayoutPanel11.Controls.Add(this.Balance20, 1, 7);
-            this.tableLayoutPanel11.Controls.Add(this.label6, 0, 6);
-            this.tableLayoutPanel11.Controls.Add(this.Balance21, 1, 6);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 8;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(428, 518);
-            this.tableLayoutPanel11.TabIndex = 7;
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.White;
-            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label26.Location = new System.Drawing.Point(5, 103);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(157, 50);
-            this.label26.TabIndex = 6;
-            this.label26.Text = "PREPAGADO:";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label21.Location = new System.Drawing.Point(5, 1);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(157, 101);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "SEDE:";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // sed
-            // 
-            this.sed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sed.AutoSize = true;
-            this.sed.BackColor = System.Drawing.Color.White;
-            this.sed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sed.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.sed.ForeColor = System.Drawing.Color.Black;
-            this.sed.Location = new System.Drawing.Point(171, 1);
-            this.sed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.sed.Name = "sed";
-            this.sed.Size = new System.Drawing.Size(252, 101);
-            this.sed.TabIndex = 5;
-            this.sed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Balance15
-            // 
-            this.Balance15.AllowDrop = true;
-            this.Balance15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance15.AutoEllipsis = true;
-            this.Balance15.AutoSize = true;
-            this.Balance15.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance15.ForeColor = System.Drawing.Color.Black;
-            this.Balance15.Location = new System.Drawing.Point(171, 103);
-            this.Balance15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Balance15.Name = "Balance15";
-            this.Balance15.Size = new System.Drawing.Size(252, 50);
-            this.Balance15.TabIndex = 32;
-            this.Balance15.Text = "0 Bs.";
-            this.Balance15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label5.Location = new System.Drawing.Point(5, 154);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 50);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "EFECTIVO:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Balance16
-            // 
-            this.Balance16.AllowDrop = true;
-            this.Balance16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance16.AutoEllipsis = true;
-            this.Balance16.AutoSize = true;
-            this.Balance16.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance16.ForeColor = System.Drawing.Color.Black;
-            this.Balance16.Location = new System.Drawing.Point(171, 154);
-            this.Balance16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Balance16.Name = "Balance16";
-            this.Balance16.Size = new System.Drawing.Size(252, 50);
-            this.Balance16.TabIndex = 34;
-            this.Balance16.Text = "0 Bs.";
-            this.Balance16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.White;
-            this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label28.Location = new System.Drawing.Point(5, 205);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(157, 50);
-            this.label28.TabIndex = 35;
-            this.label28.Text = "PUNTO DE VENTA:";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Balance17
-            // 
-            this.Balance17.AllowDrop = true;
-            this.Balance17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance17.AutoEllipsis = true;
-            this.Balance17.AutoSize = true;
-            this.Balance17.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance17.ForeColor = System.Drawing.Color.Black;
-            this.Balance17.Location = new System.Drawing.Point(171, 205);
-            this.Balance17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Balance17.Name = "Balance17";
-            this.Balance17.Size = new System.Drawing.Size(252, 50);
-            this.Balance17.TabIndex = 36;
-            this.Balance17.Text = "0 Bs.";
-            this.Balance17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.White;
-            this.label32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label32.Location = new System.Drawing.Point(5, 307);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(157, 50);
-            this.label32.TabIndex = 39;
-            this.label32.Text = "PAGO INCOMPLETO:";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Balance19
-            // 
-            this.Balance19.AllowDrop = true;
-            this.Balance19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance19.AutoEllipsis = true;
-            this.Balance19.AutoSize = true;
-            this.Balance19.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance19.ForeColor = System.Drawing.Color.Black;
-            this.Balance19.Location = new System.Drawing.Point(171, 307);
-            this.Balance19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Balance19.Name = "Balance19";
-            this.Balance19.Size = new System.Drawing.Size(252, 50);
-            this.Balance19.TabIndex = 40;
-            this.Balance19.Text = "0 Bs.";
-            this.Balance19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Balance18
-            // 
-            this.Balance18.AllowDrop = true;
-            this.Balance18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance18.AutoEllipsis = true;
-            this.Balance18.AutoSize = true;
-            this.Balance18.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance18.ForeColor = System.Drawing.Color.Black;
-            this.Balance18.Location = new System.Drawing.Point(171, 256);
-            this.Balance18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Balance18.Name = "Balance18";
-            this.Balance18.Size = new System.Drawing.Size(252, 50);
-            this.Balance18.TabIndex = 38;
-            this.Balance18.Text = "0 Bs.";
-            this.Balance18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.White;
-            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label30.Location = new System.Drawing.Point(5, 256);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(157, 50);
-            this.label30.TabIndex = 37;
-            this.label30.Text = "TARJETA EXPRESS:";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.White;
-            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label34.Location = new System.Drawing.Point(5, 409);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(157, 108);
-            this.label34.TabIndex = 41;
-            this.label34.Text = "TOTAL:";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Balance20
-            // 
-            this.Balance20.AllowDrop = true;
-            this.Balance20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance20.AutoEllipsis = true;
-            this.Balance20.AutoSize = true;
-            this.Balance20.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance20.ForeColor = System.Drawing.Color.Black;
-            this.Balance20.Location = new System.Drawing.Point(171, 409);
-            this.Balance20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Balance20.Name = "Balance20";
-            this.Balance20.Size = new System.Drawing.Size(252, 108);
-            this.Balance20.TabIndex = 42;
-            this.Balance20.Text = "0 Bs.";
-            this.Balance20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label6.Location = new System.Drawing.Point(4, 358);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 50);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "BIOPAGO:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // Balance21
-            // 
-            this.Balance21.AllowDrop = true;
-            this.Balance21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Balance21.AutoEllipsis = true;
-            this.Balance21.AutoSize = true;
-            this.Balance21.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Balance21.Location = new System.Drawing.Point(170, 358);
-            this.Balance21.Name = "Balance21";
-            this.Balance21.Size = new System.Drawing.Size(254, 50);
-            this.Balance21.TabIndex = 44;
-            this.Balance21.Text = "0 Bs.";
-            this.Balance21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel10
             // 
@@ -2288,6 +1965,366 @@
             this.date1.Size = new System.Drawing.Size(124, 22);
             this.date1.TabIndex = 11;
             // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel11.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.90675F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.09325F));
+            this.tableLayoutPanel11.Controls.Add(this.label26, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label21, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.sed, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.Balance15, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label5, 0, 2);
+            this.tableLayoutPanel11.Controls.Add(this.Balance16, 1, 2);
+            this.tableLayoutPanel11.Controls.Add(this.label28, 0, 3);
+            this.tableLayoutPanel11.Controls.Add(this.Balance17, 1, 3);
+            this.tableLayoutPanel11.Controls.Add(this.label32, 0, 5);
+            this.tableLayoutPanel11.Controls.Add(this.Balance19, 1, 5);
+            this.tableLayoutPanel11.Controls.Add(this.Balance18, 1, 4);
+            this.tableLayoutPanel11.Controls.Add(this.label30, 0, 4);
+            this.tableLayoutPanel11.Controls.Add(this.label6, 0, 6);
+            this.tableLayoutPanel11.Controls.Add(this.Balance21, 1, 6);
+            this.tableLayoutPanel11.Controls.Add(this.label34, 0, 8);
+            this.tableLayoutPanel11.Controls.Add(this.Balance20, 1, 8);
+            this.tableLayoutPanel11.Controls.Add(this.label9, 0, 7);
+            this.tableLayoutPanel11.Controls.Add(this.Balance22, 1, 7);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 9;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.74766F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.74766F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.28037F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.21495F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.51402F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.08411F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.5514F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(428, 518);
+            this.tableLayoutPanel11.TabIndex = 7;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.White;
+            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label26.Location = new System.Drawing.Point(5, 86);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(157, 45);
+            this.label26.TabIndex = 6;
+            this.label26.Text = "PREPAGADO:";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label21.Location = new System.Drawing.Point(5, 1);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(157, 84);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "SEDE:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sed
+            // 
+            this.sed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sed.AutoSize = true;
+            this.sed.BackColor = System.Drawing.Color.White;
+            this.sed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sed.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.sed.ForeColor = System.Drawing.Color.Black;
+            this.sed.Location = new System.Drawing.Point(171, 1);
+            this.sed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.sed.Name = "sed";
+            this.sed.Size = new System.Drawing.Size(252, 84);
+            this.sed.TabIndex = 5;
+            this.sed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance15
+            // 
+            this.Balance15.AllowDrop = true;
+            this.Balance15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance15.AutoEllipsis = true;
+            this.Balance15.AutoSize = true;
+            this.Balance15.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance15.ForeColor = System.Drawing.Color.Black;
+            this.Balance15.Location = new System.Drawing.Point(171, 86);
+            this.Balance15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Balance15.Name = "Balance15";
+            this.Balance15.Size = new System.Drawing.Size(252, 45);
+            this.Balance15.TabIndex = 32;
+            this.Balance15.Text = "0 Bs.";
+            this.Balance15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label5.Location = new System.Drawing.Point(5, 132);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(157, 45);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "EFECTIVO:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance16
+            // 
+            this.Balance16.AllowDrop = true;
+            this.Balance16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance16.AutoEllipsis = true;
+            this.Balance16.AutoSize = true;
+            this.Balance16.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance16.ForeColor = System.Drawing.Color.Black;
+            this.Balance16.Location = new System.Drawing.Point(171, 132);
+            this.Balance16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Balance16.Name = "Balance16";
+            this.Balance16.Size = new System.Drawing.Size(252, 45);
+            this.Balance16.TabIndex = 34;
+            this.Balance16.Text = "0 Bs.";
+            this.Balance16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.White;
+            this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label28.Location = new System.Drawing.Point(5, 178);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(157, 43);
+            this.label28.TabIndex = 35;
+            this.label28.Text = "PUNTO DE VENTA:";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance17
+            // 
+            this.Balance17.AllowDrop = true;
+            this.Balance17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance17.AutoEllipsis = true;
+            this.Balance17.AutoSize = true;
+            this.Balance17.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance17.ForeColor = System.Drawing.Color.Black;
+            this.Balance17.Location = new System.Drawing.Point(171, 178);
+            this.Balance17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Balance17.Name = "Balance17";
+            this.Balance17.Size = new System.Drawing.Size(252, 43);
+            this.Balance17.TabIndex = 36;
+            this.Balance17.Text = "0 Bs.";
+            this.Balance17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.White;
+            this.label32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label32.Location = new System.Drawing.Point(5, 270);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(157, 44);
+            this.label32.TabIndex = 39;
+            this.label32.Text = "PAGO INCOMPLETO:";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance19
+            // 
+            this.Balance19.AllowDrop = true;
+            this.Balance19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance19.AutoEllipsis = true;
+            this.Balance19.AutoSize = true;
+            this.Balance19.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance19.ForeColor = System.Drawing.Color.Black;
+            this.Balance19.Location = new System.Drawing.Point(171, 270);
+            this.Balance19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Balance19.Name = "Balance19";
+            this.Balance19.Size = new System.Drawing.Size(252, 44);
+            this.Balance19.TabIndex = 40;
+            this.Balance19.Text = "0 Bs.";
+            this.Balance19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance18
+            // 
+            this.Balance18.AllowDrop = true;
+            this.Balance18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance18.AutoEllipsis = true;
+            this.Balance18.AutoSize = true;
+            this.Balance18.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance18.ForeColor = System.Drawing.Color.Black;
+            this.Balance18.Location = new System.Drawing.Point(171, 222);
+            this.Balance18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Balance18.Name = "Balance18";
+            this.Balance18.Size = new System.Drawing.Size(252, 47);
+            this.Balance18.TabIndex = 38;
+            this.Balance18.Text = "0 Bs.";
+            this.Balance18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.White;
+            this.label30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label30.Location = new System.Drawing.Point(5, 222);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(157, 47);
+            this.label30.TabIndex = 37;
+            this.label30.Text = "TARJETA EXPRESS:";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label6.Location = new System.Drawing.Point(4, 315);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(159, 55);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "BIOPAGO:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // Balance21
+            // 
+            this.Balance21.AllowDrop = true;
+            this.Balance21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance21.AutoEllipsis = true;
+            this.Balance21.AutoSize = true;
+            this.Balance21.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance21.Location = new System.Drawing.Point(170, 315);
+            this.Balance21.Name = "Balance21";
+            this.Balance21.Size = new System.Drawing.Size(254, 55);
+            this.Balance21.TabIndex = 44;
+            this.Balance21.Text = "0 Bs.";
+            this.Balance21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.White;
+            this.label34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label34.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label34.Location = new System.Drawing.Point(5, 429);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(157, 88);
+            this.label34.TabIndex = 41;
+            this.label34.Text = "TOTAL:";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance20
+            // 
+            this.Balance20.AllowDrop = true;
+            this.Balance20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance20.AutoEllipsis = true;
+            this.Balance20.AutoSize = true;
+            this.Balance20.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Balance20.ForeColor = System.Drawing.Color.Black;
+            this.Balance20.Location = new System.Drawing.Point(171, 429);
+            this.Balance20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Balance20.Name = "Balance20";
+            this.Balance20.Size = new System.Drawing.Size(252, 88);
+            this.Balance20.TabIndex = 42;
+            this.Balance20.Text = "0 Bs.";
+            this.Balance20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label9.Location = new System.Drawing.Point(4, 371);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(159, 57);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "TRANSFERENCIA";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Balance22
+            // 
+            this.Balance22.AllowDrop = true;
+            this.Balance22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Balance22.AutoEllipsis = true;
+            this.Balance22.AutoSize = true;
+            this.Balance22.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.Balance22.Location = new System.Drawing.Point(170, 371);
+            this.Balance22.Name = "Balance22";
+            this.Balance22.Size = new System.Drawing.Size(254, 57);
+            this.Balance22.TabIndex = 46;
+            this.Balance22.Text = "0 Bs.";
+            this.Balance22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -2339,11 +2376,11 @@
             this.kryptonPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Usuario)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2368,8 +2405,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label Balance20;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label sed;
@@ -2464,5 +2499,9 @@
         private System.Windows.Forms.Label Estatus14;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Balance21;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label Balance20;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Balance22;
     }
 }

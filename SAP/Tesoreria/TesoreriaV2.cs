@@ -12,14 +12,14 @@ namespace SAP.Tesoreria
     {
         string hora = "";
         string hora2 = "";
-        Double Resultado;
-        Double Acumulado;
-        String Valores;
+        Double Resultado = 0;
+        Double Acumulado = 0;
+        String Valores = "";
         String Estatus;
         String canal;
         String canal2;
-        String valor;
-        Double acumulador;
+        String valor = "";
+        Double acumulador = 0;
         String pagos;
         Double pagos2;
         public static Boolean Validor;
@@ -32,9 +32,12 @@ namespace SAP.Tesoreria
         public static string Apertura;
         public static string id;
         public static string turno="0";
+
         public TesoreriaV2()
         {
             InitializeComponent();
+            Valores = "";
+            Acumulado = 0;
             sed.Text = SAP.Inicio.PeajeNombre.ToUpper();
             hora = DateTime.Now.ToString("d");
             hora2 = DateTime.Now.AddDays(1).ToString("d");
@@ -48,6 +51,7 @@ namespace SAP.Tesoreria
                 this.Efectivo(fecha1, hora2);
                 this.PDV(fecha1, hora2);
                 this.Biopago(fecha1, hora2);
+                this.Transferencia(fecha1, hora2);
                 this.Tickets(fecha1, hora2);
                 this.Incompletos(fecha1, hora2);
                 this.Total(fecha1, hora2);
@@ -92,6 +96,7 @@ namespace SAP.Tesoreria
             }
             dr.Close();
         }
+
         private async void ConsultaCOA()
         {
 
@@ -199,6 +204,39 @@ namespace SAP.Tesoreria
                     else
                     {
                         Balance21.Text = string.Format("{0:n}", pagos) + " Bs.";
+                    }
+                }
+                dr.Close();
+                cn.Close();
+                return;
+            }
+        }
+
+
+        private async void Transferencia(String fechas, String fechas2)
+        {
+            string sql = "SELECT SUM(TipoVehiculos.Tarifa) as Transferencia from Pagos inner join TipoVehiculos on Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo where Pagos.FormaPago='Transferencia' and Pagos.Fecha between @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000';";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                await cn.OpenAsync();
+                SqlDataReader dr;
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(fechas));
+                cmd.Parameters.AddWithValue("fecha2", Convert.ToDateTime(fechas2));
+                dr = await cmd.ExecuteReaderAsync();
+                while (await dr.ReadAsync())
+                {
+                    pagos = "";
+                    pagos2 = 0;
+                    pagos = dr["Transferencia"].ToString();
+                    if (pagos != "")
+                    {
+                        pagos2 = Convert.ToDouble(pagos);
+                        Balance22.Text = string.Format("{0:n}", pagos2) + " Bs.";
+                    }
+                    else
+                    {
+                        Balance22.Text = string.Format("{0:n}", pagos) + " Bs.";
                     }
                 }
                 dr.Close();
@@ -465,7 +503,8 @@ namespace SAP.Tesoreria
 
         private async void Recaudador(String fechas, String fechas2)
         {
-            string sql = "Select Pagos.Canal,Sum(TipoVehiculos.Tarifa)as Tarifa,ControlRecaudadores.Estado FROM Pagos inner join TipoVehiculos on Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo inner join Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario inner join ControlRecaudadores ON Pagos.Canal=ControlRecaudadores.Canal Where Pagos.Fecha BETWEEN @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000' AND Usuarios.ID_Peaje='1' AND Pagos.FormaPago<>'Pago Incompleto' AND Pagos.FormaPago<>'Ticket' Group By Pagos.Canal, ControlRecaudadores.Estado";
+            //string sql = "Select Pagos.Canal,Sum(TipoVehiculos.Tarifa)as Tarifa,ControlRecaudadores.Estado FROM Pagos inner join TipoVehiculos on Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo inner join Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario inner join ControlRecaudadores ON Pagos.Canal=ControlRecaudadores.Canal Where Pagos.Fecha BETWEEN @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000' AND Usuarios.ID_Peaje='1' AND Pagos.FormaPago<>'Pago Incompleto' AND Pagos.FormaPago<>'Ticket' Group By Pagos.Canal, ControlRecaudadores.Estado";
+            string sql = "SELECT Pagos.Canal, SUM(TipoVehiculos.Tarifa) as Tarifa, CR_Filtered.Estado FROM Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo INNER JOIN Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario OUTER APPLY(SELECT TOP 1 Estado FROM ControlRecaudadores CR WHERE CR.Canal = Pagos.Canal AND CR.ID_Usuario = Pagos.ID_Usuario ORDER BY CR.ID DESC) CR_Filtered Where Pagos.Fecha BETWEEN @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000' AND Usuarios.ID_Peaje='1' AND Pagos.FormaPago<>'Pago Incompleto' AND Pagos.FormaPago<>'Ticket' Group BY Pagos.Canal, CR_Filtered.Estado ";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 await cn.OpenAsync();
@@ -476,6 +515,8 @@ namespace SAP.Tesoreria
                 dr = await cmd.ExecuteReaderAsync();
                 while (await dr.ReadAsync())
                 {
+                    Valores = "";
+                    Acumulado = 0;
                     canal = dr["Canal"].ToString();
                     if (canal == "1")
                     {
@@ -849,6 +890,8 @@ namespace SAP.Tesoreria
             try
             {
                 Resultado = 0;
+                Valores = "";
+                Acumulado = 0;
                 this.Recaudador(fecha1, hora2);
                 this.Operadores();
                 this.UsuariosAperturados();
@@ -933,6 +976,9 @@ namespace SAP.Tesoreria
                 dr = await cmd.ExecuteReaderAsync();
                 while (await dr.ReadAsync())
                 {
+                    Valores = "";
+                    Acumulado = 0;
+
                     canal = dr["Canal"].ToString();
                     if (canal == "1")
                     {
@@ -1307,6 +1353,8 @@ namespace SAP.Tesoreria
                 timer2.Enabled = false;
                 timer3.Enabled = true;
                 Resultado = 0;
+                Valores = "";
+                Acumulado = 0;
                 this.Operadores();
                 this.UsuariosAperturados();
                 RecaudadorParametrizado(fecha1 + " 19:00:01", hora2 + " 07:00:00");
@@ -1335,6 +1383,8 @@ namespace SAP.Tesoreria
                 timer2.Enabled = true;
                 timer3.Enabled = false;
                 Resultado = 0;
+                Valores = "";
+                Acumulado = 0;
                 this.Operadores();
                 this.UsuariosAperturados();
                 RecaudadorParametrizado(fecha1 + " 07:00:00", hora2 + " 19:00:00");
@@ -1362,6 +1412,7 @@ namespace SAP.Tesoreria
                 this.Efectivo(fecha1, hora2);
                 this.PDV(fecha1, hora2);
                 this.Biopago(fecha1, hora2);
+                this.Transferencia(fecha1, hora2);
                 this.Tickets(fecha1, hora2);
                 this.Incompletos(fecha1, hora2);
                 this.Total(fecha1, hora2);
@@ -1379,6 +1430,7 @@ namespace SAP.Tesoreria
                 this.Efectivo(date1.Text, date2.Text);
                 this.PDV(date1.Text, date2.Text);
                 this.Biopago(date1.Text, date2.Text);
+                this.Transferencia(fecha1, hora2);
                 this.Tickets(date1.Text, date2.Text);
                 this.Incompletos(date1.Text, date2.Text);
                 this.Total(date1.Text, date2.Text);
@@ -1802,5 +1854,7 @@ namespace SAP.Tesoreria
         {
 
         }
+
+
     }
 }

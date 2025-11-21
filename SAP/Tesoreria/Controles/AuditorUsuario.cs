@@ -161,6 +161,14 @@ private void buscar(int name)
                     {
                         PDV.Text = string.Format("{0:n}", recaudo) + " Bs.S";
                     }
+                    else if (Vehiculo == "Biopago")
+                    {
+                        Biopago.Text = string.Format("{0:n}", recaudo) + " Bs.S";
+                    }
+                    else if (Vehiculo == "Transferencia")
+                    {
+                        Transferencia.Text = string.Format("{0:n}", recaudo) + " Bs.S";
+                    }
                     else if (Vehiculo == "Pago Incompleto")
                     {
                         PagoIncompleto.Text = string.Format("{0:n}", recaudo) + " Bs.S";
@@ -264,6 +272,11 @@ private void buscar(int name)
         }
 
         private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }

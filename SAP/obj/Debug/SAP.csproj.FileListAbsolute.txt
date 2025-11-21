@@ -4601,7 +4601,6 @@ D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Avance.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Biopago.Biopago.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Contraseña.resources
