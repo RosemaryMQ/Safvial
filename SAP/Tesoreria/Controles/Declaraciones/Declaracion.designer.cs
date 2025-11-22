@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.declaracionV2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sAPDataSet2 = new SAP.SAPDataSet2();
             this.pDVCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,6 +42,7 @@
             this.cierreBalanceV2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transferenciaCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreTarjetaExpressBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buzonRecaudadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.declaracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pDVCierreTableAdapter = new SAP.SAPDataSetTableAdapters.PDVCierreTableAdapter();
@@ -73,8 +62,10 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.transferenciaCierreTableAdapter = new SAP.SAPDataSet2TableAdapters.TransferenciaCierreTableAdapter();
             this.cierreTarjetaExpressTableAdapter = new SAP.SAPDataSet2TableAdapters.CierreTarjetaExpressTableAdapter();
-            this.buzonRecaudadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buzonRecaudadorTableAdapter = new SAP.SAPDataSet2TableAdapters.BuzonRecaudadorTableAdapter();
+            this.tableAdapterManager = new SAP.SAPDataSet2TableAdapters.TableAdapterManager();
+            this.cierreBiopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreBiopagoTableAdapter = new SAP.SAPDataSet2TableAdapters.CierreBiopagoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.declaracionV2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDVCierreBindingSource)).BeginInit();
@@ -88,11 +79,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cierreBalanceV2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transferenciaCierreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTarjetaExpressBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buzonRecaudadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.declaracionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVehiculosBindingSource1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buzonRecaudadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // declaracionV2BindingSource
@@ -160,52 +152,21 @@
             this.cierreTarjetaExpressBindingSource.DataMember = "CierreTarjetaExpress";
             this.cierreTarjetaExpressBindingSource.DataSource = this.sAPDataSet2;
             // 
+            // buzonRecaudadorBindingSource
+            // 
+            this.buzonRecaudadorBindingSource.DataMember = "BuzonRecaudador";
+            this.buzonRecaudadorBindingSource.DataSource = this.sAPDataSet2;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "Declaracion";
-            reportDataSource1.Value = this.declaracionV2BindingSource;
-            reportDataSource2.Name = "PDVCierre";
-            reportDataSource2.Value = this.pDVCierreBindingSource;
-            reportDataSource3.Name = "EfectivoCierre";
-            reportDataSource3.Value = this.efectivoCierreBindingSource;
-            reportDataSource4.Name = "TicketsCierre";
-            reportDataSource4.Value = this.ticketCierreBindingSource;
-            reportDataSource5.Name = "NoPagadoCierre";
-            reportDataSource5.Value = this.noPagoCierreBindingSource;
-            reportDataSource6.Name = "RecaudadoTotal";
-            reportDataSource6.Value = this.tipoVehiculosBindingSource;
-            reportDataSource7.Name = "Usuario";
-            reportDataSource7.Value = this.usuariosBindingSource;
-            reportDataSource8.Name = "Canales";
-            reportDataSource8.Value = this.usuarioCanalBindingSource;
-            reportDataSource9.Name = "reconversion";
-            reportDataSource9.Value = this.cierreBalanceV2BindingSource;
-            reportDataSource10.Name = "TransferenciaCierre";
-            reportDataSource10.Value = this.transferenciaCierreBindingSource;
-            reportDataSource11.Name = "TarjetaExpress";
-            reportDataSource11.Value = this.cierreTarjetaExpressBindingSource;
-            reportDataSource12.Name = "BuzonRecaudador";
-            reportDataSource12.Value = this.buzonRecaudadorBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource9);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource10);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource12);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Tesoreria.Controles.Declaraciones.DeclaracionJurada.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(4, 4);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(680, 729);
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(624, 631);
             this.reportViewer1.TabIndex = 0;
             // 
             // declaracionBindingSource
@@ -271,13 +232,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.Titulos, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.451613F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.54839F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(696, 796);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(636, 687);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // Titulos
@@ -289,10 +249,9 @@
             this.Titulos.BackColor = System.Drawing.Color.DimGray;
             this.Titulos.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.Titulos.ForeColor = System.Drawing.Color.White;
-            this.Titulos.Location = new System.Drawing.Point(4, 0);
-            this.Titulos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Titulos.Location = new System.Drawing.Point(3, 0);
             this.Titulos.Name = "Titulos";
-            this.Titulos.Size = new System.Drawing.Size(688, 51);
+            this.Titulos.Size = new System.Drawing.Size(630, 44);
             this.Titulos.TabIndex = 1042;
             this.Titulos.Text = "CIERRE DE RECAUDADOR";
             this.Titulos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,12 +264,11 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.reportViewer1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 55);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 47);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(688, 737);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(630, 637);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // transferenciaCierreTableAdapter
@@ -321,23 +279,35 @@
             // 
             this.cierreTarjetaExpressTableAdapter.ClearBeforeFill = true;
             // 
-            // buzonRecaudadorBindingSource
-            // 
-            this.buzonRecaudadorBindingSource.DataMember = "BuzonRecaudador";
-            this.buzonRecaudadorBindingSource.DataSource = this.sAPDataSet2;
-            // 
             // buzonRecaudadorTableAdapter
             // 
             this.buzonRecaudadorTableAdapter.ClearBeforeFill = true;
             // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CierresParcialesTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.PeajeTableAdapter = null;
+            this.tableAdapterManager.ReporteUserTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SAP.SAPDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cierreBiopagoBindingSource
+            // 
+            this.cierreBiopagoBindingSource.DataMember = "CierreBiopago";
+            this.cierreBiopagoBindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // cierreBiopagoTableAdapter
+            // 
+            this.cierreBiopagoTableAdapter.ClearBeforeFill = true;
+            // 
             // Declaracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 796);
+            this.ClientSize = new System.Drawing.Size(637, 687);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Declaracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Declaracion";
@@ -355,12 +325,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.cierreBalanceV2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transferenciaCierreBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTarjetaExpressBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buzonRecaudadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.declaracionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVehiculosBindingSource1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.buzonRecaudadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +371,8 @@
         private SAPDataSet2TableAdapters.CierreTarjetaExpressTableAdapter cierreTarjetaExpressTableAdapter;
         private System.Windows.Forms.BindingSource buzonRecaudadorBindingSource;
         private SAPDataSet2TableAdapters.BuzonRecaudadorTableAdapter buzonRecaudadorTableAdapter;
+        private SAPDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource cierreBiopagoBindingSource;
+        private SAPDataSet2TableAdapters.CierreBiopagoTableAdapter cierreBiopagoTableAdapter;
     }
 }

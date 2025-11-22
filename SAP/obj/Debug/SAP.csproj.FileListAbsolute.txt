@@ -4737,3 +4737,4 @@ D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.csproj.CopyComplete
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.exe
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.pdb
+D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache

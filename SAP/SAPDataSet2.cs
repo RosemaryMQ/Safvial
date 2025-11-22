@@ -4,6 +4,10 @@
 
     partial class SAPDataSet2
     {
+        partial class CierreBalanceV2DataTable
+        {
+        }
+
         partial class DeclaracionV2DataTable
         {
         }
