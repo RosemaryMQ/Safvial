@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.flujoVehicularV6BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sAPDataSet2 = new SAP.SAPDataSet2();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.flujoVehicularV6BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.prepagadoDataSet = new SAP.PrepagadoDataSet();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -43,25 +41,26 @@
             this.fecha2 = new System.Windows.Forms.DateTimePicker();
             this.button5 = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.flujoVehicularV6TableAdapter = new SAP.SAPDataSet2TableAdapters.FlujoVehicularV6TableAdapter();
             this.flujoVehicularV6TableAdapter1 = new SAP.PrepagadoDataSetTableAdapters.FlujoVehicularV6TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularV6BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
+            this.flujoVehicularV6BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sAPDataSet2 = new SAP.SAPDataSet2();
+            this.flujoVehicularV6TableAdapter = new SAP.SAPDataSet2TableAdapters.FlujoVehicularV6TableAdapter();
+            this.dataSet1 = new SAP.DataSet1();
+            this.flujoVehicularExoneradoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flujoVehicularExoneradoTableAdapter = new SAP.DataSet1TableAdapters.FlujoVehicularExoneradoTableAdapter();
+            this.tableAdapterManager = new SAP.DataSet1TableAdapters.TableAdapterManager();
+            this.flujoVehicularSinExoneradoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flujoVehicularSinExoneradoTableAdapter = new SAP.DataSet1TableAdapters.FlujoVehicularSinExoneradoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularV6BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prepagadoDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularV6BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularExoneradoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularSinExoneradoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flujoVehicularV6BindingSource
-            // 
-            this.flujoVehicularV6BindingSource.DataMember = "FlujoVehicularV6";
-            this.flujoVehicularV6BindingSource.DataSource = this.sAPDataSet2;
-            // 
-            // sAPDataSet2
-            // 
-            this.sAPDataSet2.DataSetName = "SAPDataSet2";
-            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // flujoVehicularV6BindingSource1
             // 
@@ -87,7 +86,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.51248F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.487521F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(948, 601);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(952, 637);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // tableLayoutPanel2
@@ -107,12 +106,12 @@
             this.tableLayoutPanel2.Controls.Add(this.date1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.fecha2, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 559);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 592);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.09091F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(942, 39);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(946, 42);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label2
@@ -127,7 +126,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 39);
+            this.label2.Size = new System.Drawing.Size(180, 42);
             this.label2.TabIndex = 33;
             this.label2.Text = "FECHA INICIAL:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -142,9 +141,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label1.Location = new System.Drawing.Point(409, 0);
+            this.label1.Location = new System.Drawing.Point(411, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 39);
+            this.label1.Size = new System.Drawing.Size(151, 42);
             this.label1.TabIndex = 34;
             this.label1.Text = "FECHA LIMITE:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -157,9 +156,9 @@
             this.date1.CustomFormat = "dd/MM/yyyy";
             this.date1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.date1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date1.Location = new System.Drawing.Point(188, 3);
+            this.date1.Location = new System.Drawing.Point(189, 3);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(215, 27);
+            this.date1.Size = new System.Drawing.Size(216, 27);
             this.date1.TabIndex = 39;
             // 
             // fecha2
@@ -170,9 +169,9 @@
             this.fecha2.CustomFormat = "dd/MM/yyyy";
             this.fecha2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.fecha2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha2.Location = new System.Drawing.Point(565, 3);
+            this.fecha2.Location = new System.Drawing.Point(568, 3);
             this.fecha2.Name = "fecha2";
-            this.fecha2.Size = new System.Drawing.Size(212, 27);
+            this.fecha2.Size = new System.Drawing.Size(213, 27);
             this.fecha2.TabIndex = 40;
             // 
             // button5
@@ -188,9 +187,9 @@
             this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(783, 3);
+            this.button5.Location = new System.Drawing.Point(787, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 33);
+            this.button5.Size = new System.Drawing.Size(156, 36);
             this.button5.TabIndex = 8;
             this.button5.Text = "FILTRAR";
             this.button5.UseVisualStyleBackColor = false;
@@ -199,31 +198,71 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "FlujoNormal";
-            reportDataSource1.Value = this.flujoVehicularV6BindingSource;
-            reportDataSource2.Name = "FlujoPrepagado";
-            reportDataSource2.Value = this.flujoVehicularV6BindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "FlujoNormal";
+            reportDataSource3.Value = this.flujoVehicularV6BindingSource;
+            reportDataSource4.Name = "FlujoPrepagado";
+            reportDataSource4.Value = this.flujoVehicularV6BindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Tesoreria.Controles.FlujoVehicularV2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(942, 550);
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(946, 583);
             this.reportViewer1.TabIndex = 3;
-            // 
-            // flujoVehicularV6TableAdapter
-            // 
-            this.flujoVehicularV6TableAdapter.ClearBeforeFill = true;
             // 
             // flujoVehicularV6TableAdapter1
             // 
             this.flujoVehicularV6TableAdapter1.ClearBeforeFill = true;
             // 
+            // flujoVehicularV6BindingSource
+            // 
+            this.flujoVehicularV6BindingSource.DataMember = "FlujoVehicularV6";
+            this.flujoVehicularV6BindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // sAPDataSet2
+            // 
+            this.sAPDataSet2.DataSetName = "SAPDataSet2";
+            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flujoVehicularV6TableAdapter
+            // 
+            this.flujoVehicularV6TableAdapter.ClearBeforeFill = true;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // flujoVehicularExoneradoBindingSource
+            // 
+            this.flujoVehicularExoneradoBindingSource.DataMember = "FlujoVehicularExonerado";
+            this.flujoVehicularExoneradoBindingSource.DataSource = this.dataSet1;
+            // 
+            // flujoVehicularExoneradoTableAdapter
+            // 
+            this.flujoVehicularExoneradoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = SAP.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // flujoVehicularSinExoneradoBindingSource
+            // 
+            this.flujoVehicularSinExoneradoBindingSource.DataMember = "FlujoVehicularSinExonerado";
+            this.flujoVehicularSinExoneradoBindingSource.DataSource = this.dataSet1;
+            // 
+            // flujoVehicularSinExoneradoTableAdapter
+            // 
+            this.flujoVehicularSinExoneradoTableAdapter.ClearBeforeFill = true;
+            // 
             // FlujoVehicularV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 603);
+            this.ClientSize = new System.Drawing.Size(950, 639);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FlujoVehicularV2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,13 +270,16 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FlujoVehicularV2_FormClosed);
             this.Load += new System.EventHandler(this.FlujoVehicularV2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularV6BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularV6BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prepagadoDataSet)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularV6BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularExoneradoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flujoVehicularSinExoneradoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,5 +300,11 @@
         private PrepagadoDataSet prepagadoDataSet;
         private SAPDataSet2TableAdapters.FlujoVehicularV6TableAdapter flujoVehicularV6TableAdapter;
         private PrepagadoDataSetTableAdapters.FlujoVehicularV6TableAdapter flujoVehicularV6TableAdapter1;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource flujoVehicularExoneradoBindingSource;
+        private DataSet1TableAdapters.FlujoVehicularExoneradoTableAdapter flujoVehicularExoneradoTableAdapter;
+        private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource flujoVehicularSinExoneradoBindingSource;
+        private DataSet1TableAdapters.FlujoVehicularSinExoneradoTableAdapter flujoVehicularSinExoneradoTableAdapter;
     }
 }

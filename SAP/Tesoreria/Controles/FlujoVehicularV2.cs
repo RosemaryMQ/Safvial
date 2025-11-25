@@ -39,9 +39,31 @@ namespace SAP.Tesoreria.Controles
                 this.reportViewer1.LocalReport.SetParameters(frm);
                 this.reportViewer1.LocalReport.SetParameters(frm1);
                 this.reportViewer1.LocalReport.SetParameters(frm2);
-                this.flujoVehicularV6TableAdapter.Fill(this.sAPDataSet2.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
-                this.flujoVehicularV6TableAdapter1.Fill(this.prepagadoDataSet.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()), SAP.Tesoreria.Reportes.sede);
+                //this.flujoVehicularV6TableAdapter.Fill(this.sAPDataSet2.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
+                //this.flujoVehicularV6TableAdapter1.Fill(this.prepagadoDataSet.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()), SAP.Tesoreria.Reportes.sede);
+                this.flujoVehicularExoneradoTableAdapter.Fill(this.dataSet1.FlujoVehicularExonerado, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
+                this.flujoVehicularSinExoneradoTableAdapter.Fill(this.dataSet1.FlujoVehicularSinExonerado, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
+
+
+                // -------------------------------------------------------
+                // 3. PARTE FALTANTE: VINCULAR DATOS AL REPORTE
+                // -------------------------------------------------------
+
+                // Limpiamos orígenes de datos anteriores para evitar conflictos
+                this.reportViewer1.LocalReport.DataSources.Clear();
+
+                // Agregamos el primer conjunto de datos
+                // El primer string "FlujoVehicularExonerado" debe ser IDÉNTICO al nombre en la carpeta 'Conjuntos de datos' de tu imagen.
+                Microsoft.Reporting.WinForms.ReportDataSource rds1 = new Microsoft.Reporting.WinForms.ReportDataSource("FlujoVehicularExonerado", (System.Data.DataTable)this.dataSet1.FlujoVehicularExonerado);
+                this.reportViewer1.LocalReport.DataSources.Add(rds1);
+
+                // Agregamos el segundo conjunto de datos
+                Microsoft.Reporting.WinForms.ReportDataSource rds2 = new Microsoft.Reporting.WinForms.ReportDataSource("FlujoVehicularSinExonerado", (System.Data.DataTable)this.dataSet1.FlujoVehicularSinExonerado);
+                this.reportViewer1.LocalReport.DataSources.Add(rds2);
+
+                // 4. Refrescar el reporte
                 this.reportViewer1.RefreshReport();
+
             }
             catch(Exception ex)
             {
@@ -65,8 +87,10 @@ namespace SAP.Tesoreria.Controles
                     this.reportViewer1.LocalReport.SetParameters(frm);
                     this.reportViewer1.LocalReport.SetParameters(frm1);
                     this.reportViewer1.LocalReport.SetParameters(frm2);
-                    this.flujoVehicularV6TableAdapter1.Fill(this.prepagadoDataSet.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()), SAP.Tesoreria.Reportes.sede);
-                    this.flujoVehicularV6TableAdapter.Fill(this.sAPDataSet2.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
+                    //this.flujoVehicularV6TableAdapter1.Fill(this.prepagadoDataSet.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()), SAP.Tesoreria.Reportes.sede);
+                    //this.flujoVehicularV6TableAdapter.Fill(this.sAPDataSet2.FlujoVehicularV6, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
+                    this.flujoVehicularExoneradoTableAdapter.Fill(this.dataSet1.FlujoVehicularExonerado, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
+                    this.flujoVehicularSinExoneradoTableAdapter.Fill(this.dataSet1.FlujoVehicularSinExonerado, Convert.ToDateTime(date1.Value.ToShortDateString()), Convert.ToDateTime(fecha2.Value.ToShortDateString()));
                     this.reportViewer1.RefreshReport();
                 }
              
@@ -81,5 +105,8 @@ namespace SAP.Tesoreria.Controles
         {
             this.Close();
         }
+
+
+
     }
 }

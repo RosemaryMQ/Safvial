@@ -1402,6 +1402,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Tesoreros.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\FlujoVehicularV2.rdlc" />
+    <EmbeddedResource Include="Tesoreria\Controles\FlujoVehicularV2_ConPrepagado.rdlc" />
     <EmbeddedResource Include="Tesoreria\RemesasTipos.resx">
       <DependentUpon>RemesasTipos.cs</DependentUpon>
     </EmbeddedResource>

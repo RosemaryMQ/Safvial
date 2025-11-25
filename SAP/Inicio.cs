@@ -859,7 +859,7 @@ namespace SAP
         
         private bool ValidarIngresos(string usuario)
         {
-            string sql = "Select TOP 1 * From Turno Where ID_Usuario=@usuario AND Finalizado=0";
+            string sql = "Select TOP 1 * From Turno Where ID_Usuario=@usuario AND Finalizado=0  Order by fecha asc";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();

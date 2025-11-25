@@ -24,7 +24,9 @@ namespace SAP {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private DataTable1DataTable tableDataTable1;
+        private FlujoVehicularSinExoneradoDataTable tableFlujoVehicularSinExonerado;
+        
+        private FlujoVehicularExoneradoDataTable tableFlujoVehicularExonerado;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +56,11 @@ namespace SAP {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["FlujoVehicularSinExonerado"] != null)) {
+                    base.Tables.Add(new FlujoVehicularSinExoneradoDataTable(ds.Tables["FlujoVehicularSinExonerado"]));
+                }
+                if ((ds.Tables["FlujoVehicularExonerado"] != null)) {
+                    base.Tables.Add(new FlujoVehicularExoneradoDataTable(ds.Tables["FlujoVehicularExonerado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +84,19 @@ namespace SAP {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public FlujoVehicularSinExoneradoDataTable FlujoVehicularSinExonerado {
             get {
-                return this.tableDataTable1;
+                return this.tableFlujoVehicularSinExonerado;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public FlujoVehicularExoneradoDataTable FlujoVehicularExonerado {
+            get {
+                return this.tableFlujoVehicularExonerado;
             }
         }
         
@@ -152,8 +167,11 @@ namespace SAP {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["FlujoVehicularSinExonerado"] != null)) {
+                    base.Tables.Add(new FlujoVehicularSinExoneradoDataTable(ds.Tables["FlujoVehicularSinExonerado"]));
+                }
+                if ((ds.Tables["FlujoVehicularExonerado"] != null)) {
+                    base.Tables.Add(new FlujoVehicularExoneradoDataTable(ds.Tables["FlujoVehicularExonerado"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +206,16 @@ namespace SAP {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tableFlujoVehicularSinExonerado = ((FlujoVehicularSinExoneradoDataTable)(base.Tables["FlujoVehicularSinExonerado"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tableFlujoVehicularSinExonerado != null)) {
+                    this.tableFlujoVehicularSinExonerado.InitVars();
+                }
+            }
+            this.tableFlujoVehicularExonerado = ((FlujoVehicularExoneradoDataTable)(base.Tables["FlujoVehicularExonerado"]));
+            if ((initTable == true)) {
+                if ((this.tableFlujoVehicularExonerado != null)) {
+                    this.tableFlujoVehicularExonerado.InitVars();
                 }
             }
         }
@@ -204,13 +228,21 @@ namespace SAP {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tableFlujoVehicularSinExonerado = new FlujoVehicularSinExoneradoDataTable();
+            base.Tables.Add(this.tableFlujoVehicularSinExonerado);
+            this.tableFlujoVehicularExonerado = new FlujoVehicularExoneradoDataTable();
+            base.Tables.Add(this.tableFlujoVehicularExonerado);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerializeFlujoVehicularSinExonerado() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeFlujoVehicularExonerado() {
             return false;
         }
         
@@ -270,47 +302,44 @@ namespace SAP {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void FlujoVehicularSinExoneradoRowChangeEventHandler(object sender, FlujoVehicularSinExoneradoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void FlujoVehicularExoneradoRowChangeEventHandler(object sender, FlujoVehicularExoneradoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
+        public partial class FlujoVehicularSinExoneradoDataTable : global::System.Data.TypedTableBase<FlujoVehicularSinExoneradoRow> {
             
-            private global::System.Data.DataColumn columnID;
-            
-            private global::System.Data.DataColumn columnID_Usuario;
-            
-            private global::System.Data.DataColumn columnID_Vehiculo;
+            private global::System.Data.DataColumn columnMes;
             
             private global::System.Data.DataColumn columnFecha;
             
-            private global::System.Data.DataColumn columnFormaPago;
+            private global::System.Data.DataColumn columnLivianos;
             
-            private global::System.Data.DataColumn columnReferencia;
+            private global::System.Data.DataColumn columnMicrobus;
             
-            private global::System.Data.DataColumn columnCanal;
+            private global::System.Data.DataColumn columnAutobus;
             
-            private global::System.Data.DataColumn columnTurno;
+            private global::System.Data.DataColumn columnCargaLiviana;
             
-            private global::System.Data.DataColumn columnEspecial;
+            private global::System.Data.DataColumn columnEjes2;
             
-            private global::System.Data.DataColumn columnID_Vehiculo1;
+            private global::System.Data.DataColumn columnEjes3;
             
-            private global::System.Data.DataColumn columnNombre;
+            private global::System.Data.DataColumn columnEjes4;
             
-            private global::System.Data.DataColumn columnTarifa;
+            private global::System.Data.DataColumn columnEjes5;
             
-            private global::System.Data.DataColumn columnFechaVigencia;
-            
-            private global::System.Data.DataColumn columnDisabled;
+            private global::System.Data.DataColumn columnEjes6;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public FlujoVehicularSinExoneradoDataTable() {
+                this.TableName = "FlujoVehicularSinExonerado";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -318,7 +347,7 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal FlujoVehicularSinExoneradoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -335,32 +364,16 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FlujoVehicularSinExoneradoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
+            public global::System.Data.DataColumn MesColumn {
                 get {
-                    return this.columnID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_UsuarioColumn {
-                get {
-                    return this.columnID_Usuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_VehiculoColumn {
-                get {
-                    return this.columnID_Vehiculo;
+                    return this.columnMes;
                 }
             }
             
@@ -374,81 +387,73 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FormaPagoColumn {
+            public global::System.Data.DataColumn LivianosColumn {
                 get {
-                    return this.columnFormaPago;
+                    return this.columnLivianos;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ReferenciaColumn {
+            public global::System.Data.DataColumn MicrobusColumn {
                 get {
-                    return this.columnReferencia;
+                    return this.columnMicrobus;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CanalColumn {
+            public global::System.Data.DataColumn AutobusColumn {
                 get {
-                    return this.columnCanal;
+                    return this.columnAutobus;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TurnoColumn {
+            public global::System.Data.DataColumn CargaLivianaColumn {
                 get {
-                    return this.columnTurno;
+                    return this.columnCargaLiviana;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EspecialColumn {
+            public global::System.Data.DataColumn Ejes2Column {
                 get {
-                    return this.columnEspecial;
+                    return this.columnEjes2;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_Vehiculo1Column {
+            public global::System.Data.DataColumn Ejes3Column {
                 get {
-                    return this.columnID_Vehiculo1;
+                    return this.columnEjes3;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NombreColumn {
+            public global::System.Data.DataColumn Ejes4Column {
                 get {
-                    return this.columnNombre;
+                    return this.columnEjes4;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TarifaColumn {
+            public global::System.Data.DataColumn Ejes5Column {
                 get {
-                    return this.columnTarifa;
+                    return this.columnEjes5;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaVigenciaColumn {
+            public global::System.Data.DataColumn Ejes6Column {
                 get {
-                    return this.columnFechaVigencia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DisabledColumn {
-                get {
-                    return this.columnDisabled;
+                    return this.columnEjes6;
                 }
             }
             
@@ -463,66 +468,55 @@ namespace SAP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row this[int index] {
+            public FlujoVehicularSinExoneradoRow this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((FlujoVehicularSinExoneradoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event FlujoVehicularSinExoneradoRowChangeEventHandler FlujoVehicularSinExoneradoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event FlujoVehicularSinExoneradoRowChangeEventHandler FlujoVehicularSinExoneradoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event FlujoVehicularSinExoneradoRowChangeEventHandler FlujoVehicularSinExoneradoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event FlujoVehicularSinExoneradoRowChangeEventHandler FlujoVehicularSinExoneradoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddFlujoVehicularSinExoneradoRow(FlujoVehicularSinExoneradoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(int ID_Usuario, int ID_Vehiculo, System.DateTime Fecha, string FormaPago, string Referencia, int Canal, int Turno, bool Especial, string Nombre, double Tarifa, System.DateTime FechaVigencia, bool Disabled) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public FlujoVehicularSinExoneradoRow AddFlujoVehicularSinExoneradoRow(int Mes, string Fecha, int Livianos, int Microbus, int Autobus, int CargaLiviana, int Ejes2, int Ejes3, int Ejes4, int Ejes5, int Ejes6) {
+                FlujoVehicularSinExoneradoRow rowFlujoVehicularSinExoneradoRow = ((FlujoVehicularSinExoneradoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        ID_Usuario,
-                        ID_Vehiculo,
+                        Mes,
                         Fecha,
-                        FormaPago,
-                        Referencia,
-                        Canal,
-                        Turno,
-                        Especial,
-                        null,
-                        Nombre,
-                        Tarifa,
-                        FechaVigencia,
-                        Disabled};
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row FindByIDID_Vehiculo1(int ID, int ID_Vehiculo1) {
-                return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            ID,
-                            ID_Vehiculo1})));
+                        Livianos,
+                        Microbus,
+                        Autobus,
+                        CargaLiviana,
+                        Ejes2,
+                        Ejes3,
+                        Ejes4,
+                        Ejes5,
+                        Ejes6};
+                rowFlujoVehicularSinExoneradoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFlujoVehicularSinExoneradoRow);
+                return rowFlujoVehicularSinExoneradoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                FlujoVehicularSinExoneradoDataTable cln = ((FlujoVehicularSinExoneradoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -530,107 +524,88 @@ namespace SAP {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new FlujoVehicularSinExoneradoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-                this.columnID_Usuario = base.Columns["ID_Usuario"];
-                this.columnID_Vehiculo = base.Columns["ID_Vehiculo"];
+                this.columnMes = base.Columns["Mes"];
                 this.columnFecha = base.Columns["Fecha"];
-                this.columnFormaPago = base.Columns["FormaPago"];
-                this.columnReferencia = base.Columns["Referencia"];
-                this.columnCanal = base.Columns["Canal"];
-                this.columnTurno = base.Columns["Turno"];
-                this.columnEspecial = base.Columns["Especial"];
-                this.columnID_Vehiculo1 = base.Columns["ID_Vehiculo1"];
-                this.columnNombre = base.Columns["Nombre"];
-                this.columnTarifa = base.Columns["Tarifa"];
-                this.columnFechaVigencia = base.Columns["FechaVigencia"];
-                this.columnDisabled = base.Columns["Disabled"];
+                this.columnLivianos = base.Columns["Livianos"];
+                this.columnMicrobus = base.Columns["Microbus"];
+                this.columnAutobus = base.Columns["Autobus"];
+                this.columnCargaLiviana = base.Columns["CargaLiviana"];
+                this.columnEjes2 = base.Columns["Ejes2"];
+                this.columnEjes3 = base.Columns["Ejes3"];
+                this.columnEjes4 = base.Columns["Ejes4"];
+                this.columnEjes5 = base.Columns["Ejes5"];
+                this.columnEjes6 = base.Columns["Ejes6"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.columnID_Usuario = new global::System.Data.DataColumn("ID_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_Usuario);
-                this.columnID_Vehiculo = new global::System.Data.DataColumn("ID_Vehiculo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_Vehiculo);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnMes = new global::System.Data.DataColumn("Mes", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMes);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
-                this.columnFormaPago = new global::System.Data.DataColumn("FormaPago", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFormaPago);
-                this.columnReferencia = new global::System.Data.DataColumn("Referencia", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReferencia);
-                this.columnCanal = new global::System.Data.DataColumn("Canal", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCanal);
-                this.columnTurno = new global::System.Data.DataColumn("Turno", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTurno);
-                this.columnEspecial = new global::System.Data.DataColumn("Especial", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEspecial);
-                this.columnID_Vehiculo1 = new global::System.Data.DataColumn("ID_Vehiculo1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_Vehiculo1);
-                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombre);
-                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTarifa);
-                this.columnFechaVigencia = new global::System.Data.DataColumn("FechaVigencia", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaVigencia);
-                this.columnDisabled = new global::System.Data.DataColumn("Disabled", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDisabled);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID,
-                                this.columnID_Vehiculo1}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
-                this.columnID_Usuario.AllowDBNull = false;
-                this.columnID_Vehiculo.AllowDBNull = false;
-                this.columnFecha.AllowDBNull = false;
-                this.columnFormaPago.AllowDBNull = false;
-                this.columnFormaPago.MaxLength = 20;
-                this.columnReferencia.MaxLength = 60;
-                this.columnCanal.AllowDBNull = false;
-                this.columnID_Vehiculo1.AutoIncrement = true;
-                this.columnID_Vehiculo1.AutoIncrementSeed = -1;
-                this.columnID_Vehiculo1.AutoIncrementStep = -1;
-                this.columnID_Vehiculo1.AllowDBNull = false;
-                this.columnID_Vehiculo1.ReadOnly = true;
-                this.columnNombre.AllowDBNull = false;
-                this.columnNombre.MaxLength = 20;
+                this.columnLivianos = new global::System.Data.DataColumn("Livianos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLivianos);
+                this.columnMicrobus = new global::System.Data.DataColumn("Microbus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMicrobus);
+                this.columnAutobus = new global::System.Data.DataColumn("Autobus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAutobus);
+                this.columnCargaLiviana = new global::System.Data.DataColumn("CargaLiviana", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCargaLiviana);
+                this.columnEjes2 = new global::System.Data.DataColumn("Ejes2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes2);
+                this.columnEjes3 = new global::System.Data.DataColumn("Ejes3", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes3);
+                this.columnEjes4 = new global::System.Data.DataColumn("Ejes4", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes4);
+                this.columnEjes5 = new global::System.Data.DataColumn("Ejes5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes5);
+                this.columnEjes6 = new global::System.Data.DataColumn("Ejes6", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes6);
+                this.columnMes.ReadOnly = true;
+                this.columnFecha.ReadOnly = true;
+                this.columnFecha.MaxLength = 10;
+                this.columnLivianos.ReadOnly = true;
+                this.columnMicrobus.ReadOnly = true;
+                this.columnAutobus.ReadOnly = true;
+                this.columnCargaLiviana.ReadOnly = true;
+                this.columnEjes2.ReadOnly = true;
+                this.columnEjes3.ReadOnly = true;
+                this.columnEjes4.ReadOnly = true;
+                this.columnEjes5.ReadOnly = true;
+                this.columnEjes6.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public FlujoVehicularSinExoneradoRow NewFlujoVehicularSinExoneradoRow() {
+                return ((FlujoVehicularSinExoneradoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new FlujoVehicularSinExoneradoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(FlujoVehicularSinExoneradoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.FlujoVehicularSinExoneradoRowChanged != null)) {
+                    this.FlujoVehicularSinExoneradoRowChanged(this, new FlujoVehicularSinExoneradoRowChangeEvent(((FlujoVehicularSinExoneradoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -638,8 +613,8 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.FlujoVehicularSinExoneradoRowChanging != null)) {
+                    this.FlujoVehicularSinExoneradoRowChanging(this, new FlujoVehicularSinExoneradoRowChangeEvent(((FlujoVehicularSinExoneradoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -647,8 +622,8 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.FlujoVehicularSinExoneradoRowDeleted != null)) {
+                    this.FlujoVehicularSinExoneradoRowDeleted(this, new FlujoVehicularSinExoneradoRowChangeEvent(((FlujoVehicularSinExoneradoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -656,14 +631,14 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.FlujoVehicularSinExoneradoRowDeleting != null)) {
+                    this.FlujoVehicularSinExoneradoRowDeleting(this, new FlujoVehicularSinExoneradoRowChangeEvent(((FlujoVehicularSinExoneradoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemoveFlujoVehicularSinExoneradoRow(FlujoVehicularSinExoneradoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -690,7 +665,406 @@ namespace SAP {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "FlujoVehicularSinExoneradoDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FlujoVehicularExoneradoDataTable : global::System.Data.TypedTableBase<FlujoVehicularExoneradoRow> {
+            
+            private global::System.Data.DataColumn columnMes;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnLivianos;
+            
+            private global::System.Data.DataColumn columnMicrobus;
+            
+            private global::System.Data.DataColumn columnAutobus;
+            
+            private global::System.Data.DataColumn columnCargaLiviana;
+            
+            private global::System.Data.DataColumn columnEjes2;
+            
+            private global::System.Data.DataColumn columnEjes3;
+            
+            private global::System.Data.DataColumn columnEjes4;
+            
+            private global::System.Data.DataColumn columnEjes5;
+            
+            private global::System.Data.DataColumn columnEjes6;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FlujoVehicularExoneradoDataTable() {
+                this.TableName = "FlujoVehicularExonerado";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal FlujoVehicularExoneradoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected FlujoVehicularExoneradoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MesColumn {
+                get {
+                    return this.columnMes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LivianosColumn {
+                get {
+                    return this.columnLivianos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MicrobusColumn {
+                get {
+                    return this.columnMicrobus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AutobusColumn {
+                get {
+                    return this.columnAutobus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CargaLivianaColumn {
+                get {
+                    return this.columnCargaLiviana;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ejes2Column {
+                get {
+                    return this.columnEjes2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ejes3Column {
+                get {
+                    return this.columnEjes3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ejes4Column {
+                get {
+                    return this.columnEjes4;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ejes5Column {
+                get {
+                    return this.columnEjes5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ejes6Column {
+                get {
+                    return this.columnEjes6;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FlujoVehicularExoneradoRow this[int index] {
+                get {
+                    return ((FlujoVehicularExoneradoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FlujoVehicularExoneradoRowChangeEventHandler FlujoVehicularExoneradoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FlujoVehicularExoneradoRowChangeEventHandler FlujoVehicularExoneradoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FlujoVehicularExoneradoRowChangeEventHandler FlujoVehicularExoneradoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FlujoVehicularExoneradoRowChangeEventHandler FlujoVehicularExoneradoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddFlujoVehicularExoneradoRow(FlujoVehicularExoneradoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FlujoVehicularExoneradoRow AddFlujoVehicularExoneradoRow(int Mes, string Fecha, int Livianos, int Microbus, int Autobus, int CargaLiviana, int Ejes2, int Ejes3, int Ejes4, int Ejes5, int Ejes6) {
+                FlujoVehicularExoneradoRow rowFlujoVehicularExoneradoRow = ((FlujoVehicularExoneradoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Mes,
+                        Fecha,
+                        Livianos,
+                        Microbus,
+                        Autobus,
+                        CargaLiviana,
+                        Ejes2,
+                        Ejes3,
+                        Ejes4,
+                        Ejes5,
+                        Ejes6};
+                rowFlujoVehicularExoneradoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFlujoVehicularExoneradoRow);
+                return rowFlujoVehicularExoneradoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                FlujoVehicularExoneradoDataTable cln = ((FlujoVehicularExoneradoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FlujoVehicularExoneradoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnMes = base.Columns["Mes"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnLivianos = base.Columns["Livianos"];
+                this.columnMicrobus = base.Columns["Microbus"];
+                this.columnAutobus = base.Columns["Autobus"];
+                this.columnCargaLiviana = base.Columns["CargaLiviana"];
+                this.columnEjes2 = base.Columns["Ejes2"];
+                this.columnEjes3 = base.Columns["Ejes3"];
+                this.columnEjes4 = base.Columns["Ejes4"];
+                this.columnEjes5 = base.Columns["Ejes5"];
+                this.columnEjes6 = base.Columns["Ejes6"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnMes = new global::System.Data.DataColumn("Mes", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMes);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnLivianos = new global::System.Data.DataColumn("Livianos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLivianos);
+                this.columnMicrobus = new global::System.Data.DataColumn("Microbus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMicrobus);
+                this.columnAutobus = new global::System.Data.DataColumn("Autobus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAutobus);
+                this.columnCargaLiviana = new global::System.Data.DataColumn("CargaLiviana", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCargaLiviana);
+                this.columnEjes2 = new global::System.Data.DataColumn("Ejes2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes2);
+                this.columnEjes3 = new global::System.Data.DataColumn("Ejes3", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes3);
+                this.columnEjes4 = new global::System.Data.DataColumn("Ejes4", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes4);
+                this.columnEjes5 = new global::System.Data.DataColumn("Ejes5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes5);
+                this.columnEjes6 = new global::System.Data.DataColumn("Ejes6", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEjes6);
+                this.columnMes.ReadOnly = true;
+                this.columnFecha.ReadOnly = true;
+                this.columnFecha.MaxLength = 10;
+                this.columnLivianos.ReadOnly = true;
+                this.columnMicrobus.ReadOnly = true;
+                this.columnAutobus.ReadOnly = true;
+                this.columnCargaLiviana.ReadOnly = true;
+                this.columnEjes2.ReadOnly = true;
+                this.columnEjes3.ReadOnly = true;
+                this.columnEjes4.ReadOnly = true;
+                this.columnEjes5.ReadOnly = true;
+                this.columnEjes6.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FlujoVehicularExoneradoRow NewFlujoVehicularExoneradoRow() {
+                return ((FlujoVehicularExoneradoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FlujoVehicularExoneradoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(FlujoVehicularExoneradoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FlujoVehicularExoneradoRowChanged != null)) {
+                    this.FlujoVehicularExoneradoRowChanged(this, new FlujoVehicularExoneradoRowChangeEvent(((FlujoVehicularExoneradoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FlujoVehicularExoneradoRowChanging != null)) {
+                    this.FlujoVehicularExoneradoRowChanging(this, new FlujoVehicularExoneradoRowChangeEvent(((FlujoVehicularExoneradoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FlujoVehicularExoneradoRowDeleted != null)) {
+                    this.FlujoVehicularExoneradoRowDeleted(this, new FlujoVehicularExoneradoRowChangeEvent(((FlujoVehicularExoneradoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FlujoVehicularExoneradoRowDeleting != null)) {
+                    this.FlujoVehicularExoneradoRowDeleting(this, new FlujoVehicularExoneradoRowChangeEvent(((FlujoVehicularExoneradoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveFlujoVehicularExoneradoRow(FlujoVehicularExoneradoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet1 ds = new DataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FlujoVehicularExoneradoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -734,271 +1108,660 @@ namespace SAP {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class FlujoVehicularSinExoneradoRow : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private FlujoVehicularSinExoneradoDataTable tableFlujoVehicularSinExonerado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal FlujoVehicularSinExoneradoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
+                this.tableFlujoVehicularSinExonerado = ((FlujoVehicularSinExoneradoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableDataTable1.IDColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_Usuario {
-                get {
-                    return ((int)(this[this.tableDataTable1.ID_UsuarioColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.ID_UsuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_Vehiculo {
-                get {
-                    return ((int)(this[this.tableDataTable1.ID_VehiculoColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.ID_VehiculoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Fecha {
-                get {
-                    return ((global::System.DateTime)(this[this.tableDataTable1.FechaColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.FechaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FormaPago {
-                get {
-                    return ((string)(this[this.tableDataTable1.FormaPagoColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.FormaPagoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Referencia {
+            public int Mes {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.ReferenciaColumn]));
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.MesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Referencia\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.ReferenciaColumn] = value;
+                    this[this.tableFlujoVehicularSinExonerado.MesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Canal {
-                get {
-                    return ((int)(this[this.tableDataTable1.CanalColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.CanalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Turno {
+            public string Fecha {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable1.TurnoColumn]));
+                        return ((string)(this[this.tableFlujoVehicularSinExonerado.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Turno\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.TurnoColumn] = value;
+                    this[this.tableFlujoVehicularSinExonerado.FechaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Especial {
+            public int Livianos {
                 get {
                     try {
-                        return ((bool)(this[this.tableDataTable1.EspecialColumn]));
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.LivianosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Especial\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Livianos\' de la tabla \'FlujoVehicularSinExonerado\' es DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.EspecialColumn] = value;
+                    this[this.tableFlujoVehicularSinExonerado.LivianosColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_Vehiculo1 {
-                get {
-                    return ((int)(this[this.tableDataTable1.ID_Vehiculo1Column]));
-                }
-                set {
-                    this[this.tableDataTable1.ID_Vehiculo1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nombre {
-                get {
-                    return ((string)(this[this.tableDataTable1.NombreColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.NombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Tarifa {
+            public int Microbus {
                 get {
                     try {
-                        return ((double)(this[this.tableDataTable1.TarifaColumn]));
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.MicrobusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Microbus\' de la tabla \'FlujoVehicularSinExonerado\' es DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.TarifaColumn] = value;
+                    this[this.tableFlujoVehicularSinExonerado.MicrobusColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime FechaVigencia {
+            public int Autobus {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.FechaVigenciaColumn]));
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.AutobusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaVigencia\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Autobus\' de la tabla \'FlujoVehicularSinExonerado\' es DBNu" +
+                                "ll.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.FechaVigenciaColumn] = value;
+                    this[this.tableFlujoVehicularSinExonerado.AutobusColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Disabled {
+            public int CargaLiviana {
                 get {
                     try {
-                        return ((bool)(this[this.tableDataTable1.DisabledColumn]));
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.CargaLivianaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Disabled\' de la tabla \'DataTable1\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CargaLiviana\' de la tabla \'FlujoVehicularSinExonerado\' es" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.DisabledColumn] = value;
+                    this[this.tableFlujoVehicularSinExonerado.CargaLivianaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsReferenciaNull() {
-                return this.IsNull(this.tableDataTable1.ReferenciaColumn);
+            public int Ejes2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.Ejes2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes2\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularSinExonerado.Ejes2Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetReferenciaNull() {
-                this[this.tableDataTable1.ReferenciaColumn] = global::System.Convert.DBNull;
+            public int Ejes3 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.Ejes3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes3\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularSinExonerado.Ejes3Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTurnoNull() {
-                return this.IsNull(this.tableDataTable1.TurnoColumn);
+            public int Ejes4 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.Ejes4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes4\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularSinExonerado.Ejes4Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTurnoNull() {
-                this[this.tableDataTable1.TurnoColumn] = global::System.Convert.DBNull;
+            public int Ejes5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.Ejes5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes5\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularSinExonerado.Ejes5Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsEspecialNull() {
-                return this.IsNull(this.tableDataTable1.EspecialColumn);
+            public int Ejes6 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularSinExonerado.Ejes6Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes6\' de la tabla \'FlujoVehicularSinExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularSinExonerado.Ejes6Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetEspecialNull() {
-                this[this.tableDataTable1.EspecialColumn] = global::System.Convert.DBNull;
+            public bool IsMesNull() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.MesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTarifaNull() {
-                return this.IsNull(this.tableDataTable1.TarifaColumn);
+            public void SetMesNull() {
+                this[this.tableFlujoVehicularSinExonerado.MesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTarifaNull() {
-                this[this.tableDataTable1.TarifaColumn] = global::System.Convert.DBNull;
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.FechaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFechaVigenciaNull() {
-                return this.IsNull(this.tableDataTable1.FechaVigenciaColumn);
+            public void SetFechaNull() {
+                this[this.tableFlujoVehicularSinExonerado.FechaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFechaVigenciaNull() {
-                this[this.tableDataTable1.FechaVigenciaColumn] = global::System.Convert.DBNull;
+            public bool IsLivianosNull() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.LivianosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDisabledNull() {
-                return this.IsNull(this.tableDataTable1.DisabledColumn);
+            public void SetLivianosNull() {
+                this[this.tableFlujoVehicularSinExonerado.LivianosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDisabledNull() {
-                this[this.tableDataTable1.DisabledColumn] = global::System.Convert.DBNull;
+            public bool IsMicrobusNull() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.MicrobusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMicrobusNull() {
+                this[this.tableFlujoVehicularSinExonerado.MicrobusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAutobusNull() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.AutobusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAutobusNull() {
+                this[this.tableFlujoVehicularSinExonerado.AutobusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCargaLivianaNull() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.CargaLivianaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCargaLivianaNull() {
+                this[this.tableFlujoVehicularSinExonerado.CargaLivianaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes2Null() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.Ejes2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes2Null() {
+                this[this.tableFlujoVehicularSinExonerado.Ejes2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes3Null() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.Ejes3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes3Null() {
+                this[this.tableFlujoVehicularSinExonerado.Ejes3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes4Null() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.Ejes4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes4Null() {
+                this[this.tableFlujoVehicularSinExonerado.Ejes4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes5Null() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.Ejes5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes5Null() {
+                this[this.tableFlujoVehicularSinExonerado.Ejes5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes6Null() {
+                return this.IsNull(this.tableFlujoVehicularSinExonerado.Ejes6Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes6Null() {
+                this[this.tableFlujoVehicularSinExonerado.Ejes6Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FlujoVehicularExoneradoRow : global::System.Data.DataRow {
+            
+            private FlujoVehicularExoneradoDataTable tableFlujoVehicularExonerado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal FlujoVehicularExoneradoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFlujoVehicularExonerado = ((FlujoVehicularExoneradoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Mes {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.MesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Mes\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.MesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Fecha {
+                get {
+                    try {
+                        return ((string)(this[this.tableFlujoVehicularExonerado.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Livianos {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.LivianosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Livianos\' de la tabla \'FlujoVehicularExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.LivianosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Microbus {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.MicrobusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Microbus\' de la tabla \'FlujoVehicularExonerado\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.MicrobusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Autobus {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.AutobusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Autobus\' de la tabla \'FlujoVehicularExonerado\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.AutobusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int CargaLiviana {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.CargaLivianaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CargaLiviana\' de la tabla \'FlujoVehicularExonerado\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.CargaLivianaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ejes2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.Ejes2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes2\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.Ejes2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ejes3 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.Ejes3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes3\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.Ejes3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ejes4 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.Ejes4Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes4\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.Ejes4Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ejes5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.Ejes5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes5\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.Ejes5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ejes6 {
+                get {
+                    try {
+                        return ((int)(this[this.tableFlujoVehicularExonerado.Ejes6Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Ejes6\' de la tabla \'FlujoVehicularExonerado\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFlujoVehicularExonerado.Ejes6Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMesNull() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.MesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMesNull() {
+                this[this.tableFlujoVehicularExonerado.MesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableFlujoVehicularExonerado.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLivianosNull() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.LivianosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLivianosNull() {
+                this[this.tableFlujoVehicularExonerado.LivianosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMicrobusNull() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.MicrobusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMicrobusNull() {
+                this[this.tableFlujoVehicularExonerado.MicrobusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAutobusNull() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.AutobusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAutobusNull() {
+                this[this.tableFlujoVehicularExonerado.AutobusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCargaLivianaNull() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.CargaLivianaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCargaLivianaNull() {
+                this[this.tableFlujoVehicularExonerado.CargaLivianaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes2Null() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.Ejes2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes2Null() {
+                this[this.tableFlujoVehicularExonerado.Ejes2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes3Null() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.Ejes3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes3Null() {
+                this[this.tableFlujoVehicularExonerado.Ejes3Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes4Null() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.Ejes4Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes4Null() {
+                this[this.tableFlujoVehicularExonerado.Ejes4Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes5Null() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.Ejes5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes5Null() {
+                this[this.tableFlujoVehicularExonerado.Ejes5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEjes6Null() {
+                return this.IsNull(this.tableFlujoVehicularExonerado.Ejes6Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEjes6Null() {
+                this[this.tableFlujoVehicularExonerado.Ejes6Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1006,22 +1769,56 @@ namespace SAP {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class FlujoVehicularSinExoneradoRowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private FlujoVehicularSinExoneradoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public FlujoVehicularSinExoneradoRowChangeEvent(FlujoVehicularSinExoneradoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row Row {
+            public FlujoVehicularSinExoneradoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class FlujoVehicularExoneradoRowChangeEvent : global::System.EventArgs {
+            
+            private FlujoVehicularExoneradoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FlujoVehicularExoneradoRowChangeEvent(FlujoVehicularExoneradoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FlujoVehicularExoneradoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1049,7 +1846,7 @@ namespace SAP.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
+    public partial class FlujoVehicularSinExoneradoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1063,7 +1860,7 @@ namespace SAP.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataTable1TableAdapter() {
+        public FlujoVehicularSinExoneradoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1160,21 +1957,18 @@ namespace SAP.DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("ID_Usuario", "ID_Usuario");
-            tableMapping.ColumnMappings.Add("ID_Vehiculo", "ID_Vehiculo");
+            tableMapping.DataSetTable = "FlujoVehicularSinExonerado";
+            tableMapping.ColumnMappings.Add("Mes", "Mes");
             tableMapping.ColumnMappings.Add("Fecha", "Fecha");
-            tableMapping.ColumnMappings.Add("FormaPago", "FormaPago");
-            tableMapping.ColumnMappings.Add("Referencia", "Referencia");
-            tableMapping.ColumnMappings.Add("Canal", "Canal");
-            tableMapping.ColumnMappings.Add("Turno", "Turno");
-            tableMapping.ColumnMappings.Add("Especial", "Especial");
-            tableMapping.ColumnMappings.Add("ID_Vehiculo1", "ID_Vehiculo1");
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
-            tableMapping.ColumnMappings.Add("FechaVigencia", "FechaVigencia");
-            tableMapping.ColumnMappings.Add("Disabled", "Disabled");
+            tableMapping.ColumnMappings.Add("Livianos", "Livianos");
+            tableMapping.ColumnMappings.Add("Microbus", "Microbus");
+            tableMapping.ColumnMappings.Add("Autobus", "Autobus");
+            tableMapping.ColumnMappings.Add("CargaLiviana", "CargaLiviana");
+            tableMapping.ColumnMappings.Add("Ejes2", "Ejes2");
+            tableMapping.ColumnMappings.Add("Ejes3", "Ejes3");
+            tableMapping.ColumnMappings.Add("Ejes4", "Ejes4");
+            tableMapping.ColumnMappings.Add("Ejes5", "Ejes5");
+            tableMapping.ColumnMappings.Add("Ejes6", "Ejes6");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1182,7 +1976,7 @@ namespace SAP.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAP;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1191,17 +1985,28 @@ namespace SAP.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from Pagos A INNER JOIN TipoVehiculos B ON A.id_vehiculo = B.ID_vehiculo" +
-                "\r\n";
+            this._commandCollection[0].CommandText = @"SELECT        MONTH(CONVERT(VARCHAR(10), Pagos.Fecha, 103)) AS Mes, CONVERT(VARCHAR(10), Pagos.Fecha, 103) AS Fecha, SUM(CASE WHEN Nombre = 'Liviano' THEN 1 ELSE 0 END) AS Livianos, 
+                         SUM(CASE WHEN Nombre = 'Microbus' THEN 1 ELSE 0 END) AS Microbus, SUM(CASE WHEN Nombre = 'Autobus' THEN 1 ELSE 0 END) AS Autobus, SUM(CASE WHEN Nombre = 'Carga Liviana' THEN 1 ELSE 0 END) 
+                         AS CargaLiviana, SUM(CASE WHEN Nombre = '2 Ejes' THEN 1 ELSE 0 END) AS Ejes2, SUM(CASE WHEN Nombre = '3 Ejes' THEN 1 ELSE 0 END) AS Ejes3, SUM(CASE WHEN Nombre = '4 Ejes' THEN 1 ELSE 0 END) AS Ejes4, 
+                         SUM(CASE WHEN Nombre = '5 Ejes' THEN 1 ELSE 0 END) AS Ejes5, SUM(CASE WHEN Nombre = '6 Ejes o Mas' THEN 1 ELSE 0 END) AS Ejes6
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00' AND @fecha1 + '  23:59:59') and (Pagos.FormaPago <> 'Exonerado')
+GROUP BY CONVERT(VARCHAR(10), Pagos.Fecha, 103)
+ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(10), Pagos.Fecha, 103))";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.DataTable1DataTable dataTable) {
+        public virtual int Fill(DataSet1.FlujoVehicularSinExoneradoDataTable dataTable, System.DateTime fecha, System.DateTime fecha1) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1213,9 +2018,206 @@ namespace SAP.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.DataTable1DataTable GetData() {
+        public virtual DataSet1.FlujoVehicularSinExoneradoDataTable GetData(System.DateTime fecha, System.DateTime fecha1) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.DataTable1DataTable dataTable = new DataSet1.DataTable1DataTable();
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            DataSet1.FlujoVehicularSinExoneradoDataTable dataTable = new DataSet1.FlujoVehicularSinExoneradoDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class FlujoVehicularExoneradoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public FlujoVehicularExoneradoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "FlujoVehicularExonerado";
+            tableMapping.ColumnMappings.Add("Mes", "Mes");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Livianos", "Livianos");
+            tableMapping.ColumnMappings.Add("Microbus", "Microbus");
+            tableMapping.ColumnMappings.Add("Autobus", "Autobus");
+            tableMapping.ColumnMappings.Add("CargaLiviana", "CargaLiviana");
+            tableMapping.ColumnMappings.Add("Ejes2", "Ejes2");
+            tableMapping.ColumnMappings.Add("Ejes3", "Ejes3");
+            tableMapping.ColumnMappings.Add("Ejes4", "Ejes4");
+            tableMapping.ColumnMappings.Add("Ejes5", "Ejes5");
+            tableMapping.ColumnMappings.Add("Ejes6", "Ejes6");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAP;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"
+
+SELECT        MONTH(CONVERT(VARCHAR(10), Pagos.Fecha, 103)) AS Mes, CONVERT(VARCHAR(10), Pagos.Fecha, 103) AS Fecha, SUM(CASE WHEN Nombre = 'Liviano' THEN 1 ELSE 0 END) AS Livianos, 
+                         SUM(CASE WHEN Nombre = 'Microbus' THEN 1 ELSE 0 END) AS Microbus, SUM(CASE WHEN Nombre = 'Autobus' THEN 1 ELSE 0 END) AS Autobus, SUM(CASE WHEN Nombre = 'Carga Liviana' THEN 1 ELSE 0 END) 
+                         AS CargaLiviana, SUM(CASE WHEN Nombre = '2 Ejes' THEN 1 ELSE 0 END) AS Ejes2, SUM(CASE WHEN Nombre = '3 Ejes' THEN 1 ELSE 0 END) AS Ejes3, SUM(CASE WHEN Nombre = '4 Ejes' THEN 1 ELSE 0 END) AS Ejes4, 
+                         SUM(CASE WHEN Nombre = '5 Ejes' THEN 1 ELSE 0 END) AS Ejes5, SUM(CASE WHEN Nombre = '6 Ejes o Mas' THEN 1 ELSE 0 END) AS Ejes6
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00' AND @fecha1 + '  23:59:59') and (Pagos.FormaPago = 'Exonerado')
+GROUP BY CONVERT(VARCHAR(10), Pagos.Fecha, 103)
+ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(10), Pagos.Fecha, 103))
+
+";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet1.FlujoVehicularExoneradoDataTable dataTable, System.DateTime fecha, System.DateTime fecha1) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet1.FlujoVehicularExoneradoDataTable GetData(System.DateTime fecha, System.DateTime fecha1) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            DataSet1.FlujoVehicularExoneradoDataTable dataTable = new DataSet1.FlujoVehicularExoneradoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
