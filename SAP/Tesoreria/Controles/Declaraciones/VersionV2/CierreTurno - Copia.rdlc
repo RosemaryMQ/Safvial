@@ -11800,7 +11800,7 @@
       <Width>19.241in</Width>
       <Page>
         <PageHeader>
-          <Height>5.38128cm</Height>
+          <Height>4.9858cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -11925,7 +11925,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
+              <Top>3.55704cm</Top>
               <Left>19.12345cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
@@ -11959,7 +11959,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
+              <Top>3.55704cm</Top>
               <Left>22.65613cm</Left>
               <Height>0.69674cm</Height>
               <Width>6.52576cm</Width>
@@ -12077,7 +12077,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>4.28906cm</Top>
-              <Left>3.51482cm</Left>
+              <Left>10.49982cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>8</ZIndex>
@@ -12105,15 +12105,15 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>4.28906cm</Top>
-              <Left>7.08278cm</Left>
+              <Left>14.06778cm</Left>
               <Height>0.69674cm</Height>
-              <Width>4.87336cm</Width>
+              <Width>6.52576cm</Width>
               <ZIndex>9</ZIndex>
               <Style>
                 <Border>
@@ -12145,7 +12145,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>4.28906cm</Top>
-              <Left>12.09159cm</Left>
+              <Left>20.66409cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>10</ZIndex>
@@ -12173,152 +12173,16 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>4.28905cm</Top>
-              <Left>15.65955cm</Left>
+              <Left>24.23205cm</Left>
               <Height>0.69674cm</Height>
-              <Width>5.80264cm</Width>
+              <Width>6.52576cm</Width>
               <ZIndex>11</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox147">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Fecha Primera Tabulación:</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>21.87198cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>5.45749cm</Width>
-              <ZIndex>12</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox148">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!PrimeraTabulacion.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>27.40004cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>4.96471cm</Width>
-              <ZIndex>13</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox149">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Fecha Última Tabulación</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>32.54114cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>4.95261cm</Width>
-              <ZIndex>14</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox150">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!UltimaTabulacion.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30353cm</Top>
-              <Left>37.5643cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>5.51971cm</Width>
-              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12364,19 +12228,11 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="PrimeraTabulacion">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="UltimaTabulacion">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>3</NumberOfRows>
+      <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -12397,16 +12253,6 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>FechaFin</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>PrimeraTabulacion</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>UltimaTabulacion</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
