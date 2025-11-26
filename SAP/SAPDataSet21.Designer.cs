@@ -56205,11 +56205,11 @@ WHERE        (dbo.Pagos.ID_Usuario = @usuario) AND (dbo.Pagos.Fecha BETWEEN @fec
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
-FROM            Pagos INNER JOIN
-                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
-WHERE        (Pagos.Fecha BETWEEN @fecha AND @fecha1) AND (Pagos.FormaPago = 'Transferencia') AND (Pagos.Turno = @turno)
-GROUP BY TipoVehiculos.Nombre, TipoVehiculos.Tarifa, Pagos.FormaPago";
+            this._commandCollection[0].CommandText = @"SELECT       dbo.TipoVehiculos.Nombre, SUM(dbo.TipoVehiculos.Tarifa) AS Tarifa, COUNT(dbo.Pagos.FormaPago) AS Tabulado
+FROM            dbo.Pagos INNER JOIN
+                         dbo.TipoVehiculos ON dbo.Pagos.ID_Vehiculo = dbo.TipoVehiculos.ID_Vehiculo
+WHERE        (dbo.Pagos.Fecha BETWEEN @fecha AND @fecha1) AND (dbo.Pagos.FormaPago = 'Biopago') AND (dbo.Pagos.Turno = @turno)
+GROUP BY dbo.TipoVehiculos.Nombre, dbo.TipoVehiculos.Tarifa, dbo.Pagos.FormaPago";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
