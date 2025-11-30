@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Logo2.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="SAP" version="1.9.0.90" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="SAP" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="SAP.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -775,14 +775,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="30380032">
-      <assemblyIdentity name="SAP" version="1.9.0.90" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="31290368">
+      <assemblyIdentity name="SAP" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wlGfLjCQrrWHqH4WgfN2ZGMKLVzwzD/AAoYpS604e0U=</dsig:DigestValue>
+        <dsig:DigestValue>cLZgdT/ZYMgvbPuyBKKI2f9Qt7x5MbXuONDMtyj5Nu0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

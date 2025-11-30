@@ -751,6 +751,12 @@
     <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurno.Designer.cs">
       <DependentUpon>CierreTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurnoDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurnoDiario.Designer.cs">
+      <DependentUpon>CierreTurnoDiario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -999,6 +1005,7 @@
     <EmbeddedResource Include="Cobradores\Controles\Avance.rdlc" />
     <EmbeddedResource Include="Cobradores\Controles\Avance.resx">
       <DependentUpon>Avance.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Cobradores\Controles\Biopago\Biopago.resx">
       <DependentUpon>Biopago.cs</DependentUpon>
@@ -1097,6 +1104,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\WinForms\Autorizacion.resx">
       <DependentUpon>Autorizacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Configurador\ClaveSupervisores.resx">
       <DependentUpon>ClaveSupervisores.cs</DependentUpon>
@@ -1109,6 +1117,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configurador\OperacionesContraseña\AgregarContraseña.resx">
       <DependentUpon>AgregarContraseña.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Configurador\OperacionesContraseña\EditarContraseña.resx">
       <DependentUpon>EditarContraseña.cs</DependentUpon>
@@ -1121,6 +1130,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configurador\TarjetasSupervisores\AgregarTarjeta.resx">
       <DependentUpon>AgregarTarjeta.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Configurador\TarjetasSupervisores\EditarTarjeta.resx">
       <DependentUpon>EditarTarjeta.cs</DependentUpon>
@@ -1141,15 +1151,19 @@
     </Compile>
     <EmbeddedResource Include="Recaudadores\Controles\Afiliacion.resx">
       <DependentUpon>Afiliacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\Controles\AfiliacionV3.resx">
       <DependentUpon>AfiliacionV3.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\Controles\AnularOperacion.resx">
       <DependentUpon>AnularOperacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\Controles\AsignarTarjetasEmpresa.resx">
       <DependentUpon>AsignarTarjetasEmpresa.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\Controles\Buscador.resx">
       <DependentUpon>Buscador.cs</DependentUpon>
@@ -1231,9 +1245,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\SafvialWeb\AnularRecarga.resx">
       <DependentUpon>AnularRecarga.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\SafvialWeb\AprobarRecarga.resx">
       <DependentUpon>AprobarRecarga.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recaudadores\SafvialWeb\MenuWeb.resx">
       <DependentUpon>MenuWeb.cs</DependentUpon>
@@ -1273,9 +1289,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\AuditorUsuario.resx">
       <DependentUpon>AuditorUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Autorizacion.resx">
       <DependentUpon>Autorizacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\CierreTurnoDiario.resx">
+      <DependentUpon>CierreTurnoDiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.resx">
       <DependentUpon>DeclaracionParametrizado.cs</DependentUpon>
@@ -1283,9 +1304,11 @@
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\Tabulacion.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\AvanceReport.resx">
       <DependentUpon>AvanceReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Avances.resx">
       <DependentUpon>Avances.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\AvancesRealizados.resx">
       <DependentUpon>AvancesRealizados.cs</DependentUpon>
@@ -1320,6 +1343,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvanceBuzon.resx">
       <DependentUpon>AvanceBuzon.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Tesorero\AvancesEditados.resx">
       <DependentUpon>AvancesEditados.cs</DependentUpon>
@@ -1342,15 +1366,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\AgregarUsuario.resx">
       <DependentUpon>AgregarUsuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\AperturaV2.resx">
       <DependentUpon>AperturaV2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Cierre.resx">
       <DependentUpon>Cierre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\Avances.resx">
       <DependentUpon>Avances.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\AvancesResumen.resx">
       <DependentUpon>AvancesResumen.cs</DependentUpon>

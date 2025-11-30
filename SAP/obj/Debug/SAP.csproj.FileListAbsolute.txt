@@ -4811,7 +4811,6 @@ D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Avance.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Biopago.Biopago.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Contraseña.resources
@@ -4897,6 +4896,7 @@ D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Auditoria.RecordCierres.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.AuditorUsuario.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Autorizacion.resources
+D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.VersionV2.AvanceReport.resources
 D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.VersionV2.Avances.resources

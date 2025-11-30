@@ -176,18 +176,22 @@
           <DataField>BilleteBD500</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="BilleteS10000001">
+          <DataField>BilleteS1000000</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
         <Field Name="BIO">
           <DataField>BIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
         <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreTurnoV1</rd:TableName>
+        <rd:TableName>CierreTurnoV1Diario</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreTurnoV1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierreTurnoV1DiarioTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="CierrePDV">
@@ -211,11 +215,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>H:\Proyecto\SAP\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierrePDV</rd:TableName>
+        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>CierrePDV1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierrePDVTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierrePDV1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="CierreEfectivo">
@@ -239,11 +243,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>H:\Proyecto\SAP\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreEfectivo</rd:TableName>
+        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>CierreEfectivo1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreEfectivoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierreEfectivo1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="CierrePINC">
@@ -267,11 +271,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>H:\Proyecto\SAP\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierrePINC</rd:TableName>
+        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>CierrePINC1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierrePINCTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierrePINC1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="TarjetaExpress">
@@ -359,11 +363,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ingal\Dropbox\Proyecto\SAP\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreTransf</rd:TableName>
+        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>CierreTransf1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreTransfTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierreTransf1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="CierreBuzon">
@@ -379,11 +383,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ingal\Documents\SAFVIAL - PEAJES\Copi\Carabobo\SAP\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>BuzonTurno</rd:TableName>
+        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>BuzonTurno1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>BuzonTurnoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>BuzonTurno1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="CierreBiopago">
@@ -408,10 +412,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
         <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreBiopago</rd:TableName>
+        <rd:TableName>CierreBiopago1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreBiopagoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierreBiopago1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -12350,10 +12354,6 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="Turno">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="FechaInicio">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -12374,6 +12374,10 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="Turno">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -12384,11 +12388,6 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>Fecha</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>0</RowIndex>
-          <ParameterName>Turno</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -12414,6 +12413,11 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>FechaSolicitud</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>Turno</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

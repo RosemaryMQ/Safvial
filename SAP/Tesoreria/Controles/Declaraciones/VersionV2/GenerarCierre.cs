@@ -97,7 +97,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 hora2 = " 00:00:00";
                 hora3 = " 11:59:59";
             }
-            else if (control == "Diario(24 Horas)")
+            else if (control == "Diario (24 Horas)")
             {
                 turno = 10;
                 date2.Enabled = false;
@@ -121,8 +121,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 fechaSolicitud = date1.Value.ToString("dd/MM/yyyy");
                 if (turno == 10)
                 {
-                    fechaS1 = date1.Value.ToString() + hora;
-                    fechaS = date1.Value.ToString() + hora1;
+                    fechaS1 = date1.Value.ToString("dd/MM/yyyy") + hora;
+                    fechaS = date1.Value.ToString("dd/MM/yyyy") + hora1;
                     this.PrimeraTabulacionDiaria(fechaS1, fechaS);
                     this.UltimaTabulacionDiaria(fechaS1, fechaS);
                 }
@@ -148,8 +148,17 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             {
                 MessageBox.Show("La fecha ingresada no posee registros detectados", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            SAP.Tesoreria.Controles.Declaraciones.CierreTurno frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurno();
-            frm.ShowDialog();
+
+            if (turno == 10)
+            {
+                SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario();
+                frm.ShowDialog();
+            }
+            else
+            {
+                SAP.Tesoreria.Controles.Declaraciones.CierreTurno frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurno();
+                frm.ShowDialog();
+            }
             this.Close();
         }
 

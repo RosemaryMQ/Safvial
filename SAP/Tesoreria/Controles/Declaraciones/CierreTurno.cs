@@ -99,7 +99,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 
 
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 MessageBox.Show("Error al cargar el reporte.", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //this.Close();
