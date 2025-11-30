@@ -54,9 +54,10 @@ namespace SAP.Tesoreria.Controles
             //    {
             //        MessageBox.Show("Disculpe ocurrio un error al intentar crear un nuevo usuario por favor intente nuevamente.", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //    }
-               
+
             //}
         }
+
         private void NuevoUsuario(string perfil, string nickname, string contrasena, int peaje,string nombre, string apellido, string turno)
         {
             string sql = "Insert into Usuarios (Perfil,Nickname,Contrasena,ID_Peaje,Nombre,Apellido,Estado,Turno,Canal,Clave) Values (@perfil,@Nickname,@Contrasena,@Peaje,@Nombre,@Apellido,'No Conectado',@Turno,'0','')";
@@ -75,6 +76,39 @@ namespace SAP.Tesoreria.Controles
                 return;
             }
         }
+
+        private void NewUsuario(string perfil, string nickname, string contrasena, int peaje, string nombre, string apellido, string turno)
+        {
+            string sql = "Insert into Usuarios (Perfil,Nickname,Contrasena,ID_Peaje,Nombre,Apellido,Estado,Turno,Canal,Clave) Values (@perfil,@Nickname,@Contrasena,@Peaje,@Nombre,@Apellido,'No Conectado',@Turno,'0','')";
+
+            // Es buena práctica envolver esto en un try-catch para ver errores
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+                {
+                    cn.Open();
+                    SqlCommand cmd = new SqlCommand(sql, cn);
+
+                    // Asegúrate de usar el @ en el nombre del parámetro para evitar confusiones
+                    cmd.Parameters.AddWithValue("@Perfil", perfil);
+                    cmd.Parameters.AddWithValue("@Nickname", nickname);
+                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+                    cmd.Parameters.AddWithValue("@Peaje", peaje);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", apellido);
+                    cmd.Parameters.AddWithValue("@Turno", turno);
+
+                    // CORRECCIÓN AQUÍ:
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Esto te dirá por qué falla si hay un error de SQL
+                MessageBox.Show("Error al insertar: " + ex.Message);
+            }
+        }
+
         private bool EsValido(string usuario)
         {
             string sql = "SELECT * FROM Usuarios WHERE Nickname = @usuario";
@@ -106,7 +140,7 @@ namespace SAP.Tesoreria.Controles
                 {
                     if (!EsValido(NickName.Text))
                     {
-                            this.NuevoUsuario(TipoUsuario.Text, NickName.Text, Contraseña.Text, 1, Nombre.Text, Apellido.Text, Turno.Text);
+                            this.NewUsuario(TipoUsuario.Text, NickName.Text, Contraseña.Text, 1, Nombre.Text, Apellido.Text, Turno.Text);
                             MessageBox.Show("Nuevo usuario registrado correctamente", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                     }

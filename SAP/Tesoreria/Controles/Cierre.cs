@@ -67,7 +67,7 @@ namespace SAP.Tesoreria.Controles
         private void buscarCataporte(int usuario)
         {
             //rm-->string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (ID_Usuario = @usuario) AND (Responsable = 0)";
-            string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (IDUser = @usuario) AND (Responsable = 0)";
+            string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (IDTurnoUsuario = @usuario) AND (Responsable = 0)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();

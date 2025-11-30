@@ -11797,7 +11797,7 @@
         <Height>4.07596in</Height>
         <Style />
       </Body>
-      <Width>19.241in</Width>
+      <Width>18.491in</Width>
       <Page>
         <PageHeader>
           <Height>5.38128cm</Height>
@@ -11858,7 +11858,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.52176cm</Top>
-              <Left>8.99445cm</Left>
+              <Left>6.77195cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>1</ZIndex>
@@ -11892,7 +11892,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.52176cm</Top>
-              <Left>12.52713cm</Left>
+              <Left>10.30463cm</Left>
               <Height>0.69674cm</Height>
               <Width>6.52576cm</Width>
               <ZIndex>2</ZIndex>
@@ -11913,7 +11913,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Turno:</Value>
+                      <Value>Reporte  del:</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -11926,44 +11926,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.52176cm</Top>
-              <Left>19.12345cm</Left>
+              <Left>16.90095cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox37">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!Turno.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>22.65613cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>6.52576cm</Width>
-              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -11994,10 +11960,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.52176cm</Top>
-              <Left>29.17681cm</Left>
+              <Left>31.39931cm</Left>
               <Height>0.66146cm</Height>
               <Width>1.53948cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12028,10 +11994,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.52176cm</Top>
-              <Left>30.71629cm</Left>
+              <Left>32.93879cm</Left>
               <Height>0.69674cm</Height>
               <Width>3.93868cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12050,7 +12016,7 @@
               <Left>16.2604cm</Left>
               <Height>2.68611cm</Height>
               <Width>11.5668cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12080,7 +12046,7 @@
               <Left>3.51482cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12114,7 +12080,7 @@
               <Left>7.08278cm</Left>
               <Height>0.69674cm</Height>
               <Width>4.87336cm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12148,7 +12114,7 @@
               <Left>12.09159cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12182,7 +12148,7 @@
               <Left>15.65955cm</Left>
               <Height>0.69674cm</Height>
               <Width>5.80264cm</Width>
-              <ZIndex>11</ZIndex>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12216,7 +12182,7 @@
               <Left>21.87198cm</Left>
               <Height>0.66146cm</Height>
               <Width>5.45749cm</Width>
-              <ZIndex>12</ZIndex>
+              <ZIndex>11</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12250,7 +12216,7 @@
               <Left>27.40004cm</Left>
               <Height>0.69674cm</Height>
               <Width>4.96471cm</Width>
-              <ZIndex>13</ZIndex>
+              <ZIndex>12</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12284,7 +12250,7 @@
               <Left>32.54114cm</Left>
               <Height>0.66146cm</Height>
               <Width>4.95261cm</Width>
-              <ZIndex>14</ZIndex>
+              <ZIndex>13</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12318,6 +12284,38 @@
               <Left>37.5643cm</Left>
               <Height>0.69674cm</Height>
               <Width>5.51971cm</Width>
+              <ZIndex>14</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox151">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!FechaSolicitud.Value &amp; "   (  " &amp; Parameters!Turno.Value &amp; "  )"</Value>
+                      <Style>
+                        <FontWeight>Normal</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox151</rd:DefaultName>
+              <Top>3.54224cm</Top>
+              <Left>20.76662cm</Left>
+              <Height>0.6cm</Height>
+              <Width>9.81683cm</Width>
               <ZIndex>15</ZIndex>
               <Style>
                 <Border>
@@ -12372,11 +12370,15 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="FechaSolicitud">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>3</NumberOfRows>
+      <NumberOfRows>4</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -12407,6 +12409,11 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>UltimaTabulacion</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>FechaSolicitud</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

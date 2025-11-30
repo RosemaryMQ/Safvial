@@ -59,8 +59,6 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.Liviano1 = new System.Windows.Forms.Label();
             this.Liviano = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.Totales = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.PagoIncompleto = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -81,6 +79,12 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Biopago = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.Totales = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Transferencia = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
@@ -95,6 +99,8 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.Canal = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.turnoActivo = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
@@ -112,10 +118,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Biopago = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.Transferencia = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -165,8 +167,8 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 58);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -707,40 +709,6 @@
             this.Liviano.Text = "0";
             this.Liviano.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label39
-            // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.White;
-            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label39.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label39.Location = new System.Drawing.Point(6, 506);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(177, 23);
-            this.label39.TabIndex = 29;
-            this.label39.Text = "TOTAL:";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Totales
-            // 
-            this.Totales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Totales.AutoSize = true;
-            this.Totales.BackColor = System.Drawing.Color.White;
-            this.Totales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Totales.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.Totales.ForeColor = System.Drawing.Color.Black;
-            this.Totales.Location = new System.Drawing.Point(192, 506);
-            this.Totales.Name = "Totales";
-            this.Totales.Size = new System.Drawing.Size(292, 23);
-            this.Totales.TabIndex = 30;
-            this.Totales.Text = "0 Bs.S";
-            this.Totales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label37
             // 
             this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1082,6 +1050,102 @@
             this.label8.Text = "CANTIDAD";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label10.Location = new System.Drawing.Point(6, 451);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(177, 29);
+            this.label10.TabIndex = 41;
+            this.label10.Text = "BIOPAGO";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Biopago
+            // 
+            this.Biopago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Biopago.AutoSize = true;
+            this.Biopago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Biopago.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Biopago.Location = new System.Drawing.Point(192, 451);
+            this.Biopago.Name = "Biopago";
+            this.Biopago.Size = new System.Drawing.Size(292, 29);
+            this.Biopago.TabIndex = 42;
+            this.Biopago.Text = "0 Bs.S";
+            this.Biopago.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.White;
+            this.label39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label39.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label39.Location = new System.Drawing.Point(6, 506);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(177, 23);
+            this.label39.TabIndex = 29;
+            this.label39.Text = "TOTAL:";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Totales
+            // 
+            this.Totales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Totales.AutoSize = true;
+            this.Totales.BackColor = System.Drawing.Color.White;
+            this.Totales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Totales.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.Totales.ForeColor = System.Drawing.Color.Black;
+            this.Totales.Location = new System.Drawing.Point(192, 506);
+            this.Totales.Name = "Totales";
+            this.Totales.Size = new System.Drawing.Size(292, 23);
+            this.Totales.TabIndex = 30;
+            this.Totales.Text = "0 Bs.S";
+            this.Totales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label11.Location = new System.Drawing.Point(6, 483);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(177, 20);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "TRANSFERENCIA";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // Transferencia
+            // 
+            this.Transferencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Transferencia.AutoSize = true;
+            this.Transferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Transferencia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Transferencia.Location = new System.Drawing.Point(192, 483);
+            this.Transferencia.Name = "Transferencia";
+            this.Transferencia.Size = new System.Drawing.Size(292, 20);
+            this.Transferencia.TabIndex = 44;
+            this.Transferencia.Text = "0 Bs.S";
+            this.Transferencia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1118,14 +1182,17 @@
             this.tableLayoutPanel4.Controls.Add(this.Perfil, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.Apertura, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel19, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.label12, 0, 5);
+            this.tableLayoutPanel4.Controls.Add(this.turnoActivo, 1, 5);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 5;
+            this.tableLayoutPanel4.RowCount = 6;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(483, 317);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
@@ -1139,9 +1206,9 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label6.Location = new System.Drawing.Point(6, 65);
+            this.label6.Location = new System.Drawing.Point(6, 55);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 59);
+            this.label6.Size = new System.Drawing.Size(174, 49);
             this.label6.TabIndex = 6;
             this.label6.Text = "CEDULA:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1156,9 +1223,9 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label7.Location = new System.Drawing.Point(6, 127);
+            this.label7.Location = new System.Drawing.Point(6, 107);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(174, 59);
+            this.label7.Size = new System.Drawing.Size(174, 49);
             this.label7.TabIndex = 7;
             this.label7.Text = "TIPO USUARIO:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1173,9 +1240,9 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label4.Location = new System.Drawing.Point(6, 189);
+            this.label4.Location = new System.Drawing.Point(6, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 59);
+            this.label4.Size = new System.Drawing.Size(174, 49);
             this.label4.TabIndex = 4;
             this.label4.Text = "CANAL:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1190,9 +1257,9 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label5.Location = new System.Drawing.Point(6, 251);
+            this.label5.Location = new System.Drawing.Point(6, 211);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 63);
+            this.label5.Size = new System.Drawing.Size(174, 49);
             this.label5.TabIndex = 5;
             this.label5.Text = "HORA DE APERTURA:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1209,7 +1276,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
             this.label3.Location = new System.Drawing.Point(6, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 59);
+            this.label3.Size = new System.Drawing.Size(174, 49);
             this.label3.TabIndex = 3;
             this.label3.Text = "RECAUDADOR:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1226,7 +1293,7 @@
             this.Recaudador.ForeColor = System.Drawing.Color.Black;
             this.Recaudador.Location = new System.Drawing.Point(189, 3);
             this.Recaudador.Name = "Recaudador";
-            this.Recaudador.Size = new System.Drawing.Size(288, 59);
+            this.Recaudador.Size = new System.Drawing.Size(288, 49);
             this.Recaudador.TabIndex = 8;
             this.Recaudador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1240,9 +1307,9 @@
             this.Cedula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cedula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cedula.ForeColor = System.Drawing.Color.Black;
-            this.Cedula.Location = new System.Drawing.Point(189, 65);
+            this.Cedula.Location = new System.Drawing.Point(189, 55);
             this.Cedula.Name = "Cedula";
-            this.Cedula.Size = new System.Drawing.Size(288, 59);
+            this.Cedula.Size = new System.Drawing.Size(288, 49);
             this.Cedula.TabIndex = 9;
             this.Cedula.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1256,9 +1323,9 @@
             this.Perfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Perfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Perfil.ForeColor = System.Drawing.Color.Black;
-            this.Perfil.Location = new System.Drawing.Point(189, 127);
+            this.Perfil.Location = new System.Drawing.Point(189, 107);
             this.Perfil.Name = "Perfil";
-            this.Perfil.Size = new System.Drawing.Size(288, 59);
+            this.Perfil.Size = new System.Drawing.Size(288, 49);
             this.Perfil.TabIndex = 10;
             this.Perfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1272,9 +1339,9 @@
             this.Apertura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Apertura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Apertura.ForeColor = System.Drawing.Color.Black;
-            this.Apertura.Location = new System.Drawing.Point(189, 251);
+            this.Apertura.Location = new System.Drawing.Point(189, 211);
             this.Apertura.Name = "Apertura";
-            this.Apertura.Size = new System.Drawing.Size(288, 63);
+            this.Apertura.Size = new System.Drawing.Size(288, 49);
             this.Apertura.TabIndex = 12;
             this.Apertura.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1288,11 +1355,11 @@
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel19.Controls.Add(this.button9, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.Canal, 0, 0);
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(189, 192);
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(189, 162);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 1;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(288, 53);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(288, 43);
             this.tableLayoutPanel19.TabIndex = 13;
             // 
             // button9
@@ -1309,7 +1376,7 @@
             this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(147, 3);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(138, 47);
+            this.button9.Size = new System.Drawing.Size(138, 37);
             this.button9.TabIndex = 13;
             this.button9.Text = "LIBERAR CANAL";
             this.button9.UseVisualStyleBackColor = false;
@@ -1327,9 +1394,38 @@
             this.Canal.ForeColor = System.Drawing.Color.Black;
             this.Canal.Location = new System.Drawing.Point(3, 0);
             this.Canal.Name = "Canal";
-            this.Canal.Size = new System.Drawing.Size(138, 53);
+            this.Canal.Size = new System.Drawing.Size(138, 43);
             this.Canal.TabIndex = 12;
             this.Canal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
+            this.label12.Location = new System.Drawing.Point(6, 263);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 51);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "TURNO ACTIVO";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // turnoActivo
+            // 
+            this.turnoActivo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.turnoActivo.AutoSize = true;
+            this.turnoActivo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.turnoActivo.Location = new System.Drawing.Point(189, 263);
+            this.turnoActivo.Name = "turnoActivo";
+            this.turnoActivo.Size = new System.Drawing.Size(288, 51);
+            this.turnoActivo.TabIndex = 15;
+            this.turnoActivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel7
             // 
@@ -1610,68 +1706,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label10.Location = new System.Drawing.Point(6, 451);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(177, 29);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "BIOPAGO";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Biopago
-            // 
-            this.Biopago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Biopago.AutoSize = true;
-            this.Biopago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Biopago.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Biopago.Location = new System.Drawing.Point(192, 451);
-            this.Biopago.Name = "Biopago";
-            this.Biopago.Size = new System.Drawing.Size(292, 29);
-            this.Biopago.TabIndex = 42;
-            this.Biopago.Text = "0 Bs.S";
-            this.Biopago.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(49)))), ((int)(((byte)(65)))));
-            this.label11.Location = new System.Drawing.Point(6, 483);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(177, 20);
-            this.label11.TabIndex = 43;
-            this.label11.Text = "TRANSFERENCIA";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // Transferencia
-            // 
-            this.Transferencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Transferencia.AutoSize = true;
-            this.Transferencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Transferencia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Transferencia.Location = new System.Drawing.Point(192, 483);
-            this.Transferencia.Name = "Transferencia";
-            this.Transferencia.Size = new System.Drawing.Size(292, 20);
-            this.Transferencia.TabIndex = 44;
-            this.Transferencia.Text = "0 Bs.S";
-            this.Transferencia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // AuditorUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1815,5 +1849,7 @@
         private System.Windows.Forms.Label Biopago;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label Transferencia;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label turnoActivo;
     }
 }

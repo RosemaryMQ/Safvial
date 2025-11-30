@@ -235,7 +235,7 @@
             <Value>SAFVIAL6</Value>
             <Sizing>Fit</Sizing>
             <Top>0.00353cm</Top>
-            <Left>0.04896cm</Left>
+            <Left>0.01721cm</Left>
             <Height>1.11125cm</Height>
             <Width>3.83965cm</Width>
             <Style>
@@ -265,9 +265,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox9</rd:DefaultName>
             <Top>1.11478cm</Top>
-            <Left>0.05132cm</Left>
+            <Left>0.01957cm</Left>
             <Height>0.49417cm</Height>
-            <Width>3.83965cm</Width>
+            <Width>3.83729cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -378,7 +378,7 @@
             </TablixRowHierarchy>
             <DataSetName>Efectivo</DataSetName>
             <Top>1.56309cm</Top>
-            <Left>0.05289cm</Left>
+            <Left>0.02114cm</Left>
             <Height>0.51458cm</Height>
             <Width>3.83808cm</Width>
             <ZIndex>2</ZIndex>
@@ -487,7 +487,7 @@
             </TablixRowHierarchy>
             <DataSetName>PDV</DataSetName>
             <Top>2.01077cm</Top>
-            <Left>0.05289cm</Left>
+            <Left>0.02114cm</Left>
             <Height>0.51458cm</Height>
             <Width>3.83729cm</Width>
             <ZIndex>3</ZIndex>
@@ -596,7 +596,7 @@
             </TablixRowHierarchy>
             <DataSetName>Incompleto</DataSetName>
             <Top>3.39318cm</Top>
-            <Left>0.05132cm</Left>
+            <Left>0.01957cm</Left>
             <Height>0.51458cm</Height>
             <Width>3.83965cm</Width>
             <ZIndex>4</ZIndex>
@@ -704,7 +704,7 @@
             </TablixRowHierarchy>
             <DataSetName>Usuario</DataSetName>
             <Top>4.27465cm</Top>
-            <Left>0.05289cm</Left>
+            <Left>0.02114cm</Left>
             <Height>0.43939cm</Height>
             <Width>3.83573cm</Width>
             <ZIndex>5</ZIndex>
@@ -812,7 +812,7 @@
             </TablixRowHierarchy>
             <DataSetName>Efectivo</DataSetName>
             <Top>4.61721cm</Top>
-            <Left>0.05054cm</Left>
+            <Left>0.01879cm</Left>
             <Height>0.43939cm</Height>
             <Width>3.83807cm</Width>
             <ZIndex>6</ZIndex>
@@ -847,7 +847,7 @@
                                 <TextRun>
                                   <Value>Transferencia:</Value>
                                   <Style>
-                                    <FontSize>5pt</FontSize>
+                                    <FontSize>6pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -921,7 +921,7 @@
             </TablixRowHierarchy>
             <DataSetName>Transfencia</DataSetName>
             <Top>2.90939cm</Top>
-            <Left>0.05289cm</Left>
+            <Left>0.02114cm</Left>
             <Height>0.51458cm</Height>
             <Width>3.83573cm</Width>
             <ZIndex>7</ZIndex>
@@ -1030,7 +1030,7 @@
             </TablixRowHierarchy>
             <DataSetName>TarjetasVendidas</DataSetName>
             <Top>3.86189cm</Top>
-            <Left>0.04896cm</Left>
+            <Left>0.01721cm</Left>
             <Height>0.51458cm</Height>
             <Width>3.84201cm</Width>
             <ZIndex>8</ZIndex>
@@ -1139,7 +1139,7 @@
             </TablixRowHierarchy>
             <DataSetName>PDV</DataSetName>
             <Top>4.98619cm</Top>
-            <Left>0.04896cm</Left>
+            <Left>0.01721cm</Left>
             <Height>0.51876cm</Height>
             <Width>3.83965cm</Width>
             <ZIndex>9</ZIndex>
@@ -1245,7 +1245,7 @@
             </TablixRowHierarchy>
             <DataSetName>Biopago</DataSetName>
             <Top>2.47243cm</Top>
-            <Left>0.05289cm</Left>
+            <Left>0.02114cm</Left>
             <Height>0.48094cm</Height>
             <Width>3.83573cm</Width>
             <ZIndex>10</ZIndex>
@@ -1256,7 +1256,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.2048in</Height>
+        <Height>2.21174in</Height>
         <Style />
       </Body>
       <Width>1.55642in</Width>

@@ -496,7 +496,7 @@ namespace SAP
                                                 {
                                                     this.avances(Convert.ToInt32(ID), Convert.ToInt32(Canal));
                                                     this.IngresoCanal(ID, "0", Convert.ToDateTime(fechaaperturaS), Estacion, DateTime.Now, Convert.ToInt32(Turno));
-                                                    IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion);
+                                                    IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion, Convert.ToInt32(Turno));
                                                     MessageBox.Show("Bienvenido a Sistemas SAFVIAL: " + User + " " + Apellido, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                     nickname.Text = "";
                                                     contrasena.Text = "";
@@ -511,7 +511,7 @@ namespace SAP
                                             }
                                             else if (canalUser == Convert.ToInt32(Estacion))
                                             {
-                                                IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion);
+                                                IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion, Convert.ToInt32(Turno));
                                                 MessageBox.Show("Bienvenido a Sistemas SAFVIAL: " + User + " " + Apellido, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                 nickname.Text = "";
                                                 contrasena.Text = "";
@@ -692,7 +692,7 @@ namespace SAP
                                             {
                                                 this.avances(Convert.ToInt32(ID), Convert.ToInt32(Canal));
                                                 this.IngresoCanal(ID, "0", Convert.ToDateTime(fechaaperturaS), Estacion, DateTime.Now, Convert.ToInt32(Turno));
-                                                IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion);
+                                                IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion, Convert.ToInt32(Turno));
                                                 MessageBox.Show("Bienvenido a Sistemas SAFVIAL: " + User + " " + Apellido, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                 nickname.Text = "";
                                                 contrasena.Text = "";
@@ -707,7 +707,7 @@ namespace SAP
                                         }
                                         else if (canalUser == Convert.ToInt32(Estacion))
                                         {
-                                            IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion);
+                                            IngresoCanal1(ID, "0", DateTime.Now, Convert.ToInt32(peaje), Estacion, Convert.ToInt32(Turno));
                                             MessageBox.Show("Bienvenido a Sistemas SAFVIAL: " + User + " " + Apellido, "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                             nickname.Text = "";
                                             contrasena.Text = "";
@@ -887,9 +887,9 @@ namespace SAP
                 return;
             }
         }
-        private void IngresoCanal1(string id, string monto, DateTime fecha, int numero, string canals)
+        private void IngresoCanal1(string id, string monto, DateTime fecha, int numero, string canals, int turno)
         {
-            string sql = "Update ControlRecaudadores Set ID_Usuario=@id, Fecha=@fecha, MontoApertura=@monto, Estado='Operativo',PDV=@numero Where Canal=@canals and ID_Peaje=@peaje";
+            string sql = "Update ControlRecaudadores Set ID_Usuario=@id, Fecha=@fecha, MontoApertura=@monto, Estado='Operativo',PDV=@numero, Turno=@turno Where Canal=@canals and ID_Peaje=@peaje";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -900,6 +900,7 @@ namespace SAP
                 cmd.Parameters.AddWithValue("numero", numero);
                 cmd.Parameters.AddWithValue("canals", Convert.ToInt32(canals));
                 cmd.Parameters.AddWithValue("peaje", Convert.ToInt32(SAP.Inicio.peaje));
+                cmd.Parameters.AddWithValue("turno", Convert.ToInt32(turno));
                 cmd.ExecuteReader();
                 return;
             }

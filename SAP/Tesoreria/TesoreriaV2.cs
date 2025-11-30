@@ -31,7 +31,9 @@ namespace SAP.Tesoreria
         public static string CanalUser;
         public static string Apertura;
         public static string id;
+        public static string IDTurnoUsuario = "0";
         public static string turno="0";
+        public static string descTurno = "";
 
         public TesoreriaV2()
         {
@@ -1525,7 +1527,8 @@ namespace SAP.Tesoreria
         }
         private void buscar(int canal)
         {
-            string sql = "Select ID_Usuario,Fecha,PDV From ControlRecaudadores where Canal=@canal;";
+            //string sql = "Select ID_Usuario,Fecha,PDV From ControlRecaudadores where Canal=@canal;";
+            string sql = "Select A.ID_Usuario,A.Fecha,A.PDV, B.ID, B.Turno, C.nombre From ControlRecaudadores A INNER JOIN Turno B ON A.id_usuario = B.id_usuario INNER JOIN TurnoRelacion C ON B.Turno = C.idTurno where Canal = @canal and Finalizado = 0; ";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -1538,6 +1541,8 @@ namespace SAP.Tesoreria
                     Identificador = dr["ID_Usuario"].ToString();
                     Apertura = dr["Fecha"].ToString();
                     turno = dr["PDV"].ToString();
+                    descTurno = dr["nombre"].ToString();
+                    IDTurnoUsuario = dr["ID"].ToString();
                 }
                 dr.Close();
                 return;

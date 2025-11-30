@@ -138,7 +138,7 @@
             this.Cedula.Location = new System.Drawing.Point(3, 3);
             this.Cedula.MaxLength = 12;
             this.Cedula.Name = "Cedula";
-            this.Cedula.Size = new System.Drawing.Size(190, 27);
+            this.Cedula.Size = new System.Drawing.Size(189, 27);
             this.Cedula.TabIndex = 2;
             this.Cedula.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Canal_KeyUp);
             // 
@@ -152,7 +152,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(3, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 37);
+            this.label6.Size = new System.Drawing.Size(189, 37);
             this.label6.TabIndex = 1001;
             this.label6.Text = "Formato: V123456789";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,9 +167,9 @@
             this.button3.FlatAppearance.BorderSize = 3;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(345, 3);
+            this.button3.Location = new System.Drawing.Point(344, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 68);
+            this.button3.Size = new System.Drawing.Size(193, 68);
             this.button3.TabIndex = 3;
             this.button3.Text = "BUSCAR";
             this.button3.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.01796F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.98204F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
@@ -320,7 +320,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.26866F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.73134F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(196, 68);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(195, 68);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // tableLayoutPanel6

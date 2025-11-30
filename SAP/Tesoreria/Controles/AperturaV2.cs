@@ -358,7 +358,7 @@ namespace SAP.Tesoreria.Controles
         private void CargarDeclaracion(int usuario, int turno, int idUser)
         {
             //rm-->string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable) Values (DATEADD(HOUR, -2,GETDATE()),SYSDATETIME(),@usuario,0)";
-            string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable,Turno,IDUser) Values (SYSDATETIME(),SYSDATETIME(),@usuario,0,@turno,@idUser)";
+            string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable,Turno,IDTurnoUsuario) Values (SYSDATETIME(),SYSDATETIME(),@usuario,0,@turno,@idUser)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();

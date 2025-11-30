@@ -19,6 +19,7 @@ namespace SAP.Tesoreria.Controles
                 buscar(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
                 Canal.Text = SAP.Tesoreria.TesoreriaV2.CanalUser;
                 Apertura.Text = SAP.Tesoreria.TesoreriaV2.Apertura;
+                turnoActivo.Text = SAP.Tesoreria.TesoreriaV2.descTurno;
                 Tabulacion(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), SAP.Tesoreria.TesoreriaV2.Apertura);
                 TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), SAP.Tesoreria.TesoreriaV2.Apertura);
                 
@@ -277,6 +278,11 @@ private void buscar(int name)
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }

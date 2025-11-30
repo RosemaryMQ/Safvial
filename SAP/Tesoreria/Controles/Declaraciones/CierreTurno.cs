@@ -69,6 +69,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 this.reportViewer1.LocalReport.SetParameters(frm4);
                 Microsoft.Reporting.WinForms.ReportParameter frm5 = new Microsoft.Reporting.WinForms.ReportParameter("UltimaTabulacion", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaUltimaTabulacion);
                 this.reportViewer1.LocalReport.SetParameters(frm5);
+                Microsoft.Reporting.WinForms.ReportParameter frm6 = new Microsoft.Reporting.WinForms.ReportParameter("FechaSolicitud", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaSolicitud);
+                this.reportViewer1.LocalReport.SetParameters(frm6);
 
                 this.cierreTurnoV1TableAdapter.Fill(this.sAPDataSet2.CierreTurnoV1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);
                 this.cierreEfectivoTableAdapter.Fill(this.sAPDataSet2.CierreEfectivo, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);

@@ -178,7 +178,7 @@
             this.BolivarDigital.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BolivarDigital.Location = new System.Drawing.Point(4, 22);
             this.BolivarDigital.Name = "BolivarDigital";
-            this.BolivarDigital.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.BolivarDigital.Padding = new System.Windows.Forms.Padding(3);
             this.BolivarDigital.Size = new System.Drawing.Size(760, 586);
             this.BolivarDigital.TabIndex = 0;
             this.BolivarDigital.Text = "Bolivar Digital";
@@ -365,8 +365,8 @@
             this.BolivarSoberano.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BolivarSoberano.Location = new System.Drawing.Point(4, 22);
             this.BolivarSoberano.Name = "BolivarSoberano";
-            this.BolivarSoberano.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.BolivarSoberano.Size = new System.Drawing.Size(762, 587);
+            this.BolivarSoberano.Padding = new System.Windows.Forms.Padding(3);
+            this.BolivarSoberano.Size = new System.Drawing.Size(760, 586);
             this.BolivarSoberano.TabIndex = 1;
             this.BolivarSoberano.Text = "Bolivar Soberano";
             this.BolivarSoberano.UseVisualStyleBackColor = true;
@@ -430,7 +430,7 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold);
             this.AvancesUser.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.AvancesUser.Size = new System.Drawing.Size(756, 581);
+            this.AvancesUser.Size = new System.Drawing.Size(754, 580);
             this.AvancesUser.TabIndex = 109;
             this.AvancesUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AvancesUser_CellContentClick);
             // 
@@ -682,7 +682,7 @@
             this.tabPage3.Controls.Add(this.Avance);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(347, 378);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Bolivar Digital";
@@ -756,8 +756,8 @@
             this.tabPage4.Controls.Add(this.BolivaresSS);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage4.Size = new System.Drawing.Size(349, 386);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(347, 378);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Bolivar Soberano";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -792,7 +792,7 @@
             this.BolivaresSS.Location = new System.Drawing.Point(3, 3);
             this.BolivaresSS.Name = "BolivaresSS";
             this.BolivaresSS.RowHeadersWidth = 51;
-            this.BolivaresSS.Size = new System.Drawing.Size(343, 380);
+            this.BolivaresSS.Size = new System.Drawing.Size(341, 372);
             this.BolivaresSS.TabIndex = 109;
             this.BolivaresSS.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.Avance_CellValueChanged);
             this.BolivaresSS.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.BolivaresSS_EditingControlShowing);
@@ -943,7 +943,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 697);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AvanceBuzon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buzon";

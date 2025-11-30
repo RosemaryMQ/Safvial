@@ -1297,6 +1297,7 @@
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurnoDiario.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurno - Copia.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurno.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\CierreTurno.resx">

@@ -22,35 +22,52 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
 
         }
 
+        public static DateTime fechaActual = DateTime.Now;
         public static DateTime Fecha;
         public static String fecha2 = DateTime.Now.ToString("d");
         public static String fecha3;
         public static int idacta;
 
+        public static int turno;
+        string hora;
+        string hora1;
+        string hora2;
+        string hora3;
+        public static string fechaS;
+        public static string fechaS1;
+        public static string fechaPrimeraTabulacion;
+        public static string fechaUltimaTabulacion;
+
+
+
         public AvanceUser()
         {
             InitializeComponent();
             idacta = 0;
-            buscarCataporte(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
+            buscarCataporte(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.IDTurnoUsuario));
+            BuscarTurno(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
             Denominaciones();
             indice = 1;
             Recaudador.Text = "RECAUDADOR: " + SAP.Tesoreria.TesoreriaV2.Nombre;
             Recaudador1.Text = "RECAUDADOR: " + SAP.Tesoreria.TesoreriaV2.Nombre;
             CargarAvances();
         }
-        private void buscarCataporte(int usuario)
+        private void buscarCataporte(int usuario, int turno, int idTurnoUsuario)
         {
-            string sql = "SELECT ID_Declaracion FROM Declaraciones WHERE (ID_Usuario = @usuario) AND (Responsable = 0)";
+            string sql = "SELECT ID_Declaracion, Turno FROM Declaraciones WHERE (ID_Usuario = @usuario) AND (Turno = @turno) AND (IDTurnoUsuario = @idTurnoUsuario) AND (Responsable = 0)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlDataReader dr;
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("idTurnoUsuario", idTurnoUsuario);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta = Convert.ToInt32(dr["ID_Declaracion"]);
+                    turno = Convert.ToInt32(dr["Turno"]);
                 }
                 dr.Close();
                 return;
@@ -62,6 +79,66 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero.AvanceBuzon frm = new SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero.AvanceBuzon();
             frm.ShowDialog();
         }
+
+
+
+        private void BuscarTurno(int turno)
+        {
+            if (turno == 1)
+            {
+                hora = " 04:00:00";
+                hora1 = " 23:59:59";
+            }
+            else if (turno == 2)
+            {
+                hora = " 16:00:00";
+                hora1 = " 12:00:00";
+            }
+            else if (turno == 3)
+            {
+                hora = " 00:00:00";
+                hora1 = " 16:00:00";
+            }
+            else if (turno == 4)
+            {
+                hora = " 00:00:00";
+                hora1 = " 16:00:00";
+            }
+            else if (turno == 5)
+            {
+                hora = " 04:00:00";
+                hora1 = " 16:00:00";
+            }
+            else if (turno == 6)
+            {
+                hora = " 10:00:00";
+                hora1 = " 09:00:00";
+            }
+            else if (turno == 7)
+            {
+                hora = " 20:00:00";
+                hora1 = " 19:00:00";
+            }
+            else if (turno == 8)
+            {
+                hora = " 00:00:00";
+                hora1 = " 11:59:59";
+                hora2 = " 12:00:00";
+                hora3 = " 23:59:59";
+            }
+            else if (turno == 9)
+            {
+                hora = " 12:00:00";
+                hora1 = " 23:59:59";
+                hora2 = " 00:00:00";
+                hora3 = " 11:59:59";
+            }
+            else if (turno == 0)
+            {
+            }
+
+        }
+
 
         private void Avance_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -101,7 +178,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                     
                     efectiv = 0;
                     efectiv = ((0.50 * bt1) / 1000000) + ((1 * bt2) / 1000000) + ((2 * bt3) / 1000000) + ((5 * bt4) / 1000000) + ((10 * bt5) / 1000000) + ((20 * bt6) / 1000000) + ((50 * bt7) / 1000000) + ((100 * bt8) / 1000000) + ((200 * bt9) / 1000000) + ((500 * bt10) / 1000000) + ((10000 * bt11) / 1000000) + ((20000 * bt12) / 1000000) + ((50000 * bt13) / 1000000) + ((200000 * bt14) / 1000000) + ((500000 * bt15) / 1000000) + ((1000000 * bt16) / 1000000) + (1 * bt17) + (5 * bt18) + (10 * bt19) + (20 * bt20) + (50 * bt21) + (100 * bt22) + (200 * bt26) + (200 * bt27) + (0.20 * bt23) + (0.50 * bt24) + (0.25 * bt25);
-                    AgregarDeclaracion1(bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, 0, efectiv, pd, incidenci, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(Codigo.Text), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno),bt11,bt12,bt13,Transferencia, bt14, bt15, bt16,bt17,bt18,bt19,bt20,bt21,bt22,bt23,bt24,bt25, bt26, bt27, BIOPAGO);
+                    AgregarDeclaracion1(bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, 0, efectiv, pd, incidenci, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(Codigo.Text), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno),bt11,bt12,bt13,Transferencia, bt14, bt15, bt16,bt17,bt18,bt19,bt20,bt21,bt22,bt23,bt24,bt25, bt26, bt27, BIOPAGO, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.IDTurnoUsuario));
                     Avance.Rows.Clear();
                     BolivaresSS.Rows.Clear();
                     BDLista.Rows.Clear();
@@ -121,54 +198,89 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
             DialogResult result = MessageBox.Show("¿Seguro, que desea emitir el reporte de cierre?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (result == DialogResult.Yes)
             {
                 try
                 {
-                        AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                        //AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-                        FinJornada(Convert.ToString(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToString(SAP.Tesoreria.TesoreriaV2.turno));
-                        FinJornada1(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
-                        CargarDeclaracion(SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta, Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
-                        MessageBox.Show("Declaracion cargado correctamente", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        SAP.Tesoreria.Controles.Declaraciones.Declaracion frm = new SAP.Tesoreria.Controles.Declaraciones.Declaracion();
-                        frm.ShowDialog();
-                        this.Close();
+                    fechaS = "";
+                    fechaS1 = "";
+                    fechaPrimeraTabulacion = "";
+                    fechaUltimaTabulacion = "";
+                    try
+                    {
+                        //***************************************************NO OLVIDAR VALIDAR FECHAS SI FALLA ALGUNA DE LAS 4 NECESARIAS PARA EL REPORTE
+                        this.InicioTurno(turno);//FECHA INICIO
+                        if (fechaS1 == "")
+                        {
+                            //this.InicioTurnoAlt(turno);//FECHA INICIO
 
+                        }
+                        this.FinTurno(turno);//FECHA FIN
+                        if (fechaS == "")
+                        {
+                            //this.InicioTurnoAlt(turno);//FECHA INICIO
 
+                        }
+                        this.PrimeraTabulacion(turno, fechaS1, fechaS, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
+                        if (fechaPrimeraTabulacion == "")
+                        {
+                            //this.InicioTurnoAlt(turno);//FECHA INICIO
 
+                        }
+                        this.UltimaTabulacion(turno, fechaS1, fechaS, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
+                        if (fechaUltimaTabulacion == "")
+                        {
+                            //this.InicioTurnoAlt(turno);//FECHA INICIO
 
+                        }
+
+                    }
+                    catch
+                    {
+                        MessageBox.Show("La fecha ingresada no posee registros detectados", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.IDTurnoUsuario));
+                    //AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+                    FinJornada(Convert.ToString(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToString(SAP.Tesoreria.TesoreriaV2.turno));
+                    FinJornada1(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
+                    CargarDeclaracion(SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta, Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
+                    MessageBox.Show("Declaracion cargado correctamente", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SAP.Tesoreria.Controles.Declaraciones.Declaracion frm = new SAP.Tesoreria.Controles.Declaraciones.Declaracion();
+                    frm.ShowDialog();
+                    this.Close();
                 }
                 catch
                 {
                     MessageBox.Show("Ocurrio un error, al intentar cargar el cierre intente nuevamente." , "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            }
+        }
         private void FinJornada1(int usuario, int turno)
         {
-            string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and turno=@turno and Finalizado=0";
+            string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and turno=@turno and Finalizado=0 AND ID=@id";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("id", Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
                 cmd.ExecuteReader();
                 return;
             }
         }
         private void FinJornada(string usuario, string turno)
         {
-            string sql = "Update Recaudadore Set FechaFin=SYSDATETIME(),Estatus='Finalizado' Where ID_Usuario=@usuario and turno=@turno and Estatus='Pendiente' or Estatus='Activo'";
+            string sql = "Update Recaudadore Set FechaFin=SYSDATETIME(),Estatus='Finalizado' Where (Fecha=@fechaS1) AND (ID_Usuario=@usuario) and (turno=@turno) and (Estatus='Pendiente' or Estatus='Activo')";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", Convert.ToInt32(usuario));
                 cmd.Parameters.AddWithValue("turno", Convert.ToInt32(turno));
+                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
                 cmd.ExecuteReader();
                 return;
             }
@@ -246,9 +358,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             Avance.Rows.Add("Transferencia", "0");
             Avance.Rows.Add("BIOPAGO", "0");
         }
-        private void AgregarDeclaracion1(double centimos, double uno, double dos, double cinco, double diez, double veinte, double cincuenta, double cien, double doscientos, double quinientos, double tickets, double efectivo2, double pdv, double incidencia, int id, int id2, int tesorero, int turno, double diezmil1, double veintemil1, double cincuentamil1, double transf, double docientosmil, double quinientosmil, double unmillion, double bd1, double bd5, double bd10, double bd20, double bd50, double bd100, double bd02, double bd05, double bd025, double bd200, double bd500, double BIOPAGO)
+        private void AgregarDeclaracion1(double centimos, double uno, double dos, double cinco, double diez, double veinte, double cincuenta, double cien, double doscientos, double quinientos, double tickets, double efectivo2, double pdv, double incidencia, int id, int id2, int tesorero, int turno, double diezmil1, double veintemil1, double cincuentamil1, double transf, double docientosmil, double quinientosmil, double unmillion, double bd1, double bd5, double bd10, double bd20, double bd50, double bd100, double bd02, double bd05, double bd025, double bd200, double bd500, double BIOPAGO, int idTurnoUsuario)
         {
-            string sql = "Insert into CierreBalanceV2 (BilleteS05,BilleteS1,BilleteS2,BilleteS5,BilleteS10,BilleteS20,BilleteS50,BilleteS100,BilleteS200,BilleteS500,Tickets,Efectivo,PDV,Incidencia,ID_Usuario,Fecha,Responsable,TesoreroC,Turno,BilleteS10000,BilleteS20000,BilleteS50000,Transferencia,Eliminado,Buzon,BilleteS200000,BilleteS500000,BilleteS1000000,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500, BIO) Values (@centimos,@uno,@dos,@cinco,@diez,@veinte,@cincuenta,@cien,@doscientos,@quinientos,@tickets,@efectivo,@pdv,@incidencia,@id,SYSDATETIME(),@id2,@tesorero,@turno,@diezmil,@veintemil,@cincuentamil,@transf,0,0,@docientosmil,@quinientosmil, @unmillon, @bd1,@bd5,@bd10,@bd20,@bd50,@bd100,@bd05,@bd02,@bd025,@bd200,@bd500,@BIOPAGO)";
+            string sql = "Insert into CierreBalanceV2 (BilleteS05,BilleteS1,BilleteS2,BilleteS5,BilleteS10,BilleteS20,BilleteS50,BilleteS100,BilleteS200,BilleteS500,Tickets,Efectivo,PDV,Incidencia,ID_Usuario,Fecha,Responsable,TesoreroC,Turno,BilleteS10000,BilleteS20000,BilleteS50000,Transferencia,Eliminado,Buzon,BilleteS200000,BilleteS500000,BilleteS1000000,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500, BIO, IdTurnoUsuario) Values (@centimos,@uno,@dos,@cinco,@diez,@veinte,@cincuenta,@cien,@doscientos,@quinientos,@tickets,@efectivo,@pdv,@incidencia,@id,SYSDATETIME(),@id2,@tesorero,@turno,@diezmil,@veintemil,@cincuentamil,@transf,0,0,@docientosmil,@quinientosmil, @unmillon, @bd1,@bd5,@bd10,@bd20,@bd50,@bd100,@bd05,@bd02,@bd025,@bd200,@bd500,@BIOPAGO,@idTurnoUsuario)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -290,6 +402,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 cmd.Parameters.AddWithValue("bd200", bd200);
                 cmd.Parameters.AddWithValue("bd500", bd500);
                 cmd.Parameters.AddWithValue("BIOPAGO", BIOPAGO);
+                cmd.Parameters.AddWithValue("idTurnoUsuario", idTurnoUsuario);
+                
                 cmd.ExecuteReader();
                 return;
             }
@@ -355,6 +469,148 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             {
                 MessageBox.Show("El avance que intenta modificar ha sido eliminado anteriormente.", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             } 
+        }
+
+
+        // FECHA FIN
+        private void FinTurno(int turno)
+        {
+            //string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
+            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE (CierreBalanceV2.Fecha >= @fechaS1) AND (CierreBalanceV2.Turno = @turno) AND (CierreBalanceV2.IdTurnoUsuario=@id) Order by Fecha DESC;";
+
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
+                cmd.Parameters.AddWithValue("id", Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.IDTurnoUsuario));
+                cmd.Parameters.AddWithValue("turno", turno);
+
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaS = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    fechaS = "";
+                }
+            }
+        }
+
+
+        // FECHA DE INICIO
+        private void InicioTurno(int turno)
+        {
+            string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.ID = @id AND Turno.Turno=@turno AND Turno.Finalizado=0 Order by Fecha ASC;";
+
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("id", Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.IDTurnoUsuario));
+
+                // ExecuteScalar devuelve un 'object' directamente
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaS1 = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    fechaS1 = "";
+                }
+            }
+        }
+
+        private void InicioTurnoAlt(int turno)
+        {
+            string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
+
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", Fecha.Date.AddHours(-1));
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(fechaActual + hora1));
+                cmd.Parameters.AddWithValue("turno", turno);
+
+                // ExecuteScalar devuelve un 'object' directamente
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaS1 = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    //fechaS1 = Convert.ToDateTime(fechaActual.AddHours(-1).ToString());
+                }
+            }
+        }
+
+
+        private void PrimeraTabulacion(int turno, string fechaS1, string fechaS, int usuario)
+        {
+            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN TipoVehiculos B ON A.ID_Vehiculo=B.ID_Vehiculo WHERE (A.fecha BETWEEN @fechaS1 and @fechaS) and (A.Turno = @turno) and (A.ID_Usuario = @usuario) order by A.fecha ASC;";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
+                cmd.Parameters.AddWithValue("fechaS", fechaS);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaPrimeraTabulacion = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    fechaPrimeraTabulacion = "";
+                }
+            }
+        }
+
+        private void UltimaTabulacion(int turno, string fechaS1, string fechaS, int usuario)
+        {
+            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN TipoVehiculos B ON A.ID_Vehiculo=B.ID_Vehiculo WHERE (A.fecha BETWEEN @fechaS1 and @fechaS) and (A.Turno = @turno) and (A.ID_Usuario = @usuario) order by A.fecha DESC;";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
+                cmd.Parameters.AddWithValue("fechaS", fechaS);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+
+                object resultado = cmd.ExecuteScalar();
+
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaUltimaTabulacion = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    fechaUltimaTabulacion = "";
+                }
+            }
         }
 
         private void Avance_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -528,6 +784,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 MessageBox.Show("El avcance que intenta modificar ha sido eliminado anteriormente.", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
+
+
+
 
     }
 }

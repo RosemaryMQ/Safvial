@@ -1851,7 +1851,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!PDV.Value)+Sum(Fields!PDV.Value, "reconversion")</Value>
+                                  <Value>=IIf(Sum(Fields!PDV.Value, "reconversion")=0,0,Sum(Fields!PDV.Value, "reconversion"))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -2178,7 +2178,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(((Sum(Fields!Efectivo.Value, "Declaracion")+Sum(Fields!PDV.Value, "Declaracion")+Sum(Fields!Tickets.Value, "Declaracion"))-Sum(Fields!Incidencia.Value, "Declaracion"))/100000)+((Sum(Fields!Tickets.Value, "reconversion")+Sum(Fields!Efectivo.Value, "reconversion")+Sum(Fields!PDV.Value, "reconversion")+Sum(Fields!Transferencia.Value, "reconversion"))+Sum(Fields!Incidencia.Value, "reconversion"))</Value>
+                                  <Value>=(((Sum(Fields!Efectivo.Value, "Declaracion")+Sum(Fields!PDV.Value, "Declaracion")+Sum(Fields!Tickets.Value, "Declaracion")+Sum(Fields!BIO.Value, "Declaracion"))-Sum(Fields!Incidencia.Value, "Declaracion"))/100000)+((Sum(Fields!Tickets.Value, "reconversion")+Sum(Fields!Efectivo.Value, "reconversion")+Sum(Fields!PDV.Value, "reconversion")+Sum(Fields!Transferencia.Value, "reconversion")+Sum(Fields!BIO.Value, "reconversion"))+Sum(Fields!Incidencia.Value, "reconversion"))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -6327,7 +6327,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!BIO.Value)+Sum(Fields!BIO.Value, "reconversion")</Value>
+                                  <Value>=IIf(Sum(Fields!BIO.Value, "reconversion")=0,0,Sum(Fields!BIO.Value, "reconversion"))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
                                   </Style>
