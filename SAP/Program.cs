@@ -16,16 +16,20 @@ namespace SAP
         [STAThread]
         static void Main()
         {
+
+
+            // ESTA LÍNEA ES CRUCIAL:
+            // Carga las librerías nativas antes de iniciar la app.
             // 1. MANEJADOR PARA EXCEPCIONES EN EL HILO PRINCIPAL DE LA UI
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
 
             // 2. MANEJADOR CRÍTICO PARA EXCEPCIONES EN CUALQUIER OTRO HILO (Timers, Tasks, etc.)
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
+            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
 
             Application.Run(new Inicio());
         }

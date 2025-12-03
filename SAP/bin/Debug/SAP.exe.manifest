@@ -775,14 +775,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="31290368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="31279616">
       <assemblyIdentity name="SAP" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dQyMxLG5CFWDvWRcJ/SxTiEe4U+E7byCjnB1wCsifqk=</dsig:DigestValue>
+        <dsig:DigestValue>t1sdiHHzOa625r0o/kfUfup6Hugj2i8CdC1VXHt7k5g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -814,123 +814,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>MDZNJt1zRxqPhuHEi1ROz94ceJX3YI75Z7u7gkpDfrY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\SAP.csproj.FileListAbsolute.txt" size="21519">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ewc5dbbt0254uU5cKgy5eer4gev63FWIFsBBkZWAyUM=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\Facturas.Designer.cs.dll" size="79872">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>meu/13ya66lRcLARi8Sr4pnnDYLK/0YzTAfVekSylaE=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\PrepagadoDataSet.Designer.cs.dll" size="149504">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+SVgheVYF7rs+Wxn6uaebKRQdev0lOfDCAIqD/qRndI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\PrepagadoDataSet1.Designer.cs.dll" size="149504">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QtfOwy8JXPaUwu/sn6e7qClkYkURSn0/YwPqm5QfIFg=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\PrepagadoDataSet2.Designer.cs.dll" size="149504">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>r/A5sCW+z9dDfNEXG5mjpPZsb6tMPeNnnw9tj3kSnU0=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\PrepagadoDataSet3.Designer.cs.dll" size="149504">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2wMGAtQz4J7sZUpfUkrdx2wW2CpZoHWNejto7vG8KZg=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" size="4608">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>hnUjVet6NB9viSYOUAIaqWwoq1+gZANHAYYPyhQiODs=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\SAPDataSet.Designer.cs.dll" size="8192">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wtaeLyMz28DND+i8QwnZD4ILGbE+MGcI4k/59H8MHd8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\SAPDataSet1.Designer.cs.dll" size="584192">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pdsYxeF1jg5L3DSGerJl59dy011+s14XuNZLgkbIecM=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\SAPDataSet2.Designer.cs.dll" size="334336">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pliGmrFsqtzO9NuyAguIsGFr8SA1UX4PnsLzI07U6OI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\SAPDataSet21.Designer.cs.dll" size="334336">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>u5+n5JJN6HYW/IqffacVAfd9vhvmx/zWofV4v+9pizk=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\SAPDataSet22.Designer.cs.dll" size="334336">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UCb/xCAVOtlmwDMKz2ADhSx53gogxAvDCoei+EBZOg4=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="obj\obj\Debug\TempPE\SAPDataSet3.Designer.cs.dll" size="584192">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZsvZ05LaMixXOA2s8mRkVzJKuZZCGVNDUEN+iFnDQdI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\compliant.png" size="1459">
@@ -1023,13 +906,13 @@
       <dsig:DigestValue>g68w7mLnhBnnikgd0XeDegtLpRftWcSU7LkInrUNt88=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SAP.exe.config" size="7377">
+  <file name="SAP.exe.config" size="7426">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+FXUIz/w+KP55GLToFy9RtCiivBiQQnR+M7umWKn9Qw=</dsig:DigestValue>
+      <dsig:DigestValue>QUPg6farEuD0w7MUR6c3e/Jyzc5/fd+KdALAS3WEmeo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">

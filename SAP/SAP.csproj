@@ -442,12 +442,6 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="obj\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="PrepagadoDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -704,6 +698,11 @@
     </Compile>
     <Compile Include="SAPDataSet3.cs">
       <DependentUpon>SAPDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAPDataSetLocal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SAPDataSetLocal.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -1138,7 +1137,6 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\obj\Debug\SAP.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -1456,10 +1454,6 @@
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="obj\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\obj\Debug\SAP.csproj.GenerateResource.Cache" />
-    <None Include="obj\obj\Debug\SAP.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="PrepagadoDataSet.xsc">
       <DependentUpon>PrepagadoDataSet.xsd</DependentUpon>
@@ -1531,6 +1525,17 @@
     <None Include="SAPDataSet3.xss">
       <DependentUpon>SAPDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="SAPDataSetLocal.xsc">
+      <DependentUpon>SAPDataSetLocal.xsd</DependentUpon>
+    </None>
+    <None Include="SAPDataSetLocal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SAPDataSetLocal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SAPDataSetLocal.xss">
+      <DependentUpon>SAPDataSetLocal.xsd</DependentUpon>
+    </None>
     <None Include="TarjetaExpressDataSet.xsc">
       <DependentUpon>TarjetaExpressDataSet.xsd</DependentUpon>
     </None>
@@ -1549,31 +1554,18 @@
   <ItemGroup>
     <Content Include="AutoConfig.txt" />
     <Content Include="Logo2.ico" />
-    <Content Include="obj\obj\Debug\SAP.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\obj\Debug\TempPE\Facturas.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet1.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet2.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\PrepagadoDataSet3.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\SAPDataSet.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\SAPDataSet1.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\SAPDataSet2.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\SAPDataSet21.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\SAPDataSet22.Designer.cs.dll" />
-    <Content Include="obj\obj\Debug\TempPE\SAPDataSet3.Designer.cs.dll" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\002-question-mark.png" />
     <Content Include="Resources\compliant.png" />
@@ -1589,7 +1581,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Administradores\" />
-    <Folder Include="obj\obj\x86\Debug\TempPE\" />
     <Folder Include="Recaudadores\Controles\Operaciones\" />
     <Folder Include="Tesoreria\Controles\Remesas\" />
   </ItemGroup>
@@ -1656,6 +1647,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

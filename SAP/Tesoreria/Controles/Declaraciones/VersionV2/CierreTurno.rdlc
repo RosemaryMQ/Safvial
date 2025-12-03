@@ -16,180 +16,15 @@
       </ConnectionProperties>
       <rd:DataSourceID>cb512817-a9c9-494f-934d-a1eb3368fc6e</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="SAPDataSetLocal">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>351d24f0-e799-4ac0-9032-073a26212f7b</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="CierreTurno">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="ID_Cierre">
-          <DataField>ID_Cierre</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS05">
-          <DataField>BilleteS05</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS1">
-          <DataField>BilleteS1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS2">
-          <DataField>BilleteS2</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS5">
-          <DataField>BilleteS5</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS10">
-          <DataField>BilleteS10</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS20">
-          <DataField>BilleteS20</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS50">
-          <DataField>BilleteS50</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS100">
-          <DataField>BilleteS100</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS200">
-          <DataField>BilleteS200</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS500">
-          <DataField>BilleteS500</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Tickets">
-          <DataField>Tickets</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Efectivo">
-          <DataField>Efectivo</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="PDV">
-          <DataField>PDV</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Incidencia">
-          <DataField>Incidencia</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Fecha">
-          <DataField>Fecha</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="TesoreroC">
-          <DataField>TesoreroC</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Turno">
-          <DataField>Turno</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Apellido">
-          <DataField>Apellido</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS10000">
-          <DataField>BilleteS10000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS20000">
-          <DataField>BilleteS20000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS50000">
-          <DataField>BilleteS50000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Transferencia">
-          <DataField>Transferencia</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Buzon">
-          <DataField>Buzon</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS200000">
-          <DataField>BilleteS200000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS500000">
-          <DataField>BilleteS500000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteS1000000">
-          <DataField>BilleteS1000000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD1">
-          <DataField>BilleteBD1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD5">
-          <DataField>BilleteBD5</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD10">
-          <DataField>BilleteBD10</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD20">
-          <DataField>BilleteBD20</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD50">
-          <DataField>BilleteBD50</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD100">
-          <DataField>BilleteBD100</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD05">
-          <DataField>BilleteBD05</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD025">
-          <DataField>BilleteBD025</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD200">
-          <DataField>BilleteBD200</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BilleteBD500">
-          <DataField>BilleteBD500</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="BIO">
-          <DataField>BIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreTurnoV1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreTurnoV1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
     <DataSet Name="CierrePDV">
       <Query>
         <DataSourceName>SAPDataSet2</DataSourceName>
@@ -414,6 +249,182 @@
         <rd:TableAdapterName>CierreBiopagoTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
+    <DataSet Name="CierreTurno">
+      <Query>
+        <DataSourceName>SAPDataSet2</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ID_Cierre">
+          <DataField>ID_Cierre</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS05">
+          <DataField>BilleteS05</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS1">
+          <DataField>BilleteS1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS2">
+          <DataField>BilleteS2</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS5">
+          <DataField>BilleteS5</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS10">
+          <DataField>BilleteS10</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS20">
+          <DataField>BilleteS20</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS50">
+          <DataField>BilleteS50</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS100">
+          <DataField>BilleteS100</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS200">
+          <DataField>BilleteS200</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS500">
+          <DataField>BilleteS500</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Tickets">
+          <DataField>Tickets</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Efectivo">
+          <DataField>Efectivo</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PDV">
+          <DataField>PDV</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Incidencia">
+          <DataField>Incidencia</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TesoreroC">
+          <DataField>TesoreroC</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Turno">
+          <DataField>Turno</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Apellido">
+          <DataField>Apellido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS10000">
+          <DataField>BilleteS10000</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS20000">
+          <DataField>BilleteS20000</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS50000">
+          <DataField>BilleteS50000</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Transferencia">
+          <DataField>Transferencia</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Buzon">
+          <DataField>Buzon</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS200000">
+          <DataField>BilleteS200000</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS500000">
+          <DataField>BilleteS500000</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS1000000">
+          <DataField>BilleteS1000000</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD1">
+          <DataField>BilleteBD1</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD5">
+          <DataField>BilleteBD5</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD10">
+          <DataField>BilleteBD10</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD20">
+          <DataField>BilleteBD20</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD50">
+          <DataField>BilleteBD50</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD100">
+          <DataField>BilleteBD100</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD05">
+          <DataField>BilleteBD05</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD025">
+          <DataField>BilleteBD025</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD200">
+          <DataField>BilleteBD200</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteBD500">
+          <DataField>BilleteBD500</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BilleteS10000001">
+          <DataField>BilleteS1000000</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="BIO">
+          <DataField>BIO</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:TableName>CierreTurnoV1</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CierreTurnoV1TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -426,7 +437,7 @@
                   <Width>0.73194cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.93933cm</Width>
+                  <Width>0.94174cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.8424cm</Width>
@@ -435,7 +446,7 @@
                   <Width>0.8881cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.07317cm</Width>
+                  <Width>1.07558cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.81121cm</Width>
@@ -444,7 +455,7 @@
                   <Width>0.86467cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.94164cm</Width>
+                  <Width>0.94405cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.08925cm</Width>
@@ -453,7 +464,7 @@
                   <Width>0.98227cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.00631cm</Width>
+                  <Width>1.00872cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.04404cm</Width>
@@ -462,7 +473,7 @@
                   <Width>1.07229cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.18512cm</Width>
+                  <Width>1.18753cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.19892cm</Width>
@@ -471,7 +482,7 @@
                   <Width>1.41334cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.62645cm</Width>
+                  <Width>1.62886cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.04479cm</Width>
@@ -480,7 +491,7 @@
                   <Width>0.95032cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.98947cm</Width>
+                  <Width>0.99188cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.07964cm</Width>
@@ -489,7 +500,7 @@
                   <Width>0.87806cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.98997cm</Width>
+                  <Width>0.99238cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.86009cm</Width>
@@ -498,19 +509,16 @@
                   <Width>1.04479cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.88755cm</Width>
+                  <Width>0.88996cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.03158cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.5cm</Width>
-                </TablixColumn>
-                <TablixColumn>
                   <Width>2.64953cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.91941cm</Width>
+                  <Width>2.92182cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.39513cm</Width>
@@ -519,7 +527,7 @@
                   <Width>1.69254cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.63208cm</Width>
+                  <Width>3.63449cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -678,59 +686,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox106">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox106</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -1083,59 +1038,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox92</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox130">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox130</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -3262,60 +3164,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox140">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Biopago</Value>
-                                  <Style>
-                                    <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox140</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Textbox24">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -5001,59 +4849,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="BIO">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!BIO.Value</Value>
-                                  <Style>
-                                    <FontSize>7pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>BIO</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="PDV">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -5336,10 +5131,9 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>33</ColSpan>
+                        <ColSpan>32</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -5978,7 +5772,7 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox142">
+                        <Textbox Name="Textbox105">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -5996,41 +5790,20 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox142</rd:DefaultName>
+                          <rd:DefaultName>Textbox105</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>6</ColSpan>
+                        <ColSpan>5</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -7822,60 +7595,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox143">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Biopago</Value>
-                                  <Style>
-                                    <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox143</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Textbox88">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -9437,59 +9156,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox144">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!BIO.Value)</Value>
-                                  <Style>
-                                    <FontSize>7pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox144</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="PDV1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -9567,7 +9233,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!BIO.Value, "CierreTurno")+Sum(Fields!Tickets.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno"))</Value>
+                                  <Value>=(((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!Tickets.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno"))</Value>
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -9866,39 +9532,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox145">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value />
-                                  <Style>
-                                    <FontSize>7pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox145</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Textbox61">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -9964,6 +9597,7 @@
                           </Style>
                         </Textbox>
                         <ColSpan>4</ColSpan>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -9975,7 +9609,6 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
-                <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -10332,10 +9965,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>CierreTurno</DataSetName>
-            <Top>0.3175cm</Top>
-            <Left>0.66146cm</Left>
+            <Top>0.34774cm</Top>
+            <Left>1.86497cm</Left>
             <Height>5.6173cm</Height>
-            <Width>45.71068cm</Width>
+            <Width>43.23719cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -10394,8 +10027,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
-            <Top>8.67074cm</Top>
-            <Left>9.39087cm</Left>
+            <Top>8.70098cm</Top>
+            <Left>10.59438cm</Left>
             <Height>1.30421cm</Height>
             <Width>8.21842cm</Width>
             <ZIndex>1</ZIndex>
@@ -10441,8 +10074,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
-            <Top>8.67074cm</Top>
-            <Left>27.27995cm</Left>
+            <Top>8.70098cm</Top>
+            <Left>28.48346cm</Left>
             <Height>1.30421cm</Height>
             <Width>8.25471cm</Width>
             <ZIndex>2</ZIndex>
@@ -10464,9 +10097,6 @@
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.46231cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>3.99099cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.56629cm</Width>
@@ -10542,10 +10172,9 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>9</ColSpan>
+                        <ColSpan>8</ColSpan>
                       </CellContents>
                     </TablixCell>
-                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -10632,59 +10261,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox44</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="Textbox105">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Biopago</Value>
-                                  <Style>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox105</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -11130,39 +10706,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox141">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopago")</Value>
-                                  <Style>
-                                    <FontSize>9pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox141</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Textbox56">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -11272,7 +10815,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreEfectivo")+Sum(Fields!Tarifa.Value, "CierreBiopago")+Sum(Fields!Tarifa.Value, "CierrePDV")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")+Sum(Fields!CostoTarjeta.Value, "TarjetaExpress")+Sum(Fields!Tarifa.Value, "CierreTransf")</Value>
+                                  <Value>=(Sum(Fields!Tarifa.Value, "CierreEfectivo")+Sum(Fields!Tarifa.Value, "CierrePDV")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")+Sum(Fields!CostoTarjeta.Value, "TarjetaExpress")+Sum(Fields!Tarifa.Value, "CierreTransf"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -11306,7 +10849,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!BIO.Value, "CierreTurno")+Sum(Fields!Incidencia.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno"))-(Sum(Fields!Tarifa.Value, "CierreEfectivo")+Sum(Fields!Tarifa.Value, "CierrePDV")+Sum(Fields!Tarifa.Value, "CierreBiopago")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")+Sum(Fields!CostoTarjeta.Value, "TarjetaExpress")+Sum(Fields!Tarifa.Value, "CierreTransf"))</Value>
+                                  <Value>=(((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!Incidencia.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno"))-(Sum(Fields!Tarifa.Value, "CierreEfectivo")+Sum(Fields!Tarifa.Value, "CierrePDV")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")+Sum(Fields!CostoTarjeta.Value, "TarjetaExpress")+Sum(Fields!Tarifa.Value, "CierreTransf"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -11460,39 +11003,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox146">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Sum(Fields!BIO.Value)</Value>
-                                  <Style>
-                                    <FontSize>9pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox146</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Efectivo">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -11602,7 +11112,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!Incidencia.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno")+Sum(Fields!BIO.Value, "CierreTurno")</Value>
+                                  <Value>=((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!Incidencia.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -11747,7 +11257,6 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -11762,10 +11271,10 @@
             <PageBreak>
               <BreakLocation>Start</BreakLocation>
             </PageBreak>
-            <Top>6.27102cm</Top>
-            <Left>5.58087cm</Left>
+            <Top>6.30126cm</Top>
+            <Left>6.78438cm</Left>
             <Height>2.32917cm</Height>
-            <Width>36.3302cm</Width>
+            <Width>32.33921cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -11824,8 +11333,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>2.77561cm</Top>
-              <Left>13.92452cm</Left>
+              <Top>2.85996cm</Top>
+              <Left>15.58338cm</Left>
               <Height>0.66146cm</Height>
               <Width>17.01271cm</Width>
               <Style>
@@ -11857,8 +11366,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>6.77195cm</Left>
+              <Top>3.60611cm</Top>
+              <Left>10.65331cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>1</ZIndex>
@@ -11891,8 +11400,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>10.30463cm</Left>
+              <Top>3.60611cm</Top>
+              <Left>14.18599cm</Left>
               <Height>0.69674cm</Height>
               <Width>6.52576cm</Width>
               <ZIndex>2</ZIndex>
@@ -11913,7 +11422,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Reporte  del:</Value>
+                      <Value>Turno:</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -11925,11 +11434,45 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>16.90095cm</Left>
+              <Top>3.64139cm</Top>
+              <Left>20.78231cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox37">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!Turno.Value</Value>
+                      <Style>
+                        <FontWeight>Normal</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox28</rd:DefaultName>
+              <Top>3.64139cm</Top>
+              <Left>24.31499cm</Left>
+              <Height>0.69674cm</Height>
+              <Width>6.52576cm</Width>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -11959,11 +11502,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>31.39931cm</Left>
+              <Top>3.60611cm</Top>
+              <Left>30.83567cm</Left>
               <Height>0.66146cm</Height>
               <Width>1.53948cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -11993,11 +11536,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>32.93879cm</Left>
+              <Top>3.60611cm</Top>
+              <Left>32.37515cm</Left>
               <Height>0.69674cm</Height>
               <Width>3.93868cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12012,11 +11555,11 @@
               <Source>Embedded</Source>
               <Value>SAFVIAL6</Value>
               <Sizing>Fit</Sizing>
-              <Top>0.22679cm</Top>
-              <Left>16.2604cm</Left>
+              <Top>0.31114cm</Top>
+              <Left>17.91926cm</Left>
               <Height>2.68611cm</Height>
               <Width>11.5668cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12042,11 +11585,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28906cm</Top>
-              <Left>3.51482cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>12.15868cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12071,16 +11614,16 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28906cm</Top>
-              <Left>7.08278cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>15.72664cm</Left>
               <Height>0.69674cm</Height>
-              <Width>4.87336cm</Width>
-              <ZIndex>8</ZIndex>
+              <Width>6.52576cm</Width>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12110,11 +11653,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28906cm</Top>
-              <Left>12.09159cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>22.32295cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12139,184 +11682,16 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28905cm</Top>
-              <Left>15.65955cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>25.89091cm</Left>
               <Height>0.69674cm</Height>
-              <Width>5.80264cm</Width>
-              <ZIndex>10</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox147">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Fecha Primera Tabulación:</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>21.87198cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>5.45749cm</Width>
+              <Width>6.52576cm</Width>
               <ZIndex>11</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox148">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!PrimeraTabulacion.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>27.40004cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>4.96471cm</Width>
-              <ZIndex>12</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox149">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Fecha Última Tabulación</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>32.54114cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>4.95261cm</Width>
-              <ZIndex>13</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox150">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!UltimaTabulacion.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30353cm</Top>
-              <Left>37.5643cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>5.51971cm</Width>
-              <ZIndex>14</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox151">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!FechaSolicitud.Value &amp; "   (  " &amp; Parameters!Turno.Value &amp; "  )"</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox151</rd:DefaultName>
-              <Top>3.54224cm</Top>
-              <Left>20.76662cm</Left>
-              <Height>0.6cm</Height>
-              <Width>9.81683cm</Width>
-              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12362,23 +11737,11 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="PrimeraTabulacion">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="UltimaTabulacion">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="FechaSolicitud">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>4</NumberOfRows>
+      <NumberOfRows>5</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -12399,21 +11762,6 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>FechaFin</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>PrimeraTabulacion</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>UltimaTabulacion</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>FechaSolicitud</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

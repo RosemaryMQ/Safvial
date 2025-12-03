@@ -36,9 +36,8 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.cierreTurnoV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sAPDataSet2 = new SAP.SAPDataSet2();
             this.cierrePDVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sAPDataSet2 = new SAP.SAPDataSet2();
             this.cierreEfectivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierrePINCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tarjetaExpressReporte1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,7 +46,6 @@
             this.buzonTurnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tarjetaExpressReporte1TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter();
-            this.cierreTurnoV1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierreTurnoV1TableAdapter();
             this.cierrePDVTableAdapter = new SAP.SAPDataSet2TableAdapters.CierrePDVTableAdapter();
             this.cierreEfectivoTableAdapter = new SAP.SAPDataSet2TableAdapters.CierreEfectivoTableAdapter();
             this.cierrePINCTableAdapter = new SAP.SAPDataSet2TableAdapters.CierrePINCTableAdapter();
@@ -56,9 +54,14 @@
             this.cierreBiopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreBiopagoTableAdapter = new SAP.SAPDataSet2TableAdapters.CierreBiopagoTableAdapter();
             this.tableAdapterManager = new SAP.SAPDataSet2TableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
+            this.sAPDataSetLocal = new SAP.SAPDataSetLocal();
+            this.cierreTurnoAvancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTurnoAvancesTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTurnoAvancesTableAdapter();
+            this.tableAdapterManager1 = new SAP.SAPDataSetLocalTableAdapters.TableAdapterManager();
+            this.cierreTurnoV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTurnoV1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierreTurnoV1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePDVBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePINCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).BeginInit();
@@ -66,22 +69,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.cierreTransfBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buzonTurnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoAvancesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cierreTurnoV1BindingSource
-            // 
-            this.cierreTurnoV1BindingSource.DataMember = "CierreTurnoV1";
-            this.cierreTurnoV1BindingSource.DataSource = this.sAPDataSet2;
-            // 
-            // sAPDataSet2
-            // 
-            this.sAPDataSet2.DataSetName = "SAPDataSet2";
-            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cierrePDVBindingSource
             // 
             this.cierrePDVBindingSource.DataMember = "CierrePDV";
             this.cierrePDVBindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // sAPDataSet2
+            // 
+            this.sAPDataSet2.DataSetName = "SAPDataSet2";
+            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cierreEfectivoBindingSource
             // 
@@ -118,7 +119,7 @@
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.DocumentMapWidth = 65;
             reportDataSource1.Name = "CierreTurno";
-            reportDataSource1.Value = this.cierreTurnoV1BindingSource;
+            reportDataSource1.Value = null;
             reportDataSource2.Name = "CierrePDV";
             reportDataSource2.Value = this.cierrePDVBindingSource;
             reportDataSource3.Name = "CierreEfectivo";
@@ -142,16 +143,12 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(601, 473);
+            this.reportViewer1.Size = new System.Drawing.Size(601, 513);
             this.reportViewer1.TabIndex = 0;
             // 
             // tarjetaExpressReporte1TableAdapter
             // 
             this.tarjetaExpressReporte1TableAdapter.ClearBeforeFill = true;
-            // 
-            // cierreTurnoV1TableAdapter
-            // 
-            this.cierreTurnoV1TableAdapter.ClearBeforeFill = true;
             // 
             // cierrePDVTableAdapter
             // 
@@ -191,20 +188,52 @@
             this.tableAdapterManager.ReporteUserTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SAP.SAPDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // sAPDataSetLocal
+            // 
+            this.sAPDataSetLocal.DataSetName = "SAPDataSetLocal";
+            this.sAPDataSetLocal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cierreTurnoAvancesBindingSource
+            // 
+            this.cierreTurnoAvancesBindingSource.DataMember = "CierreTurnoAvances";
+            this.cierreTurnoAvancesBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreTurnoAvancesTableAdapter
+            // 
+            this.cierreTurnoAvancesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.CierreBalanceV2TableAdapter = null;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.DeclaracionesTableAdapter = null;
+            this.tableAdapterManager1.TurnoTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = SAP.SAPDataSetLocalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.UsuariosTableAdapter = null;
+            // 
+            // cierreTurnoV1BindingSource
+            // 
+            this.cierreTurnoV1BindingSource.DataMember = "CierreTurnoV1";
+            this.cierreTurnoV1BindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // cierreTurnoV1TableAdapter
+            // 
+            this.cierreTurnoV1TableAdapter.ClearBeforeFill = true;
+            // 
             // CierreTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 473);
+            this.ClientSize = new System.Drawing.Size(601, 513);
             this.Controls.Add(this.reportViewer1);
             this.Name = "CierreTurno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CierreTurno";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CierreTurno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePDVBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePINCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).EndInit();
@@ -212,6 +241,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cierreTransfBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buzonTurnoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoAvancesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,12 +251,10 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource cierreTurnoV1BindingSource;
         private SAPDataSet2 sAPDataSet2;
         private System.Windows.Forms.BindingSource cierrePDVBindingSource;
         private System.Windows.Forms.BindingSource cierreEfectivoBindingSource;
         private System.Windows.Forms.BindingSource cierrePINCBindingSource;
-        private SAPDataSet2TableAdapters.CierreTurnoV1TableAdapter cierreTurnoV1TableAdapter;
         private SAPDataSet2TableAdapters.CierrePDVTableAdapter cierrePDVTableAdapter;
         private SAPDataSet2TableAdapters.CierreEfectivoTableAdapter cierreEfectivoTableAdapter;
         private SAPDataSet2TableAdapters.CierrePINCTableAdapter cierrePINCTableAdapter;
@@ -238,5 +268,11 @@
         private System.Windows.Forms.BindingSource cierreBiopagoBindingSource;
         private SAPDataSet2TableAdapters.CierreBiopagoTableAdapter cierreBiopagoTableAdapter;
         private SAPDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
+        private SAPDataSetLocal sAPDataSetLocal;
+        private System.Windows.Forms.BindingSource cierreTurnoAvancesBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreTurnoAvancesTableAdapter cierreTurnoAvancesTableAdapter;
+        private SAPDataSetLocalTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource cierreTurnoV1BindingSource;
+        private SAPDataSet2TableAdapters.CierreTurnoV1TableAdapter cierreTurnoV1TableAdapter;
     }
 }

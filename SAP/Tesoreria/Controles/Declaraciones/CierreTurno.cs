@@ -65,14 +65,20 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 this.reportViewer1.LocalReport.SetParameters(frm2);
                 Microsoft.Reporting.WinForms.ReportParameter frm3 = new Microsoft.Reporting.WinForms.ReportParameter("FechaFin", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS);
                 this.reportViewer1.LocalReport.SetParameters(frm3);
+                /*
                 Microsoft.Reporting.WinForms.ReportParameter frm4 = new Microsoft.Reporting.WinForms.ReportParameter("PrimeraTabulacion", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaPrimeraTabulacion);
                 this.reportViewer1.LocalReport.SetParameters(frm4);
                 Microsoft.Reporting.WinForms.ReportParameter frm5 = new Microsoft.Reporting.WinForms.ReportParameter("UltimaTabulacion", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaUltimaTabulacion);
                 this.reportViewer1.LocalReport.SetParameters(frm5);
                 Microsoft.Reporting.WinForms.ReportParameter frm6 = new Microsoft.Reporting.WinForms.ReportParameter("FechaSolicitud", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaSolicitud);
                 this.reportViewer1.LocalReport.SetParameters(frm6);
-
+                Microsoft.Reporting.WinForms.ReportParameter frm7 = new Microsoft.Reporting.WinForms.ReportParameter("FechaPrimerAvance", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaPrimerAvance);
+                this.reportViewer1.LocalReport.SetParameters(frm7);
+                Microsoft.Reporting.WinForms.ReportParameter frm8 = new Microsoft.Reporting.WinForms.ReportParameter("FechaUltimoAvance", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaUltimoAvance);
+                this.reportViewer1.LocalReport.SetParameters(frm8);
+                */
                 this.cierreTurnoV1TableAdapter.Fill(this.sAPDataSet2.CierreTurnoV1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);
+                //this.cierreTurnoAvancesTableAdapter.Fill(this.sAPDataSetLocal.CierreTurnoAvances, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaPrimerAvance), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaUltimoAvance), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);
                 this.cierreEfectivoTableAdapter.Fill(this.sAPDataSet2.CierreEfectivo, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);
                 this.cierrePDVTableAdapter.Fill(this.sAPDataSet2.CierrePDV, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);
                 this.cierrePINCTableAdapter.Fill(this.sAPDataSet2.CierrePINC, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno);
@@ -85,6 +91,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 this.reportViewer1.LocalReport.DataSources.Clear();
 
                 this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreTurno", (System.Data.DataTable)this.sAPDataSet2.CierreTurnoV1));
+                //this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreTurnoAvances", (System.Data.DataTable)this.sAPDataSetLocal.CierreTurnoAvances));
                 this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierrePDV", (System.Data.DataTable)this.sAPDataSet2.CierrePDV));
                 this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreEfectivo", (System.Data.DataTable)this.sAPDataSet2.CierreEfectivo));
                 this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierrePINC", (System.Data.DataTable)this.sAPDataSet2.CierrePINC));
@@ -108,7 +115,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             
 
         }
-
 
     }
 }

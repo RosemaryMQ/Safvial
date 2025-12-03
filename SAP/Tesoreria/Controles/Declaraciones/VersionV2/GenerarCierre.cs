@@ -14,6 +14,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         string control;
         public static string fechaS;
         public static string fechaS1;
+        public static string fechaPrimerAvance;
+        public static string fechaUltimoAvance;
         public static string fechaPrimeraTabulacion;
         public static string fechaUltimaTabulacion;
         public static string fechaSolicitud;
@@ -78,26 +80,26 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             else if (control == "Turno 12h 00:00 - 12:00")
             {
                 turno = 8;
-                date2.Enabled = false;
-                //hora = " 21:00:00";
-                //hora1 = " 20:59:59";
-                hora = " 00:00:00";
+                date2.Enabled = true;
+                hora = " 21:00:00";
+                hora1 = " 20:59:59";
+                /*hora = " 00:00:00";
                 hora1 = " 11:59:59";
                 hora2 = " 12:00:00";
-                hora3 = " 23:59:59";
+                hora3 = " 23:59:59";*/
             }
             else if (control == "Turno 12h 12:00 - 23:59")
             {
                 turno = 9;
-                date2.Enabled = false;
-                //hora = " 10:00:00";
-                //hora1 = " 09:59:00";
-                hora = " 12:00:00";
+                date2.Enabled = true;
+                hora = " 10:00:00";
+                hora1 = " 09:59:00";
+                /*hora = " 12:00:00";
                 hora1 = " 23:59:59";
                 hora2 = " 00:00:00";
-                hora3 = " 11:59:59";
+                hora3 = " 11:59:59";*/
             }
-            else if (control == "Diario (24 Horas)")
+            else if (control == "Recaudacion Diario (24 Horas)")
             {
                 turno = 10;
                 date2.Enabled = false;
@@ -113,9 +115,25 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         {
             fechaS = "";
             fechaS1 = "";
+            fechaPrimerAvance = "";
+            fechaUltimoAvance = "";
             fechaSolicitud = "";
             fechaPrimeraTabulacion = "";
             fechaUltimaTabulacion = "";
+            try
+            {
+                MessageBox.Show(Convert.ToString(turno), "");
+                this.Control2(turno);//FECHA INICIO
+                this.Control(turno);//FECHA FIN
+            }
+            catch
+            {
+                MessageBox.Show("La fecha ingresada no posee registros detectados", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            SAP.Tesoreria.Controles.Declaraciones.CierreTurno frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurno();
+            frm.ShowDialog();
+            this.Close();
+            /*
             try
             {
                 fechaSolicitud = date1.Value.ToString("dd/MM/yyyy");
@@ -128,21 +146,25 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 }
                 else
                 {
-                    this.Control2(turno);//FECHA INICIO
+                    this.FechaInicio(turno);//FECHA INICIO
                     if (fechaS1 == "")
                     {
-                        this.Control2Alt(turno);//FECHA INICIO
+                        this.FechaInicioAlt(turno);//FECHA INICIO
 
                     }
-                    this.Control(turno);//FECHA FIN
+                    this.FechaFin(turno);//FECHA FIN
                     if (fechaS == "")
                     {
-                        this.ControlAlt(turno);//FECHA INICIO
+                        this.FechaFinAlt(turno);//FECHA INICIO
 
                     }
                     this.PrimeraTabulacion(turno, fechaS1, fechaS);
                     this.UltimaTabulacion(turno, fechaS1, fechaS);
+                    //Calcular fecha de inicio y fin de Avances
+                    this.FechaInicioAvance(turno);
+                    this.FechaFinAvance(turno);
                 }
+
             }
             catch
             {
@@ -160,11 +182,81 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 frm.ShowDialog();
             }
             this.Close();
+            */
         }
 
 
         // FECHA FIN
         private void Control(int turno)
+        {
+            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlDataReader dr;
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.ToShortDateString() + hora));
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date2.Value.ToShortDateString() + hora1));
+                cmd.Parameters.AddWithValue("turno", turno);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    fechaS = Convert.ToString(Convert.ToDateTime(dr["Fecha"]).AddHours(1)); //FIN DEL TURNO
+                }
+                dr.Close();
+                MessageBox.Show(fechaS, "");
+                return;
+            }
+        }
+        // FECHA DE INICIO
+        private void Control2(int turno)
+        {
+            string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlDataReader dr;
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.ToShortDateString() + hora));
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date2.Value.ToShortDateString() + hora1));
+                cmd.Parameters.AddWithValue("turno", turno);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    fechaS1 = Convert.ToString(Convert.ToDateTime(dr["Fecha"]).AddHours(-1)); //INICIO DEL TURNO
+                }
+                dr.Close();
+                MessageBox.Show(fechaS1, "");
+                return;
+            }
+        }
+
+        private void date1_ValueChanged(object sender, EventArgs e)
+        {
+            if (control == "Diurno")
+            {
+                date2.Text = date1.Text;
+            }
+            else if (control == "Turno 2")
+            {
+                date2.Text = date1.Text;
+            }
+            
+            /*
+            if (turno == 8)
+            {
+                date2.Text = date1.Value.Date.AddDays(1).ToString();
+            }
+            else if (turno == 9)
+            {
+                date2.Text = date1.Value.Date.AddDays(1).ToString();
+            }*/
+        }
+
+        //     codigo nuevo
+
+        // FECHA FIN
+        private void FechaFin(int turno)
         {
             string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
 
@@ -192,7 +284,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             }
         }
 
-        private void ControlAlt(int turno)
+        private void FechaFinAlt(int turno)
         {
             string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
 
@@ -221,7 +313,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         }
 
         // FECHA DE INICIO
-        private void Control2(int turno)
+        private void FechaInicio(int turno)
         {
             string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
 
@@ -249,7 +341,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             }
         }
 
-        private void Control2Alt(int turno)
+        private void FechaInicioAlt(int turno)
         {
             string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
 
@@ -278,29 +370,63 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         }
 
 
-
-        private void date1_ValueChanged(object sender, EventArgs e)
+        private void FechaFinAvance(int turno)
         {
-            if (control == "Diurno")
-            {
-                date2.Text = date1.Text;
-            }
-            else if (control == "Turno 2")
-            {
-                date2.Text = date1.Text;
-            }
+            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
 
-            if (turno == 8)
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
-                date2.Text = date1.Value.Date.AddDays(1).ToString();
-            }
-            else if (turno == 9)
-            {
-                date2.Text = date1.Value.Date.AddDays(1).ToString();
-            }
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", date1.Value.ToString("dd/MM/yyyy") + hora1);
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(6));
+                cmd.Parameters.AddWithValue("turno", turno);
 
+                // ExecuteScalar devuelve un 'object' directamente
+                object resultado = cmd.ExecuteScalar();
 
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaUltimoAvance = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    fechaUltimoAvance = "";
+                }
+            }
         }
+
+        private void FechaInicioAvance(int turno)
+        {
+            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
+
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("fecha", date1.Value.ToString("dd/MM/yyyy") + hora);
+                cmd.Parameters.AddWithValue("fecha1", date1.Value.ToString("dd/MM/yyyy") + hora1);
+                cmd.Parameters.AddWithValue("turno", turno);
+
+                // ExecuteScalar devuelve un 'object' directamente
+                object resultado = cmd.ExecuteScalar();
+                
+                if (resultado != null && resultado != DBNull.Value)
+                {
+                    // SI ENCONTRÓ DATO
+                    fechaPrimerAvance = Convert.ToString(Convert.ToDateTime(resultado));
+                }
+                else
+                {
+                    // NO ENCONTRÓ DATO (resultado es null)
+                    fechaPrimerAvance = "";
+                }
+            }
+        }
+
+
 
 
         private void PrimeraTabulacion(int turno, string fechaS1, string fechaS)
