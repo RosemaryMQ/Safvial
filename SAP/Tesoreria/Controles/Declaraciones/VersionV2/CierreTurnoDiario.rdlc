@@ -16,11 +16,178 @@
       </ConnectionProperties>
       <rd:DataSourceID>cb512817-a9c9-494f-934d-a1eb3368fc6e</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="SAPDataSetLocal">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>82ad5fb7-7422-4ee1-b37f-76b1fb051a45</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
+    <DataSet Name="CierrePDV">
+      <Query>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tarifa">
+          <DataField>Tarifa</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Tabulado">
+          <DataField>Tabulado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>CierrePDV</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CierrePDVTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CierreEfectivo">
+      <Query>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tarifa">
+          <DataField>Tarifa</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Tabulado">
+          <DataField>Tabulado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>CierreEfectivo</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CierreEfectivoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CierrePINC">
+      <Query>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tarifa">
+          <DataField>Tarifa</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Tabulado">
+          <DataField>Tabulado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>CierrePINC</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CierrePINCTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CierreTransf">
+      <Query>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tarifa">
+          <DataField>Tarifa</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Tabulado">
+          <DataField>Tabulado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>CierreTransf</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CierreTransfTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CierreBuzon">
+      <Query>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="TotalBuzon">
+          <DataField>TotalBuzon</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>BuzonTurno</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>BuzonTurnoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="CierreBiopago">
+      <Query>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tarifa">
+          <DataField>Tarifa</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Tabulado">
+          <DataField>Tabulado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>CierreBiopago</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CierreBiopagoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
     <DataSet Name="CierreTurno">
       <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
+        <DataSourceName>SAPDataSetLocal</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -116,14 +283,6 @@
           <DataField>BilleteS50000</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Transferencia">
-          <DataField>Transferencia</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Buzon">
-          <DataField>Buzon</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
-        </Field>
         <Field Name="BilleteS200000">
           <DataField>BilleteS200000</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -132,9 +291,13 @@
           <DataField>BilleteS500000</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BilleteS1000000">
-          <DataField>BilleteS1000000</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Transferencia">
+          <DataField>Transferencia</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Buzon">
+          <DataField>Buzon</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
         </Field>
         <Field Name="BilleteBD1">
           <DataField>BilleteBD1</DataField>
@@ -176,7 +339,7 @@
           <DataField>BilleteBD500</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="BilleteS10000001">
+        <Field Name="BilleteS1000000">
           <DataField>BilleteS1000000</DataField>
           <rd:TypeName>System.Int64</rd:TypeName>
         </Field>
@@ -186,96 +349,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreTurnoV1Diario</rd:TableName>
+        <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
+        <rd:TableName>CierreTurnoV1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreTurnoV1DiarioTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="CierrePDV">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tarifa">
-          <DataField>Tarifa</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Tabulado">
-          <DataField>Tabulado</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierrePDV1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierrePDV1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="CierreEfectivo">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tarifa">
-          <DataField>Tarifa</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Tabulado">
-          <DataField>Tabulado</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreEfectivo1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreEfectivo1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="CierrePINC">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tarifa">
-          <DataField>Tarifa</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Tabulado">
-          <DataField>Tabulado</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierrePINC1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierrePINC1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CierreTurnoV1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="TarjetaExpress">
@@ -312,14 +391,6 @@
           <DataField>ID_Cliente</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Apellido">
-          <DataField>Apellido</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="SaldoInicial">
           <DataField>SaldoInicial</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
@@ -335,87 +406,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>TarjetaExpressDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ingal\Dropbox\Proyecto\SAP\SAP\TarjetaExpressDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\TarjetaExpressDataSet.xsd</rd:SchemaPath>
         <rd:TableName>TarjetaExpressReporte1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>TarjetaExpressReporte1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="CierreTransf">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tarifa">
-          <DataField>Tarifa</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Tabulado">
-          <DataField>Tabulado</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreTransf1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreTransf1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="CierreBuzon">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="TotalBuzon">
-          <DataField>TotalBuzon</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>BuzonTurno1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>BuzonTurno1TableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="CierreBiopago">
-      <Query>
-        <DataSourceName>SAPDataSet2</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Tarifa">
-          <DataField>Tarifa</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
-        </Field>
-        <Field Name="Tabulado">
-          <DataField>Tabulado</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
-        <rd:TableName>CierreBiopago1</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreBiopago1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -11815,7 +11810,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>CIERRE DE TURNO DIARIO</Value>
+                      <Value>CIERRE DE TURNO</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -11828,8 +11823,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>2.77561cm</Top>
-              <Left>13.92452cm</Left>
+              <Top>2.85996cm</Top>
+              <Left>15.58338cm</Left>
               <Height>0.66146cm</Height>
               <Width>17.01271cm</Width>
               <Style>
@@ -11861,8 +11856,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>6.77195cm</Left>
+              <Top>3.60611cm</Top>
+              <Left>19.86081cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>1</ZIndex>
@@ -11895,113 +11890,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>10.30463cm</Left>
+              <Top>3.60611cm</Top>
+              <Left>23.39349cm</Left>
               <Height>0.69674cm</Height>
               <Width>6.52576cm</Width>
               <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox36">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Reporte  del:</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>16.90095cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>3.4974cm</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox41">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Grupo:</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>31.39931cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>1.53948cm</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox42">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>____________</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>3.52176cm</Top>
-              <Left>32.93879cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>3.93868cm</Width>
-              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12016,11 +11909,11 @@
               <Source>Embedded</Source>
               <Value>SAFVIAL6</Value>
               <Sizing>Fit</Sizing>
-              <Top>0.22679cm</Top>
-              <Left>16.2604cm</Left>
+              <Top>0.31114cm</Top>
+              <Left>17.91926cm</Left>
               <Height>2.68611cm</Height>
               <Width>11.5668cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12046,11 +11939,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28906cm</Top>
-              <Left>3.51482cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>12.15868cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12075,16 +11968,16 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28906cm</Top>
-              <Left>7.08278cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>15.72664cm</Left>
               <Height>0.69674cm</Height>
-              <Width>4.87336cm</Width>
-              <ZIndex>8</ZIndex>
+              <Width>6.52576cm</Width>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12114,11 +12007,11 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28906cm</Top>
-              <Left>12.09159cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>22.32295cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12143,184 +12036,16 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Left</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.28905cm</Top>
-              <Left>15.65955cm</Left>
+              <Top>4.3734cm</Top>
+              <Left>25.89091cm</Left>
               <Height>0.69674cm</Height>
-              <Width>5.80264cm</Width>
-              <ZIndex>10</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox147">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Fecha Primera Tabulación:</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>21.87198cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>5.45749cm</Width>
-              <ZIndex>11</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox148">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!PrimeraTabulacion.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>27.40004cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>4.96471cm</Width>
-              <ZIndex>12</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox149">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Fecha Última Tabulación</Value>
-                      <Style>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30354cm</Top>
-              <Left>32.54114cm</Left>
-              <Height>0.66146cm</Height>
-              <Width>4.95261cm</Width>
-              <ZIndex>13</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox150">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!UltimaTabulacion.Value</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Left</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox28</rd:DefaultName>
-              <Top>4.30353cm</Top>
-              <Left>37.5643cm</Left>
-              <Height>0.69674cm</Height>
-              <Width>5.51971cm</Width>
-              <ZIndex>14</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox151">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!FechaSolicitud.Value &amp; "   (  " &amp; Parameters!Turno.Value &amp; "  )"</Value>
-                      <Style>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox151</rd:DefaultName>
-              <Top>3.54224cm</Top>
-              <Left>20.76662cm</Left>
-              <Height>0.6cm</Height>
-              <Width>9.81683cm</Width>
-              <ZIndex>15</ZIndex>
+              <Width>6.52576cm</Width>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -12362,18 +12087,6 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="PrimeraTabulacion">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="UltimaTabulacion">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="FechaSolicitud">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
     <ReportParameter Name="Turno">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -12402,21 +12115,6 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>PrimeraTabulacion</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>UltimaTabulacion</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>FechaSolicitud</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>3</RowIndex>
           <ParameterName>Turno</ParameterName>
         </CellDefinition>
       </CellDefinitions>

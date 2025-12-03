@@ -699,6 +699,9 @@
     <Compile Include="SAPDataSet3.cs">
       <DependentUpon>SAPDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SAPDataSetLocal.cs">
+      <DependentUpon>SAPDataSetLocal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SAPDataSetLocal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

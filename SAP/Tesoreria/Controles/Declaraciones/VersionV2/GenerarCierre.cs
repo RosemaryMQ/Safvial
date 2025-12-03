@@ -99,7 +99,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 hora2 = " 00:00:00";
                 hora3 = " 11:59:59";*/
             }
-            else if (control == "Recaudacion Diario (24 Horas)")
+            else if (control == "Reporte Diario (24 Horas)")
             {
                 turno = 10;
                 date2.Enabled = false;
@@ -123,15 +123,25 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             try
             {
                 MessageBox.Show(Convert.ToString(turno), "");
-                this.Control2(turno);//FECHA INICIO
-                this.Control(turno);//FECHA FIN
+                if (turno == 10)
+                {
+                    fechaS1 = date1.Value.ToString("dd/MM/yyyy") + hora;
+                    fechaS = date1.Value.ToString("dd/MM/yyyy") + hora1;
+                    SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    this.Control2(turno);//FECHA INICIO
+                    this.Control(turno);//FECHA FIN
+                    SAP.Tesoreria.Controles.Declaraciones.CierreTurno frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurno();
+                    frm.ShowDialog();
+                }
             }
             catch
             {
                 MessageBox.Show("La fecha ingresada no posee registros detectados", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            SAP.Tesoreria.Controles.Declaraciones.CierreTurno frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurno();
-            frm.ShowDialog();
             this.Close();
             /*
             try
@@ -139,10 +149,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 fechaSolicitud = date1.Value.ToString("dd/MM/yyyy");
                 if (turno == 10)
                 {
-                    fechaS1 = date1.Value.ToString("dd/MM/yyyy") + hora;
-                    fechaS = date1.Value.ToString("dd/MM/yyyy") + hora1;
-                    this.PrimeraTabulacionDiaria(fechaS1, fechaS);
-                    this.UltimaTabulacionDiaria(fechaS1, fechaS);
                 }
                 else
                 {
@@ -204,7 +210,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                     fechaS = Convert.ToString(Convert.ToDateTime(dr["Fecha"]).AddHours(1)); //FIN DEL TURNO
                 }
                 dr.Close();
-                MessageBox.Show(fechaS, "");
                 return;
             }
         }
@@ -226,7 +231,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                     fechaS1 = Convert.ToString(Convert.ToDateTime(dr["Fecha"]).AddHours(-1)); //INICIO DEL TURNO
                 }
                 dr.Close();
-                MessageBox.Show(fechaS1, "");
                 return;
             }
         }

@@ -59,6 +59,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                     Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Turno", "Turno 12h 12:00 - 23:59");
                     this.reportViewer1.LocalReport.SetParameters(frm);
                 }
+                else if (SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno == 10)
+                {
+                    Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Turno", "Reporte Diario (24 Horas)");
+                    this.reportViewer1.LocalReport.SetParameters(frm);
+                }
                 Microsoft.Reporting.WinForms.ReportParameter frm1 = new Microsoft.Reporting.WinForms.ReportParameter("Fecha", DateTime.Now.ToString("G"));
                 this.reportViewer1.LocalReport.SetParameters(frm1);
                 Microsoft.Reporting.WinForms.ReportParameter frm2 = new Microsoft.Reporting.WinForms.ReportParameter("FechaInicio", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1);

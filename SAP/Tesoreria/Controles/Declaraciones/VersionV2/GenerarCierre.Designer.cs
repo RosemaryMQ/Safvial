@@ -253,7 +253,7 @@
             this.PDV.ForeColor = System.Drawing.SystemColors.WindowText;
             this.PDV.FormattingEnabled = true;
             this.PDV.Items.AddRange(new object[] {
-            "Diario (24 Horas)",
+            "Reporte Diario (24 Horas)",
             "Diurno",
             "Nocturno",
             "Completo Grupo 1",

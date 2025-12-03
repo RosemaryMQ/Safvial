@@ -518,6 +518,9 @@
                   <Width>2.64953cm</Width>
                 </TablixColumn>
                 <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
                   <Width>2.92182cm</Width>
                 </TablixColumn>
                 <TablixColumn>
@@ -769,9 +772,10 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>5</ColSpan>
+                        <ColSpan>6</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -1091,6 +1095,59 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox159</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox147">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox147</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -3218,6 +3275,60 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox148">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>BIOPAGO</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox148</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox65">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -4903,6 +5014,39 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="BIO">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!BIO.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>BIO</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Transferencia">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -5131,9 +5275,10 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>32</ColSpan>
+                        <ColSpan>33</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -5801,9 +5946,10 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>5</ColSpan>
+                        <ColSpan>6</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -7629,6 +7775,60 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox150">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>BIOPAGO</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox150</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox73">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -9190,6 +9390,39 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="BIO1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!BIO.Value)</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>BIO1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox82">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -9539,7 +9772,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Total Efectivo:</Value>
+                                  <Value />
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -9552,6 +9785,40 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox61</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox152">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Total Efectivo:</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox152</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -9597,7 +9864,6 @@
                           </Style>
                         </Textbox>
                         <ColSpan>4</ColSpan>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -9609,6 +9875,7 @@
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
+                <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -9968,7 +10235,7 @@
             <Top>0.34774cm</Top>
             <Left>1.86497cm</Left>
             <Height>5.6173cm</Height>
-            <Width>43.23719cm</Width>
+            <Width>45.73719cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -10099,6 +10366,9 @@
                   <Width>4.46231cm</Width>
                 </TablixColumn>
                 <TablixColumn>
+                  <Width>3.45686cm</Width>
+                </TablixColumn>
+                <TablixColumn>
                   <Width>4.56629cm</Width>
                 </TablixColumn>
                 <TablixColumn>
@@ -10172,9 +10442,10 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <ColSpan>8</ColSpan>
+                        <ColSpan>9</ColSpan>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell />
                     <TablixCell />
                     <TablixCell />
                     <TablixCell />
@@ -10261,6 +10532,59 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox44</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox153">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>BIOPAGO</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox153</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -10706,6 +11030,39 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox154">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopago")</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox154</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox56">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -10815,7 +11172,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(Sum(Fields!Tarifa.Value, "CierreEfectivo")+Sum(Fields!Tarifa.Value, "CierrePDV")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")+Sum(Fields!CostoTarjeta.Value, "TarjetaExpress")+Sum(Fields!Tarifa.Value, "CierreTransf"))</Value>
+                                  <Value>=(Sum(Fields!Tarifa.Value, "CierreEfectivo")+Sum(Fields!Tarifa.Value, "CierrePDV")+Sum(Fields!Tarifa.Value, "CierreBiopago")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")+Sum(Fields!CostoTarjeta.Value, "TarjetaExpress")+Sum(Fields!Tarifa.Value, "CierreTransf"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -11003,6 +11360,39 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="BIO2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!BIO.Value)</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>BIO2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Efectivo">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -11112,7 +11502,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!Incidencia.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno")</Value>
+                                  <Value>=((Sum(Fields!BilleteS05.Value, "CierreTurno")*0.5)/1000000)+((Sum(Fields!BilleteS1.Value, "CierreTurno")*1)/1000000)+((Sum(Fields!BilleteS2.Value, "CierreTurno")*2)/1000000)+((Sum(Fields!BilleteS5.Value, "CierreTurno")*5)/1000000)+((Sum(Fields!BilleteS10.Value, "CierreTurno")*10)/1000000)+((Sum(Fields!BilleteS20.Value, "CierreTurno")*20)/1000000)+((Sum(Fields!BilleteS50.Value, "CierreTurno")*50)/1000000)+((Sum(Fields!BilleteS100.Value, "CierreTurno")*100)/1000000)+((Sum(Fields!BilleteS200.Value, "CierreTurno")*200)/1000000)+((Sum(Fields!BilleteS500.Value, "CierreTurno")*500)/1000000)+((Sum(Fields!BilleteS10000.Value, "CierreTurno")*10000)/1000000)+((Sum(Fields!BilleteS20000.Value, "CierreTurno")*20000)/1000000)+((Sum(Fields!BilleteS50000.Value, "CierreTurno")*50000)/1000000)+((Sum(Fields!BilleteS200000.Value, "CierreTurno")*200000)/1000000)+((Sum(Fields!BilleteS500000.Value, "CierreTurno")*500000)/1000000)+((Sum(Fields!BilleteS1000000.Value, "CierreTurno")*1000000)/1000000)+(Sum(Fields!BilleteBD1.Value, "CierreTurno")*1)+(Sum(Fields!BilleteBD5.Value, "CierreTurno")*5)+(Sum(Fields!BilleteBD10.Value, "CierreTurno")*10)+(Sum(Fields!BilleteBD20.Value, "CierreTurno")*20)+(Sum(Fields!BilleteBD50.Value, "CierreTurno")*50)+(Sum(Fields!BilleteBD100.Value, "CierreTurno")*100)+(Sum(Fields!BilleteBD025.Value, "CierreTurno")*0.25)+(Sum(Fields!BilleteBD05.Value, "CierreTurno")*0.5)+(Sum(Fields!BilleteBD200.Value, "CierreTurno")*200)+(Sum(Fields!BilleteBD500.Value, "CierreTurno")*500)+Sum(Fields!PDV.Value, "CierreTurno")+Sum(Fields!BIO.Value, "CierreTurno")+Sum(Fields!Incidencia.Value, "CierreTurno")+Sum(Fields!Transferencia.Value, "CierreTurno")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -11257,6 +11647,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -11274,7 +11665,7 @@
             <Top>6.30126cm</Top>
             <Left>6.78438cm</Left>
             <Height>2.32917cm</Height>
-            <Width>32.33921cm</Width>
+            <Width>35.79607cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -11306,7 +11697,7 @@
         <Height>4.07596in</Height>
         <Style />
       </Body>
-      <Width>18.491in</Width>
+      <Width>18.99101in</Width>
       <Page>
         <PageHeader>
           <Height>5.38128cm</Height>

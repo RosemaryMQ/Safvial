@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SAP.Tesoreria.Controles.Declaraciones
@@ -70,7 +63,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 }
                 else if (SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno == 10)
                 {
-                    Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Turno", "Turno 24h  00:00 - 23:59");
+                    Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Turno", "Reporte Diario (24 Horas)");
                     this.reportViewer1.LocalReport.SetParameters(frm);
                 }
                 Microsoft.Reporting.WinForms.ReportParameter frm1 = new Microsoft.Reporting.WinForms.ReportParameter("Fecha", DateTime.Now.ToString("G"));
@@ -79,33 +72,27 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 this.reportViewer1.LocalReport.SetParameters(frm2);
                 Microsoft.Reporting.WinForms.ReportParameter frm3 = new Microsoft.Reporting.WinForms.ReportParameter("FechaFin", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS);
                 this.reportViewer1.LocalReport.SetParameters(frm3);
-                Microsoft.Reporting.WinForms.ReportParameter frm4 = new Microsoft.Reporting.WinForms.ReportParameter("PrimeraTabulacion", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaPrimeraTabulacion);
-                this.reportViewer1.LocalReport.SetParameters(frm4);
-                Microsoft.Reporting.WinForms.ReportParameter frm5 = new Microsoft.Reporting.WinForms.ReportParameter("UltimaTabulacion", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaUltimaTabulacion);
-                this.reportViewer1.LocalReport.SetParameters(frm5);
-                Microsoft.Reporting.WinForms.ReportParameter frm6 = new Microsoft.Reporting.WinForms.ReportParameter("FechaSolicitud", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaSolicitud);
-                this.reportViewer1.LocalReport.SetParameters(frm6);
 
-                this.cierreTurnoV1DiarioTableAdapter.Fill(this.sAPDataSet2.CierreTurnoV1Diario, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
-                this.cierreEfectivo1TableAdapter.Fill(this.sAPDataSet2.CierreEfectivo1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
-                this.cierrePDV1TableAdapter.Fill(this.sAPDataSet2.CierrePDV1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
-                this.cierrePINC1TableAdapter.Fill(this.sAPDataSet2.CierrePINC1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
-                this.cierreTransf1TableAdapter.Fill(this.sAPDataSet2.CierreTransf1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
-                this.cierreBiopago1TableAdapter.Fill(this.sAPDataSet2.CierreBiopago1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
-                this.buzonTurno1TableAdapter.Fill(this.sAPDataSet2.BuzonTurno1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.cierreTurnoV1TableAdapter.Fill(this.sAPDataSetLocal.CierreTurnoV1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.cierreEfectivoTableAdapter.Fill(this.sAPDataSetLocal.CierreEfectivo, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.cierrePDVTableAdapter.Fill(this.sAPDataSetLocal.CierrePDV, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.cierrePINCTableAdapter.Fill(this.sAPDataSetLocal.CierrePINC, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.cierreTransfTableAdapter.Fill(this.sAPDataSetLocal.CierreTransf, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.cierreBiopagoTableAdapter.Fill(this.sAPDataSetLocal.CierreBiopago, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
+                this.buzonTurnoTableAdapter.Fill(this.sAPDataSetLocal.BuzonTurno, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
                 this.tarjetaExpressReporte1TableAdapter.Fill(this.tarjetaExpressDataSet.TarjetaExpressReporte1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS), SAP.Inicio.sede);
 
                 // Limpiamos cualquier basura anterior
                 this.reportViewer1.LocalReport.DataSources.Clear();
 
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreTurno", (System.Data.DataTable)this.sAPDataSet2.CierreTurnoV1Diario));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierrePDV", (System.Data.DataTable)this.sAPDataSet2.CierrePDV1));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreEfectivo", (System.Data.DataTable)this.sAPDataSet2.CierreEfectivo1));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierrePINC", (System.Data.DataTable)this.sAPDataSet2.CierrePINC1));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreTransf", (System.Data.DataTable)this.sAPDataSet2.CierreTransf1));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreBuzon", (System.Data.DataTable)this.sAPDataSet2.BuzonTurno1));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreBiopago", (System.Data.DataTable)this.sAPDataSet2.CierreBiopago1));
-                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("TarjetaExpress", (System.Data.DataTable)this.sAPDataSet2.CierreTarjetaExpress));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreTurno", (System.Data.DataTable)this.sAPDataSetLocal.CierreTurnoV1));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierrePDV", (System.Data.DataTable)this.sAPDataSetLocal.CierrePDV));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreEfectivo", (System.Data.DataTable)this.sAPDataSetLocal.CierreEfectivo));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierrePINC", (System.Data.DataTable)this.sAPDataSetLocal.CierrePINC));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreTransf", (System.Data.DataTable)this.sAPDataSetLocal.CierreTransf));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreBuzon", (System.Data.DataTable)this.sAPDataSetLocal.BuzonTurno));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("CierreBiopago", (System.Data.DataTable)this.sAPDataSetLocal.CierreBiopago));
+                this.reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("TarjetaExpress", (System.Data.DataTable)this.tarjetaExpressDataSet.TarjetaExpressReporte1));
 
 
 
@@ -116,12 +103,14 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             catch (Exception)
             {
                 MessageBox.Show("Error al cargar el reporte.", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-                //throw;
+                //this.Close();
+                throw;
             }
 
 
             //this.reportViewer1.RefreshReport();
         }
+
+
     }
 }

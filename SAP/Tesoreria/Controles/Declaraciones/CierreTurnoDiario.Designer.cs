@@ -30,115 +30,126 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.sAPDataSet2 = new SAP.SAPDataSet2();
-            this.buzonTurno1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buzonTurno1TableAdapter = new SAP.SAPDataSet2TableAdapters.BuzonTurno1TableAdapter();
-            this.tableAdapterManager = new SAP.SAPDataSet2TableAdapters.TableAdapterManager();
-            this.cierreBiopago1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierreBiopago1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierreBiopago1TableAdapter();
-            this.cierreEfectivo1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierreEfectivo1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierreEfectivo1TableAdapter();
-            this.cierrePDV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierrePDV1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierrePDV1TableAdapter();
-            this.cierrePINC1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierrePINC1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierrePINC1TableAdapter();
-            this.cierreTransf1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierreTransf1TableAdapter = new SAP.SAPDataSet2TableAdapters.CierreTransf1TableAdapter();
-            this.cierreTurnoV1DiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierreTurnoV1DiarioTableAdapter = new SAP.SAPDataSet2TableAdapters.CierreTurnoV1DiarioTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.sAPDataSetLocal = new SAP.SAPDataSetLocal();
+            this.cierreTurnoV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTurnoV1TableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTurnoV1TableAdapter();
+            this.tableAdapterManager = new SAP.SAPDataSetLocalTableAdapters.TableAdapterManager();
+            this.cierreBiopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreBiopagoTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreBiopagoTableAdapter();
+            this.buzonTurnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buzonTurnoTableAdapter = new SAP.SAPDataSetLocalTableAdapters.BuzonTurnoTableAdapter();
+            this.cierreTransfBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTransfTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTransfTableAdapter();
+            this.cierrePDVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierrePDVTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePDVTableAdapter();
+            this.cierreEfectivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreEfectivoTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreEfectivoTableAdapter();
+            this.cierrePINCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierrePINCTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePINCTableAdapter();
             this.tarjetaExpressDataSet = new SAP.TarjetaExpressDataSet();
             this.tarjetaExpressReporte1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tarjetaExpressReporte1TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter();
             this.tableAdapterManager1 = new SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buzonTurno1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopago1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivo1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierrePDV1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierrePINC1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTransf1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1DiarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buzonTurnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTransfBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePDVBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePINCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // sAPDataSet2
+            // reportViewer1
             // 
-            this.sAPDataSet2.DataSetName = "SAPDataSet2";
-            this.sAPDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Tesoreria.Controles.Declaraciones.VersionV2.CierreTurnoDiario.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 518);
+            this.reportViewer1.TabIndex = 0;
             // 
-            // buzonTurno1BindingSource
+            // sAPDataSetLocal
             // 
-            this.buzonTurno1BindingSource.DataMember = "BuzonTurno1";
-            this.buzonTurno1BindingSource.DataSource = this.sAPDataSet2;
+            this.sAPDataSetLocal.DataSetName = "SAPDataSetLocal";
+            this.sAPDataSetLocal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // buzonTurno1TableAdapter
+            // cierreTurnoV1BindingSource
             // 
-            this.buzonTurno1TableAdapter.ClearBeforeFill = true;
+            this.cierreTurnoV1BindingSource.DataMember = "CierreTurnoV1";
+            this.cierreTurnoV1BindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreTurnoV1TableAdapter
+            // 
+            this.cierreTurnoV1TableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CierresParcialesTableAdapter = null;
+            this.tableAdapterManager.CierreBalanceV2TableAdapter = null;
             this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.PeajeTableAdapter = null;
-            this.tableAdapterManager.ReporteUserTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SAP.SAPDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.DeclaracionesTableAdapter = null;
+            this.tableAdapterManager.TurnoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SAP.SAPDataSetLocalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // cierreBiopago1BindingSource
+            // cierreBiopagoBindingSource
             // 
-            this.cierreBiopago1BindingSource.DataMember = "CierreBiopago1";
-            this.cierreBiopago1BindingSource.DataSource = this.sAPDataSet2;
+            this.cierreBiopagoBindingSource.DataMember = "CierreBiopago";
+            this.cierreBiopagoBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // cierreBiopago1TableAdapter
+            // cierreBiopagoTableAdapter
             // 
-            this.cierreBiopago1TableAdapter.ClearBeforeFill = true;
+            this.cierreBiopagoTableAdapter.ClearBeforeFill = true;
             // 
-            // cierreEfectivo1BindingSource
+            // buzonTurnoBindingSource
             // 
-            this.cierreEfectivo1BindingSource.DataMember = "CierreEfectivo1";
-            this.cierreEfectivo1BindingSource.DataSource = this.sAPDataSet2;
+            this.buzonTurnoBindingSource.DataMember = "BuzonTurno";
+            this.buzonTurnoBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // cierreEfectivo1TableAdapter
+            // buzonTurnoTableAdapter
             // 
-            this.cierreEfectivo1TableAdapter.ClearBeforeFill = true;
+            this.buzonTurnoTableAdapter.ClearBeforeFill = true;
             // 
-            // cierrePDV1BindingSource
+            // cierreTransfBindingSource
             // 
-            this.cierrePDV1BindingSource.DataMember = "CierrePDV1";
-            this.cierrePDV1BindingSource.DataSource = this.sAPDataSet2;
+            this.cierreTransfBindingSource.DataMember = "CierreTransf";
+            this.cierreTransfBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // cierrePDV1TableAdapter
+            // cierreTransfTableAdapter
             // 
-            this.cierrePDV1TableAdapter.ClearBeforeFill = true;
+            this.cierreTransfTableAdapter.ClearBeforeFill = true;
             // 
-            // cierrePINC1BindingSource
+            // cierrePDVBindingSource
             // 
-            this.cierrePINC1BindingSource.DataMember = "CierrePINC1";
-            this.cierrePINC1BindingSource.DataSource = this.sAPDataSet2;
+            this.cierrePDVBindingSource.DataMember = "CierrePDV";
+            this.cierrePDVBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // cierrePINC1TableAdapter
+            // cierrePDVTableAdapter
             // 
-            this.cierrePINC1TableAdapter.ClearBeforeFill = true;
+            this.cierrePDVTableAdapter.ClearBeforeFill = true;
             // 
-            // cierreTransf1BindingSource
+            // cierreEfectivoBindingSource
             // 
-            this.cierreTransf1BindingSource.DataMember = "CierreTransf1";
-            this.cierreTransf1BindingSource.DataSource = this.sAPDataSet2;
+            this.cierreEfectivoBindingSource.DataMember = "CierreEfectivo";
+            this.cierreEfectivoBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // cierreTransf1TableAdapter
+            // cierreEfectivoTableAdapter
             // 
-            this.cierreTransf1TableAdapter.ClearBeforeFill = true;
+            this.cierreEfectivoTableAdapter.ClearBeforeFill = true;
             // 
-            // cierreTurnoV1DiarioBindingSource
+            // cierrePINCBindingSource
             // 
-            this.cierreTurnoV1DiarioBindingSource.DataMember = "CierreTurnoV1Diario";
-            this.cierreTurnoV1DiarioBindingSource.DataSource = this.sAPDataSet2;
+            this.cierrePINCBindingSource.DataMember = "CierrePINC";
+            this.cierrePINCBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // cierreTurnoV1DiarioTableAdapter
+            // cierrePINCTableAdapter
             // 
-            this.cierreTurnoV1DiarioTableAdapter.ClearBeforeFill = true;
+            this.cierrePINCTableAdapter.ClearBeforeFill = true;
             // 
             // tarjetaExpressDataSet
             // 
@@ -160,33 +171,23 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.UpdateOrder = SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Tesoreria.Controles.Declaraciones.VersionV2.CierreTurnoDiario.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 498);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // CierreTurnoDiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 498);
+            this.ClientSize = new System.Drawing.Size(800, 518);
             this.Controls.Add(this.reportViewer1);
             this.Name = "CierreTurnoDiario";
             this.Text = "CierreTurnoDiario";
             this.Load += new System.EventHandler(this.CierreTurnoDiario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buzonTurno1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopago1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivo1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierrePDV1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierrePINC1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTransf1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1DiarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buzonTurnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTransfBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePDVBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePINCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -194,27 +195,26 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         }
 
         #endregion
-
-        private SAPDataSet2 sAPDataSet2;
-        private System.Windows.Forms.BindingSource buzonTurno1BindingSource;
-        private SAPDataSet2TableAdapters.BuzonTurno1TableAdapter buzonTurno1TableAdapter;
-        private SAPDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingSource cierreBiopago1BindingSource;
-        private SAPDataSet2TableAdapters.CierreBiopago1TableAdapter cierreBiopago1TableAdapter;
-        private System.Windows.Forms.BindingSource cierreEfectivo1BindingSource;
-        private SAPDataSet2TableAdapters.CierreEfectivo1TableAdapter cierreEfectivo1TableAdapter;
-        private System.Windows.Forms.BindingSource cierrePDV1BindingSource;
-        private SAPDataSet2TableAdapters.CierrePDV1TableAdapter cierrePDV1TableAdapter;
-        private System.Windows.Forms.BindingSource cierrePINC1BindingSource;
-        private SAPDataSet2TableAdapters.CierrePINC1TableAdapter cierrePINC1TableAdapter;
-        private System.Windows.Forms.BindingSource cierreTransf1BindingSource;
-        private SAPDataSet2TableAdapters.CierreTransf1TableAdapter cierreTransf1TableAdapter;
-        private System.Windows.Forms.BindingSource cierreTurnoV1DiarioBindingSource;
-        private SAPDataSet2TableAdapters.CierreTurnoV1DiarioTableAdapter cierreTurnoV1DiarioTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private SAPDataSetLocal sAPDataSetLocal;
+        private System.Windows.Forms.BindingSource cierreTurnoV1BindingSource;
+        private SAPDataSetLocalTableAdapters.CierreTurnoV1TableAdapter cierreTurnoV1TableAdapter;
+        private SAPDataSetLocalTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource cierreBiopagoBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreBiopagoTableAdapter cierreBiopagoTableAdapter;
+        private System.Windows.Forms.BindingSource buzonTurnoBindingSource;
+        private SAPDataSetLocalTableAdapters.BuzonTurnoTableAdapter buzonTurnoTableAdapter;
+        private System.Windows.Forms.BindingSource cierreTransfBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreTransfTableAdapter cierreTransfTableAdapter;
+        private System.Windows.Forms.BindingSource cierrePDVBindingSource;
+        private SAPDataSetLocalTableAdapters.CierrePDVTableAdapter cierrePDVTableAdapter;
+        private System.Windows.Forms.BindingSource cierreEfectivoBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreEfectivoTableAdapter cierreEfectivoTableAdapter;
+        private System.Windows.Forms.BindingSource cierrePINCBindingSource;
+        private SAPDataSetLocalTableAdapters.CierrePINCTableAdapter cierrePINCTableAdapter;
         private TarjetaExpressDataSet tarjetaExpressDataSet;
         private System.Windows.Forms.BindingSource tarjetaExpressReporte1BindingSource;
         private TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter tarjetaExpressReporte1TableAdapter;
         private TarjetaExpressDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
