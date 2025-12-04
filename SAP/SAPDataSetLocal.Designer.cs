@@ -48,6 +48,20 @@ namespace SAP {
         
         private BuzonTurnoDataTable tableBuzonTurno;
         
+        private CierreTurnoFiltroDataTable tableCierreTurnoFiltro;
+        
+        private CierreEfectivoFiltroDataTable tableCierreEfectivoFiltro;
+        
+        private CierreBiopagoFiltroDataTable tableCierreBiopagoFiltro;
+        
+        private CierrePDVFiltroDataTable tableCierrePDVFiltro;
+        
+        private CierreTransfFiltroDataTable tableCierreTransfFiltro;
+        
+        private CierrePINCFiltroDataTable tableCierrePINCFiltro;
+        
+        private CierreBuzonFiltroDataTable tableCierreBuzonFiltro;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -111,6 +125,27 @@ namespace SAP {
                 }
                 if ((ds.Tables["BuzonTurno"] != null)) {
                     base.Tables.Add(new BuzonTurnoDataTable(ds.Tables["BuzonTurno"]));
+                }
+                if ((ds.Tables["CierreTurnoFiltro"] != null)) {
+                    base.Tables.Add(new CierreTurnoFiltroDataTable(ds.Tables["CierreTurnoFiltro"]));
+                }
+                if ((ds.Tables["CierreEfectivoFiltro"] != null)) {
+                    base.Tables.Add(new CierreEfectivoFiltroDataTable(ds.Tables["CierreEfectivoFiltro"]));
+                }
+                if ((ds.Tables["CierreBiopagoFiltro"] != null)) {
+                    base.Tables.Add(new CierreBiopagoFiltroDataTable(ds.Tables["CierreBiopagoFiltro"]));
+                }
+                if ((ds.Tables["CierrePDVFiltro"] != null)) {
+                    base.Tables.Add(new CierrePDVFiltroDataTable(ds.Tables["CierrePDVFiltro"]));
+                }
+                if ((ds.Tables["CierreTransfFiltro"] != null)) {
+                    base.Tables.Add(new CierreTransfFiltroDataTable(ds.Tables["CierreTransfFiltro"]));
+                }
+                if ((ds.Tables["CierrePINCFiltro"] != null)) {
+                    base.Tables.Add(new CierrePINCFiltroDataTable(ds.Tables["CierrePINCFiltro"]));
+                }
+                if ((ds.Tables["CierreBuzonFiltro"] != null)) {
+                    base.Tables.Add(new CierreBuzonFiltroDataTable(ds.Tables["CierreBuzonFiltro"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -252,6 +287,76 @@ namespace SAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreTurnoFiltroDataTable CierreTurnoFiltro {
+            get {
+                return this.tableCierreTurnoFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreEfectivoFiltroDataTable CierreEfectivoFiltro {
+            get {
+                return this.tableCierreEfectivoFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreBiopagoFiltroDataTable CierreBiopagoFiltro {
+            get {
+                return this.tableCierreBiopagoFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierrePDVFiltroDataTable CierrePDVFiltro {
+            get {
+                return this.tableCierrePDVFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreTransfFiltroDataTable CierreTransfFiltro {
+            get {
+                return this.tableCierreTransfFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierrePINCFiltroDataTable CierrePINCFiltro {
+            get {
+                return this.tableCierrePINCFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreBuzonFiltroDataTable CierreBuzonFiltro {
+            get {
+                return this.tableCierreBuzonFiltro;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -352,6 +457,27 @@ namespace SAP {
                 }
                 if ((ds.Tables["BuzonTurno"] != null)) {
                     base.Tables.Add(new BuzonTurnoDataTable(ds.Tables["BuzonTurno"]));
+                }
+                if ((ds.Tables["CierreTurnoFiltro"] != null)) {
+                    base.Tables.Add(new CierreTurnoFiltroDataTable(ds.Tables["CierreTurnoFiltro"]));
+                }
+                if ((ds.Tables["CierreEfectivoFiltro"] != null)) {
+                    base.Tables.Add(new CierreEfectivoFiltroDataTable(ds.Tables["CierreEfectivoFiltro"]));
+                }
+                if ((ds.Tables["CierreBiopagoFiltro"] != null)) {
+                    base.Tables.Add(new CierreBiopagoFiltroDataTable(ds.Tables["CierreBiopagoFiltro"]));
+                }
+                if ((ds.Tables["CierrePDVFiltro"] != null)) {
+                    base.Tables.Add(new CierrePDVFiltroDataTable(ds.Tables["CierrePDVFiltro"]));
+                }
+                if ((ds.Tables["CierreTransfFiltro"] != null)) {
+                    base.Tables.Add(new CierreTransfFiltroDataTable(ds.Tables["CierreTransfFiltro"]));
+                }
+                if ((ds.Tables["CierrePINCFiltro"] != null)) {
+                    base.Tables.Add(new CierrePINCFiltroDataTable(ds.Tables["CierrePINCFiltro"]));
+                }
+                if ((ds.Tables["CierreBuzonFiltro"] != null)) {
+                    base.Tables.Add(new CierreBuzonFiltroDataTable(ds.Tables["CierreBuzonFiltro"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -458,6 +584,48 @@ namespace SAP {
                     this.tableBuzonTurno.InitVars();
                 }
             }
+            this.tableCierreTurnoFiltro = ((CierreTurnoFiltroDataTable)(base.Tables["CierreTurnoFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreTurnoFiltro != null)) {
+                    this.tableCierreTurnoFiltro.InitVars();
+                }
+            }
+            this.tableCierreEfectivoFiltro = ((CierreEfectivoFiltroDataTable)(base.Tables["CierreEfectivoFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreEfectivoFiltro != null)) {
+                    this.tableCierreEfectivoFiltro.InitVars();
+                }
+            }
+            this.tableCierreBiopagoFiltro = ((CierreBiopagoFiltroDataTable)(base.Tables["CierreBiopagoFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreBiopagoFiltro != null)) {
+                    this.tableCierreBiopagoFiltro.InitVars();
+                }
+            }
+            this.tableCierrePDVFiltro = ((CierrePDVFiltroDataTable)(base.Tables["CierrePDVFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierrePDVFiltro != null)) {
+                    this.tableCierrePDVFiltro.InitVars();
+                }
+            }
+            this.tableCierreTransfFiltro = ((CierreTransfFiltroDataTable)(base.Tables["CierreTransfFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreTransfFiltro != null)) {
+                    this.tableCierreTransfFiltro.InitVars();
+                }
+            }
+            this.tableCierrePINCFiltro = ((CierrePINCFiltroDataTable)(base.Tables["CierrePINCFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierrePINCFiltro != null)) {
+                    this.tableCierrePINCFiltro.InitVars();
+                }
+            }
+            this.tableCierreBuzonFiltro = ((CierreBuzonFiltroDataTable)(base.Tables["CierreBuzonFiltro"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreBuzonFiltro != null)) {
+                    this.tableCierreBuzonFiltro.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -492,6 +660,20 @@ namespace SAP {
             base.Tables.Add(this.tableCierreBiopago);
             this.tableBuzonTurno = new BuzonTurnoDataTable();
             base.Tables.Add(this.tableBuzonTurno);
+            this.tableCierreTurnoFiltro = new CierreTurnoFiltroDataTable();
+            base.Tables.Add(this.tableCierreTurnoFiltro);
+            this.tableCierreEfectivoFiltro = new CierreEfectivoFiltroDataTable();
+            base.Tables.Add(this.tableCierreEfectivoFiltro);
+            this.tableCierreBiopagoFiltro = new CierreBiopagoFiltroDataTable();
+            base.Tables.Add(this.tableCierreBiopagoFiltro);
+            this.tableCierrePDVFiltro = new CierrePDVFiltroDataTable();
+            base.Tables.Add(this.tableCierrePDVFiltro);
+            this.tableCierreTransfFiltro = new CierreTransfFiltroDataTable();
+            base.Tables.Add(this.tableCierreTransfFiltro);
+            this.tableCierrePINCFiltro = new CierrePINCFiltroDataTable();
+            base.Tables.Add(this.tableCierrePINCFiltro);
+            this.tableCierreBuzonFiltro = new CierreBuzonFiltroDataTable();
+            base.Tables.Add(this.tableCierreBuzonFiltro);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -563,6 +745,48 @@ namespace SAP {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeBuzonTurno() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreTurnoFiltro() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreEfectivoFiltro() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreBiopagoFiltro() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierrePDVFiltro() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreTransfFiltro() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierrePINCFiltro() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreBuzonFiltro() {
             return false;
         }
         
@@ -656,6 +880,27 @@ namespace SAP {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void BuzonTurnoRowChangeEventHandler(object sender, BuzonTurnoRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreTurnoFiltroRowChangeEventHandler(object sender, CierreTurnoFiltroRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreEfectivoFiltroRowChangeEventHandler(object sender, CierreEfectivoFiltroRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreBiopagoFiltroRowChangeEventHandler(object sender, CierreBiopagoFiltroRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierrePDVFiltroRowChangeEventHandler(object sender, CierrePDVFiltroRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreTransfFiltroRowChangeEventHandler(object sender, CierreTransfFiltroRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierrePINCFiltroRowChangeEventHandler(object sender, CierrePINCFiltroRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreBuzonFiltroRowChangeEventHandler(object sender, CierreBuzonFiltroRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5959,6 +6204,2508 @@ namespace SAP {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreTurnoFiltroDataTable : global::System.Data.TypedTableBase<CierreTurnoFiltroRow> {
+            
+            private global::System.Data.DataColumn columnID_Cierre;
+            
+            private global::System.Data.DataColumn columnBilleteS05;
+            
+            private global::System.Data.DataColumn columnBilleteS1;
+            
+            private global::System.Data.DataColumn columnBilleteS2;
+            
+            private global::System.Data.DataColumn columnBilleteS5;
+            
+            private global::System.Data.DataColumn columnBilleteS10;
+            
+            private global::System.Data.DataColumn columnBilleteS20;
+            
+            private global::System.Data.DataColumn columnBilleteS50;
+            
+            private global::System.Data.DataColumn columnBilleteS100;
+            
+            private global::System.Data.DataColumn columnBilleteS200;
+            
+            private global::System.Data.DataColumn columnBilleteS500;
+            
+            private global::System.Data.DataColumn columnTickets;
+            
+            private global::System.Data.DataColumn columnEfectivo;
+            
+            private global::System.Data.DataColumn columnPDV;
+            
+            private global::System.Data.DataColumn columnIncidencia;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnTesoreroC;
+            
+            private global::System.Data.DataColumn columnTurno;
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnApellido;
+            
+            private global::System.Data.DataColumn columnBilleteS10000;
+            
+            private global::System.Data.DataColumn columnBilleteS20000;
+            
+            private global::System.Data.DataColumn columnBilleteS50000;
+            
+            private global::System.Data.DataColumn columnBilleteS200000;
+            
+            private global::System.Data.DataColumn columnBilleteS500000;
+            
+            private global::System.Data.DataColumn columnTransferencia;
+            
+            private global::System.Data.DataColumn columnBuzon;
+            
+            private global::System.Data.DataColumn columnBilleteBD1;
+            
+            private global::System.Data.DataColumn columnBilleteBD5;
+            
+            private global::System.Data.DataColumn columnBilleteBD10;
+            
+            private global::System.Data.DataColumn columnBilleteBD20;
+            
+            private global::System.Data.DataColumn columnBilleteBD50;
+            
+            private global::System.Data.DataColumn columnBilleteBD100;
+            
+            private global::System.Data.DataColumn columnBilleteBD05;
+            
+            private global::System.Data.DataColumn columnBilleteBD025;
+            
+            private global::System.Data.DataColumn columnBilleteBD200;
+            
+            private global::System.Data.DataColumn columnBilleteBD500;
+            
+            private global::System.Data.DataColumn columnBilleteS1000000;
+            
+            private global::System.Data.DataColumn columnBIO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoFiltroDataTable() {
+                this.TableName = "CierreTurnoFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreTurnoFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreTurnoFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ID_CierreColumn {
+                get {
+                    return this.columnID_Cierre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS05Column {
+                get {
+                    return this.columnBilleteS05;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS1Column {
+                get {
+                    return this.columnBilleteS1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS2Column {
+                get {
+                    return this.columnBilleteS2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS5Column {
+                get {
+                    return this.columnBilleteS5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS10Column {
+                get {
+                    return this.columnBilleteS10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS20Column {
+                get {
+                    return this.columnBilleteS20;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS50Column {
+                get {
+                    return this.columnBilleteS50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS100Column {
+                get {
+                    return this.columnBilleteS100;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS200Column {
+                get {
+                    return this.columnBilleteS200;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS500Column {
+                get {
+                    return this.columnBilleteS500;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TicketsColumn {
+                get {
+                    return this.columnTickets;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EfectivoColumn {
+                get {
+                    return this.columnEfectivo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PDVColumn {
+                get {
+                    return this.columnPDV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IncidenciaColumn {
+                get {
+                    return this.columnIncidencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TesoreroCColumn {
+                get {
+                    return this.columnTesoreroC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TurnoColumn {
+                get {
+                    return this.columnTurno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ApellidoColumn {
+                get {
+                    return this.columnApellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS10000Column {
+                get {
+                    return this.columnBilleteS10000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS20000Column {
+                get {
+                    return this.columnBilleteS20000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS50000Column {
+                get {
+                    return this.columnBilleteS50000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS200000Column {
+                get {
+                    return this.columnBilleteS200000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS500000Column {
+                get {
+                    return this.columnBilleteS500000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TransferenciaColumn {
+                get {
+                    return this.columnTransferencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BuzonColumn {
+                get {
+                    return this.columnBuzon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD1Column {
+                get {
+                    return this.columnBilleteBD1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD5Column {
+                get {
+                    return this.columnBilleteBD5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD10Column {
+                get {
+                    return this.columnBilleteBD10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD20Column {
+                get {
+                    return this.columnBilleteBD20;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD50Column {
+                get {
+                    return this.columnBilleteBD50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD100Column {
+                get {
+                    return this.columnBilleteBD100;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD05Column {
+                get {
+                    return this.columnBilleteBD05;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD025Column {
+                get {
+                    return this.columnBilleteBD025;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD200Column {
+                get {
+                    return this.columnBilleteBD200;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD500Column {
+                get {
+                    return this.columnBilleteBD500;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS1000000Column {
+                get {
+                    return this.columnBilleteS1000000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BIOColumn {
+                get {
+                    return this.columnBIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoFiltroRow this[int index] {
+                get {
+                    return ((CierreTurnoFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoFiltroRowChangeEventHandler CierreTurnoFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoFiltroRowChangeEventHandler CierreTurnoFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoFiltroRowChangeEventHandler CierreTurnoFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoFiltroRowChangeEventHandler CierreTurnoFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreTurnoFiltroRow(CierreTurnoFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoFiltroRow AddCierreTurnoFiltroRow(
+                        int ID_Cierre, 
+                        int BilleteS05, 
+                        int BilleteS1, 
+                        int BilleteS2, 
+                        int BilleteS5, 
+                        int BilleteS10, 
+                        int BilleteS20, 
+                        int BilleteS50, 
+                        int BilleteS100, 
+                        int BilleteS200, 
+                        int BilleteS500, 
+                        double Tickets, 
+                        double Efectivo, 
+                        double PDV, 
+                        double Incidencia, 
+                        System.DateTime Fecha, 
+                        int TesoreroC, 
+                        int Turno, 
+                        string Nombre, 
+                        string Apellido, 
+                        int BilleteS10000, 
+                        int BilleteS20000, 
+                        int BilleteS50000, 
+                        int BilleteS200000, 
+                        int BilleteS500000, 
+                        double Transferencia, 
+                        bool Buzon, 
+                        int BilleteBD1, 
+                        int BilleteBD5, 
+                        int BilleteBD10, 
+                        int BilleteBD20, 
+                        int BilleteBD50, 
+                        int BilleteBD100, 
+                        int BilleteBD05, 
+                        int BilleteBD025, 
+                        int BilleteBD200, 
+                        int BilleteBD500, 
+                        long BilleteS1000000, 
+                        double BIO) {
+                CierreTurnoFiltroRow rowCierreTurnoFiltroRow = ((CierreTurnoFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        ID_Cierre,
+                        BilleteS05,
+                        BilleteS1,
+                        BilleteS2,
+                        BilleteS5,
+                        BilleteS10,
+                        BilleteS20,
+                        BilleteS50,
+                        BilleteS100,
+                        BilleteS200,
+                        BilleteS500,
+                        Tickets,
+                        Efectivo,
+                        PDV,
+                        Incidencia,
+                        Fecha,
+                        TesoreroC,
+                        Turno,
+                        Nombre,
+                        Apellido,
+                        BilleteS10000,
+                        BilleteS20000,
+                        BilleteS50000,
+                        BilleteS200000,
+                        BilleteS500000,
+                        Transferencia,
+                        Buzon,
+                        BilleteBD1,
+                        BilleteBD5,
+                        BilleteBD10,
+                        BilleteBD20,
+                        BilleteBD50,
+                        BilleteBD100,
+                        BilleteBD05,
+                        BilleteBD025,
+                        BilleteBD200,
+                        BilleteBD500,
+                        BilleteS1000000,
+                        BIO};
+                rowCierreTurnoFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreTurnoFiltroRow);
+                return rowCierreTurnoFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreTurnoFiltroDataTable cln = ((CierreTurnoFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreTurnoFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Cierre = base.Columns["ID_Cierre"];
+                this.columnBilleteS05 = base.Columns["BilleteS05"];
+                this.columnBilleteS1 = base.Columns["BilleteS1"];
+                this.columnBilleteS2 = base.Columns["BilleteS2"];
+                this.columnBilleteS5 = base.Columns["BilleteS5"];
+                this.columnBilleteS10 = base.Columns["BilleteS10"];
+                this.columnBilleteS20 = base.Columns["BilleteS20"];
+                this.columnBilleteS50 = base.Columns["BilleteS50"];
+                this.columnBilleteS100 = base.Columns["BilleteS100"];
+                this.columnBilleteS200 = base.Columns["BilleteS200"];
+                this.columnBilleteS500 = base.Columns["BilleteS500"];
+                this.columnTickets = base.Columns["Tickets"];
+                this.columnEfectivo = base.Columns["Efectivo"];
+                this.columnPDV = base.Columns["PDV"];
+                this.columnIncidencia = base.Columns["Incidencia"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnTesoreroC = base.Columns["TesoreroC"];
+                this.columnTurno = base.Columns["Turno"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnApellido = base.Columns["Apellido"];
+                this.columnBilleteS10000 = base.Columns["BilleteS10000"];
+                this.columnBilleteS20000 = base.Columns["BilleteS20000"];
+                this.columnBilleteS50000 = base.Columns["BilleteS50000"];
+                this.columnBilleteS200000 = base.Columns["BilleteS200000"];
+                this.columnBilleteS500000 = base.Columns["BilleteS500000"];
+                this.columnTransferencia = base.Columns["Transferencia"];
+                this.columnBuzon = base.Columns["Buzon"];
+                this.columnBilleteBD1 = base.Columns["BilleteBD1"];
+                this.columnBilleteBD5 = base.Columns["BilleteBD5"];
+                this.columnBilleteBD10 = base.Columns["BilleteBD10"];
+                this.columnBilleteBD20 = base.Columns["BilleteBD20"];
+                this.columnBilleteBD50 = base.Columns["BilleteBD50"];
+                this.columnBilleteBD100 = base.Columns["BilleteBD100"];
+                this.columnBilleteBD05 = base.Columns["BilleteBD05"];
+                this.columnBilleteBD025 = base.Columns["BilleteBD025"];
+                this.columnBilleteBD200 = base.Columns["BilleteBD200"];
+                this.columnBilleteBD500 = base.Columns["BilleteBD500"];
+                this.columnBilleteS1000000 = base.Columns["BilleteS1000000"];
+                this.columnBIO = base.Columns["BIO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnID_Cierre = new global::System.Data.DataColumn("ID_Cierre", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Cierre);
+                this.columnBilleteS05 = new global::System.Data.DataColumn("BilleteS05", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS05);
+                this.columnBilleteS1 = new global::System.Data.DataColumn("BilleteS1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS1);
+                this.columnBilleteS2 = new global::System.Data.DataColumn("BilleteS2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS2);
+                this.columnBilleteS5 = new global::System.Data.DataColumn("BilleteS5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS5);
+                this.columnBilleteS10 = new global::System.Data.DataColumn("BilleteS10", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS10);
+                this.columnBilleteS20 = new global::System.Data.DataColumn("BilleteS20", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS20);
+                this.columnBilleteS50 = new global::System.Data.DataColumn("BilleteS50", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS50);
+                this.columnBilleteS100 = new global::System.Data.DataColumn("BilleteS100", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS100);
+                this.columnBilleteS200 = new global::System.Data.DataColumn("BilleteS200", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS200);
+                this.columnBilleteS500 = new global::System.Data.DataColumn("BilleteS500", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS500);
+                this.columnTickets = new global::System.Data.DataColumn("Tickets", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTickets);
+                this.columnEfectivo = new global::System.Data.DataColumn("Efectivo", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEfectivo);
+                this.columnPDV = new global::System.Data.DataColumn("PDV", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPDV);
+                this.columnIncidencia = new global::System.Data.DataColumn("Incidencia", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIncidencia);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnTesoreroC = new global::System.Data.DataColumn("TesoreroC", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTesoreroC);
+                this.columnTurno = new global::System.Data.DataColumn("Turno", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTurno);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApellido);
+                this.columnBilleteS10000 = new global::System.Data.DataColumn("BilleteS10000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS10000);
+                this.columnBilleteS20000 = new global::System.Data.DataColumn("BilleteS20000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS20000);
+                this.columnBilleteS50000 = new global::System.Data.DataColumn("BilleteS50000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS50000);
+                this.columnBilleteS200000 = new global::System.Data.DataColumn("BilleteS200000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS200000);
+                this.columnBilleteS500000 = new global::System.Data.DataColumn("BilleteS500000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS500000);
+                this.columnTransferencia = new global::System.Data.DataColumn("Transferencia", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransferencia);
+                this.columnBuzon = new global::System.Data.DataColumn("Buzon", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuzon);
+                this.columnBilleteBD1 = new global::System.Data.DataColumn("BilleteBD1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD1);
+                this.columnBilleteBD5 = new global::System.Data.DataColumn("BilleteBD5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD5);
+                this.columnBilleteBD10 = new global::System.Data.DataColumn("BilleteBD10", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD10);
+                this.columnBilleteBD20 = new global::System.Data.DataColumn("BilleteBD20", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD20);
+                this.columnBilleteBD50 = new global::System.Data.DataColumn("BilleteBD50", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD50);
+                this.columnBilleteBD100 = new global::System.Data.DataColumn("BilleteBD100", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD100);
+                this.columnBilleteBD05 = new global::System.Data.DataColumn("BilleteBD05", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD05);
+                this.columnBilleteBD025 = new global::System.Data.DataColumn("BilleteBD025", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD025);
+                this.columnBilleteBD200 = new global::System.Data.DataColumn("BilleteBD200", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD200);
+                this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD500);
+                this.columnBilleteS1000000 = new global::System.Data.DataColumn("BilleteS1000000", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS1000000);
+                this.columnBIO = new global::System.Data.DataColumn("BIO", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBIO);
+                this.columnID_Cierre.ReadOnly = true;
+                this.columnBilleteS05.ReadOnly = true;
+                this.columnBilleteS1.ReadOnly = true;
+                this.columnBilleteS2.ReadOnly = true;
+                this.columnBilleteS5.ReadOnly = true;
+                this.columnBilleteS10.ReadOnly = true;
+                this.columnBilleteS20.ReadOnly = true;
+                this.columnBilleteS50.ReadOnly = true;
+                this.columnBilleteS100.ReadOnly = true;
+                this.columnBilleteS200.ReadOnly = true;
+                this.columnBilleteS500.ReadOnly = true;
+                this.columnTickets.ReadOnly = true;
+                this.columnEfectivo.ReadOnly = true;
+                this.columnPDV.ReadOnly = true;
+                this.columnIncidencia.ReadOnly = true;
+                this.columnFecha.ReadOnly = true;
+                this.columnTesoreroC.ReadOnly = true;
+                this.columnTurno.ReadOnly = true;
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 50;
+                this.columnApellido.ReadOnly = true;
+                this.columnApellido.MaxLength = 50;
+                this.columnBilleteS10000.ReadOnly = true;
+                this.columnBilleteS20000.ReadOnly = true;
+                this.columnBilleteS50000.ReadOnly = true;
+                this.columnBilleteS200000.ReadOnly = true;
+                this.columnBilleteS500000.ReadOnly = true;
+                this.columnTransferencia.ReadOnly = true;
+                this.columnBuzon.ReadOnly = true;
+                this.columnBilleteBD1.ReadOnly = true;
+                this.columnBilleteBD5.ReadOnly = true;
+                this.columnBilleteBD10.ReadOnly = true;
+                this.columnBilleteBD20.ReadOnly = true;
+                this.columnBilleteBD50.ReadOnly = true;
+                this.columnBilleteBD100.ReadOnly = true;
+                this.columnBilleteBD05.ReadOnly = true;
+                this.columnBilleteBD025.ReadOnly = true;
+                this.columnBilleteBD200.ReadOnly = true;
+                this.columnBilleteBD500.ReadOnly = true;
+                this.columnBilleteS1000000.ReadOnly = true;
+                this.columnBIO.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoFiltroRow NewCierreTurnoFiltroRow() {
+                return ((CierreTurnoFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreTurnoFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreTurnoFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreTurnoFiltroRowChanged != null)) {
+                    this.CierreTurnoFiltroRowChanged(this, new CierreTurnoFiltroRowChangeEvent(((CierreTurnoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreTurnoFiltroRowChanging != null)) {
+                    this.CierreTurnoFiltroRowChanging(this, new CierreTurnoFiltroRowChangeEvent(((CierreTurnoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreTurnoFiltroRowDeleted != null)) {
+                    this.CierreTurnoFiltroRowDeleted(this, new CierreTurnoFiltroRowChangeEvent(((CierreTurnoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreTurnoFiltroRowDeleting != null)) {
+                    this.CierreTurnoFiltroRowDeleting(this, new CierreTurnoFiltroRowChangeEvent(((CierreTurnoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreTurnoFiltroRow(CierreTurnoFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreTurnoFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreEfectivoFiltroDataTable : global::System.Data.TypedTableBase<CierreEfectivoFiltroRow> {
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTarifa;
+            
+            private global::System.Data.DataColumn columnTabulado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreEfectivoFiltroDataTable() {
+                this.TableName = "CierreEfectivoFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreEfectivoFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreEfectivoFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TarifaColumn {
+                get {
+                    return this.columnTarifa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TabuladoColumn {
+                get {
+                    return this.columnTabulado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreEfectivoFiltroRow this[int index] {
+                get {
+                    return ((CierreEfectivoFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreEfectivoFiltroRowChangeEventHandler CierreEfectivoFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreEfectivoFiltroRowChangeEventHandler CierreEfectivoFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreEfectivoFiltroRowChangeEventHandler CierreEfectivoFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreEfectivoFiltroRowChangeEventHandler CierreEfectivoFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreEfectivoFiltroRow(CierreEfectivoFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreEfectivoFiltroRow AddCierreEfectivoFiltroRow(string Nombre, double Tarifa, int Tabulado) {
+                CierreEfectivoFiltroRow rowCierreEfectivoFiltroRow = ((CierreEfectivoFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nombre,
+                        Tarifa,
+                        Tabulado};
+                rowCierreEfectivoFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreEfectivoFiltroRow);
+                return rowCierreEfectivoFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreEfectivoFiltroDataTable cln = ((CierreEfectivoFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreEfectivoFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTarifa = base.Columns["Tarifa"];
+                this.columnTabulado = base.Columns["Tabulado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarifa);
+                this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabulado);
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 20;
+                this.columnTarifa.ReadOnly = true;
+                this.columnTabulado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreEfectivoFiltroRow NewCierreEfectivoFiltroRow() {
+                return ((CierreEfectivoFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreEfectivoFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreEfectivoFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreEfectivoFiltroRowChanged != null)) {
+                    this.CierreEfectivoFiltroRowChanged(this, new CierreEfectivoFiltroRowChangeEvent(((CierreEfectivoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreEfectivoFiltroRowChanging != null)) {
+                    this.CierreEfectivoFiltroRowChanging(this, new CierreEfectivoFiltroRowChangeEvent(((CierreEfectivoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreEfectivoFiltroRowDeleted != null)) {
+                    this.CierreEfectivoFiltroRowDeleted(this, new CierreEfectivoFiltroRowChangeEvent(((CierreEfectivoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreEfectivoFiltroRowDeleting != null)) {
+                    this.CierreEfectivoFiltroRowDeleting(this, new CierreEfectivoFiltroRowChangeEvent(((CierreEfectivoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreEfectivoFiltroRow(CierreEfectivoFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreEfectivoFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreBiopagoFiltroDataTable : global::System.Data.TypedTableBase<CierreBiopagoFiltroRow> {
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTarifa;
+            
+            private global::System.Data.DataColumn columnTabulado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoFiltroDataTable() {
+                this.TableName = "CierreBiopagoFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreBiopagoFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreBiopagoFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TarifaColumn {
+                get {
+                    return this.columnTarifa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TabuladoColumn {
+                get {
+                    return this.columnTabulado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoFiltroRow this[int index] {
+                get {
+                    return ((CierreBiopagoFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoFiltroRowChangeEventHandler CierreBiopagoFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoFiltroRowChangeEventHandler CierreBiopagoFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoFiltroRowChangeEventHandler CierreBiopagoFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBiopagoFiltroRowChangeEventHandler CierreBiopagoFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreBiopagoFiltroRow(CierreBiopagoFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoFiltroRow AddCierreBiopagoFiltroRow(string Nombre, double Tarifa, int Tabulado) {
+                CierreBiopagoFiltroRow rowCierreBiopagoFiltroRow = ((CierreBiopagoFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nombre,
+                        Tarifa,
+                        Tabulado};
+                rowCierreBiopagoFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreBiopagoFiltroRow);
+                return rowCierreBiopagoFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreBiopagoFiltroDataTable cln = ((CierreBiopagoFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreBiopagoFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTarifa = base.Columns["Tarifa"];
+                this.columnTabulado = base.Columns["Tabulado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarifa);
+                this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabulado);
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 20;
+                this.columnTarifa.ReadOnly = true;
+                this.columnTabulado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoFiltroRow NewCierreBiopagoFiltroRow() {
+                return ((CierreBiopagoFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreBiopagoFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreBiopagoFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreBiopagoFiltroRowChanged != null)) {
+                    this.CierreBiopagoFiltroRowChanged(this, new CierreBiopagoFiltroRowChangeEvent(((CierreBiopagoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreBiopagoFiltroRowChanging != null)) {
+                    this.CierreBiopagoFiltroRowChanging(this, new CierreBiopagoFiltroRowChangeEvent(((CierreBiopagoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreBiopagoFiltroRowDeleted != null)) {
+                    this.CierreBiopagoFiltroRowDeleted(this, new CierreBiopagoFiltroRowChangeEvent(((CierreBiopagoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreBiopagoFiltroRowDeleting != null)) {
+                    this.CierreBiopagoFiltroRowDeleting(this, new CierreBiopagoFiltroRowChangeEvent(((CierreBiopagoFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreBiopagoFiltroRow(CierreBiopagoFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreBiopagoFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierrePDVFiltroDataTable : global::System.Data.TypedTableBase<CierrePDVFiltroRow> {
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTarifa;
+            
+            private global::System.Data.DataColumn columnTabulado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePDVFiltroDataTable() {
+                this.TableName = "CierrePDVFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierrePDVFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierrePDVFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TarifaColumn {
+                get {
+                    return this.columnTarifa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TabuladoColumn {
+                get {
+                    return this.columnTabulado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePDVFiltroRow this[int index] {
+                get {
+                    return ((CierrePDVFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePDVFiltroRowChangeEventHandler CierrePDVFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePDVFiltroRowChangeEventHandler CierrePDVFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePDVFiltroRowChangeEventHandler CierrePDVFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePDVFiltroRowChangeEventHandler CierrePDVFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierrePDVFiltroRow(CierrePDVFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePDVFiltroRow AddCierrePDVFiltroRow(string Nombre, double Tarifa, int Tabulado) {
+                CierrePDVFiltroRow rowCierrePDVFiltroRow = ((CierrePDVFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nombre,
+                        Tarifa,
+                        Tabulado};
+                rowCierrePDVFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierrePDVFiltroRow);
+                return rowCierrePDVFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierrePDVFiltroDataTable cln = ((CierrePDVFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierrePDVFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTarifa = base.Columns["Tarifa"];
+                this.columnTabulado = base.Columns["Tabulado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarifa);
+                this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabulado);
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 20;
+                this.columnTarifa.ReadOnly = true;
+                this.columnTabulado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePDVFiltroRow NewCierrePDVFiltroRow() {
+                return ((CierrePDVFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierrePDVFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierrePDVFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierrePDVFiltroRowChanged != null)) {
+                    this.CierrePDVFiltroRowChanged(this, new CierrePDVFiltroRowChangeEvent(((CierrePDVFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierrePDVFiltroRowChanging != null)) {
+                    this.CierrePDVFiltroRowChanging(this, new CierrePDVFiltroRowChangeEvent(((CierrePDVFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierrePDVFiltroRowDeleted != null)) {
+                    this.CierrePDVFiltroRowDeleted(this, new CierrePDVFiltroRowChangeEvent(((CierrePDVFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierrePDVFiltroRowDeleting != null)) {
+                    this.CierrePDVFiltroRowDeleting(this, new CierrePDVFiltroRowChangeEvent(((CierrePDVFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierrePDVFiltroRow(CierrePDVFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierrePDVFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreTransfFiltroDataTable : global::System.Data.TypedTableBase<CierreTransfFiltroRow> {
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTarifa;
+            
+            private global::System.Data.DataColumn columnTabulado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTransfFiltroDataTable() {
+                this.TableName = "CierreTransfFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreTransfFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreTransfFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TarifaColumn {
+                get {
+                    return this.columnTarifa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TabuladoColumn {
+                get {
+                    return this.columnTabulado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTransfFiltroRow this[int index] {
+                get {
+                    return ((CierreTransfFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTransfFiltroRowChangeEventHandler CierreTransfFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTransfFiltroRowChangeEventHandler CierreTransfFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTransfFiltroRowChangeEventHandler CierreTransfFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTransfFiltroRowChangeEventHandler CierreTransfFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreTransfFiltroRow(CierreTransfFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTransfFiltroRow AddCierreTransfFiltroRow(string Nombre, double Tarifa, int Tabulado) {
+                CierreTransfFiltroRow rowCierreTransfFiltroRow = ((CierreTransfFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nombre,
+                        Tarifa,
+                        Tabulado};
+                rowCierreTransfFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreTransfFiltroRow);
+                return rowCierreTransfFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreTransfFiltroDataTable cln = ((CierreTransfFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreTransfFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTarifa = base.Columns["Tarifa"];
+                this.columnTabulado = base.Columns["Tabulado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarifa);
+                this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabulado);
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 20;
+                this.columnTarifa.ReadOnly = true;
+                this.columnTabulado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTransfFiltroRow NewCierreTransfFiltroRow() {
+                return ((CierreTransfFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreTransfFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreTransfFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreTransfFiltroRowChanged != null)) {
+                    this.CierreTransfFiltroRowChanged(this, new CierreTransfFiltroRowChangeEvent(((CierreTransfFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreTransfFiltroRowChanging != null)) {
+                    this.CierreTransfFiltroRowChanging(this, new CierreTransfFiltroRowChangeEvent(((CierreTransfFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreTransfFiltroRowDeleted != null)) {
+                    this.CierreTransfFiltroRowDeleted(this, new CierreTransfFiltroRowChangeEvent(((CierreTransfFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreTransfFiltroRowDeleting != null)) {
+                    this.CierreTransfFiltroRowDeleting(this, new CierreTransfFiltroRowChangeEvent(((CierreTransfFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreTransfFiltroRow(CierreTransfFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreTransfFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierrePINCFiltroDataTable : global::System.Data.TypedTableBase<CierrePINCFiltroRow> {
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnTarifa;
+            
+            private global::System.Data.DataColumn columnTabulado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePINCFiltroDataTable() {
+                this.TableName = "CierrePINCFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierrePINCFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierrePINCFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TarifaColumn {
+                get {
+                    return this.columnTarifa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TabuladoColumn {
+                get {
+                    return this.columnTabulado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePINCFiltroRow this[int index] {
+                get {
+                    return ((CierrePINCFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePINCFiltroRowChangeEventHandler CierrePINCFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePINCFiltroRowChangeEventHandler CierrePINCFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePINCFiltroRowChangeEventHandler CierrePINCFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierrePINCFiltroRowChangeEventHandler CierrePINCFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierrePINCFiltroRow(CierrePINCFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePINCFiltroRow AddCierrePINCFiltroRow(string Nombre, double Tarifa, int Tabulado) {
+                CierrePINCFiltroRow rowCierrePINCFiltroRow = ((CierrePINCFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nombre,
+                        Tarifa,
+                        Tabulado};
+                rowCierrePINCFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierrePINCFiltroRow);
+                return rowCierrePINCFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierrePINCFiltroDataTable cln = ((CierrePINCFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierrePINCFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnTarifa = base.Columns["Tarifa"];
+                this.columnTabulado = base.Columns["Tabulado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnTarifa = new global::System.Data.DataColumn("Tarifa", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTarifa);
+                this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTabulado);
+                this.columnNombre.ReadOnly = true;
+                this.columnNombre.MaxLength = 20;
+                this.columnTarifa.ReadOnly = true;
+                this.columnTabulado.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePINCFiltroRow NewCierrePINCFiltroRow() {
+                return ((CierrePINCFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierrePINCFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierrePINCFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierrePINCFiltroRowChanged != null)) {
+                    this.CierrePINCFiltroRowChanged(this, new CierrePINCFiltroRowChangeEvent(((CierrePINCFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierrePINCFiltroRowChanging != null)) {
+                    this.CierrePINCFiltroRowChanging(this, new CierrePINCFiltroRowChangeEvent(((CierrePINCFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierrePINCFiltroRowDeleted != null)) {
+                    this.CierrePINCFiltroRowDeleted(this, new CierrePINCFiltroRowChangeEvent(((CierrePINCFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierrePINCFiltroRowDeleting != null)) {
+                    this.CierrePINCFiltroRowDeleting(this, new CierrePINCFiltroRowChangeEvent(((CierrePINCFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierrePINCFiltroRow(CierrePINCFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierrePINCFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreBuzonFiltroDataTable : global::System.Data.TypedTableBase<CierreBuzonFiltroRow> {
+            
+            private global::System.Data.DataColumn columnTotalBuzon;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBuzonFiltroDataTable() {
+                this.TableName = "CierreBuzonFiltro";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreBuzonFiltroDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreBuzonFiltroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TotalBuzonColumn {
+                get {
+                    return this.columnTotalBuzon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBuzonFiltroRow this[int index] {
+                get {
+                    return ((CierreBuzonFiltroRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBuzonFiltroRowChangeEventHandler CierreBuzonFiltroRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBuzonFiltroRowChangeEventHandler CierreBuzonFiltroRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBuzonFiltroRowChangeEventHandler CierreBuzonFiltroRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreBuzonFiltroRowChangeEventHandler CierreBuzonFiltroRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreBuzonFiltroRow(CierreBuzonFiltroRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBuzonFiltroRow AddCierreBuzonFiltroRow(decimal TotalBuzon) {
+                CierreBuzonFiltroRow rowCierreBuzonFiltroRow = ((CierreBuzonFiltroRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TotalBuzon};
+                rowCierreBuzonFiltroRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreBuzonFiltroRow);
+                return rowCierreBuzonFiltroRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreBuzonFiltroDataTable cln = ((CierreBuzonFiltroDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreBuzonFiltroDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnTotalBuzon = base.Columns["TotalBuzon"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnTotalBuzon = new global::System.Data.DataColumn("TotalBuzon", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotalBuzon);
+                this.columnTotalBuzon.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBuzonFiltroRow NewCierreBuzonFiltroRow() {
+                return ((CierreBuzonFiltroRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreBuzonFiltroRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreBuzonFiltroRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreBuzonFiltroRowChanged != null)) {
+                    this.CierreBuzonFiltroRowChanged(this, new CierreBuzonFiltroRowChangeEvent(((CierreBuzonFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreBuzonFiltroRowChanging != null)) {
+                    this.CierreBuzonFiltroRowChanging(this, new CierreBuzonFiltroRowChangeEvent(((CierreBuzonFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreBuzonFiltroRowDeleted != null)) {
+                    this.CierreBuzonFiltroRowDeleted(this, new CierreBuzonFiltroRowChangeEvent(((CierreBuzonFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreBuzonFiltroRowDeleting != null)) {
+                    this.CierreBuzonFiltroRowDeleting(this, new CierreBuzonFiltroRowChangeEvent(((CierreBuzonFiltroRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreBuzonFiltroRow(CierreBuzonFiltroRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSetLocal ds = new SAPDataSetLocal();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreBuzonFiltroDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CierreBalanceV2Row : global::System.Data.DataRow {
@@ -10036,6 +12783,1658 @@ namespace SAP {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreTurnoFiltroRow : global::System.Data.DataRow {
+            
+            private CierreTurnoFiltroDataTable tableCierreTurnoFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreTurnoFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreTurnoFiltro = ((CierreTurnoFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ID_Cierre {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.ID_CierreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ID_Cierre\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.ID_CierreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS05 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS05Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS05\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS1\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS2\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS5\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS10 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS20 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS20Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS20\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS20Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS50 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS50Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS50\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS50Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS100 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS100Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS100\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS100Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS200 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS200Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS200\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS200Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS500 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS500Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS500\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS500Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tickets {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoFiltro.TicketsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tickets\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.TicketsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Efectivo {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoFiltro.EfectivoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Efectivo\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.EfectivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double PDV {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoFiltro.PDVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PDV\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.PDVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Incidencia {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoFiltro.IncidenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Incidencia\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.IncidenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Fecha {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableCierreTurnoFiltro.FechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int TesoreroC {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.TesoreroCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TesoreroC\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.TesoreroCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Turno {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.TurnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Turno\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.TurnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierreTurnoFiltro.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Apellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierreTurnoFiltro.ApellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Apellido\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.ApellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS10000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS10000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000\' de la tabla \'CierreTurnoFiltro\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS10000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS20000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS20000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS20000\' de la tabla \'CierreTurnoFiltro\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS20000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS50000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS50000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS50000\' de la tabla \'CierreTurnoFiltro\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS50000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS200000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS200000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS200000\' de la tabla \'CierreTurnoFiltro\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS200000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS500000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteS500000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS500000\' de la tabla \'CierreTurnoFiltro\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS500000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Transferencia {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoFiltro.TransferenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Transferencia\' de la tabla \'CierreTurnoFiltro\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.TransferenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Buzon {
+                get {
+                    try {
+                        return ((bool)(this[this.tableCierreTurnoFiltro.BuzonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Buzon\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BuzonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD1\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD5\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD10 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD10\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD20 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD20Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD20\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD20Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD50 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD50Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD50\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD50Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD100 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD100Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD100\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD100Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD05 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD05Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD05\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD025 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD025Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD025\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD025Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD200 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD200Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD200\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD200Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD500 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoFiltro.BilleteBD500Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD500\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteBD500Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public long BilleteS1000000 {
+                get {
+                    try {
+                        return ((long)(this[this.tableCierreTurnoFiltro.BilleteS1000000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS1000000\' de la tabla \'CierreTurnoFiltro\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BilleteS1000000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double BIO {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoFiltro.BIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BIO\' de la tabla \'CierreTurnoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoFiltro.BIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsID_CierreNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.ID_CierreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetID_CierreNull() {
+                this[this.tableCierreTurnoFiltro.ID_CierreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS05Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS05Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS05Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS05Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS1Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS1Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS2Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS2Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS5Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS5Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS10Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS10Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS20Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS20Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS20Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS20Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS50Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS50Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS50Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS50Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS100Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS100Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS100Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS100Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS200Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS200Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS200Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS200Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS500Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS500Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS500Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTicketsNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.TicketsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTicketsNull() {
+                this[this.tableCierreTurnoFiltro.TicketsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEfectivoNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.EfectivoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEfectivoNull() {
+                this[this.tableCierreTurnoFiltro.EfectivoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPDVNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.PDVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPDVNull() {
+                this[this.tableCierreTurnoFiltro.PDVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIncidenciaNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.IncidenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIncidenciaNull() {
+                this[this.tableCierreTurnoFiltro.IncidenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFechaNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.FechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFechaNull() {
+                this[this.tableCierreTurnoFiltro.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTesoreroCNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.TesoreroCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTesoreroCNull() {
+                this[this.tableCierreTurnoFiltro.TesoreroCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTurnoNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.TurnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTurnoNull() {
+                this[this.tableCierreTurnoFiltro.TurnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreTurnoFiltro.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsApellidoNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.ApellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetApellidoNull() {
+                this[this.tableCierreTurnoFiltro.ApellidoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS10000Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS10000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS10000Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS10000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS20000Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS20000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS20000Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS20000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS50000Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS50000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS50000Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS50000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS200000Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS200000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS200000Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS200000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS500000Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS500000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS500000Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS500000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTransferenciaNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.TransferenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTransferenciaNull() {
+                this[this.tableCierreTurnoFiltro.TransferenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBuzonNull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BuzonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBuzonNull() {
+                this[this.tableCierreTurnoFiltro.BuzonColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD1Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD1Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD5Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD5Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD10Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD10Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD20Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD20Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD20Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD20Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD50Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD50Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD50Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD50Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD100Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD100Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD100Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD100Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD05Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD05Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD05Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD05Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD025Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD025Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD025Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD025Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD200Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD200Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD200Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD200Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD500Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteBD500Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD500Null() {
+                this[this.tableCierreTurnoFiltro.BilleteBD500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS1000000Null() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BilleteS1000000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS1000000Null() {
+                this[this.tableCierreTurnoFiltro.BilleteS1000000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBIONull() {
+                return this.IsNull(this.tableCierreTurnoFiltro.BIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBIONull() {
+                this[this.tableCierreTurnoFiltro.BIOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreEfectivoFiltroRow : global::System.Data.DataRow {
+            
+            private CierreEfectivoFiltroDataTable tableCierreEfectivoFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreEfectivoFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreEfectivoFiltro = ((CierreEfectivoFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierreEfectivoFiltro.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreEfectivoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreEfectivoFiltro.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tarifa {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreEfectivoFiltro.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'CierreEfectivoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreEfectivoFiltro.TarifaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Tabulado {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreEfectivoFiltro.TabuladoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tabulado\' de la tabla \'CierreEfectivoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreEfectivoFiltro.TabuladoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreEfectivoFiltro.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreEfectivoFiltro.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableCierreEfectivoFiltro.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableCierreEfectivoFiltro.TarifaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTabuladoNull() {
+                return this.IsNull(this.tableCierreEfectivoFiltro.TabuladoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTabuladoNull() {
+                this[this.tableCierreEfectivoFiltro.TabuladoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreBiopagoFiltroRow : global::System.Data.DataRow {
+            
+            private CierreBiopagoFiltroDataTable tableCierreBiopagoFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreBiopagoFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreBiopagoFiltro = ((CierreBiopagoFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierreBiopagoFiltro.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreBiopagoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBiopagoFiltro.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tarifa {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreBiopagoFiltro.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'CierreBiopagoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBiopagoFiltro.TarifaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Tabulado {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreBiopagoFiltro.TabuladoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tabulado\' de la tabla \'CierreBiopagoFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBiopagoFiltro.TabuladoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreBiopagoFiltro.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreBiopagoFiltro.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableCierreBiopagoFiltro.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableCierreBiopagoFiltro.TarifaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTabuladoNull() {
+                return this.IsNull(this.tableCierreBiopagoFiltro.TabuladoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTabuladoNull() {
+                this[this.tableCierreBiopagoFiltro.TabuladoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierrePDVFiltroRow : global::System.Data.DataRow {
+            
+            private CierrePDVFiltroDataTable tableCierrePDVFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierrePDVFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierrePDVFiltro = ((CierrePDVFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierrePDVFiltro.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierrePDVFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierrePDVFiltro.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tarifa {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierrePDVFiltro.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'CierrePDVFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierrePDVFiltro.TarifaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Tabulado {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierrePDVFiltro.TabuladoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tabulado\' de la tabla \'CierrePDVFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierrePDVFiltro.TabuladoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierrePDVFiltro.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierrePDVFiltro.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableCierrePDVFiltro.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableCierrePDVFiltro.TarifaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTabuladoNull() {
+                return this.IsNull(this.tableCierrePDVFiltro.TabuladoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTabuladoNull() {
+                this[this.tableCierrePDVFiltro.TabuladoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreTransfFiltroRow : global::System.Data.DataRow {
+            
+            private CierreTransfFiltroDataTable tableCierreTransfFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreTransfFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreTransfFiltro = ((CierreTransfFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierreTransfFiltro.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreTransfFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTransfFiltro.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tarifa {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTransfFiltro.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'CierreTransfFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTransfFiltro.TarifaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Tabulado {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTransfFiltro.TabuladoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tabulado\' de la tabla \'CierreTransfFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTransfFiltro.TabuladoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreTransfFiltro.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreTransfFiltro.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableCierreTransfFiltro.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableCierreTransfFiltro.TarifaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTabuladoNull() {
+                return this.IsNull(this.tableCierreTransfFiltro.TabuladoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTabuladoNull() {
+                this[this.tableCierreTransfFiltro.TabuladoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierrePINCFiltroRow : global::System.Data.DataRow {
+            
+            private CierrePINCFiltroDataTable tableCierrePINCFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierrePINCFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierrePINCFiltro = ((CierrePINCFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableCierrePINCFiltro.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierrePINCFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierrePINCFiltro.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tarifa {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierrePINCFiltro.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'CierrePINCFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierrePINCFiltro.TarifaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Tabulado {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierrePINCFiltro.TabuladoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tabulado\' de la tabla \'CierrePINCFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierrePINCFiltro.TabuladoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierrePINCFiltro.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierrePINCFiltro.NombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableCierrePINCFiltro.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableCierrePINCFiltro.TarifaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTabuladoNull() {
+                return this.IsNull(this.tableCierrePINCFiltro.TabuladoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTabuladoNull() {
+                this[this.tableCierrePINCFiltro.TabuladoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreBuzonFiltroRow : global::System.Data.DataRow {
+            
+            private CierreBuzonFiltroDataTable tableCierreBuzonFiltro;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreBuzonFiltroRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreBuzonFiltro = ((CierreBuzonFiltroDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal TotalBuzon {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableCierreBuzonFiltro.TotalBuzonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TotalBuzon\' de la tabla \'CierreBuzonFiltro\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreBuzonFiltro.TotalBuzonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTotalBuzonNull() {
+                return this.IsNull(this.tableCierreBuzonFiltro.TotalBuzonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalBuzonNull() {
+                this[this.tableCierreBuzonFiltro.TotalBuzonColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -10429,6 +14828,244 @@ namespace SAP {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BuzonTurnoRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreTurnoFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierreTurnoFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoFiltroRowChangeEvent(CierreTurnoFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoFiltroRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreEfectivoFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierreEfectivoFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreEfectivoFiltroRowChangeEvent(CierreEfectivoFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreEfectivoFiltroRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreBiopagoFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierreBiopagoFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoFiltroRowChangeEvent(CierreBiopagoFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBiopagoFiltroRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierrePDVFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierrePDVFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePDVFiltroRowChangeEvent(CierrePDVFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePDVFiltroRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreTransfFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierreTransfFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTransfFiltroRowChangeEvent(CierreTransfFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTransfFiltroRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierrePINCFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierrePINCFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePINCFiltroRowChangeEvent(CierrePINCFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierrePINCFiltroRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreBuzonFiltroRowChangeEvent : global::System.EventArgs {
+            
+            private CierreBuzonFiltroRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBuzonFiltroRowChangeEvent(CierreBuzonFiltroRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreBuzonFiltroRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -15406,6 +20043,1629 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreTurnoFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreTurnoFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreTurnoFiltro";
+            tableMapping.ColumnMappings.Add("ID_Cierre", "ID_Cierre");
+            tableMapping.ColumnMappings.Add("BilleteS05", "BilleteS05");
+            tableMapping.ColumnMappings.Add("BilleteS1", "BilleteS1");
+            tableMapping.ColumnMappings.Add("BilleteS2", "BilleteS2");
+            tableMapping.ColumnMappings.Add("BilleteS5", "BilleteS5");
+            tableMapping.ColumnMappings.Add("BilleteS10", "BilleteS10");
+            tableMapping.ColumnMappings.Add("BilleteS20", "BilleteS20");
+            tableMapping.ColumnMappings.Add("BilleteS50", "BilleteS50");
+            tableMapping.ColumnMappings.Add("BilleteS100", "BilleteS100");
+            tableMapping.ColumnMappings.Add("BilleteS200", "BilleteS200");
+            tableMapping.ColumnMappings.Add("BilleteS500", "BilleteS500");
+            tableMapping.ColumnMappings.Add("Tickets", "Tickets");
+            tableMapping.ColumnMappings.Add("Efectivo", "Efectivo");
+            tableMapping.ColumnMappings.Add("PDV", "PDV");
+            tableMapping.ColumnMappings.Add("Incidencia", "Incidencia");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("TesoreroC", "TesoreroC");
+            tableMapping.ColumnMappings.Add("Turno", "Turno");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Apellido", "Apellido");
+            tableMapping.ColumnMappings.Add("BilleteS10000", "BilleteS10000");
+            tableMapping.ColumnMappings.Add("BilleteS20000", "BilleteS20000");
+            tableMapping.ColumnMappings.Add("BilleteS50000", "BilleteS50000");
+            tableMapping.ColumnMappings.Add("BilleteS200000", "BilleteS200000");
+            tableMapping.ColumnMappings.Add("BilleteS500000", "BilleteS500000");
+            tableMapping.ColumnMappings.Add("Transferencia", "Transferencia");
+            tableMapping.ColumnMappings.Add("Buzon", "Buzon");
+            tableMapping.ColumnMappings.Add("BilleteBD1", "BilleteBD1");
+            tableMapping.ColumnMappings.Add("BilleteBD5", "BilleteBD5");
+            tableMapping.ColumnMappings.Add("BilleteBD10", "BilleteBD10");
+            tableMapping.ColumnMappings.Add("BilleteBD20", "BilleteBD20");
+            tableMapping.ColumnMappings.Add("BilleteBD50", "BilleteBD50");
+            tableMapping.ColumnMappings.Add("BilleteBD100", "BilleteBD100");
+            tableMapping.ColumnMappings.Add("BilleteBD05", "BilleteBD05");
+            tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
+            tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
+            tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
+            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS1000000");
+            tableMapping.ColumnMappings.Add("BIO", "BIO");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT       dbo.CierreBalanceV2.ID_Cierre, dbo.CierreBalanceV2.BilleteS05, dbo.C" +
+                "ierreBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS2, dbo.CierreBalanceV2.Bil" +
+                "leteS5, dbo.CierreBalanceV2.BilleteS10, dbo.CierreBalanceV2.BilleteS20, \r\n      " +
+                "                   dbo.CierreBalanceV2.BilleteS50, dbo.CierreBalanceV2.BilleteS1" +
+                "00, dbo.CierreBalanceV2.BilleteS200, dbo.CierreBalanceV2.BilleteS500, dbo.Cierre" +
+                "BalanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.CierreBalanceV2.PDV, \r\n    " +
+                "                     dbo.CierreBalanceV2.Incidencia, dbo.CierreBalanceV2.Fecha, " +
+                "dbo.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Turno, dbo.Usuarios.Nombre, d" +
+                "bo.Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS10000, \r\n                     " +
+                "    dbo.CierreBalanceV2.BilleteS20000, dbo.CierreBalanceV2.BilleteS50000, dbo.Ci" +
+                "erreBalanceV2.BilleteS200000, dbo.CierreBalanceV2.BilleteS500000, dbo.CierreBala" +
+                "nceV2.Transferencia, dbo.CierreBalanceV2.Buzon, \r\n                         dbo.C" +
+                "ierreBalanceV2.BilleteBD1, dbo.CierreBalanceV2.BilleteBD5, dbo.CierreBalanceV2.B" +
+                "illeteBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.CierreBalanceV2.BilleteBD50, db" +
+                "o.CierreBalanceV2.BilleteBD100, \r\n                         dbo.CierreBalanceV2.B" +
+                "illeteBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.CierreBalanceV2.BilleteBD200, " +
+                "dbo.CierreBalanceV2.BilleteBD500, dbo.CierreBalanceV2.BilleteS1000000, dbo.Cierr" +
+                "eBalanceV2.BIO\r\nFROM            dbo.CierreBalanceV2 INNER JOIN\r\n                " +
+                "         dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuario = dbo.Usuarios.ID_Usuari" +
+                "o\r\nWHERE        (dbo.CierreBalanceV2.Fecha BETWEEN @fechaPrimerTurno AND @fechaU" +
+                "ltimoAvance) AND (dbo.CierreBalanceV2.Eliminado <> 1) AND (dbo.CierreBalanceV2.T" +
+                "urno = @turnoA) \r\nUNION\r\nSELECT       dbo.CierreBalanceV2.ID_Cierre, dbo.CierreB" +
+                "alanceV2.BilleteS05, dbo.CierreBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS" +
+                "2, dbo.CierreBalanceV2.BilleteS5, dbo.CierreBalanceV2.BilleteS10, dbo.CierreBala" +
+                "nceV2.BilleteS20, \r\n                         dbo.CierreBalanceV2.BilleteS50, dbo" +
+                ".CierreBalanceV2.BilleteS100, dbo.CierreBalanceV2.BilleteS200, dbo.CierreBalance" +
+                "V2.BilleteS500, dbo.CierreBalanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.C" +
+                "ierreBalanceV2.PDV, \r\n                         dbo.CierreBalanceV2.Incidencia, d" +
+                "bo.CierreBalanceV2.Fecha, dbo.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Tur" +
+                "no, dbo.Usuarios.Nombre, dbo.Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS1000" +
+                "0, \r\n                         dbo.CierreBalanceV2.BilleteS20000, dbo.CierreBalan" +
+                "ceV2.BilleteS50000, dbo.CierreBalanceV2.BilleteS200000, dbo.CierreBalanceV2.Bill" +
+                "eteS500000, dbo.CierreBalanceV2.Transferencia, dbo.CierreBalanceV2.Buzon, \r\n    " +
+                "                     dbo.CierreBalanceV2.BilleteBD1, dbo.CierreBalanceV2.Billete" +
+                "BD5, dbo.CierreBalanceV2.BilleteBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.Cierr" +
+                "eBalanceV2.BilleteBD50, dbo.CierreBalanceV2.BilleteBD100, \r\n                    " +
+                "     dbo.CierreBalanceV2.BilleteBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.Cier" +
+                "reBalanceV2.BilleteBD200, dbo.CierreBalanceV2.BilleteBD500, dbo.CierreBalanceV2." +
+                "BilleteS1000000, dbo.CierreBalanceV2.BIO\r\nFROM            dbo.CierreBalanceV2 IN" +
+                "NER JOIN\r\n                         dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuari" +
+                "o = dbo.Usuarios.ID_Usuario\r\nWHERE        (dbo.CierreBalanceV2.Fecha BETWEEN @fe" +
+                "chaInicio AND @fechaUltimoAvance) AND (dbo.CierreBalanceV2.Eliminado <> 1) AND (" +
+                "dbo.CierreBalanceV2.Turno = @turnoB) \r\nORDER BY dbo.Usuarios.Nombre, dbo.Usuario" +
+                "s.Apellido\r\n";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPrimerTurno", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimoAvance", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierreTurnoFiltroDataTable dataTable, System.DateTime fechaPrimerTurno, System.DateTime fechaUltimoAvance, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimerTurno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaUltimoAvance));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierreTurnoFiltroDataTable GetData(System.DateTime fechaPrimerTurno, System.DateTime fechaUltimoAvance, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimerTurno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaUltimoAvance));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierreTurnoFiltroDataTable dataTable = new SAPDataSetLocal.CierreTurnoFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreEfectivoFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreEfectivoFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreEfectivoFiltro";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
+            tableMapping.ColumnMappings.Add("Tabulado", "Tabulado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
+INNER JOIN Turno ON Pagos.ID_Usuario=Turno.ID_Usuario AND Pagos.Turno = Turno.Turno
+WHERE        (Pagos.Fecha BETWEEN @primeraTabulacion AND @fechaPivoteD) AND (Pagos.FormaPago = 'Efectivo') AND (Pagos.Turno = @turnoA)
+AND (Turno.Fecha Between @primerTurno and @ultimoTurno)
+GROUP BY TipoVehiculos.Nombre
+UNION ALL
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN  TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+INNER JOIN Turno ON Pagos.ID_Usuario=Turno.ID_Usuario AND Pagos.Turno = Turno.Turno
+WHERE        (Pagos.Fecha BETWEEN @fechaPivoteN AND @ultimaTabulacion) AND (Pagos.FormaPago = 'Efectivo') AND (Pagos.Turno = @turnoB)
+AND (Turno.Fecha Between @primerTurno and @ultimoTurno)
+GROUP BY TipoVehiculos.Nombre";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@primeraTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteD", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@primerTurno", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimoTurno", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimaTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierreEfectivoFiltroDataTable dataTable, System.DateTime primeraTabulacion, System.DateTime fechaPivoteD, global::System.Nullable<int> turnoA, System.DateTime primerTurno, System.DateTime ultimoTurno, System.DateTime fechaPivoteN, System.DateTime ultimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(primeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaPivoteD));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(primerTurno));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(ultimoTurno));
+            this.Adapter.SelectCommand.Parameters[5].Value = ((System.DateTime)(fechaPivoteN));
+            this.Adapter.SelectCommand.Parameters[6].Value = ((System.DateTime)(ultimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierreEfectivoFiltroDataTable GetData(System.DateTime primeraTabulacion, System.DateTime fechaPivoteD, global::System.Nullable<int> turnoA, System.DateTime primerTurno, System.DateTime ultimoTurno, System.DateTime fechaPivoteN, System.DateTime ultimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(primeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaPivoteD));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(primerTurno));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(ultimoTurno));
+            this.Adapter.SelectCommand.Parameters[5].Value = ((System.DateTime)(fechaPivoteN));
+            this.Adapter.SelectCommand.Parameters[6].Value = ((System.DateTime)(ultimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierreEfectivoFiltroDataTable dataTable = new SAPDataSetLocal.CierreEfectivoFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreBiopagoFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreBiopagoFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreBiopagoFiltro";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
+            tableMapping.ColumnMappings.Add("Tabulado", "Tabulado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fechaPrimeraTabulacion AND @fechaFinal) AND (Pagos.FormaPago = 'Biopago') AND (Pagos.Turno = @turnoA)
+GROUP BY TipoVehiculos.Nombre
+UNION ALL
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fechaInicio AND @fechaUltimaTabulacion) AND (Pagos.FormaPago = 'Biopago') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
+
+";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPrimeraTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimaTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierreBiopagoFiltroDataTable dataTable, System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierreBiopagoFiltroDataTable GetData(System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierreBiopagoFiltroDataTable dataTable = new SAPDataSetLocal.CierreBiopagoFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierrePDVFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierrePDVFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierrePDVFiltro";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
+            tableMapping.ColumnMappings.Add("Tabulado", "Tabulado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT       dbo.TipoVehiculos.Nombre, SUM(dbo.TipoVehiculos.Tarifa) AS Tarifa, COUNT(dbo.Pagos.FormaPago) AS Tabulado
+FROM            dbo.Pagos INNER JOIN
+                         dbo.TipoVehiculos ON dbo.Pagos.ID_Vehiculo = dbo.TipoVehiculos.ID_Vehiculo
+WHERE        (dbo.Pagos.Fecha BETWEEN @fechaPrimeraTabulacion AND @fechaFinal) AND (dbo.Pagos.FormaPago = 'Punto de Venta') AND (dbo.Pagos.Turno = @turnoA)
+GROUP BY dbo.TipoVehiculos.Nombre
+UNION ALL
+SELECT       TipoVehiculos_1.Nombre, SUM(TipoVehiculos_1.Tarifa) AS Tarifa, COUNT(Pagos_1.FormaPago) AS Tabulado
+FROM            dbo.Pagos AS Pagos_1 INNER JOIN
+                         dbo.TipoVehiculos AS TipoVehiculos_1 ON Pagos_1.ID_Vehiculo = TipoVehiculos_1.ID_Vehiculo
+WHERE        (Pagos_1.Fecha BETWEEN @fechaInicio AND @fechaUltimaTabulacion) AND (Pagos_1.FormaPago = 'Punto de Venta') AND (Pagos_1.Turno = @turnoB)
+GROUP BY TipoVehiculos_1.Nombre";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPrimeraTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimaTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierrePDVFiltroDataTable dataTable, System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierrePDVFiltroDataTable GetData(System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierrePDVFiltroDataTable dataTable = new SAPDataSetLocal.CierrePDVFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreTransfFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreTransfFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreTransfFiltro";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
+            tableMapping.ColumnMappings.Add("Tabulado", "Tabulado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fechaPrimeraTabulacion AND @fechaFinal) AND (Pagos.FormaPago = 'Transferencia') AND (Pagos.Turno = @turnoA)
+GROUP BY TipoVehiculos.Nombre
+UNION ALL
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fechaInicio AND @fechaUltimaTabulacion) AND (Pagos.FormaPago = 'Transferencia') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
+
+";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPrimeraTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimaTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierreTransfFiltroDataTable dataTable, System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierreTransfFiltroDataTable GetData(System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierreTransfFiltroDataTable dataTable = new SAPDataSetLocal.CierreTransfFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierrePINCFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierrePINCFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierrePINCFiltro";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Tarifa", "Tarifa");
+            tableMapping.ColumnMappings.Add("Tabulado", "Tabulado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fechaPrimeraTabulacion AND @fechaFinal) AND (Pagos.FormaPago = 'Pago Incompleto') AND (Pagos.Turno = @turnoA)
+GROUP BY TipoVehiculos.Nombre
+UNION ALL
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN
+                         TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
+WHERE        (Pagos.Fecha BETWEEN @fechaInicio AND @fechaUltimaTabulacion) AND (Pagos.FormaPago = 'Pago Incompleto') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
+
+";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPrimeraTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimaTabulacion", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierrePINCFiltroDataTable dataTable, System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierrePINCFiltroDataTable GetData(System.DateTime fechaPrimeraTabulacion, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, System.DateTime fechaUltimaTabulacion, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimeraTabulacion));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            this.Adapter.SelectCommand.Parameters[4].Value = ((System.DateTime)(fechaUltimaTabulacion));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierrePINCFiltroDataTable dataTable = new SAPDataSetLocal.CierrePINCFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreBuzonFiltroTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreBuzonFiltroTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreBuzonFiltro";
+            tableMapping.ColumnMappings.Add("TotalBuzon", "TotalBuzon");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAPConnectionString_Local;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "\r\nSELECT        (((SUM(CierreBalanceV2.BilleteS05)*0.5)/1000000) + ((SUM(CierreBa" +
+                "lanceV2.BilleteS1)*1)/1000000) + ((SUM(CierreBalanceV2.BilleteS2)*2)/1000000) + " +
+                "((SUM(CierreBalanceV2.BilleteS5)*5)/1000000) + ((SUM(CierreBalanceV2.BilleteS10)" +
+                "*10)/1000000) + ((SUM(CierreBalanceV2.BilleteS20)*20)/1000000) + ((SUM(CierreBal" +
+                "anceV2.BilleteS50)*50)/1000000) +\r\n                         ((SUM(CierreBalanceV" +
+                "2.BilleteS100)*100)/1000000) + ((SUM(CierreBalanceV2.BilleteS200)*200)/1000000) " +
+                "+ ((SUM(CierreBalanceV2.BilleteS500)*500)/1000000) + ((SUM(CierreBalanceV2.Bille" +
+                "teS10000)*10000)/1000000)+\r\n                         ((SUM(CierreBalanceV2.Bille" +
+                "teS20000)*20000)/1000000)+((SUM(CierreBalanceV2.BilleteS50000)*50000)/1000000) +" +
+                " ((SUM(CierreBalanceV2.BilleteS200000)*200000)/1000000) + ((SUM(CierreBalanceV2." +
+                "BilleteS500000)*500000)/1000000)  + ((SUM(CierreBalanceV2.BilleteS1000000)*10000" +
+                "00)/1000000) + (SUM(CierreBalanceV2.BilleteBD1)*1) + (SUM(CierreBalanceV2.Billet" +
+                "eBD5)*5) + (SUM(CierreBalanceV2.BilleteBD10)*10)+(SUM(CierreBalanceV2.BilleteBD2" +
+                "0)*20)+(SUM(CierreBalanceV2.BilleteBD50)*50) + (SUM(CierreBalanceV2.BilleteBD1)*" +
+                "100)) as TotalBuzon\r\nFROM            CierreBalanceV2 INNER JOIN  Usuarios ON Cie" +
+                "rreBalanceV2.Responsable = Usuarios.ID_Usuario\r\nWHERE       (CierreBalanceV2.Fec" +
+                "ha BETWEEN @fechaPrimerTurno AND @fechaUltimoAvance) AND (CierreBalanceV2.Elimin" +
+                "ado<>1) AND (CierreBalanceV2.Buzon = 1) AND (CierreBalanceV2.Turno = @turnoA)\r\nU" +
+                "NION\r\nSELECT        (((SUM(CierreBalanceV2.BilleteS05)*0.5)/1000000) + ((SUM(Cie" +
+                "rreBalanceV2.BilleteS1)*1)/1000000) + ((SUM(CierreBalanceV2.BilleteS2)*2)/100000" +
+                "0) + ((SUM(CierreBalanceV2.BilleteS5)*5)/1000000) + ((SUM(CierreBalanceV2.Billet" +
+                "eS10)*10)/1000000) + ((SUM(CierreBalanceV2.BilleteS20)*20)/1000000) + ((SUM(Cier" +
+                "reBalanceV2.BilleteS50)*50)/1000000) +\r\n                         ((SUM(CierreBal" +
+                "anceV2.BilleteS100)*100)/1000000) + ((SUM(CierreBalanceV2.BilleteS200)*200)/1000" +
+                "000) + ((SUM(CierreBalanceV2.BilleteS500)*500)/1000000) + ((SUM(CierreBalanceV2." +
+                "BilleteS10000)*10000)/1000000)+\r\n                         ((SUM(CierreBalanceV2." +
+                "BilleteS20000)*20000)/1000000)+((SUM(CierreBalanceV2.BilleteS50000)*50000)/10000" +
+                "00) + ((SUM(CierreBalanceV2.BilleteS200000)*200000)/1000000) + ((SUM(CierreBalan" +
+                "ceV2.BilleteS500000)*500000)/1000000)  + ((SUM(CierreBalanceV2.BilleteS1000000)*" +
+                "1000000)/1000000) + (SUM(CierreBalanceV2.BilleteBD1)*1) + (SUM(CierreBalanceV2.B" +
+                "illeteBD5)*5) + (SUM(CierreBalanceV2.BilleteBD10)*10)+(SUM(CierreBalanceV2.Bille" +
+                "teBD20)*20)+(SUM(CierreBalanceV2.BilleteBD50)*50) + (SUM(CierreBalanceV2.Billete" +
+                "BD1)*100)) as TotalBuzon\r\nFROM            CierreBalanceV2 INNER JOIN  Usuarios O" +
+                "N CierreBalanceV2.Responsable = Usuarios.ID_Usuario\r\nWHERE       (CierreBalanceV" +
+                "2.Fecha BETWEEN @fechaInicio AND @fechaUltimoAvance) AND (CierreBalanceV2.Elimin" +
+                "ado<>1) AND (CierreBalanceV2.Buzon = 1) AND (CierreBalanceV2.Turno = @turnoB)\r\n\r" +
+                "\n";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPrimerTurno", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimoAvance", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSetLocal.CierreBuzonFiltroDataTable dataTable, System.DateTime fechaPrimerTurno, System.DateTime fechaUltimoAvance, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimerTurno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaUltimoAvance));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSetLocal.CierreBuzonFiltroDataTable GetData(System.DateTime fechaPrimerTurno, System.DateTime fechaUltimoAvance, global::System.Nullable<int> turnoA, System.DateTime fechaInicio, global::System.Nullable<int> turnoB) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPrimerTurno));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaUltimoAvance));
+            if ((turnoA.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(fechaInicio));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            SAPDataSetLocal.CierreBuzonFiltroDataTable dataTable = new SAPDataSetLocal.CierreBuzonFiltroDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15576,12 +21836,12 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._declaracionesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Declaraciones.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._usuariosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._declaracionesTableAdapter.Update(updatedRows));
+                    result = (result + this._usuariosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15594,12 +21854,12 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._declaracionesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Declaraciones.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(updatedRows));
+                    result = (result + this._declaracionesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15621,11 +21881,11 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._declaracionesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Declaraciones.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._usuariosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._declaracionesTableAdapter.Update(addedRows));
+                    result = (result + this._usuariosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15637,11 +21897,11 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._declaracionesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Declaraciones.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(addedRows));
+                    result = (result + this._declaracionesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15655,11 +21915,11 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(SAPDataSetLocal dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._declaracionesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Declaraciones.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(deletedRows));
+                    result = (result + this._declaracionesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15671,11 +21931,11 @@ WHERE       (CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (CierreBalanc
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._declaracionesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Declaraciones.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._usuariosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Usuarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._declaracionesTableAdapter.Update(deletedRows));
+                    result = (result + this._usuariosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

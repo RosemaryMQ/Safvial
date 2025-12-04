@@ -7,6 +7,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
     public partial class GenerarCierre : Form
     {
         public static int turno;
+        public static int turnoA;
+        public static int turnoB;
         string hora;
         string hora1;
         string hora2;
@@ -18,7 +20,13 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         public static string fechaUltimoAvance;
         public static string fechaPrimeraTabulacion;
         public static string fechaUltimaTabulacion;
+        public static string fechaPrimerTurno;
+        public static string fechaUltimoTurno;
         public static string fechaSolicitud;
+        public static string fechaInicio;
+        public static string fechaFinal;
+        public static string fechaPivoteD;
+        public static string fechaPivoteN;
         public GenerarCierre()
         {
             InitializeComponent();
@@ -106,7 +114,15 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 hora = " 00:00:00";
                 hora1 = " 23:59:59";
             }
-            else if(control==""){
+            else if (control == "Reporte Diario por Turno (24 Horas)")
+            {
+                turno = 11;
+                date2.Enabled = false;
+                hora = " 00:00:00.000";
+                hora1 = " 23:59:59.999";
+                hora2 = " 12:00:00.000";
+            }
+            else if (control==""){
                 date2.Enabled = false;
             }
         }
@@ -120,6 +136,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             fechaSolicitud = "";
             fechaPrimeraTabulacion = "";
             fechaUltimaTabulacion = "";
+            fechaInicio = "";
             try
             {
                 MessageBox.Show(Convert.ToString(turno), "");
@@ -129,6 +146,37 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                     fechaS = date1.Value.ToString("dd/MM/yyyy") + hora1;
                     SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario();
                     frm.ShowDialog();
+                }
+                else if (turno == 11)
+                {
+                    fechaPivoteD = Convert.ToDateTime(date1.Value.ToShortDateString() + hora2).AddHours(4).ToString("dd-MM-yyyy HH:mm:ss");
+                    fechaPivoteN = Convert.ToDateTime(date1.Value.ToShortDateString() + hora2).AddHours(-4).ToString("dd-MM-yyyy HH:mm:ss");
+                    fechaS1 = date1.Value.ToString("dd/MM/yyyy") + hora;
+                    MessageBox.Show(fechaS1, "fechaS1");
+                    fechaS = date1.Value.ToString("dd/MM/yyyy") + hora1;
+                    MessageBox.Show(fechaS, "fechaS");
+                    fechaInicio = Convert.ToDateTime(date1.Value.ToShortDateString() + hora).AddHours(-4).ToString("dd-MM-yyyy HH:mm:ss");
+                    MessageBox.Show(fechaInicio, "fechaInicio");
+                    fechaFinal = Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(4).ToString("dd-MM-yyyy HH:mm:ss");
+                    MessageBox.Show(fechaFinal, "fechaFinal");
+                    turnoA = 8;
+                    MessageBox.Show(Convert.ToString(turnoA), "turnoA");
+                    turnoB = 9;
+                    MessageBox.Show(Convert.ToString(turnoB), "turnoB");
+                    this.PrimerTurno(turnoA);
+                    MessageBox.Show(fechaPrimerTurno, "fechaPrimerTurno");
+                    this.UltimoTurno(turnoB);
+                    MessageBox.Show(fechaUltimoTurno, "fechaUltimoTurno");
+                    this.UltimoAvance(turnoB);
+                    MessageBox.Show(fechaUltimoAvance, "fechaUltimoAvance");
+                    this.PrimeraTabulacion(turnoA, fechaPrimerTurno, fechaUltimoTurno);
+                    MessageBox.Show(fechaPrimeraTabulacion, "fechaPrimeraTabulacion");
+                    this.UltimaTabulacion(turnoB);
+                    MessageBox.Show(fechaUltimaTabulacion, "fechaUltimaTabulacion");
+
+                    SAP.Tesoreria.Controles.Declaraciones.CierreTurnoFiltro frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurnoFiltro();
+                    frm.ShowDialog();
+
                 }
                 else
                 {
@@ -143,52 +191,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 MessageBox.Show("La fecha ingresada no posee registros detectados", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.Close();
-            /*
-            try
-            {
-                fechaSolicitud = date1.Value.ToString("dd/MM/yyyy");
-                if (turno == 10)
-                {
-                }
-                else
-                {
-                    this.FechaInicio(turno);//FECHA INICIO
-                    if (fechaS1 == "")
-                    {
-                        this.FechaInicioAlt(turno);//FECHA INICIO
-
-                    }
-                    this.FechaFin(turno);//FECHA FIN
-                    if (fechaS == "")
-                    {
-                        this.FechaFinAlt(turno);//FECHA INICIO
-
-                    }
-                    this.PrimeraTabulacion(turno, fechaS1, fechaS);
-                    this.UltimaTabulacion(turno, fechaS1, fechaS);
-                    //Calcular fecha de inicio y fin de Avances
-                    this.FechaInicioAvance(turno);
-                    this.FechaFinAvance(turno);
-                }
-
-            }
-            catch
-            {
-                MessageBox.Show("La fecha ingresada no posee registros detectados", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            if (turno == 10)
-            {
-                SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario();
-                frm.ShowDialog();
-            }
-            else
-            {
-                SAP.Tesoreria.Controles.Declaraciones.CierreTurno frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurno();
-                frm.ShowDialog();
-            }
-            this.Close();
-            */
+           
         }
 
 
@@ -246,78 +249,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 date2.Text = date1.Text;
             }
             
-            /*
-            if (turno == 8)
-            {
-                date2.Text = date1.Value.Date.AddDays(1).ToString();
-            }
-            else if (turno == 9)
-            {
-                date2.Text = date1.Value.Date.AddDays(1).ToString();
-            }*/
         }
 
-        //     codigo nuevo
-
-        // FECHA FIN
-        private void FechaFin(int turno)
-        {
-            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
-
-            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
-            {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fecha", fechaS1);
-                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(2));
-                cmd.Parameters.AddWithValue("turno", turno);
-
-                // ExecuteScalar devuelve un 'object' directamente
-                object resultado = cmd.ExecuteScalar();
-
-                if (resultado != null && resultado != DBNull.Value)
-                {
-                    // SI ENCONTRÓ DATO
-                    fechaS = Convert.ToString(Convert.ToDateTime(resultado));
-                }
-                else
-                {
-                    // NO ENCONTRÓ DATO (resultado es null)
-                    fechaS = "";
-                }
-            }
-        }
-
-        private void FechaFinAlt(int turno)
-        {
-            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
-
-            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
-            {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.ToShortDateString() + hora2));
-                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora3));
-                cmd.Parameters.AddWithValue("turno", turno);
-
-                // ExecuteScalar devuelve un 'object' directamente
-                object resultado = cmd.ExecuteScalar();
-
-                if (resultado != null && resultado != DBNull.Value)
-                {
-                    // SI ENCONTRÓ DATO
-                    fechaS = Convert.ToString(Convert.ToDateTime(resultado));
-                }
-                else
-                {
-                    // NO ENCONTRÓ DATO (resultado es null)
-                    fechaS = date1.Value.Date.AddDays(1).ToString();
-                }
-            }
-        }
 
         // FECHA DE INICIO
-        private void FechaInicio(int turno)
+        private void PrimerTurno(int turnoA)
         {
             string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
 
@@ -326,8 +262,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.ToShortDateString() + hora).AddHours(-4));
-                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date2.Value.ToShortDateString() + hora1));
-                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora1));
+                cmd.Parameters.AddWithValue("turno", turnoA);
 
                 // ExecuteScalar devuelve un 'object' directamente
                 object resultado = cmd.ExecuteScalar();
@@ -335,56 +271,26 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 if (resultado != null && resultado != DBNull.Value)
                 {
                     // SI ENCONTRÓ DATO
-                    fechaS1 = Convert.ToString(Convert.ToDateTime(resultado));
+                    fechaPrimerTurno = Convert.ToString(Convert.ToDateTime(resultado));
                 }
                 else
                 {
                     // NO ENCONTRÓ DATO (resultado es null)
-                    fechaS1 = "";
+                    fechaPrimerTurno = "";
                 }
             }
         }
-
-        private void FechaInicioAlt(int turno)
+                       
+        private void UltimoAvance(int turnoB)
         {
-            string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
-
+            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.Date.AddDays(-1).ToShortDateString() + hora2));
-                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date2.Value.ToShortDateString() + hora3));
-                cmd.Parameters.AddWithValue("turno", turno);
-
-                // ExecuteScalar devuelve un 'object' directamente
-                object resultado = cmd.ExecuteScalar();
-
-                if (resultado != null && resultado != DBNull.Value)
-                {
-                    // SI ENCONTRÓ DATO
-                    fechaS1 = Convert.ToString(Convert.ToDateTime(resultado));
-                }
-                else
-                {
-                    // NO ENCONTRÓ DATO (resultado es null)
-                    fechaS1 = date1.Value.Date.AddHours(-1).ToString();
-                }
-            }
-        }
-
-
-        private void FechaFinAvance(int turno)
-        {
-            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
-
-            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
-            {
-                cn.Open();
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fecha", date1.Value.ToString("dd/MM/yyyy") + hora1);
-                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(6));
-                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.ToShortDateString() + hora));
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(4));
+                cmd.Parameters.AddWithValue("turno", turnoB);
 
                 // ExecuteScalar devuelve un 'object' directamente
                 object resultado = cmd.ExecuteScalar();
@@ -402,49 +308,46 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             }
         }
 
-        private void FechaInicioAvance(int turno)
+        private void UltimoTurno(int turnoB)
         {
-            string sql = "SELECT TOP 1 Fecha FROM CierreBalanceV2 WHERE CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha ASC;";
+            string sql = "SELECT TOP 1 Fecha FROM Turno WHERE Turno.Fecha BETWEEN @fecha AND @fecha1 AND Turno=@turno Order by Fecha DESC;";
 
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fecha", date1.Value.ToString("dd/MM/yyyy") + hora);
-                cmd.Parameters.AddWithValue("fecha1", date1.Value.ToString("dd/MM/yyyy") + hora1);
-                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(date1.Value.ToShortDateString() + hora).AddHours(-4));
+                cmd.Parameters.AddWithValue("fecha1", Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(4));
+                cmd.Parameters.AddWithValue("turno", turnoB);
 
                 // ExecuteScalar devuelve un 'object' directamente
                 object resultado = cmd.ExecuteScalar();
-                
+
                 if (resultado != null && resultado != DBNull.Value)
                 {
                     // SI ENCONTRÓ DATO
-                    fechaPrimerAvance = Convert.ToString(Convert.ToDateTime(resultado));
+                    fechaUltimoTurno = Convert.ToString(Convert.ToDateTime(resultado));
                 }
                 else
                 {
                     // NO ENCONTRÓ DATO (resultado es null)
-                    fechaPrimerAvance = "";
+                    fechaUltimoTurno = "";
                 }
             }
         }
 
-
-
-
-        private void PrimeraTabulacion(int turno, string fechaS1, string fechaS)
+        private void PrimeraTabulacion(int turnoA, string fechaPrimerTurno, string fechaUltimoTurno)
         {
-            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN Turno C ON A.ID_Usuario = C.ID_Usuario and A.Turno = C.Turno where A.fecha BETWEEN @fechaS1 and @fechaS and A.Turno = @turno and C.fecha BETWEEN @fechaS1 and @fechaS order by A.fecha ASC;";
+            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN Turno C ON A.ID_Usuario = C.ID_Usuario and A.Turno = C.Turno where A.fecha BETWEEN @fechaA and @fechaB and A.Turno = @turno and C.fecha BETWEEN @fechaA and @fechaB order by A.fecha ASC;";
 
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlDataReader dr;
                 SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
-                cmd.Parameters.AddWithValue("fechaS", fechaS);
-                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("fechaA", fechaPrimerTurno);
+                cmd.Parameters.AddWithValue("fechaB", fechaUltimoTurno);
+                cmd.Parameters.AddWithValue("turno", turnoA);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -455,17 +358,19 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             }
         }
 
-        private void UltimaTabulacion(int turno, string fechaS1, string fechaS)
+        private void UltimaTabulacion(int turnoB)
         {
-            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN Turno C ON A.ID_Usuario = C.ID_Usuario and A.Turno = C.Turno where A.fecha BETWEEN @fechaS1 and @fechaS and A.Turno = @turno and C.fecha BETWEEN @fechaS1 and @fechaS order by A.fecha DESC;";
+            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN Turno C ON A.ID_Usuario = C.ID_Usuario and A.Turno = C.Turno where A.fecha BETWEEN @fechaS1 and @fechaS and A.Turno = @turno and C.fecha BETWEEN @fechaS1 and @fechaS2 order by A.fecha DESC;";
+
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlDataReader dr;
                 SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
-                cmd.Parameters.AddWithValue("fechaS", fechaS);
-                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("fechaS1", fechaPrimerTurno);
+                cmd.Parameters.AddWithValue("fechaS", fechaUltimoAvance);
+                cmd.Parameters.AddWithValue("fechaS2", fechaUltimoTurno);
+                cmd.Parameters.AddWithValue("turno", turnoB);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -475,48 +380,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 return;
             }
         }
-
-        private void PrimeraTabulacionDiaria(string fechaS1, string fechaS)
-        {
-            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN Turno C ON A.ID_Usuario = C.ID_Usuario and A.Turno = C.Turno where A.fecha BETWEEN @fechaS1 and @fechaS and C.fecha BETWEEN @fechaS1 and @fechaS order by A.fecha ASC;";
-
-            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
-            {
-                cn.Open();
-                SqlDataReader dr;
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
-                cmd.Parameters.AddWithValue("fechaS", fechaS);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    fechaPrimeraTabulacion = Convert.ToString(Convert.ToDateTime(dr["Fecha"])); //Primera Tabulacion del turno
-                }
-                dr.Close();
-                return;
-            }
-        }
-
-        private void UltimaTabulacionDiaria(string fechaS1, string fechaS)
-        {
-            string sql = "SELECT Top 1 A.Fecha from Pagos A INNER JOIN Turno C ON A.ID_Usuario = C.ID_Usuario and A.Turno = C.Turno where A.fecha BETWEEN @fechaS1 and @fechaS and C.fecha BETWEEN @fechaS1 and @fechaS order by A.fecha DESC;";
-            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
-            {
-                cn.Open();
-                SqlDataReader dr;
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.Parameters.AddWithValue("fechaS1", fechaS1);
-                cmd.Parameters.AddWithValue("fechaS", fechaS);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    fechaUltimaTabulacion = Convert.ToString(Convert.ToDateTime(dr["Fecha"])); //Primera Tabulacion del turno
-                }
-                dr.Close();
-                return;
-            }
-        }
-
 
     }
 }

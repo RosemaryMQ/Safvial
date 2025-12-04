@@ -71,7 +71,6 @@ D:\Dev\Safvial\SAP\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Dev\Safvial\SAP\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Dev\Safvial\SAP\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Dev\Safvial\SAP\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Dev\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Avance.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Biopago.Biopago.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Contraseña.resources
@@ -158,6 +157,7 @@ D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Auditoria.RecordCierres.res
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.AuditorUsuario.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Autorizacion.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.CierreTurnoDiario.resources
+D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.CierreTurnoFiltro.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.VersionV2.AvanceReport.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Tesoreria.Controles.Declaraciones.VersionV2.Avances.resources
@@ -209,3 +209,4 @@ D:\Dev\Safvial\SAP\obj\Debug\SAP.application
 D:\Dev\Safvial\SAP\obj\Debug\SAP.csproj.CopyComplete
 D:\Dev\Safvial\SAP\obj\Debug\SAP.exe
 D:\Dev\Safvial\SAP\obj\Debug\SAP.pdb
+D:\Dev\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache

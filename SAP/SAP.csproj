@@ -759,6 +759,12 @@
     <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurnoDiario.Designer.cs">
       <DependentUpon>CierreTurnoDiario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurnoFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tesoreria\Controles\Declaraciones\CierreTurnoFiltro.Designer.cs">
+      <DependentUpon>CierreTurnoFiltro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1299,6 +1305,9 @@
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\CierreTurnoDiario.resx">
       <DependentUpon>CierreTurnoDiario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\CierreTurnoFiltro.resx">
+      <DependentUpon>CierreTurnoFiltro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\DeclaracionParametrizado.resx">
       <DependentUpon>DeclaracionParametrizado.cs</DependentUpon>
     </EmbeddedResource>
@@ -1321,6 +1330,7 @@
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurnoFiltro.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurnoDiario.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurno - Copia.rdlc" />
     <EmbeddedResource Include="Tesoreria\Controles\Declaraciones\VersionV2\CierreTurno.rdlc" />
