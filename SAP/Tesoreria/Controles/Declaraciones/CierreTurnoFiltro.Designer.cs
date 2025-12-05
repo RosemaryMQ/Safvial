@@ -31,6 +31,10 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         {
             this.components = new System.ComponentModel.Container();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tarjetaExpressDataSet = new SAP.TarjetaExpressDataSet();
+            this.tarjetaExpressReporte1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tarjetaExpressReporte1TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter();
+            this.tableAdapterManager1 = new SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager();
             this.sAPDataSetLocal = new SAP.SAPDataSetLocal();
             this.cierreBiopagoFiltroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreBiopagoFiltroTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreBiopagoFiltroTableAdapter();
@@ -47,10 +51,28 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.cierreTransfFiltroTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTransfFiltroTableAdapter();
             this.cierreTurnoFiltroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreTurnoFiltroTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTurnoFiltroTableAdapter();
-            this.tarjetaExpressDataSet = new SAP.TarjetaExpressDataSet();
-            this.tarjetaExpressReporte1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tarjetaExpressReporte1TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter();
-            this.tableAdapterManager1 = new SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager();
+            this.cierreEfectivoDiaAnteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreEfectivoDiaAnteriorTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreEfectivoDiaAnteriorTableAdapter();
+            this.cierrePDVDiaAnteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierrePDVDiaAnteriorTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePDVDiaAnteriorTableAdapter();
+            this.cierrePINCDiaAnteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierrePINCDiaAnteriorTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePINCDiaAnteriorTableAdapter();
+            this.cierreTransfDiaAnteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTransfDiaAnteriorTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTransfDiaAnteriorTableAdapter();
+            this.cierreBiopagoDiaAnteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreBiopagoDiaAnteriorTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreBiopagoDiaAnteriorTableAdapter();
+            this.cierreBiopagoDiaSiguienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreBiopagoDiaSiguienteTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreBiopagoDiaSiguienteTableAdapter();
+            this.cierreEfectivoDiaSiguienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreEfectivoDiaSiguienteTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreEfectivoDiaSiguienteTableAdapter();
+            this.cierrePDVDiaSiguienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierrePDVDiaSiguienteTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePDVDiaSiguienteTableAdapter();
+            this.cierrePINCDiaSiguienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierrePINCDiaSiguienteTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePINCDiaSiguienteTableAdapter();
+            this.cierreTransfDiaSiguienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTransfDiaSiguienteTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTransfDiaSiguienteTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoFiltroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBuzonFiltroBindingSource)).BeginInit();
@@ -59,8 +81,16 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             ((System.ComponentModel.ISupportInitialize)(this.cierrePINCFiltroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTransfFiltroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoFiltroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoDiaAnteriorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePDVDiaAnteriorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePINCDiaAnteriorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTransfDiaAnteriorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoDiaAnteriorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoDiaSiguienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoDiaSiguienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePDVDiaSiguienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePINCDiaSiguienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTransfDiaSiguienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -70,8 +100,29 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(674, 454);
+            this.reportViewer1.Size = new System.Drawing.Size(674, 474);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // tarjetaExpressDataSet
+            // 
+            this.tarjetaExpressDataSet.DataSetName = "TarjetaExpressDataSet";
+            this.tarjetaExpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tarjetaExpressReporte1BindingSource
+            // 
+            this.tarjetaExpressReporte1BindingSource.DataMember = "TarjetaExpressReporte1";
+            this.tarjetaExpressReporte1BindingSource.DataSource = this.tarjetaExpressDataSet;
+            // 
+            // tarjetaExpressReporte1TableAdapter
+            // 
+            this.tarjetaExpressReporte1TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.UpdateOrder = SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // sAPDataSetLocal
             // 
@@ -151,35 +202,107 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             // 
             this.cierreTurnoFiltroTableAdapter.ClearBeforeFill = true;
             // 
-            // tarjetaExpressDataSet
+            // cierreEfectivoDiaAnteriorBindingSource
             // 
-            this.tarjetaExpressDataSet.DataSetName = "TarjetaExpressDataSet";
-            this.tarjetaExpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cierreEfectivoDiaAnteriorBindingSource.DataMember = "CierreEfectivoDiaAnterior";
+            this.cierreEfectivoDiaAnteriorBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // tarjetaExpressReporte1BindingSource
+            // cierreEfectivoDiaAnteriorTableAdapter
             // 
-            this.tarjetaExpressReporte1BindingSource.DataMember = "TarjetaExpressReporte1";
-            this.tarjetaExpressReporte1BindingSource.DataSource = this.tarjetaExpressDataSet;
+            this.cierreEfectivoDiaAnteriorTableAdapter.ClearBeforeFill = true;
             // 
-            // tarjetaExpressReporte1TableAdapter
+            // cierrePDVDiaAnteriorBindingSource
             // 
-            this.tarjetaExpressReporte1TableAdapter.ClearBeforeFill = true;
+            this.cierrePDVDiaAnteriorBindingSource.DataMember = "CierrePDVDiaAnterior";
+            this.cierrePDVDiaAnteriorBindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // tableAdapterManager1
+            // cierrePDVDiaAnteriorTableAdapter
             // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.UpdateOrder = SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.cierrePDVDiaAnteriorTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierrePINCDiaAnteriorBindingSource
+            // 
+            this.cierrePINCDiaAnteriorBindingSource.DataMember = "CierrePINCDiaAnterior";
+            this.cierrePINCDiaAnteriorBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierrePINCDiaAnteriorTableAdapter
+            // 
+            this.cierrePINCDiaAnteriorTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierreTransfDiaAnteriorBindingSource
+            // 
+            this.cierreTransfDiaAnteriorBindingSource.DataMember = "CierreTransfDiaAnterior";
+            this.cierreTransfDiaAnteriorBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreTransfDiaAnteriorTableAdapter
+            // 
+            this.cierreTransfDiaAnteriorTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierreBiopagoDiaAnteriorBindingSource
+            // 
+            this.cierreBiopagoDiaAnteriorBindingSource.DataMember = "CierreBiopagoDiaAnterior";
+            this.cierreBiopagoDiaAnteriorBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreBiopagoDiaAnteriorTableAdapter
+            // 
+            this.cierreBiopagoDiaAnteriorTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierreBiopagoDiaSiguienteBindingSource
+            // 
+            this.cierreBiopagoDiaSiguienteBindingSource.DataMember = "CierreBiopagoDiaSiguiente";
+            this.cierreBiopagoDiaSiguienteBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreBiopagoDiaSiguienteTableAdapter
+            // 
+            this.cierreBiopagoDiaSiguienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierreEfectivoDiaSiguienteBindingSource
+            // 
+            this.cierreEfectivoDiaSiguienteBindingSource.DataMember = "CierreEfectivoDiaSiguiente";
+            this.cierreEfectivoDiaSiguienteBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreEfectivoDiaSiguienteTableAdapter
+            // 
+            this.cierreEfectivoDiaSiguienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierrePDVDiaSiguienteBindingSource
+            // 
+            this.cierrePDVDiaSiguienteBindingSource.DataMember = "CierrePDVDiaSiguiente";
+            this.cierrePDVDiaSiguienteBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierrePDVDiaSiguienteTableAdapter
+            // 
+            this.cierrePDVDiaSiguienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierrePINCDiaSiguienteBindingSource
+            // 
+            this.cierrePINCDiaSiguienteBindingSource.DataMember = "CierrePINCDiaSiguiente";
+            this.cierrePINCDiaSiguienteBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierrePINCDiaSiguienteTableAdapter
+            // 
+            this.cierrePINCDiaSiguienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // cierreTransfDiaSiguienteBindingSource
+            // 
+            this.cierreTransfDiaSiguienteBindingSource.DataMember = "CierreTransfDiaSiguiente";
+            this.cierreTransfDiaSiguienteBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // cierreTransfDiaSiguienteTableAdapter
+            // 
+            this.cierreTransfDiaSiguienteTableAdapter.ClearBeforeFill = true;
             // 
             // CierreTurnoFiltro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 454);
+            this.ClientSize = new System.Drawing.Size(674, 474);
             this.Controls.Add(this.reportViewer1);
             this.Name = "CierreTurnoFiltro";
             this.Text = "CierreTurnoFiltro";
             this.Load += new System.EventHandler(this.CierreTurnoFiltro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoFiltroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBuzonFiltroBindingSource)).EndInit();
@@ -188,8 +311,16 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             ((System.ComponentModel.ISupportInitialize)(this.cierrePINCFiltroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTransfFiltroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoFiltroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoDiaAnteriorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePDVDiaAnteriorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePINCDiaAnteriorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTransfDiaAnteriorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoDiaAnteriorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoDiaSiguienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoDiaSiguienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePDVDiaSiguienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierrePINCDiaSiguienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTransfDiaSiguienteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +348,25 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         private System.Windows.Forms.BindingSource tarjetaExpressReporte1BindingSource;
         private TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter tarjetaExpressReporte1TableAdapter;
         private TarjetaExpressDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource cierreEfectivoDiaAnteriorBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreEfectivoDiaAnteriorTableAdapter cierreEfectivoDiaAnteriorTableAdapter;
+        private System.Windows.Forms.BindingSource cierrePDVDiaAnteriorBindingSource;
+        private SAPDataSetLocalTableAdapters.CierrePDVDiaAnteriorTableAdapter cierrePDVDiaAnteriorTableAdapter;
+        private System.Windows.Forms.BindingSource cierrePINCDiaAnteriorBindingSource;
+        private SAPDataSetLocalTableAdapters.CierrePINCDiaAnteriorTableAdapter cierrePINCDiaAnteriorTableAdapter;
+        private System.Windows.Forms.BindingSource cierreTransfDiaAnteriorBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreTransfDiaAnteriorTableAdapter cierreTransfDiaAnteriorTableAdapter;
+        private System.Windows.Forms.BindingSource cierreBiopagoDiaAnteriorBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreBiopagoDiaAnteriorTableAdapter cierreBiopagoDiaAnteriorTableAdapter;
+        private System.Windows.Forms.BindingSource cierreBiopagoDiaSiguienteBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreBiopagoDiaSiguienteTableAdapter cierreBiopagoDiaSiguienteTableAdapter;
+        private System.Windows.Forms.BindingSource cierreEfectivoDiaSiguienteBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreEfectivoDiaSiguienteTableAdapter cierreEfectivoDiaSiguienteTableAdapter;
+        private System.Windows.Forms.BindingSource cierrePDVDiaSiguienteBindingSource;
+        private SAPDataSetLocalTableAdapters.CierrePDVDiaSiguienteTableAdapter cierrePDVDiaSiguienteTableAdapter;
+        private System.Windows.Forms.BindingSource cierrePINCDiaSiguienteBindingSource;
+        private SAPDataSetLocalTableAdapters.CierrePINCDiaSiguienteTableAdapter cierrePINCDiaSiguienteTableAdapter;
+        private System.Windows.Forms.BindingSource cierreTransfDiaSiguienteBindingSource;
+        private SAPDataSetLocalTableAdapters.CierreTransfDiaSiguienteTableAdapter cierreTransfDiaSiguienteTableAdapter;
     }
 }
