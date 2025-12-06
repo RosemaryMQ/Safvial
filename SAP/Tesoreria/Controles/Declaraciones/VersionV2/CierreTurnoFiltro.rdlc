@@ -11999,7 +11999,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>REGISTRO EN SISTEMA (Tabulado dia anterior)</Value>
+                                  <Value>="REGISTRO EN SISTEMA ( para el día " +  Parameters!FechaDiaAnterior.Value + " )"</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -12780,7 +12780,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>REGISTRO EN SISTEMA (Tabulado dia Siguiente)</Value>
+                                  <Value>="REGISTRO EN SISTEMA ( para el día " +  Parameters!FechaDiaSiguiente.Value + " )"</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -13541,7 +13541,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>CIERRE DE TURNO</Value>
+                      <Value>="CIERRE DE TURNO DEL DÍA " + FormatDateTime(Parameters!FechaInicio.Value)</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -13588,7 +13588,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.60611cm</Top>
-              <Left>10.65331cm</Left>
+              <Left>12.17731cm</Left>
               <Height>0.66146cm</Height>
               <Width>3.4974cm</Width>
               <ZIndex>1</ZIndex>
@@ -13616,13 +13616,13 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Center</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.60611cm</Top>
-              <Left>14.18599cm</Left>
+              <Left>15.70999cm</Left>
               <Height>0.69674cm</Height>
               <Width>6.52576cm</Width>
               <ZIndex>2</ZIndex>
@@ -13656,9 +13656,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox28</rd:DefaultName>
               <Top>3.64139cm</Top>
-              <Left>20.78231cm</Left>
+              <Left>22.32295cm</Left>
               <Height>0.66146cm</Height>
-              <Width>3.4974cm</Width>
+              <Width>1.95676cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -13684,7 +13684,7 @@
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Center</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
@@ -13828,14 +13828,14 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!FechaInicio.Value</Value>
+                      <Value>=Parameters!FechaPrimeraTabulacionD.Value</Value>
                       <Style>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Center</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
@@ -13896,14 +13896,14 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!FechaFin.Value</Value>
+                      <Value>=Parameters!FechaUltimaTabulacionN.Value</Value>
                       <Style>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Center</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
@@ -13994,11 +13994,27 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="FechaPivoteD">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaPivoteN">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaDiaAnterior">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FechaDiaSiguiente">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>2</NumberOfColumns>
-      <NumberOfRows>7</NumberOfRows>
+      <NumberOfRows>9</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -14064,6 +14080,26 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>6</RowIndex>
           <ParameterName>FechaPivoteM</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>FechaPivoteD</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>FechaPivoteN</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>8</RowIndex>
+          <ParameterName>FechaDiaAnterior</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>8</RowIndex>
+          <ParameterName>FechaDiaSiguiente</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

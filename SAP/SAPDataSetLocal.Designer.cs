@@ -10599,7 +10599,6 @@ namespace SAP {
                 base.Columns.Add(this.columnTarifa);
                 this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTabulado);
-                this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 20;
                 this.columnTarifa.ReadOnly = true;
                 this.columnTabulado.ReadOnly = true;
@@ -10878,7 +10877,6 @@ namespace SAP {
                 base.Columns.Add(this.columnTarifa);
                 this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTabulado);
-                this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 20;
                 this.columnTarifa.ReadOnly = true;
                 this.columnTabulado.ReadOnly = true;
@@ -11157,7 +11155,6 @@ namespace SAP {
                 base.Columns.Add(this.columnTarifa);
                 this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTabulado);
-                this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 20;
                 this.columnTarifa.ReadOnly = true;
                 this.columnTabulado.ReadOnly = true;
@@ -11436,7 +11433,6 @@ namespace SAP {
                 base.Columns.Add(this.columnTarifa);
                 this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTabulado);
-                this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 20;
                 this.columnTarifa.ReadOnly = true;
                 this.columnTabulado.ReadOnly = true;
@@ -11715,7 +11711,6 @@ namespace SAP {
                 base.Columns.Add(this.columnTarifa);
                 this.columnTabulado = new global::System.Data.DataColumn("Tabulado", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTabulado);
-                this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 20;
                 this.columnTarifa.ReadOnly = true;
                 this.columnTabulado.ReadOnly = true;
@@ -18007,7 +18002,13 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableCierreEfectivoDiaSiguiente.NombreColumn]));
+                    try {
+                        return ((string)(this[this.tableCierreEfectivoDiaSiguiente.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreEfectivoDiaSiguiente\' es DBNul" +
+                                "l.", e);
+                    }
                 }
                 set {
                     this[this.tableCierreEfectivoDiaSiguiente.NombreColumn] = value;
@@ -18046,6 +18047,18 @@ namespace SAP {
                 set {
                     this[this.tableCierreEfectivoDiaSiguiente.TabuladoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreEfectivoDiaSiguiente.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreEfectivoDiaSiguiente.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18091,7 +18104,12 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableCierrePDVDiaSiguiente.NombreColumn]));
+                    try {
+                        return ((string)(this[this.tableCierrePDVDiaSiguiente.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierrePDVDiaSiguiente\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCierrePDVDiaSiguiente.NombreColumn] = value;
@@ -18128,6 +18146,18 @@ namespace SAP {
                 set {
                     this[this.tableCierrePDVDiaSiguiente.TabuladoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierrePDVDiaSiguiente.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierrePDVDiaSiguiente.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18173,7 +18203,13 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableCierreBiopagoDiaSiguiente.NombreColumn]));
+                    try {
+                        return ((string)(this[this.tableCierreBiopagoDiaSiguiente.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreBiopagoDiaSiguiente\' es DBNull" +
+                                ".", e);
+                    }
                 }
                 set {
                     this[this.tableCierreBiopagoDiaSiguiente.NombreColumn] = value;
@@ -18212,6 +18248,18 @@ namespace SAP {
                 set {
                     this[this.tableCierreBiopagoDiaSiguiente.TabuladoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreBiopagoDiaSiguiente.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreBiopagoDiaSiguiente.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18257,7 +18305,13 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableCierreTransfDiaSiguiente.NombreColumn]));
+                    try {
+                        return ((string)(this[this.tableCierreTransfDiaSiguiente.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierreTransfDiaSiguiente\' es DBNull." +
+                                "", e);
+                    }
                 }
                 set {
                     this[this.tableCierreTransfDiaSiguiente.NombreColumn] = value;
@@ -18296,6 +18350,18 @@ namespace SAP {
                 set {
                     this[this.tableCierreTransfDiaSiguiente.TabuladoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierreTransfDiaSiguiente.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierreTransfDiaSiguiente.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18341,7 +18407,12 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tableCierrePINCDiaSiguiente.NombreColumn]));
+                    try {
+                        return ((string)(this[this.tableCierrePINCDiaSiguiente.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'CierrePINCDiaSiguiente\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableCierrePINCDiaSiguiente.NombreColumn] = value;
@@ -18379,6 +18450,18 @@ namespace SAP {
                 set {
                     this[this.tableCierrePINCDiaSiguiente.TabuladoColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableCierrePINCDiaSiguiente.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableCierrePINCDiaSiguiente.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -27068,32 +27151,45 @@ GROUP BY TipoVehiculos.Nombre
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"
+            this._commandCollection[0].CommandText = @"SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
+WHERE        (Pagos.Fecha BETWEEN @fechaPivoteN AND @fechaFinal) AND (Pagos.FormaPago = 'Efectivo') AND (Pagos.Turno = @turnoA)
+GROUP BY TipoVehiculos.Nombre
+UNION
 SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
 FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
-WHERE        (Pagos.Fecha BETWEEN @fechaFin AND @fechaUltimaTabulacionN) AND (Pagos.FormaPago = 'Efectivo') AND (Pagos.Turno = @turnoA)
+WHERE        (Pagos.Fecha BETWEEN @fechaFinal AND @ultimaTabulacionN) AND (Pagos.FormaPago = 'Efectivo') AND (Pagos.Turno = @turnoB)
 GROUP BY TipoVehiculos.Nombre
 
 ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFin", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaUltimaTabulacionN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimaTabulacionN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAPDataSetLocal.CierreEfectivoDiaSiguienteDataTable dataTable, System.DateTime fechaFin, System.DateTime fechaUltimaTabulacionN, global::System.Nullable<int> turnoA) {
+        public virtual int Fill(SAPDataSetLocal.CierreEfectivoDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteN, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaFin));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaUltimaTabulacionN));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteN));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
             if ((turnoA.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27106,15 +27202,22 @@ GROUP BY TipoVehiculos.Nombre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAPDataSetLocal.CierreEfectivoDiaSiguienteDataTable GetData(System.DateTime fechaFin, System.DateTime fechaUltimaTabulacionN, global::System.Nullable<int> turnoA) {
+        public virtual SAPDataSetLocal.CierreEfectivoDiaSiguienteDataTable GetData(System.DateTime fechaPivoteN, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaFin));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaUltimaTabulacionN));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteN));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
             if ((turnoA.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turnoA.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             SAPDataSetLocal.CierreEfectivoDiaSiguienteDataTable dataTable = new SAPDataSetLocal.CierreEfectivoDiaSiguienteDataTable();
             this.Adapter.Fill(dataTable);
@@ -27267,19 +27370,25 @@ SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(P
 FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
 WHERE        (Pagos.Fecha BETWEEN @fechaPivoteM AND @fechaFinal) AND (Pagos.FormaPago = 'Punto de Venta') AND (Pagos.Turno = @turnoA)
 GROUP BY TipoVehiculos.Nombre
-
+UNION
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
+WHERE        (Pagos.Fecha BETWEEN @fechaFinal AND @ultimaTabulacionN) AND (Pagos.FormaPago = 'Punto de Venta') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
 ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimaTabulacionN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAPDataSetLocal.CierrePDVDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual int Fill(SAPDataSetLocal.CierrePDVDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27288,6 +27397,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27300,7 +27416,7 @@ GROUP BY TipoVehiculos.Nombre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAPDataSetLocal.CierrePDVDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual SAPDataSetLocal.CierrePDVDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27309,6 +27425,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             SAPDataSetLocal.CierrePDVDiaSiguienteDataTable dataTable = new SAPDataSetLocal.CierrePDVDiaSiguienteDataTable();
             this.Adapter.Fill(dataTable);
@@ -27461,19 +27584,25 @@ SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(P
 FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
 WHERE        (Pagos.Fecha BETWEEN @fechaPivoteM AND @fechaFinal) AND (Pagos.FormaPago = 'Biopago') AND (Pagos.Turno = @turnoA)
 GROUP BY TipoVehiculos.Nombre
-
+UNION
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
+WHERE        (Pagos.Fecha BETWEEN @fechaFinal AND @ultimaTabulacionN) AND (Pagos.FormaPago = 'Biopago') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
 ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimaTabulacionN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAPDataSetLocal.CierreBiopagoDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual int Fill(SAPDataSetLocal.CierreBiopagoDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27482,6 +27611,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27494,7 +27630,7 @@ GROUP BY TipoVehiculos.Nombre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAPDataSetLocal.CierreBiopagoDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual SAPDataSetLocal.CierreBiopagoDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27503,6 +27639,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             SAPDataSetLocal.CierreBiopagoDiaSiguienteDataTable dataTable = new SAPDataSetLocal.CierreBiopagoDiaSiguienteDataTable();
             this.Adapter.Fill(dataTable);
@@ -27655,19 +27798,25 @@ SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(P
 FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
 WHERE        (Pagos.Fecha BETWEEN @fechaPivoteM AND @fechaFinal) AND (Pagos.FormaPago = 'Transferencia') AND (Pagos.Turno = @turnoA)
 GROUP BY TipoVehiculos.Nombre
-
+UNION
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
+WHERE        (Pagos.Fecha BETWEEN @fechaFinal AND @ultimaTabulacionN) AND (Pagos.FormaPago = 'Transferencia') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
 ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimaTabulacionN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAPDataSetLocal.CierreTransfDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual int Fill(SAPDataSetLocal.CierreTransfDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27676,6 +27825,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27688,7 +27844,7 @@ GROUP BY TipoVehiculos.Nombre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAPDataSetLocal.CierreTransfDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual SAPDataSetLocal.CierreTransfDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27697,6 +27853,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             SAPDataSetLocal.CierreTransfDiaSiguienteDataTable dataTable = new SAPDataSetLocal.CierreTransfDiaSiguienteDataTable();
             this.Adapter.Fill(dataTable);
@@ -27849,19 +28012,25 @@ SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(P
 FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
 WHERE        (Pagos.Fecha BETWEEN @fechaPivoteM AND @fechaFinal) AND (Pagos.FormaPago = 'Pago Incompleto') AND (Pagos.Turno = @turnoA)
 GROUP BY TipoVehiculos.Nombre
-
+UNION
+SELECT        TipoVehiculos.Nombre, SUM(TipoVehiculos.Tarifa) AS Tarifa, COUNT(Pagos.FormaPago) AS Tabulado
+FROM            Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo 
+WHERE        (Pagos.Fecha BETWEEN @fechaFinal AND @ultimaTabulacionN) AND (Pagos.FormaPago = 'Pago Incompleto') AND (Pagos.Turno = @turnoB)
+GROUP BY TipoVehiculos.Nombre
 ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaPivoteM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ultimaTabulacionN", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turnoB", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAPDataSetLocal.CierrePINCDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual int Fill(SAPDataSetLocal.CierrePINCDiaSiguienteDataTable dataTable, System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27870,6 +28039,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -27882,7 +28058,7 @@ GROUP BY TipoVehiculos.Nombre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAPDataSetLocal.CierrePINCDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA) {
+        public virtual SAPDataSetLocal.CierrePINCDiaSiguienteDataTable GetData(System.DateTime fechaPivoteM, System.DateTime fechaFinal, global::System.Nullable<int> turnoA, System.DateTime ultimaTabulacionN, global::System.Nullable<int> turnoB) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fechaPivoteM));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fechaFinal));
@@ -27891,6 +28067,13 @@ GROUP BY TipoVehiculos.Nombre
             }
             else {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(ultimaTabulacionN));
+            if ((turnoB.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(turnoB.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             SAPDataSetLocal.CierrePINCDiaSiguienteDataTable dataTable = new SAPDataSetLocal.CierrePINCDiaSiguienteDataTable();
             this.Adapter.Fill(dataTable);

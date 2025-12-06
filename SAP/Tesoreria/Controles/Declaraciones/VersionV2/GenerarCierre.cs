@@ -30,6 +30,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         public static string fechaPivoteD;
         public static string fechaPivoteM;
         public static string fechaPivoteN;
+        public static string fechaDiaAnterior;
+        public static string fechaDiaSiguiente;
+
         public GenerarCierre()
         {
             InitializeComponent();
@@ -123,7 +126,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 date2.Enabled = false;
                 hora = " 00:00:00.000";
                 hora1 = " 23:59:59.999";
-                hora2 = " 16:00:00.000";
+                hora2 = " 12:00:00.000";
             }
             else if (control==""){
                 date2.Enabled = false;
@@ -143,6 +146,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             fechaUltimaTabulacionN = "";
             fechaPivoteM = "";
             fechaInicio = "";
+            fechaDiaAnterior = Convert.ToDateTime(date1.Value.ToShortDateString()).AddDays(-1).ToString("dd-MM-yyyy");
+            fechaDiaSiguiente = Convert.ToDateTime(date1.Value.ToShortDateString()).AddDays(1).ToString("dd-MM-yyyy");
+
             try
             {
                 if (turno == 10)
@@ -154,8 +160,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 }
                 else if (turno == 11)
                 {
-                    fechaPivoteD = Convert.ToDateTime(date1.Value.ToShortDateString() + hora2).AddHours(4).ToString("dd-MM-yyyy HH:mm:ss");
-                    fechaPivoteN = Convert.ToDateTime(date1.Value.ToShortDateString() + hora2).AddHours(-4).ToString("dd-MM-yyyy HH:mm:ss");
+                    fechaPivoteD = Convert.ToDateTime(date1.Value.ToShortDateString() + hora).AddHours(8).ToString("dd-MM-yyyy HH:mm:ss");
+                    fechaPivoteN = Convert.ToDateTime(date1.Value.ToShortDateString() + hora1).AddHours(-4).ToString("dd-MM-yyyy HH:mm:ss");
                     fechaPivoteM = date1.Value.ToString("dd/MM/yyyy") + hora2;
                     fechaS1 = date1.Value.ToString("dd/MM/yyyy") + hora;
                     fechaS = date1.Value.ToString("dd/MM/yyyy") + hora1;
@@ -172,11 +178,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                     this.UltimaTabulacionD(turnoB);
                     this.UltimaTabulacionN(turnoB);
                     this.PrimeraTabulacionN(turnoB, fechaPrimerTurno, fechaUltimoTurno);
-
-
-                    MessageBox.Show(fechaS, "fecha S");
-                    MessageBox.Show(fechaUltimaTabulacionN, "Ultima tabulacion Nocturna");
-
 
                     SAP.Tesoreria.Controles.Declaraciones.CierreTurnoFiltro frm = new SAP.Tesoreria.Controles.Declaraciones.CierreTurnoFiltro();
                     frm.ShowDialog();
