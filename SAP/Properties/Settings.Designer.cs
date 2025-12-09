@@ -438,7 +438,7 @@ namespace SAP.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8RN94Q0\\CANDIL;Initial Catalog=SAP;User ID=sa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8RN94Q0\\CANDIL;Initial Catalog=SAP;User ID=sap")]
         public string SAPConnectionString_Local {
             get {
                 return ((string)(this["SAPConnectionString_Local"]));

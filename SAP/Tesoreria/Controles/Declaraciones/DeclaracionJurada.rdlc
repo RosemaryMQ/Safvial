@@ -739,7 +739,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSet2</rd:DataSetName>
-        <rd:SchemaPath>D:\Invialca-master-facturaOk_TicketCabina_v100_desarrollo\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSet2.xsd</rd:SchemaPath>
         <rd:TableName>BiopagoCierre</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -6268,7 +6268,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Biopago</Value>
+                                <Value>Biopago:</Value>
                                 <Style>
                                   <FontSize>6pt</FontSize>
                                   <FontWeight>Bold</FontWeight>

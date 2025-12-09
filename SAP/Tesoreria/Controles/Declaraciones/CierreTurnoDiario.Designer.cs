@@ -31,9 +31,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         {
             this.components = new System.ComponentModel.Container();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tarjetaExpressDataSet = new SAP.TarjetaExpressDataSet();
+            this.tarjetaExpressReporte1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tarjetaExpressReporte1TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter();
+            this.tableAdapterManager1 = new SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager();
             this.sAPDataSetLocal = new SAP.SAPDataSetLocal();
-            this.cierreTurnoV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cierreTurnoV1TableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTurnoV1TableAdapter();
             this.tableAdapterManager = new SAP.SAPDataSetLocalTableAdapters.TableAdapterManager();
             this.cierreBiopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreBiopagoTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreBiopagoTableAdapter();
@@ -47,20 +49,18 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.cierreEfectivoTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreEfectivoTableAdapter();
             this.cierrePINCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierrePINCTableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierrePINCTableAdapter();
-            this.tarjetaExpressDataSet = new SAP.TarjetaExpressDataSet();
-            this.tarjetaExpressReporte1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tarjetaExpressReporte1TableAdapter = new SAP.TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter();
-            this.tableAdapterManager1 = new SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager();
+            this.cierreTurnoV1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cierreTurnoV1TableAdapter = new SAP.SAPDataSetLocalTableAdapters.CierreTurnoV1TableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buzonTurnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTransfBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePDVBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePINCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -70,22 +70,33 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 518);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 558);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // tarjetaExpressDataSet
+            // 
+            this.tarjetaExpressDataSet.DataSetName = "TarjetaExpressDataSet";
+            this.tarjetaExpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tarjetaExpressReporte1BindingSource
+            // 
+            this.tarjetaExpressReporte1BindingSource.DataMember = "TarjetaExpressReporte1";
+            this.tarjetaExpressReporte1BindingSource.DataSource = this.tarjetaExpressDataSet;
+            // 
+            // tarjetaExpressReporte1TableAdapter
+            // 
+            this.tarjetaExpressReporte1TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.UpdateOrder = SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // sAPDataSetLocal
             // 
             this.sAPDataSetLocal.DataSetName = "SAPDataSetLocal";
             this.sAPDataSetLocal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cierreTurnoV1BindingSource
-            // 
-            this.cierreTurnoV1BindingSource.DataMember = "CierreTurnoV1";
-            this.cierreTurnoV1BindingSource.DataSource = this.sAPDataSetLocal;
-            // 
-            // cierreTurnoV1TableAdapter
-            // 
-            this.cierreTurnoV1TableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -93,8 +104,10 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.tableAdapterManager.CierreBalanceV2TableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DeclaracionesTableAdapter = null;
+            this.tableAdapterManager.Turno1TableAdapter = null;
             this.tableAdapterManager.TurnoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SAP.SAPDataSetLocalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Usuarios1TableAdapter = null;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
             // cierreBiopagoBindingSource
@@ -151,45 +164,34 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             // 
             this.cierrePINCTableAdapter.ClearBeforeFill = true;
             // 
-            // tarjetaExpressDataSet
+            // cierreTurnoV1BindingSource
             // 
-            this.tarjetaExpressDataSet.DataSetName = "TarjetaExpressDataSet";
-            this.tarjetaExpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cierreTurnoV1BindingSource.DataMember = "CierreTurnoV1";
+            this.cierreTurnoV1BindingSource.DataSource = this.sAPDataSetLocal;
             // 
-            // tarjetaExpressReporte1BindingSource
+            // cierreTurnoV1TableAdapter
             // 
-            this.tarjetaExpressReporte1BindingSource.DataMember = "TarjetaExpressReporte1";
-            this.tarjetaExpressReporte1BindingSource.DataSource = this.tarjetaExpressDataSet;
-            // 
-            // tarjetaExpressReporte1TableAdapter
-            // 
-            this.tarjetaExpressReporte1TableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.UpdateOrder = SAP.TarjetaExpressDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.cierreTurnoV1TableAdapter.ClearBeforeFill = true;
             // 
             // CierreTurnoDiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 518);
+            this.ClientSize = new System.Drawing.Size(800, 558);
             this.Controls.Add(this.reportViewer1);
             this.Name = "CierreTurnoDiario";
             this.Text = "CierreTurnoDiario";
             this.Load += new System.EventHandler(this.CierreTurnoDiario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buzonTurnoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreTransfBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePDVBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierreEfectivoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cierrePINCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tarjetaExpressReporte1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cierreTurnoV1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,8 +199,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         #endregion
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private SAPDataSetLocal sAPDataSetLocal;
-        private System.Windows.Forms.BindingSource cierreTurnoV1BindingSource;
-        private SAPDataSetLocalTableAdapters.CierreTurnoV1TableAdapter cierreTurnoV1TableAdapter;
         private SAPDataSetLocalTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource cierreBiopagoBindingSource;
         private SAPDataSetLocalTableAdapters.CierreBiopagoTableAdapter cierreBiopagoTableAdapter;
@@ -216,5 +216,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         private System.Windows.Forms.BindingSource tarjetaExpressReporte1BindingSource;
         private TarjetaExpressDataSetTableAdapters.TarjetaExpressReporte1TableAdapter tarjetaExpressReporte1TableAdapter;
         private TarjetaExpressDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingSource cierreTurnoV1BindingSource;
+        private SAPDataSetLocalTableAdapters.CierreTurnoV1TableAdapter cierreTurnoV1TableAdapter;
     }
 }

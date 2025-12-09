@@ -775,14 +775,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="32620544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAP.exe" size="33090560">
       <assemblyIdentity name="SAP" version="2.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GDmk1JFrP0UAC2lbpp7NYf8Zvfw952qcjgqmxJnV1xg=</dsig:DigestValue>
+        <dsig:DigestValue>UTRKxP1bjpiMo5F+H9i4SfH/LqQpf0vQfT6z2v2JpiI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -798,13 +798,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AutoConfig.txt" size="570">
+  <file name="AutoConfig.txt" size="550">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MIjsjsnG3wHowxGK4qWTLj1QKGHDKIxAF6gv5680UOc=</dsig:DigestValue>
+      <dsig:DigestValue>XxpEiHh8y/WeLgNPU2RzJ1nogvk4xRo3oWyqgYK/KNU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo2.ico" size="185702">
@@ -912,7 +912,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QUPg6farEuD0w7MUR6c3e/Jyzc5/fd+KdALAS3WEmeo=</dsig:DigestValue>
+      <dsig:DigestValue>EBRSGQ3n9e5Vsk/yhASAPL+ioYOiPlscs87nDWtKyuM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SqlServerTypes\readme.htm" size="2369">

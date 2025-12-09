@@ -122,8 +122,6 @@ namespace SAP {
         
         private CierresParcialesDataTable tableCierresParciales;
         
-        private CierreTurnoV1DataTable tableCierreTurnoV1;
-        
         private CierrePDVDataTable tableCierrePDV;
         
         private CierreEfectivoDataTable tableCierreEfectivo;
@@ -183,6 +181,8 @@ namespace SAP {
         private CierreBiopago1DataTable tableCierreBiopago1;
         
         private BuzonTurno1DataTable tableBuzonTurno1;
+        
+        private CierreTurnoV1DataTable tableCierreTurnoV1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -359,9 +359,6 @@ namespace SAP {
                 if ((ds.Tables["CierresParciales"] != null)) {
                     base.Tables.Add(new CierresParcialesDataTable(ds.Tables["CierresParciales"]));
                 }
-                if ((ds.Tables["CierreTurnoV1"] != null)) {
-                    base.Tables.Add(new CierreTurnoV1DataTable(ds.Tables["CierreTurnoV1"]));
-                }
                 if ((ds.Tables["CierrePDV"] != null)) {
                     base.Tables.Add(new CierrePDVDataTable(ds.Tables["CierrePDV"]));
                 }
@@ -451,6 +448,9 @@ namespace SAP {
                 }
                 if ((ds.Tables["BuzonTurno1"] != null)) {
                     base.Tables.Add(new BuzonTurno1DataTable(ds.Tables["BuzonTurno1"]));
+                }
+                if ((ds.Tables["CierreTurnoV1"] != null)) {
+                    base.Tables.Add(new CierreTurnoV1DataTable(ds.Tables["CierreTurnoV1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -964,16 +964,6 @@ namespace SAP {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CierreTurnoV1DataTable CierreTurnoV1 {
-            get {
-                return this.tableCierreTurnoV1;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public CierrePDVDataTable CierrePDV {
             get {
                 return this.tableCierrePDV;
@@ -1272,6 +1262,16 @@ namespace SAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CierreTurnoV1DataTable CierreTurnoV1 {
+            get {
+                return this.tableCierreTurnoV1;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -1484,9 +1484,6 @@ namespace SAP {
                 if ((ds.Tables["CierresParciales"] != null)) {
                     base.Tables.Add(new CierresParcialesDataTable(ds.Tables["CierresParciales"]));
                 }
-                if ((ds.Tables["CierreTurnoV1"] != null)) {
-                    base.Tables.Add(new CierreTurnoV1DataTable(ds.Tables["CierreTurnoV1"]));
-                }
                 if ((ds.Tables["CierrePDV"] != null)) {
                     base.Tables.Add(new CierrePDVDataTable(ds.Tables["CierrePDV"]));
                 }
@@ -1576,6 +1573,9 @@ namespace SAP {
                 }
                 if ((ds.Tables["BuzonTurno1"] != null)) {
                     base.Tables.Add(new BuzonTurno1DataTable(ds.Tables["BuzonTurno1"]));
+                }
+                if ((ds.Tables["CierreTurnoV1"] != null)) {
+                    base.Tables.Add(new CierreTurnoV1DataTable(ds.Tables["CierreTurnoV1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1904,12 +1904,6 @@ namespace SAP {
                     this.tableCierresParciales.InitVars();
                 }
             }
-            this.tableCierreTurnoV1 = ((CierreTurnoV1DataTable)(base.Tables["CierreTurnoV1"]));
-            if ((initTable == true)) {
-                if ((this.tableCierreTurnoV1 != null)) {
-                    this.tableCierreTurnoV1.InitVars();
-                }
-            }
             this.tableCierrePDV = ((CierrePDVDataTable)(base.Tables["CierrePDV"]));
             if ((initTable == true)) {
                 if ((this.tableCierrePDV != null)) {
@@ -2090,6 +2084,12 @@ namespace SAP {
                     this.tableBuzonTurno1.InitVars();
                 }
             }
+            this.tableCierreTurnoV1 = ((CierreTurnoV1DataTable)(base.Tables["CierreTurnoV1"]));
+            if ((initTable == true)) {
+                if ((this.tableCierreTurnoV1 != null)) {
+                    this.tableCierreTurnoV1.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2198,8 +2198,6 @@ namespace SAP {
             base.Tables.Add(this.tableVehiculoFlujo2);
             this.tableCierresParciales = new CierresParcialesDataTable();
             base.Tables.Add(this.tableCierresParciales);
-            this.tableCierreTurnoV1 = new CierreTurnoV1DataTable();
-            base.Tables.Add(this.tableCierreTurnoV1);
             this.tableCierrePDV = new CierrePDVDataTable();
             base.Tables.Add(this.tableCierrePDV);
             this.tableCierreEfectivo = new CierreEfectivoDataTable();
@@ -2260,6 +2258,8 @@ namespace SAP {
             base.Tables.Add(this.tableCierreBiopago1);
             this.tableBuzonTurno1 = new BuzonTurno1DataTable();
             base.Tables.Add(this.tableBuzonTurno1);
+            this.tableCierreTurnoV1 = new CierreTurnoV1DataTable();
+            base.Tables.Add(this.tableCierreTurnoV1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2558,12 +2558,6 @@ namespace SAP {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeCierreTurnoV1() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeCierrePDV() {
             return false;
         }
@@ -2739,6 +2733,12 @@ namespace SAP {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeBuzonTurno1() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeCierreTurnoV1() {
             return false;
         }
         
@@ -2945,9 +2945,6 @@ namespace SAP {
         public delegate void CierresParcialesRowChangeEventHandler(object sender, CierresParcialesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void CierreTurnoV1RowChangeEventHandler(object sender, CierreTurnoV1RowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void CierrePDVRowChangeEventHandler(object sender, CierrePDVRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3036,6 +3033,9 @@ namespace SAP {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void BuzonTurno1RowChangeEventHandler(object sender, BuzonTurno1RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void CierreTurnoV1RowChangeEventHandler(object sender, CierreTurnoV1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -18697,859 +18697,6 @@ namespace SAP {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CierreTurnoV1DataTable : global::System.Data.TypedTableBase<CierreTurnoV1Row> {
-            
-            private global::System.Data.DataColumn columnID_Cierre;
-            
-            private global::System.Data.DataColumn columnBilleteS05;
-            
-            private global::System.Data.DataColumn columnBilleteS1;
-            
-            private global::System.Data.DataColumn columnBilleteS2;
-            
-            private global::System.Data.DataColumn columnBilleteS5;
-            
-            private global::System.Data.DataColumn columnBilleteS10;
-            
-            private global::System.Data.DataColumn columnBilleteS20;
-            
-            private global::System.Data.DataColumn columnBilleteS50;
-            
-            private global::System.Data.DataColumn columnBilleteS100;
-            
-            private global::System.Data.DataColumn columnBilleteS200;
-            
-            private global::System.Data.DataColumn columnBilleteS500;
-            
-            private global::System.Data.DataColumn columnTickets;
-            
-            private global::System.Data.DataColumn columnEfectivo;
-            
-            private global::System.Data.DataColumn columnPDV;
-            
-            private global::System.Data.DataColumn columnIncidencia;
-            
-            private global::System.Data.DataColumn columnFecha;
-            
-            private global::System.Data.DataColumn columnTesoreroC;
-            
-            private global::System.Data.DataColumn columnTurno;
-            
-            private global::System.Data.DataColumn columnNombre;
-            
-            private global::System.Data.DataColumn columnApellido;
-            
-            private global::System.Data.DataColumn columnBilleteS10000;
-            
-            private global::System.Data.DataColumn columnBilleteS20000;
-            
-            private global::System.Data.DataColumn columnBilleteS50000;
-            
-            private global::System.Data.DataColumn columnTransferencia;
-            
-            private global::System.Data.DataColumn columnBuzon;
-            
-            private global::System.Data.DataColumn columnBilleteS200000;
-            
-            private global::System.Data.DataColumn columnBilleteS500000;
-            
-            private global::System.Data.DataColumn columnBilleteS1000000;
-            
-            private global::System.Data.DataColumn columnBilleteBD1;
-            
-            private global::System.Data.DataColumn columnBilleteBD5;
-            
-            private global::System.Data.DataColumn columnBilleteBD10;
-            
-            private global::System.Data.DataColumn columnBilleteBD20;
-            
-            private global::System.Data.DataColumn columnBilleteBD50;
-            
-            private global::System.Data.DataColumn columnBilleteBD100;
-            
-            private global::System.Data.DataColumn columnBilleteBD05;
-            
-            private global::System.Data.DataColumn columnBilleteBD025;
-            
-            private global::System.Data.DataColumn columnBilleteBD200;
-            
-            private global::System.Data.DataColumn columnBilleteBD500;
-            
-            private global::System.Data.DataColumn columnBilleteS10000001;
-            
-            private global::System.Data.DataColumn columnBIO;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1DataTable() {
-                this.TableName = "CierreTurnoV1";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal CierreTurnoV1DataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected CierreTurnoV1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ID_CierreColumn {
-                get {
-                    return this.columnID_Cierre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS05Column {
-                get {
-                    return this.columnBilleteS05;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS1Column {
-                get {
-                    return this.columnBilleteS1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS2Column {
-                get {
-                    return this.columnBilleteS2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS5Column {
-                get {
-                    return this.columnBilleteS5;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS10Column {
-                get {
-                    return this.columnBilleteS10;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS20Column {
-                get {
-                    return this.columnBilleteS20;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS50Column {
-                get {
-                    return this.columnBilleteS50;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS100Column {
-                get {
-                    return this.columnBilleteS100;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS200Column {
-                get {
-                    return this.columnBilleteS200;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS500Column {
-                get {
-                    return this.columnBilleteS500;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TicketsColumn {
-                get {
-                    return this.columnTickets;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EfectivoColumn {
-                get {
-                    return this.columnEfectivo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PDVColumn {
-                get {
-                    return this.columnPDV;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IncidenciaColumn {
-                get {
-                    return this.columnIncidencia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
-                get {
-                    return this.columnFecha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TesoreroCColumn {
-                get {
-                    return this.columnTesoreroC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TurnoColumn {
-                get {
-                    return this.columnTurno;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NombreColumn {
-                get {
-                    return this.columnNombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ApellidoColumn {
-                get {
-                    return this.columnApellido;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS10000Column {
-                get {
-                    return this.columnBilleteS10000;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS20000Column {
-                get {
-                    return this.columnBilleteS20000;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS50000Column {
-                get {
-                    return this.columnBilleteS50000;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TransferenciaColumn {
-                get {
-                    return this.columnTransferencia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BuzonColumn {
-                get {
-                    return this.columnBuzon;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS200000Column {
-                get {
-                    return this.columnBilleteS200000;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS500000Column {
-                get {
-                    return this.columnBilleteS500000;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS1000000Column {
-                get {
-                    return this.columnBilleteS1000000;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD1Column {
-                get {
-                    return this.columnBilleteBD1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD5Column {
-                get {
-                    return this.columnBilleteBD5;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD10Column {
-                get {
-                    return this.columnBilleteBD10;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD20Column {
-                get {
-                    return this.columnBilleteBD20;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD50Column {
-                get {
-                    return this.columnBilleteBD50;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD100Column {
-                get {
-                    return this.columnBilleteBD100;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD05Column {
-                get {
-                    return this.columnBilleteBD05;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD025Column {
-                get {
-                    return this.columnBilleteBD025;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD200Column {
-                get {
-                    return this.columnBilleteBD200;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteBD500Column {
-                get {
-                    return this.columnBilleteBD500;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BilleteS10000001Column {
-                get {
-                    return this.columnBilleteS10000001;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BIOColumn {
-                get {
-                    return this.columnBIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1Row this[int index] {
-                get {
-                    return ((CierreTurnoV1Row)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddCierreTurnoV1Row(CierreTurnoV1Row row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1Row AddCierreTurnoV1Row(
-                        int BilleteS05, 
-                        int BilleteS1, 
-                        int BilleteS2, 
-                        int BilleteS5, 
-                        int BilleteS10, 
-                        int BilleteS20, 
-                        int BilleteS50, 
-                        int BilleteS100, 
-                        int BilleteS200, 
-                        int BilleteS500, 
-                        double Tickets, 
-                        double Efectivo, 
-                        double PDV, 
-                        double Incidencia, 
-                        System.DateTime Fecha, 
-                        int TesoreroC, 
-                        int Turno, 
-                        string Nombre, 
-                        string Apellido, 
-                        int BilleteS10000, 
-                        int BilleteS20000, 
-                        int BilleteS50000, 
-                        double Transferencia, 
-                        bool Buzon, 
-                        int BilleteS200000, 
-                        int BilleteS500000, 
-                        int BilleteS1000000, 
-                        int BilleteBD1, 
-                        int BilleteBD5, 
-                        int BilleteBD10, 
-                        int BilleteBD20, 
-                        int BilleteBD50, 
-                        int BilleteBD100, 
-                        int BilleteBD05, 
-                        int BilleteBD025, 
-                        int BilleteBD200, 
-                        int BilleteBD500, 
-                        long BilleteS10000001, 
-                        double BIO) {
-                CierreTurnoV1Row rowCierreTurnoV1Row = ((CierreTurnoV1Row)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        BilleteS05,
-                        BilleteS1,
-                        BilleteS2,
-                        BilleteS5,
-                        BilleteS10,
-                        BilleteS20,
-                        BilleteS50,
-                        BilleteS100,
-                        BilleteS200,
-                        BilleteS500,
-                        Tickets,
-                        Efectivo,
-                        PDV,
-                        Incidencia,
-                        Fecha,
-                        TesoreroC,
-                        Turno,
-                        Nombre,
-                        Apellido,
-                        BilleteS10000,
-                        BilleteS20000,
-                        BilleteS50000,
-                        Transferencia,
-                        Buzon,
-                        BilleteS200000,
-                        BilleteS500000,
-                        BilleteS1000000,
-                        BilleteBD1,
-                        BilleteBD5,
-                        BilleteBD10,
-                        BilleteBD20,
-                        BilleteBD50,
-                        BilleteBD100,
-                        BilleteBD05,
-                        BilleteBD025,
-                        BilleteBD200,
-                        BilleteBD500,
-                        BilleteS10000001,
-                        BIO};
-                rowCierreTurnoV1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCierreTurnoV1Row);
-                return rowCierreTurnoV1Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1Row FindByID_Cierre(int ID_Cierre) {
-                return ((CierreTurnoV1Row)(this.Rows.Find(new object[] {
-                            ID_Cierre})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                CierreTurnoV1DataTable cln = ((CierreTurnoV1DataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new CierreTurnoV1DataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnID_Cierre = base.Columns["ID_Cierre"];
-                this.columnBilleteS05 = base.Columns["BilleteS05"];
-                this.columnBilleteS1 = base.Columns["BilleteS1"];
-                this.columnBilleteS2 = base.Columns["BilleteS2"];
-                this.columnBilleteS5 = base.Columns["BilleteS5"];
-                this.columnBilleteS10 = base.Columns["BilleteS10"];
-                this.columnBilleteS20 = base.Columns["BilleteS20"];
-                this.columnBilleteS50 = base.Columns["BilleteS50"];
-                this.columnBilleteS100 = base.Columns["BilleteS100"];
-                this.columnBilleteS200 = base.Columns["BilleteS200"];
-                this.columnBilleteS500 = base.Columns["BilleteS500"];
-                this.columnTickets = base.Columns["Tickets"];
-                this.columnEfectivo = base.Columns["Efectivo"];
-                this.columnPDV = base.Columns["PDV"];
-                this.columnIncidencia = base.Columns["Incidencia"];
-                this.columnFecha = base.Columns["Fecha"];
-                this.columnTesoreroC = base.Columns["TesoreroC"];
-                this.columnTurno = base.Columns["Turno"];
-                this.columnNombre = base.Columns["Nombre"];
-                this.columnApellido = base.Columns["Apellido"];
-                this.columnBilleteS10000 = base.Columns["BilleteS10000"];
-                this.columnBilleteS20000 = base.Columns["BilleteS20000"];
-                this.columnBilleteS50000 = base.Columns["BilleteS50000"];
-                this.columnTransferencia = base.Columns["Transferencia"];
-                this.columnBuzon = base.Columns["Buzon"];
-                this.columnBilleteS200000 = base.Columns["BilleteS200000"];
-                this.columnBilleteS500000 = base.Columns["BilleteS500000"];
-                this.columnBilleteS1000000 = base.Columns["BilleteS1000000"];
-                this.columnBilleteBD1 = base.Columns["BilleteBD1"];
-                this.columnBilleteBD5 = base.Columns["BilleteBD5"];
-                this.columnBilleteBD10 = base.Columns["BilleteBD10"];
-                this.columnBilleteBD20 = base.Columns["BilleteBD20"];
-                this.columnBilleteBD50 = base.Columns["BilleteBD50"];
-                this.columnBilleteBD100 = base.Columns["BilleteBD100"];
-                this.columnBilleteBD05 = base.Columns["BilleteBD05"];
-                this.columnBilleteBD025 = base.Columns["BilleteBD025"];
-                this.columnBilleteBD200 = base.Columns["BilleteBD200"];
-                this.columnBilleteBD500 = base.Columns["BilleteBD500"];
-                this.columnBilleteS10000001 = base.Columns["BilleteS10000001"];
-                this.columnBIO = base.Columns["BIO"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnID_Cierre = new global::System.Data.DataColumn("ID_Cierre", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_Cierre);
-                this.columnBilleteS05 = new global::System.Data.DataColumn("BilleteS05", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS05);
-                this.columnBilleteS1 = new global::System.Data.DataColumn("BilleteS1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS1);
-                this.columnBilleteS2 = new global::System.Data.DataColumn("BilleteS2", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS2);
-                this.columnBilleteS5 = new global::System.Data.DataColumn("BilleteS5", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS5);
-                this.columnBilleteS10 = new global::System.Data.DataColumn("BilleteS10", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS10);
-                this.columnBilleteS20 = new global::System.Data.DataColumn("BilleteS20", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS20);
-                this.columnBilleteS50 = new global::System.Data.DataColumn("BilleteS50", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS50);
-                this.columnBilleteS100 = new global::System.Data.DataColumn("BilleteS100", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS100);
-                this.columnBilleteS200 = new global::System.Data.DataColumn("BilleteS200", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS200);
-                this.columnBilleteS500 = new global::System.Data.DataColumn("BilleteS500", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS500);
-                this.columnTickets = new global::System.Data.DataColumn("Tickets", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTickets);
-                this.columnEfectivo = new global::System.Data.DataColumn("Efectivo", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEfectivo);
-                this.columnPDV = new global::System.Data.DataColumn("PDV", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPDV);
-                this.columnIncidencia = new global::System.Data.DataColumn("Incidencia", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIncidencia);
-                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha);
-                this.columnTesoreroC = new global::System.Data.DataColumn("TesoreroC", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTesoreroC);
-                this.columnTurno = new global::System.Data.DataColumn("Turno", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTurno);
-                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombre);
-                this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnApellido);
-                this.columnBilleteS10000 = new global::System.Data.DataColumn("BilleteS10000", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS10000);
-                this.columnBilleteS20000 = new global::System.Data.DataColumn("BilleteS20000", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS20000);
-                this.columnBilleteS50000 = new global::System.Data.DataColumn("BilleteS50000", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS50000);
-                this.columnTransferencia = new global::System.Data.DataColumn("Transferencia", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransferencia);
-                this.columnBuzon = new global::System.Data.DataColumn("Buzon", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuzon);
-                this.columnBilleteS200000 = new global::System.Data.DataColumn("BilleteS200000", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS200000);
-                this.columnBilleteS500000 = new global::System.Data.DataColumn("BilleteS500000", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS500000);
-                this.columnBilleteS1000000 = new global::System.Data.DataColumn("BilleteS1000000", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS1000000);
-                this.columnBilleteBD1 = new global::System.Data.DataColumn("BilleteBD1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD1);
-                this.columnBilleteBD5 = new global::System.Data.DataColumn("BilleteBD5", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD5);
-                this.columnBilleteBD10 = new global::System.Data.DataColumn("BilleteBD10", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD10);
-                this.columnBilleteBD20 = new global::System.Data.DataColumn("BilleteBD20", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD20);
-                this.columnBilleteBD50 = new global::System.Data.DataColumn("BilleteBD50", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD50);
-                this.columnBilleteBD100 = new global::System.Data.DataColumn("BilleteBD100", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD100);
-                this.columnBilleteBD05 = new global::System.Data.DataColumn("BilleteBD05", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD05);
-                this.columnBilleteBD025 = new global::System.Data.DataColumn("BilleteBD025", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD025);
-                this.columnBilleteBD200 = new global::System.Data.DataColumn("BilleteBD200", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD200);
-                this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteBD500);
-                this.columnBilleteS10000001 = new global::System.Data.DataColumn("BilleteS10000001", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBilleteS10000001);
-                this.columnBIO = new global::System.Data.DataColumn("BIO", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBIO);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_Cierre}, true));
-                this.columnID_Cierre.AutoIncrement = true;
-                this.columnID_Cierre.AutoIncrementSeed = -1;
-                this.columnID_Cierre.AutoIncrementStep = -1;
-                this.columnID_Cierre.AllowDBNull = false;
-                this.columnID_Cierre.ReadOnly = true;
-                this.columnID_Cierre.Unique = true;
-                this.columnFecha.AllowDBNull = false;
-                this.columnNombre.AllowDBNull = false;
-                this.columnNombre.MaxLength = 50;
-                this.columnApellido.AllowDBNull = false;
-                this.columnApellido.MaxLength = 50;
-                this.columnBilleteS10000001.Caption = "BilleteS1000000";
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1Row NewCierreTurnoV1Row() {
-                return ((CierreTurnoV1Row)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CierreTurnoV1Row(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(CierreTurnoV1Row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.CierreTurnoV1RowChanged != null)) {
-                    this.CierreTurnoV1RowChanged(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.CierreTurnoV1RowChanging != null)) {
-                    this.CierreTurnoV1RowChanging(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.CierreTurnoV1RowDeleted != null)) {
-                    this.CierreTurnoV1RowDeleted(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.CierreTurnoV1RowDeleting != null)) {
-                    this.CierreTurnoV1RowDeleting(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveCierreTurnoV1Row(CierreTurnoV1Row row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SAPDataSet2 ds = new SAPDataSet2();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CierreTurnoV1DataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class CierrePDVDataTable : global::System.Data.TypedTableBase<CierrePDVRow> {
             
             private global::System.Data.DataColumn columnNombre;
@@ -29477,6 +28624,843 @@ namespace SAP {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CierreTurnoV1DataTable : global::System.Data.TypedTableBase<CierreTurnoV1Row> {
+            
+            private global::System.Data.DataColumn columnID_Cierre;
+            
+            private global::System.Data.DataColumn columnBilleteS05;
+            
+            private global::System.Data.DataColumn columnBilleteS1;
+            
+            private global::System.Data.DataColumn columnBilleteS2;
+            
+            private global::System.Data.DataColumn columnBilleteS5;
+            
+            private global::System.Data.DataColumn columnBilleteS10;
+            
+            private global::System.Data.DataColumn columnBilleteS20;
+            
+            private global::System.Data.DataColumn columnBilleteS50;
+            
+            private global::System.Data.DataColumn columnBilleteS100;
+            
+            private global::System.Data.DataColumn columnBilleteS200;
+            
+            private global::System.Data.DataColumn columnBilleteS500;
+            
+            private global::System.Data.DataColumn columnTickets;
+            
+            private global::System.Data.DataColumn columnEfectivo;
+            
+            private global::System.Data.DataColumn columnPDV;
+            
+            private global::System.Data.DataColumn columnIncidencia;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnTesoreroC;
+            
+            private global::System.Data.DataColumn columnTurno;
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnApellido;
+            
+            private global::System.Data.DataColumn columnBilleteS10000;
+            
+            private global::System.Data.DataColumn columnBilleteS20000;
+            
+            private global::System.Data.DataColumn columnBilleteS50000;
+            
+            private global::System.Data.DataColumn columnBilleteS200000;
+            
+            private global::System.Data.DataColumn columnBilleteS500000;
+            
+            private global::System.Data.DataColumn columnTransferencia;
+            
+            private global::System.Data.DataColumn columnBuzon;
+            
+            private global::System.Data.DataColumn columnBilleteBD1;
+            
+            private global::System.Data.DataColumn columnBilleteBD5;
+            
+            private global::System.Data.DataColumn columnBilleteBD10;
+            
+            private global::System.Data.DataColumn columnBilleteBD20;
+            
+            private global::System.Data.DataColumn columnBilleteBD50;
+            
+            private global::System.Data.DataColumn columnBilleteBD100;
+            
+            private global::System.Data.DataColumn columnBilleteBD05;
+            
+            private global::System.Data.DataColumn columnBilleteBD025;
+            
+            private global::System.Data.DataColumn columnBilleteBD200;
+            
+            private global::System.Data.DataColumn columnBilleteBD500;
+            
+            private global::System.Data.DataColumn columnBilleteS1000000;
+            
+            private global::System.Data.DataColumn columnBIO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1DataTable() {
+                this.TableName = "CierreTurnoV1";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreTurnoV1DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected CierreTurnoV1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ID_CierreColumn {
+                get {
+                    return this.columnID_Cierre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS05Column {
+                get {
+                    return this.columnBilleteS05;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS1Column {
+                get {
+                    return this.columnBilleteS1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS2Column {
+                get {
+                    return this.columnBilleteS2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS5Column {
+                get {
+                    return this.columnBilleteS5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS10Column {
+                get {
+                    return this.columnBilleteS10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS20Column {
+                get {
+                    return this.columnBilleteS20;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS50Column {
+                get {
+                    return this.columnBilleteS50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS100Column {
+                get {
+                    return this.columnBilleteS100;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS200Column {
+                get {
+                    return this.columnBilleteS200;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS500Column {
+                get {
+                    return this.columnBilleteS500;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TicketsColumn {
+                get {
+                    return this.columnTickets;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EfectivoColumn {
+                get {
+                    return this.columnEfectivo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PDVColumn {
+                get {
+                    return this.columnPDV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IncidenciaColumn {
+                get {
+                    return this.columnIncidencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TesoreroCColumn {
+                get {
+                    return this.columnTesoreroC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TurnoColumn {
+                get {
+                    return this.columnTurno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ApellidoColumn {
+                get {
+                    return this.columnApellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS10000Column {
+                get {
+                    return this.columnBilleteS10000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS20000Column {
+                get {
+                    return this.columnBilleteS20000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS50000Column {
+                get {
+                    return this.columnBilleteS50000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS200000Column {
+                get {
+                    return this.columnBilleteS200000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS500000Column {
+                get {
+                    return this.columnBilleteS500000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TransferenciaColumn {
+                get {
+                    return this.columnTransferencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BuzonColumn {
+                get {
+                    return this.columnBuzon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD1Column {
+                get {
+                    return this.columnBilleteBD1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD5Column {
+                get {
+                    return this.columnBilleteBD5;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD10Column {
+                get {
+                    return this.columnBilleteBD10;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD20Column {
+                get {
+                    return this.columnBilleteBD20;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD50Column {
+                get {
+                    return this.columnBilleteBD50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD100Column {
+                get {
+                    return this.columnBilleteBD100;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD05Column {
+                get {
+                    return this.columnBilleteBD05;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD025Column {
+                get {
+                    return this.columnBilleteBD025;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD200Column {
+                get {
+                    return this.columnBilleteBD200;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteBD500Column {
+                get {
+                    return this.columnBilleteBD500;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BilleteS1000000Column {
+                get {
+                    return this.columnBilleteS1000000;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BIOColumn {
+                get {
+                    return this.columnBIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1Row this[int index] {
+                get {
+                    return ((CierreTurnoV1Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event CierreTurnoV1RowChangeEventHandler CierreTurnoV1RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddCierreTurnoV1Row(CierreTurnoV1Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1Row AddCierreTurnoV1Row(
+                        int BilleteS05, 
+                        int BilleteS1, 
+                        int BilleteS2, 
+                        int BilleteS5, 
+                        int BilleteS10, 
+                        int BilleteS20, 
+                        int BilleteS50, 
+                        int BilleteS100, 
+                        int BilleteS200, 
+                        int BilleteS500, 
+                        double Tickets, 
+                        double Efectivo, 
+                        double PDV, 
+                        double Incidencia, 
+                        System.DateTime Fecha, 
+                        int TesoreroC, 
+                        int Turno, 
+                        string Nombre, 
+                        string Apellido, 
+                        int BilleteS10000, 
+                        int BilleteS20000, 
+                        int BilleteS50000, 
+                        int BilleteS200000, 
+                        int BilleteS500000, 
+                        double Transferencia, 
+                        bool Buzon, 
+                        int BilleteBD1, 
+                        int BilleteBD5, 
+                        int BilleteBD10, 
+                        int BilleteBD20, 
+                        int BilleteBD50, 
+                        int BilleteBD100, 
+                        int BilleteBD05, 
+                        int BilleteBD025, 
+                        int BilleteBD200, 
+                        int BilleteBD500, 
+                        long BilleteS1000000, 
+                        double BIO) {
+                CierreTurnoV1Row rowCierreTurnoV1Row = ((CierreTurnoV1Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        BilleteS05,
+                        BilleteS1,
+                        BilleteS2,
+                        BilleteS5,
+                        BilleteS10,
+                        BilleteS20,
+                        BilleteS50,
+                        BilleteS100,
+                        BilleteS200,
+                        BilleteS500,
+                        Tickets,
+                        Efectivo,
+                        PDV,
+                        Incidencia,
+                        Fecha,
+                        TesoreroC,
+                        Turno,
+                        Nombre,
+                        Apellido,
+                        BilleteS10000,
+                        BilleteS20000,
+                        BilleteS50000,
+                        BilleteS200000,
+                        BilleteS500000,
+                        Transferencia,
+                        Buzon,
+                        BilleteBD1,
+                        BilleteBD5,
+                        BilleteBD10,
+                        BilleteBD20,
+                        BilleteBD50,
+                        BilleteBD100,
+                        BilleteBD05,
+                        BilleteBD025,
+                        BilleteBD200,
+                        BilleteBD500,
+                        BilleteS1000000,
+                        BIO};
+                rowCierreTurnoV1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCierreTurnoV1Row);
+                return rowCierreTurnoV1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1Row FindByID_Cierre(int ID_Cierre) {
+                return ((CierreTurnoV1Row)(this.Rows.Find(new object[] {
+                            ID_Cierre})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CierreTurnoV1DataTable cln = ((CierreTurnoV1DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CierreTurnoV1DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Cierre = base.Columns["ID_Cierre"];
+                this.columnBilleteS05 = base.Columns["BilleteS05"];
+                this.columnBilleteS1 = base.Columns["BilleteS1"];
+                this.columnBilleteS2 = base.Columns["BilleteS2"];
+                this.columnBilleteS5 = base.Columns["BilleteS5"];
+                this.columnBilleteS10 = base.Columns["BilleteS10"];
+                this.columnBilleteS20 = base.Columns["BilleteS20"];
+                this.columnBilleteS50 = base.Columns["BilleteS50"];
+                this.columnBilleteS100 = base.Columns["BilleteS100"];
+                this.columnBilleteS200 = base.Columns["BilleteS200"];
+                this.columnBilleteS500 = base.Columns["BilleteS500"];
+                this.columnTickets = base.Columns["Tickets"];
+                this.columnEfectivo = base.Columns["Efectivo"];
+                this.columnPDV = base.Columns["PDV"];
+                this.columnIncidencia = base.Columns["Incidencia"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnTesoreroC = base.Columns["TesoreroC"];
+                this.columnTurno = base.Columns["Turno"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnApellido = base.Columns["Apellido"];
+                this.columnBilleteS10000 = base.Columns["BilleteS10000"];
+                this.columnBilleteS20000 = base.Columns["BilleteS20000"];
+                this.columnBilleteS50000 = base.Columns["BilleteS50000"];
+                this.columnBilleteS200000 = base.Columns["BilleteS200000"];
+                this.columnBilleteS500000 = base.Columns["BilleteS500000"];
+                this.columnTransferencia = base.Columns["Transferencia"];
+                this.columnBuzon = base.Columns["Buzon"];
+                this.columnBilleteBD1 = base.Columns["BilleteBD1"];
+                this.columnBilleteBD5 = base.Columns["BilleteBD5"];
+                this.columnBilleteBD10 = base.Columns["BilleteBD10"];
+                this.columnBilleteBD20 = base.Columns["BilleteBD20"];
+                this.columnBilleteBD50 = base.Columns["BilleteBD50"];
+                this.columnBilleteBD100 = base.Columns["BilleteBD100"];
+                this.columnBilleteBD05 = base.Columns["BilleteBD05"];
+                this.columnBilleteBD025 = base.Columns["BilleteBD025"];
+                this.columnBilleteBD200 = base.Columns["BilleteBD200"];
+                this.columnBilleteBD500 = base.Columns["BilleteBD500"];
+                this.columnBilleteS1000000 = base.Columns["BilleteS1000000"];
+                this.columnBIO = base.Columns["BIO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnID_Cierre = new global::System.Data.DataColumn("ID_Cierre", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Cierre);
+                this.columnBilleteS05 = new global::System.Data.DataColumn("BilleteS05", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS05);
+                this.columnBilleteS1 = new global::System.Data.DataColumn("BilleteS1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS1);
+                this.columnBilleteS2 = new global::System.Data.DataColumn("BilleteS2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS2);
+                this.columnBilleteS5 = new global::System.Data.DataColumn("BilleteS5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS5);
+                this.columnBilleteS10 = new global::System.Data.DataColumn("BilleteS10", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS10);
+                this.columnBilleteS20 = new global::System.Data.DataColumn("BilleteS20", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS20);
+                this.columnBilleteS50 = new global::System.Data.DataColumn("BilleteS50", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS50);
+                this.columnBilleteS100 = new global::System.Data.DataColumn("BilleteS100", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS100);
+                this.columnBilleteS200 = new global::System.Data.DataColumn("BilleteS200", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS200);
+                this.columnBilleteS500 = new global::System.Data.DataColumn("BilleteS500", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS500);
+                this.columnTickets = new global::System.Data.DataColumn("Tickets", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTickets);
+                this.columnEfectivo = new global::System.Data.DataColumn("Efectivo", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEfectivo);
+                this.columnPDV = new global::System.Data.DataColumn("PDV", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPDV);
+                this.columnIncidencia = new global::System.Data.DataColumn("Incidencia", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIncidencia);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnTesoreroC = new global::System.Data.DataColumn("TesoreroC", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTesoreroC);
+                this.columnTurno = new global::System.Data.DataColumn("Turno", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTurno);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnApellido = new global::System.Data.DataColumn("Apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApellido);
+                this.columnBilleteS10000 = new global::System.Data.DataColumn("BilleteS10000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS10000);
+                this.columnBilleteS20000 = new global::System.Data.DataColumn("BilleteS20000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS20000);
+                this.columnBilleteS50000 = new global::System.Data.DataColumn("BilleteS50000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS50000);
+                this.columnBilleteS200000 = new global::System.Data.DataColumn("BilleteS200000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS200000);
+                this.columnBilleteS500000 = new global::System.Data.DataColumn("BilleteS500000", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS500000);
+                this.columnTransferencia = new global::System.Data.DataColumn("Transferencia", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransferencia);
+                this.columnBuzon = new global::System.Data.DataColumn("Buzon", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBuzon);
+                this.columnBilleteBD1 = new global::System.Data.DataColumn("BilleteBD1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD1);
+                this.columnBilleteBD5 = new global::System.Data.DataColumn("BilleteBD5", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD5);
+                this.columnBilleteBD10 = new global::System.Data.DataColumn("BilleteBD10", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD10);
+                this.columnBilleteBD20 = new global::System.Data.DataColumn("BilleteBD20", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD20);
+                this.columnBilleteBD50 = new global::System.Data.DataColumn("BilleteBD50", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD50);
+                this.columnBilleteBD100 = new global::System.Data.DataColumn("BilleteBD100", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD100);
+                this.columnBilleteBD05 = new global::System.Data.DataColumn("BilleteBD05", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD05);
+                this.columnBilleteBD025 = new global::System.Data.DataColumn("BilleteBD025", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD025);
+                this.columnBilleteBD200 = new global::System.Data.DataColumn("BilleteBD200", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD200);
+                this.columnBilleteBD500 = new global::System.Data.DataColumn("BilleteBD500", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteBD500);
+                this.columnBilleteS1000000 = new global::System.Data.DataColumn("BilleteS1000000", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBilleteS1000000);
+                this.columnBIO = new global::System.Data.DataColumn("BIO", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBIO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Cierre}, true));
+                this.columnID_Cierre.AutoIncrement = true;
+                this.columnID_Cierre.AutoIncrementSeed = -1;
+                this.columnID_Cierre.AutoIncrementStep = -1;
+                this.columnID_Cierre.AllowDBNull = false;
+                this.columnID_Cierre.ReadOnly = true;
+                this.columnID_Cierre.Unique = true;
+                this.columnFecha.AllowDBNull = false;
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 50;
+                this.columnApellido.AllowDBNull = false;
+                this.columnApellido.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1Row NewCierreTurnoV1Row() {
+                return ((CierreTurnoV1Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CierreTurnoV1Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CierreTurnoV1Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CierreTurnoV1RowChanged != null)) {
+                    this.CierreTurnoV1RowChanged(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CierreTurnoV1RowChanging != null)) {
+                    this.CierreTurnoV1RowChanging(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CierreTurnoV1RowDeleted != null)) {
+                    this.CierreTurnoV1RowDeleted(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CierreTurnoV1RowDeleting != null)) {
+                    this.CierreTurnoV1RowDeleting(this, new CierreTurnoV1RowChangeEvent(((CierreTurnoV1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveCierreTurnoV1Row(CierreTurnoV1Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                SAPDataSet2 ds = new SAPDataSet2();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CierreTurnoV1DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DeclaracionV2Row : global::System.Data.DataRow {
@@ -36809,1073 +36793,6 @@ namespace SAP {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CierreTurnoV1Row : global::System.Data.DataRow {
-            
-            private CierreTurnoV1DataTable tableCierreTurnoV1;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal CierreTurnoV1Row(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableCierreTurnoV1 = ((CierreTurnoV1DataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int ID_Cierre {
-                get {
-                    return ((int)(this[this.tableCierreTurnoV1.ID_CierreColumn]));
-                }
-                set {
-                    this[this.tableCierreTurnoV1.ID_CierreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS05 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS05Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS05\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS05Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS1\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS2 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS2\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS5 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS5Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS5\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS5Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS10 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS10Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS10Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS20 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS20Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS20\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS20Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS50 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS50Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS50\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS50Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS100 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS100Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS100\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS100Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS200 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS200Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS200\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS200Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS500 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS500Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS500\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS500Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Tickets {
-                get {
-                    try {
-                        return ((double)(this[this.tableCierreTurnoV1.TicketsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tickets\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.TicketsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Efectivo {
-                get {
-                    try {
-                        return ((double)(this[this.tableCierreTurnoV1.EfectivoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Efectivo\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.EfectivoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double PDV {
-                get {
-                    try {
-                        return ((double)(this[this.tableCierreTurnoV1.PDVColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PDV\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.PDVColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Incidencia {
-                get {
-                    try {
-                        return ((double)(this[this.tableCierreTurnoV1.IncidenciaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Incidencia\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.IncidenciaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Fecha {
-                get {
-                    return ((global::System.DateTime)(this[this.tableCierreTurnoV1.FechaColumn]));
-                }
-                set {
-                    this[this.tableCierreTurnoV1.FechaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int TesoreroC {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.TesoreroCColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TesoreroC\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.TesoreroCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Turno {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.TurnoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Turno\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.TurnoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nombre {
-                get {
-                    return ((string)(this[this.tableCierreTurnoV1.NombreColumn]));
-                }
-                set {
-                    this[this.tableCierreTurnoV1.NombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Apellido {
-                get {
-                    return ((string)(this[this.tableCierreTurnoV1.ApellidoColumn]));
-                }
-                set {
-                    this[this.tableCierreTurnoV1.ApellidoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS10000 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS10000Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS10000Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS20000 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS20000Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS20000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS20000Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS50000 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS50000Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS50000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS50000Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double Transferencia {
-                get {
-                    try {
-                        return ((double)(this[this.tableCierreTurnoV1.TransferenciaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Transferencia\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.TransferenciaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Buzon {
-                get {
-                    try {
-                        return ((bool)(this[this.tableCierreTurnoV1.BuzonColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Buzon\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BuzonColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS200000 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS200000Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS200000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS200000Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS500000 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS500000Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS500000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS500000Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteS1000000 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteS1000000Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS1000000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS1000000Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD1 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD1\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD5 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD5Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD5\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD5Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD10 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD10Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD10\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD10Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD20 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD20Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD20\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD20Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD50 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD50Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD50\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD50Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD100 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD100Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD100\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD100Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD05 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD05Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD05\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD05Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD025 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD025Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD025\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD025Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD200 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD200Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD200\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD200Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int BilleteBD500 {
-                get {
-                    try {
-                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD500Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD500\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteBD500Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public long BilleteS10000001 {
-                get {
-                    try {
-                        return ((long)(this[this.tableCierreTurnoV1.BilleteS10000001Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000001\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BilleteS10000001Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double BIO {
-                get {
-                    try {
-                        return ((double)(this[this.tableCierreTurnoV1.BIOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BIO\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCierreTurnoV1.BIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS05Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS05Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS05Null() {
-                this[this.tableCierreTurnoV1.BilleteS05Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS1Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS1Null() {
-                this[this.tableCierreTurnoV1.BilleteS1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS2Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS2Null() {
-                this[this.tableCierreTurnoV1.BilleteS2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS5Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS5Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS5Null() {
-                this[this.tableCierreTurnoV1.BilleteS5Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS10Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS10Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS10Null() {
-                this[this.tableCierreTurnoV1.BilleteS10Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS20Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS20Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS20Null() {
-                this[this.tableCierreTurnoV1.BilleteS20Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS50Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS50Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS50Null() {
-                this[this.tableCierreTurnoV1.BilleteS50Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS100Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS100Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS100Null() {
-                this[this.tableCierreTurnoV1.BilleteS100Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS200Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS200Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS200Null() {
-                this[this.tableCierreTurnoV1.BilleteS200Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS500Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS500Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS500Null() {
-                this[this.tableCierreTurnoV1.BilleteS500Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTicketsNull() {
-                return this.IsNull(this.tableCierreTurnoV1.TicketsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTicketsNull() {
-                this[this.tableCierreTurnoV1.TicketsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsEfectivoNull() {
-                return this.IsNull(this.tableCierreTurnoV1.EfectivoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetEfectivoNull() {
-                this[this.tableCierreTurnoV1.EfectivoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPDVNull() {
-                return this.IsNull(this.tableCierreTurnoV1.PDVColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPDVNull() {
-                this[this.tableCierreTurnoV1.PDVColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsIncidenciaNull() {
-                return this.IsNull(this.tableCierreTurnoV1.IncidenciaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetIncidenciaNull() {
-                this[this.tableCierreTurnoV1.IncidenciaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTesoreroCNull() {
-                return this.IsNull(this.tableCierreTurnoV1.TesoreroCColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTesoreroCNull() {
-                this[this.tableCierreTurnoV1.TesoreroCColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTurnoNull() {
-                return this.IsNull(this.tableCierreTurnoV1.TurnoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTurnoNull() {
-                this[this.tableCierreTurnoV1.TurnoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS10000Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS10000Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS10000Null() {
-                this[this.tableCierreTurnoV1.BilleteS10000Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS20000Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS20000Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS20000Null() {
-                this[this.tableCierreTurnoV1.BilleteS20000Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS50000Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS50000Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS50000Null() {
-                this[this.tableCierreTurnoV1.BilleteS50000Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTransferenciaNull() {
-                return this.IsNull(this.tableCierreTurnoV1.TransferenciaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTransferenciaNull() {
-                this[this.tableCierreTurnoV1.TransferenciaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBuzonNull() {
-                return this.IsNull(this.tableCierreTurnoV1.BuzonColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBuzonNull() {
-                this[this.tableCierreTurnoV1.BuzonColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS200000Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS200000Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS200000Null() {
-                this[this.tableCierreTurnoV1.BilleteS200000Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS500000Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS500000Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS500000Null() {
-                this[this.tableCierreTurnoV1.BilleteS500000Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS1000000Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS1000000Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS1000000Null() {
-                this[this.tableCierreTurnoV1.BilleteS1000000Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD1Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD1Null() {
-                this[this.tableCierreTurnoV1.BilleteBD1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD5Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD5Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD5Null() {
-                this[this.tableCierreTurnoV1.BilleteBD5Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD10Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD10Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD10Null() {
-                this[this.tableCierreTurnoV1.BilleteBD10Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD20Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD20Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD20Null() {
-                this[this.tableCierreTurnoV1.BilleteBD20Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD50Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD50Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD50Null() {
-                this[this.tableCierreTurnoV1.BilleteBD50Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD100Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD100Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD100Null() {
-                this[this.tableCierreTurnoV1.BilleteBD100Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD05Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD05Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD05Null() {
-                this[this.tableCierreTurnoV1.BilleteBD05Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD025Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD025Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD025Null() {
-                this[this.tableCierreTurnoV1.BilleteBD025Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD200Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD200Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD200Null() {
-                this[this.tableCierreTurnoV1.BilleteBD200Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteBD500Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteBD500Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteBD500Null() {
-                this[this.tableCierreTurnoV1.BilleteBD500Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBilleteS10000001Null() {
-                return this.IsNull(this.tableCierreTurnoV1.BilleteS10000001Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBilleteS10000001Null() {
-                this[this.tableCierreTurnoV1.BilleteS10000001Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBIONull() {
-                return this.IsNull(this.tableCierreTurnoV1.BIOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBIONull() {
-                this[this.tableCierreTurnoV1.BIOColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class CierrePDVRow : global::System.Data.DataRow {
             
             private CierrePDVDataTable tableCierrePDV;
@@ -42882,6 +41799,1045 @@ namespace SAP {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CierreTurnoV1Row : global::System.Data.DataRow {
+            
+            private CierreTurnoV1DataTable tableCierreTurnoV1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal CierreTurnoV1Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCierreTurnoV1 = ((CierreTurnoV1DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ID_Cierre {
+                get {
+                    return ((int)(this[this.tableCierreTurnoV1.ID_CierreColumn]));
+                }
+                set {
+                    this[this.tableCierreTurnoV1.ID_CierreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS05 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS05Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS05\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS1\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS2 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS2\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS5\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS10 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS20 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS20Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS20\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS20Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS50 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS50Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS50\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS50Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS100 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS100Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS100\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS100Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS200 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS200Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS200\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS200Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS500 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS500Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS500\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS500Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Tickets {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.TicketsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tickets\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.TicketsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Efectivo {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.EfectivoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Efectivo\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.EfectivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double PDV {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.PDVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PDV\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.PDVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Incidencia {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.IncidenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Incidencia\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.IncidenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Fecha {
+                get {
+                    return ((global::System.DateTime)(this[this.tableCierreTurnoV1.FechaColumn]));
+                }
+                set {
+                    this[this.tableCierreTurnoV1.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int TesoreroC {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.TesoreroCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TesoreroC\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.TesoreroCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Turno {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.TurnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Turno\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.TurnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nombre {
+                get {
+                    return ((string)(this[this.tableCierreTurnoV1.NombreColumn]));
+                }
+                set {
+                    this[this.tableCierreTurnoV1.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Apellido {
+                get {
+                    return ((string)(this[this.tableCierreTurnoV1.ApellidoColumn]));
+                }
+                set {
+                    this[this.tableCierreTurnoV1.ApellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS10000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS10000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS10000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS10000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS20000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS20000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS20000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS20000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS50000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS50000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS50000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS50000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS200000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS200000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS200000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS200000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteS500000 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteS500000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS500000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS500000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Transferencia {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.TransferenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Transferencia\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.TransferenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Buzon {
+                get {
+                    try {
+                        return ((bool)(this[this.tableCierreTurnoV1.BuzonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Buzon\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BuzonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD1 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD1\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD5 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD5Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD5\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD5Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD10 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD10Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD10\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD10Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD20 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD20Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD20\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD20Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD50 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD50Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD50\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD50Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD100 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD100Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD100\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD100Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD05 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD05Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD05\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD05Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD025 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD025Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD025\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD025Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD200 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD200Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD200\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD200Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BilleteBD500 {
+                get {
+                    try {
+                        return ((int)(this[this.tableCierreTurnoV1.BilleteBD500Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteBD500\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteBD500Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public long BilleteS1000000 {
+                get {
+                    try {
+                        return ((long)(this[this.tableCierreTurnoV1.BilleteS1000000Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BilleteS1000000\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BilleteS1000000Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double BIO {
+                get {
+                    try {
+                        return ((double)(this[this.tableCierreTurnoV1.BIOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'BIO\' de la tabla \'CierreTurnoV1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCierreTurnoV1.BIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS05Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS05Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS05Null() {
+                this[this.tableCierreTurnoV1.BilleteS05Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS1Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS1Null() {
+                this[this.tableCierreTurnoV1.BilleteS1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS2Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS2Null() {
+                this[this.tableCierreTurnoV1.BilleteS2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS5Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS5Null() {
+                this[this.tableCierreTurnoV1.BilleteS5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS10Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS10Null() {
+                this[this.tableCierreTurnoV1.BilleteS10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS20Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS20Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS20Null() {
+                this[this.tableCierreTurnoV1.BilleteS20Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS50Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS50Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS50Null() {
+                this[this.tableCierreTurnoV1.BilleteS50Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS100Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS100Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS100Null() {
+                this[this.tableCierreTurnoV1.BilleteS100Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS200Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS200Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS200Null() {
+                this[this.tableCierreTurnoV1.BilleteS200Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS500Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS500Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS500Null() {
+                this[this.tableCierreTurnoV1.BilleteS500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTicketsNull() {
+                return this.IsNull(this.tableCierreTurnoV1.TicketsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTicketsNull() {
+                this[this.tableCierreTurnoV1.TicketsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEfectivoNull() {
+                return this.IsNull(this.tableCierreTurnoV1.EfectivoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEfectivoNull() {
+                this[this.tableCierreTurnoV1.EfectivoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPDVNull() {
+                return this.IsNull(this.tableCierreTurnoV1.PDVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPDVNull() {
+                this[this.tableCierreTurnoV1.PDVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIncidenciaNull() {
+                return this.IsNull(this.tableCierreTurnoV1.IncidenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIncidenciaNull() {
+                this[this.tableCierreTurnoV1.IncidenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTesoreroCNull() {
+                return this.IsNull(this.tableCierreTurnoV1.TesoreroCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTesoreroCNull() {
+                this[this.tableCierreTurnoV1.TesoreroCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTurnoNull() {
+                return this.IsNull(this.tableCierreTurnoV1.TurnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTurnoNull() {
+                this[this.tableCierreTurnoV1.TurnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS10000Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS10000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS10000Null() {
+                this[this.tableCierreTurnoV1.BilleteS10000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS20000Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS20000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS20000Null() {
+                this[this.tableCierreTurnoV1.BilleteS20000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS50000Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS50000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS50000Null() {
+                this[this.tableCierreTurnoV1.BilleteS50000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS200000Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS200000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS200000Null() {
+                this[this.tableCierreTurnoV1.BilleteS200000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS500000Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS500000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS500000Null() {
+                this[this.tableCierreTurnoV1.BilleteS500000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTransferenciaNull() {
+                return this.IsNull(this.tableCierreTurnoV1.TransferenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTransferenciaNull() {
+                this[this.tableCierreTurnoV1.TransferenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBuzonNull() {
+                return this.IsNull(this.tableCierreTurnoV1.BuzonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBuzonNull() {
+                this[this.tableCierreTurnoV1.BuzonColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD1Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD1Null() {
+                this[this.tableCierreTurnoV1.BilleteBD1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD5Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD5Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD5Null() {
+                this[this.tableCierreTurnoV1.BilleteBD5Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD10Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD10Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD10Null() {
+                this[this.tableCierreTurnoV1.BilleteBD10Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD20Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD20Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD20Null() {
+                this[this.tableCierreTurnoV1.BilleteBD20Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD50Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD50Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD50Null() {
+                this[this.tableCierreTurnoV1.BilleteBD50Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD100Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD100Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD100Null() {
+                this[this.tableCierreTurnoV1.BilleteBD100Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD05Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD05Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD05Null() {
+                this[this.tableCierreTurnoV1.BilleteBD05Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD025Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD025Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD025Null() {
+                this[this.tableCierreTurnoV1.BilleteBD025Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD200Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD200Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD200Null() {
+                this[this.tableCierreTurnoV1.BilleteBD200Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteBD500Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteBD500Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteBD500Null() {
+                this[this.tableCierreTurnoV1.BilleteBD500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBilleteS1000000Null() {
+                return this.IsNull(this.tableCierreTurnoV1.BilleteS1000000Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBilleteS1000000Null() {
+                this[this.tableCierreTurnoV1.BilleteS1000000Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBIONull() {
+                return this.IsNull(this.tableCierreTurnoV1.BIOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBIONull() {
+                this[this.tableCierreTurnoV1.BIOColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -44551,40 +44507,6 @@ namespace SAP {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class CierreTurnoV1RowChangeEvent : global::System.EventArgs {
-            
-            private CierreTurnoV1Row eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1RowChangeEvent(CierreTurnoV1Row row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CierreTurnoV1Row Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class CierrePDVRowChangeEvent : global::System.EventArgs {
             
             private CierrePDVRow eventRow;
@@ -45587,6 +45509,40 @@ namespace SAP {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BuzonTurno1Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class CierreTurnoV1RowChangeEvent : global::System.EventArgs {
+            
+            private CierreTurnoV1Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1RowChangeEvent(CierreTurnoV1Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CierreTurnoV1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -56049,251 +56005,6 @@ WHERE        (ID_Usuario = @usuario) AND (Fecha BETWEEN @fecha AND @fecha2)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CierreTurnoV1TableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CierreTurnoV1TableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "CierreTurnoV1";
-            tableMapping.ColumnMappings.Add("ID_Cierre", "ID_Cierre");
-            tableMapping.ColumnMappings.Add("BilleteS05", "BilleteS05");
-            tableMapping.ColumnMappings.Add("BilleteS1", "BilleteS1");
-            tableMapping.ColumnMappings.Add("BilleteS2", "BilleteS2");
-            tableMapping.ColumnMappings.Add("BilleteS5", "BilleteS5");
-            tableMapping.ColumnMappings.Add("BilleteS10", "BilleteS10");
-            tableMapping.ColumnMappings.Add("BilleteS20", "BilleteS20");
-            tableMapping.ColumnMappings.Add("BilleteS50", "BilleteS50");
-            tableMapping.ColumnMappings.Add("BilleteS100", "BilleteS100");
-            tableMapping.ColumnMappings.Add("BilleteS200", "BilleteS200");
-            tableMapping.ColumnMappings.Add("BilleteS500", "BilleteS500");
-            tableMapping.ColumnMappings.Add("Tickets", "Tickets");
-            tableMapping.ColumnMappings.Add("Efectivo", "Efectivo");
-            tableMapping.ColumnMappings.Add("PDV", "PDV");
-            tableMapping.ColumnMappings.Add("Incidencia", "Incidencia");
-            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
-            tableMapping.ColumnMappings.Add("TesoreroC", "TesoreroC");
-            tableMapping.ColumnMappings.Add("Turno", "Turno");
-            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Apellido", "Apellido");
-            tableMapping.ColumnMappings.Add("BilleteS10000", "BilleteS10000");
-            tableMapping.ColumnMappings.Add("BilleteS20000", "BilleteS20000");
-            tableMapping.ColumnMappings.Add("BilleteS50000", "BilleteS50000");
-            tableMapping.ColumnMappings.Add("Transferencia", "Transferencia");
-            tableMapping.ColumnMappings.Add("Buzon", "Buzon");
-            tableMapping.ColumnMappings.Add("BilleteS200000", "BilleteS200000");
-            tableMapping.ColumnMappings.Add("BilleteS500000", "BilleteS500000");
-            tableMapping.ColumnMappings.Add("BilleteBD1", "BilleteBD1");
-            tableMapping.ColumnMappings.Add("BilleteBD5", "BilleteBD5");
-            tableMapping.ColumnMappings.Add("BilleteBD10", "BilleteBD10");
-            tableMapping.ColumnMappings.Add("BilleteBD20", "BilleteBD20");
-            tableMapping.ColumnMappings.Add("BilleteBD50", "BilleteBD50");
-            tableMapping.ColumnMappings.Add("BilleteBD100", "BilleteBD100");
-            tableMapping.ColumnMappings.Add("BilleteBD05", "BilleteBD05");
-            tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
-            tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
-            tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
-            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS10000001");
-            tableMapping.ColumnMappings.Add("BIO", "BIO");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAP;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT       dbo.CierreBalanceV2.ID_Cierre, dbo.CierreBalanceV2.BilleteS05, dbo.C" +
-                "ierreBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS2, dbo.CierreBalanceV2.Bil" +
-                "leteS5, dbo.CierreBalanceV2.BilleteS10, dbo.CierreBalanceV2.BilleteS20, \r\n      " +
-                "                   dbo.CierreBalanceV2.BilleteS50, dbo.CierreBalanceV2.BilleteS1" +
-                "00, dbo.CierreBalanceV2.BilleteS200, dbo.CierreBalanceV2.BilleteS500, dbo.Cierre" +
-                "BalanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.CierreBalanceV2.PDV, \r\n    " +
-                "                     dbo.CierreBalanceV2.Incidencia, dbo.CierreBalanceV2.Fecha, " +
-                "dbo.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Turno, dbo.Usuarios.Nombre, d" +
-                "bo.Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS10000, \r\n                     " +
-                "    dbo.CierreBalanceV2.BilleteS20000, dbo.CierreBalanceV2.BilleteS50000, dbo.Ci" +
-                "erreBalanceV2.BilleteS200000, dbo.CierreBalanceV2.BilleteS500000, dbo.CierreBala" +
-                "nceV2.Transferencia, dbo.CierreBalanceV2.Buzon, \r\n                         dbo.C" +
-                "ierreBalanceV2.BilleteBD1, dbo.CierreBalanceV2.BilleteBD5, dbo.CierreBalanceV2.B" +
-                "illeteBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.CierreBalanceV2.BilleteBD50, db" +
-                "o.CierreBalanceV2.BilleteBD100, \r\n                         dbo.CierreBalanceV2.B" +
-                "illeteBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.CierreBalanceV2.BilleteBD200, " +
-                "dbo.CierreBalanceV2.BilleteBD500, dbo.CierreBalanceV2.BilleteS1000000, dbo.Cierr" +
-                "eBalanceV2.BIO\r\nFROM            dbo.CierreBalanceV2 INNER JOIN\r\n                " +
-                "         dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuario = dbo.Usuarios.ID_Usuari" +
-                "o\r\nWHERE        (dbo.CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (dbo." +
-                "CierreBalanceV2.Turno = @turno) AND (dbo.CierreBalanceV2.Eliminado <> 1)\r\nORDER " +
-                "BY dbo.Usuarios.ID_Usuario";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turno", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAPDataSet2.CierreTurnoV1DataTable dataTable, System.DateTime fecha, System.DateTime fecha1, global::System.Nullable<int> turno) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
-            if ((turno.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turno.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAPDataSet2.CierreTurnoV1DataTable GetData(System.DateTime fecha, System.DateTime fecha1, global::System.Nullable<int> turno) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
-            if ((turno.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turno.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            SAPDataSet2.CierreTurnoV1DataTable dataTable = new SAPDataSet2.CierreTurnoV1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class CierrePDVTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -62275,6 +61986,251 @@ GROUP BY dbo.TipoVehiculos.Nombre, dbo.TipoVehiculos.Tarifa, dbo.Pagos.FormaPago
             this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
             this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
             SAPDataSet2.BuzonTurno1DataTable dataTable = new SAPDataSet2.BuzonTurno1DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CierreTurnoV1TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public CierreTurnoV1TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CierreTurnoV1";
+            tableMapping.ColumnMappings.Add("ID_Cierre", "ID_Cierre");
+            tableMapping.ColumnMappings.Add("BilleteS05", "BilleteS05");
+            tableMapping.ColumnMappings.Add("BilleteS1", "BilleteS1");
+            tableMapping.ColumnMappings.Add("BilleteS2", "BilleteS2");
+            tableMapping.ColumnMappings.Add("BilleteS5", "BilleteS5");
+            tableMapping.ColumnMappings.Add("BilleteS10", "BilleteS10");
+            tableMapping.ColumnMappings.Add("BilleteS20", "BilleteS20");
+            tableMapping.ColumnMappings.Add("BilleteS50", "BilleteS50");
+            tableMapping.ColumnMappings.Add("BilleteS100", "BilleteS100");
+            tableMapping.ColumnMappings.Add("BilleteS200", "BilleteS200");
+            tableMapping.ColumnMappings.Add("BilleteS500", "BilleteS500");
+            tableMapping.ColumnMappings.Add("Tickets", "Tickets");
+            tableMapping.ColumnMappings.Add("Efectivo", "Efectivo");
+            tableMapping.ColumnMappings.Add("PDV", "PDV");
+            tableMapping.ColumnMappings.Add("Incidencia", "Incidencia");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("TesoreroC", "TesoreroC");
+            tableMapping.ColumnMappings.Add("Turno", "Turno");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Apellido", "Apellido");
+            tableMapping.ColumnMappings.Add("BilleteS10000", "BilleteS10000");
+            tableMapping.ColumnMappings.Add("BilleteS20000", "BilleteS20000");
+            tableMapping.ColumnMappings.Add("BilleteS50000", "BilleteS50000");
+            tableMapping.ColumnMappings.Add("BilleteS200000", "BilleteS200000");
+            tableMapping.ColumnMappings.Add("BilleteS500000", "BilleteS500000");
+            tableMapping.ColumnMappings.Add("Transferencia", "Transferencia");
+            tableMapping.ColumnMappings.Add("Buzon", "Buzon");
+            tableMapping.ColumnMappings.Add("BilleteBD1", "BilleteBD1");
+            tableMapping.ColumnMappings.Add("BilleteBD5", "BilleteBD5");
+            tableMapping.ColumnMappings.Add("BilleteBD10", "BilleteBD10");
+            tableMapping.ColumnMappings.Add("BilleteBD20", "BilleteBD20");
+            tableMapping.ColumnMappings.Add("BilleteBD50", "BilleteBD50");
+            tableMapping.ColumnMappings.Add("BilleteBD100", "BilleteBD100");
+            tableMapping.ColumnMappings.Add("BilleteBD05", "BilleteBD05");
+            tableMapping.ColumnMappings.Add("BilleteBD025", "BilleteBD025");
+            tableMapping.ColumnMappings.Add("BilleteBD200", "BilleteBD200");
+            tableMapping.ColumnMappings.Add("BilleteBD500", "BilleteBD500");
+            tableMapping.ColumnMappings.Add("BilleteS1000000", "BilleteS1000000");
+            tableMapping.ColumnMappings.Add("BIO", "BIO");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SAP.Properties.Settings.Default.SAP;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT       dbo.CierreBalanceV2.ID_Cierre, dbo.CierreBalanceV2.BilleteS05, dbo.C" +
+                "ierreBalanceV2.BilleteS1, dbo.CierreBalanceV2.BilleteS2, dbo.CierreBalanceV2.Bil" +
+                "leteS5, dbo.CierreBalanceV2.BilleteS10, dbo.CierreBalanceV2.BilleteS20, \n       " +
+                "                  dbo.CierreBalanceV2.BilleteS50, dbo.CierreBalanceV2.BilleteS10" +
+                "0, dbo.CierreBalanceV2.BilleteS200, dbo.CierreBalanceV2.BilleteS500, dbo.CierreB" +
+                "alanceV2.Tickets, dbo.CierreBalanceV2.Efectivo, dbo.CierreBalanceV2.PDV, \n      " +
+                "                   dbo.CierreBalanceV2.Incidencia, dbo.CierreBalanceV2.Fecha, db" +
+                "o.CierreBalanceV2.TesoreroC, dbo.CierreBalanceV2.Turno, dbo.Usuarios.Nombre, dbo" +
+                ".Usuarios.Apellido, dbo.CierreBalanceV2.BilleteS10000, \n                        " +
+                " dbo.CierreBalanceV2.BilleteS20000, dbo.CierreBalanceV2.BilleteS50000, dbo.Cierr" +
+                "eBalanceV2.BilleteS200000, dbo.CierreBalanceV2.BilleteS500000, dbo.CierreBalance" +
+                "V2.Transferencia, dbo.CierreBalanceV2.Buzon, \n                         dbo.Cierr" +
+                "eBalanceV2.BilleteBD1, dbo.CierreBalanceV2.BilleteBD5, dbo.CierreBalanceV2.Bille" +
+                "teBD10, dbo.CierreBalanceV2.BilleteBD20, dbo.CierreBalanceV2.BilleteBD50, dbo.Ci" +
+                "erreBalanceV2.BilleteBD100, \n                         dbo.CierreBalanceV2.Billet" +
+                "eBD05, dbo.CierreBalanceV2.BilleteBD025, dbo.CierreBalanceV2.BilleteBD200, dbo.C" +
+                "ierreBalanceV2.BilleteBD500, dbo.CierreBalanceV2.BilleteS1000000, dbo.CierreBala" +
+                "nceV2.BIO\nFROM            dbo.CierreBalanceV2 INNER JOIN\n                       " +
+                "  dbo.Usuarios ON dbo.CierreBalanceV2.ID_Usuario = dbo.Usuarios.ID_Usuario\nWHERE" +
+                "        (dbo.CierreBalanceV2.Fecha BETWEEN @fecha AND @fecha1) AND (dbo.CierreBa" +
+                "lanceV2.Turno = @turno) AND (dbo.CierreBalanceV2.Eliminado <> 1)\nORDER BY dbo.Us" +
+                "uarios.ID_Usuario";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fecha1", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turno", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(SAPDataSet2.CierreTurnoV1DataTable dataTable, System.DateTime fecha, System.DateTime fecha1, global::System.Nullable<int> turno) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            if ((turno.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turno.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual SAPDataSet2.CierreTurnoV1DataTable GetData(System.DateTime fecha, System.DateTime fecha1, global::System.Nullable<int> turno) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(fecha));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(fecha1));
+            if ((turno.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(turno.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            SAPDataSet2.CierreTurnoV1DataTable dataTable = new SAPDataSet2.CierreTurnoV1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

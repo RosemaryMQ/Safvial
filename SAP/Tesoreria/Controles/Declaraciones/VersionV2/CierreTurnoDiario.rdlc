@@ -351,10 +351,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>SAPDataSetLocal</rd:DataSetName>
         <rd:SchemaPath>D:\Dev\Safvial\SAP\SAPDataSetLocal.xsd</rd:SchemaPath>
-        <rd:TableName>CierreTurnoV1</rd:TableName>
+        <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>CierreTurnoV1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="TarjetaExpress">
@@ -11812,7 +11812,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>CIERRE DE TURNO</Value>
+                      <Value>CIERRE DIARIO</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>

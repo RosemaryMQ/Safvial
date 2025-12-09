@@ -22,6 +22,38 @@ namespace SAP.Tesoreria.Controles.Declaraciones
 
             try
             {
+                this.cierreTurnoFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreEfectivoFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePDVFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePINCFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreTransfFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreBiopagoFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreBuzonFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+
+                this.cierreEfectivoDiaAnteriorTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePDVDiaAnteriorTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePINCDiaAnteriorTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreTransfDiaAnteriorTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreBiopagoDiaAnteriorTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+
+                this.cierreEfectivoDiaSiguienteTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePDVDiaSiguienteTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePINCDiaSiguienteTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreTransfDiaSiguienteTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreBiopagoDiaSiguienteTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+
+                this.cierreEfectivoDiaSiguientehoyTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePDVDiaSiguientehoyTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePINCDiaSiguientehoyTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreTransfDiaSiguientehoyTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreBiopagoDiaSiguientehoyTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+
+
+                /**********************************/
+                                
+
+                /**************************/
+
                 if (SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno == 1)
                 {
                     Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Turno", "Diurno");

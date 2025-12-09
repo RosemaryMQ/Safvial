@@ -159,8 +159,10 @@ namespace SAP.Tesoreria.Controles.Declaraciones
             this.tableAdapterManager.CierreBalanceV2TableAdapter = null;
             this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DeclaracionesTableAdapter = null;
+            this.tableAdapterManager.Turno1TableAdapter = null;
             this.tableAdapterManager.TurnoTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SAP.SAPDataSetLocalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Usuarios1TableAdapter = null;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
             // cierreBuzonFiltroBindingSource

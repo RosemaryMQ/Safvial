@@ -13,9 +13,46 @@ namespace SAP.Tesoreria.Controles.Declaraciones
 
         private void CierreTurnoDiario_Load(object sender, EventArgs e)
         {
+            /*
+            try
+            {
+                string cadena = "Data Source=safvialcentercorp.ddns.net;Initial Catalog=SAP;User ID=sap;Password=sap1234;";
+                using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(cadena))
+                {
+                    con.Open();
+                    MessageBox.Show("¡Conexión Exitosa! El problema es el TableAdapter.");
+                    con.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fallo en conexión cruda: " + ex.Message);
+            }
+            */
 
             try
             {
+                /*
+                System.Data.SqlClient.SqlConnectionStringBuilder builder = new System.Data.SqlClient.SqlConnectionStringBuilder();
+                builder.DataSource = "safvialcentercorp.ddns.net"; // Ojo: Si es local usa "localhost" o ".\SQLEXPRESS"
+                builder.InitialCatalog = "SAP";
+                builder.UserID = "sap";
+                builder.Password = "sap1234";
+                builder.IntegratedSecurity = false;
+                builder.PersistSecurityInfo = true;
+                */
+
+                this.cierreTurnoV1TableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreTurnoV1TableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreEfectivoTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePDVTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierrePINCTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreBiopagoTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.cierreTransfTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                this.buzonTurnoTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
+                //this.tarjetaExpressReporte1TableAdapter.Connection.ConnectionString = builder.ConnectionString;
+
+
                 if (SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.turno == 1)
                 {
                     Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Turno", "Diurno");
@@ -73,6 +110,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 Microsoft.Reporting.WinForms.ReportParameter frm3 = new Microsoft.Reporting.WinForms.ReportParameter("FechaFin", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS);
                 this.reportViewer1.LocalReport.SetParameters(frm3);
 
+               
                 this.cierreTurnoV1TableAdapter.Fill(this.sAPDataSetLocal.CierreTurnoV1, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
                 this.cierreEfectivoTableAdapter.Fill(this.sAPDataSetLocal.CierreEfectivo, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
                 this.cierrePDVTableAdapter.Fill(this.sAPDataSetLocal.CierrePDV, Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS1), Convert.ToDateTime(SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaS));
@@ -100,9 +138,10 @@ namespace SAP.Tesoreria.Controles.Declaraciones
 
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar el reporte.", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error detallado: " + ex.Message);
                 //this.Close();
                 throw;
             }
