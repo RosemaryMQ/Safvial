@@ -71,7 +71,6 @@ D:\Dev\Safvial\SAP\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Dev\Safvial\SAP\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Dev\Safvial\SAP\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Dev\Safvial\SAP\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-D:\Dev\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Avance.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Biopago.Biopago.resources
 D:\Dev\Safvial\SAP\obj\Debug\SAP.Cobradores.Controles.Contraseña.resources

@@ -112,6 +112,7 @@ namespace SAP.Cobradores.Controles.V2
             this.button4.Text = "CANCELAR [ESC]";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // button1
             // 
@@ -132,6 +133,7 @@ namespace SAP.Cobradores.Controles.V2
             this.button1.Text = "PROCESAR [ENTER]";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button1_KeyDown);
             // 
             // tableLayoutPanel8
             // 

@@ -1,0 +1,2 @@
+10/12/2025 16:38:45 - El nombre de puerto proporcionado no empieza por COM o com, o no se resuelve en un puerto serie válido.
+Nombre del parámetro: portName

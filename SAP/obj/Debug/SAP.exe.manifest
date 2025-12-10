@@ -782,7 +782,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UTRKxP1bjpiMo5F+H9i4SfH/LqQpf0vQfT6z2v2JpiI=</dsig:DigestValue>
+        <dsig:DigestValue>FAgefUCedLQMG04s0j4ZAIE59pq75Db7d86PxMcNj4c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -798,13 +798,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="AutoConfig.txt" size="550">
+  <file name="AutoConfig.txt" size="547">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XxpEiHh8y/WeLgNPU2RzJ1nogvk4xRo3oWyqgYK/KNU=</dsig:DigestValue>
+      <dsig:DigestValue>kfZEsEA5oedKDme2ps4I67I7FcAtcdWlrGGv9YCWu7Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo2.ico" size="185702">
