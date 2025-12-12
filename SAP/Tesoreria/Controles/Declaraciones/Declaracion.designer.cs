@@ -43,7 +43,6 @@
             this.transferenciaCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreTarjetaExpressBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buzonRecaudadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.declaracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pDVCierreTableAdapter = new SAP.SAPDataSetTableAdapters.PDVCierreTableAdapter();
             this.efectivoCierreTableAdapter = new SAP.SAPDataSetTableAdapters.EfectivoCierreTableAdapter();
@@ -66,6 +65,9 @@
             this.tableAdapterManager = new SAP.SAPDataSet2TableAdapters.TableAdapterManager();
             this.cierreBiopagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cierreBiopagoTableAdapter = new SAP.SAPDataSet2TableAdapters.CierreBiopagoTableAdapter();
+            this.biopagoCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.biopagoCierreTableAdapter = new SAP.SAPDataSet2TableAdapters.BiopagoCierreTableAdapter();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.declaracionV2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pDVCierreBindingSource)).BeginInit();
@@ -85,6 +87,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // declaracionV2BindingSource
@@ -157,18 +160,6 @@
             this.buzonRecaudadorBindingSource.DataMember = "BuzonRecaudador";
             this.buzonRecaudadorBindingSource.DataSource = this.sAPDataSet2;
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Tesoreria.Controles.Declaraciones.DeclaracionJurada.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(624, 631);
-            this.reportViewer1.TabIndex = 0;
-            // 
             // declaracionBindingSource
             // 
             this.declaracionBindingSource.DataMember = "Declaracion";
@@ -237,7 +228,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.451613F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.54839F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(636, 687);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(636, 930);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // Titulos
@@ -251,7 +242,7 @@
             this.Titulos.ForeColor = System.Drawing.Color.White;
             this.Titulos.Location = new System.Drawing.Point(3, 0);
             this.Titulos.Name = "Titulos";
-            this.Titulos.Size = new System.Drawing.Size(630, 44);
+            this.Titulos.Size = new System.Drawing.Size(630, 59);
             this.Titulos.TabIndex = 1042;
             this.Titulos.Text = "CIERRE DE RECAUDADOR";
             this.Titulos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -261,14 +252,16 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.AutoScroll = true;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.reportViewer1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 47);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 62);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(630, 637);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(630, 865);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // transferenciaCierreTableAdapter
@@ -301,12 +294,31 @@
             // 
             this.cierreBiopagoTableAdapter.ClearBeforeFill = true;
             // 
+            // biopagoCierreBindingSource
+            // 
+            this.biopagoCierreBindingSource.DataMember = "BiopagoCierre";
+            this.biopagoCierreBindingSource.DataSource = this.sAPDataSet2;
+            // 
+            // biopagoCierreTableAdapter
+            // 
+            this.biopagoCierreTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SAP.Tesoreria.Controles.Declaraciones.DeclaracionJurada.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(3, 3);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(624, 839);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // Declaracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(637, 687);
+            this.ClientSize = new System.Drawing.Size(637, 930);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Declaracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -332,12 +344,12 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cierreBiopagoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource pDVCierreBindingSource;
         private SAPDataSet sAPDataSet;
         private System.Windows.Forms.BindingSource efectivoCierreBindingSource;
@@ -374,5 +386,8 @@
         private SAPDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource cierreBiopagoBindingSource;
         private SAPDataSet2TableAdapters.CierreBiopagoTableAdapter cierreBiopagoTableAdapter;
+        private System.Windows.Forms.BindingSource biopagoCierreBindingSource;
+        private SAPDataSet2TableAdapters.BiopagoCierreTableAdapter biopagoCierreTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

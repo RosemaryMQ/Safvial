@@ -34,6 +34,7 @@ namespace SAP.Tesoreria
         public static string IDTurnoUsuario = "0";
         public static string turno="0";
         public static string descTurno = "";
+        public static DateTime fechaAperturaTurno;
 
         public TesoreriaV2()
         {
@@ -88,13 +89,13 @@ namespace SAP.Tesoreria
             SqlConnection cn = new SqlConnection(Inicio.conexion);
             await cn.OpenAsync();
             SqlDataReader dr;
-            SqlCommand cmd = new SqlCommand("SELECT ID,Nombre,Apellido,Turno.Turno,Fecha FROM Turno Inner Join Usuarios ON Usuarios.ID_Usuario = Turno.ID_Usuario Where Finalizado=0", cn);
+            SqlCommand cmd = new SqlCommand("SELECT Turno.ID_Usuario,Nombre,Apellido,Turno.Turno,Fecha FROM Turno Inner Join Usuarios ON Usuarios.ID_Usuario = Turno.ID_Usuario Where Finalizado=0", cn);
             dr = await cmd.ExecuteReaderAsync();
             Usuario.Rows.Clear();
             while (await dr.ReadAsync())
             {
 
-                Usuario.Rows.Add(dr["ID"].ToString(), dr["Nombre"].ToString() + " " + dr["Apellido"].ToString(), "TURNO " + dr["Turno"].ToString(), dr["Fecha"].ToString());
+                Usuario.Rows.Add(dr["ID_Usuario"].ToString(), dr["Nombre"].ToString() + " " + dr["Apellido"].ToString(), "TURNO " + dr["Turno"].ToString(), dr["Fecha"].ToString());
             }
             dr.Close();
         }
@@ -505,7 +506,7 @@ namespace SAP.Tesoreria
 
         private async void Recaudador(String fechas, String fechas2)
         {
-            //string sql = "Select Pagos.Canal,Sum(TipoVehiculos.Tarifa)as Tarifa,ControlRecaudadores.Estado FROM Pagos inner join TipoVehiculos on Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo inner join Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario inner join ControlRecaudadores ON Pagos.Canal=ControlRecaudadores.Canal Where Pagos.Fecha BETWEEN @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000' AND Usuarios.ID_Peaje='1' AND Pagos.FormaPago<>'Pago Incompleto' AND Pagos.FormaPago<>'Ticket' Group By Pagos.Canal, ControlRecaudadores.Estado";
+            //string sql = "Select Pagos.Canal, Sum(TipoVehiculos.Tarifa) as Tarifa, ControlRecaudadores.Estado FROM Pagos inner join TipoVehiculos on Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo inner join Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario inner join ControlRecaudadores ON Pagos.Canal=ControlRecaudadores.Canal Where Pagos.Fecha BETWEEN @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000' AND Usuarios.ID_Peaje='1' AND Pagos.FormaPago<>'Pago Incompleto' AND Pagos.FormaPago<>'Ticket' Group By Pagos.Canal, ControlRecaudadores.Estado";
             string sql = "SELECT Pagos.Canal, SUM(TipoVehiculos.Tarifa) as Tarifa, CR_Filtered.Estado FROM Pagos INNER JOIN TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo INNER JOIN Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario OUTER APPLY(SELECT TOP 1 Estado FROM ControlRecaudadores CR WHERE CR.Canal = Pagos.Canal AND CR.ID_Usuario = Pagos.ID_Usuario ORDER BY CR.ID DESC) CR_Filtered Where Pagos.Fecha BETWEEN @fecha+' 00:00:00.000' AND  @fecha2 +' 23:59:59.000' AND Usuarios.ID_Peaje='1' AND Pagos.FormaPago<>'Pago Incompleto' AND Pagos.FormaPago<>'Ticket' Group BY Pagos.Canal, CR_Filtered.Estado ";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {

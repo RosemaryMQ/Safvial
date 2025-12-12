@@ -1172,6 +1172,7 @@
                                   <Value>=IIf(Sum(Fields!Tarifa.Value) is Nothing,"No hay Tabulaciones",Sum(Fields!Tarifa.Value))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>

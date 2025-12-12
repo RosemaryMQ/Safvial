@@ -771,7 +771,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Resumen de Recaudacion</Value>
+                    <Value>Resumen de Recaudación</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -1434,7 +1434,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "PDVCierre")+Sum(Fields!Tarifa.Value, "EfectivoCierre")+Sum(Fields!Tarifa.Value, "TicketsCierre")+Sum(Fields!Tarifa.Value, "TransferenciaCierre")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")</Value>
+                                  <Value>=Sum(Fields!Tarifa.Value, "PDVCierre")+Sum(Fields!Tarifa.Value, "BiopagoCierre")+Sum(Fields!Tarifa.Value, "EfectivoCierre")+Sum(Fields!Tarifa.Value, "TicketsCierre")+Sum(Fields!Tarifa.Value, "TransferenciaCierre")+Sum(Fields!SaldoInicial.Value, "TarjetaExpress")</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -1588,7 +1588,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Resumen de Declaracion</Value>
+                    <Value>Resumen de Declaración</Value>
                     <Style>
                       <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -6222,9 +6222,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value)</Value>
+                                  <Value>=IIf(Sum(Fields!Tarifa.Value)=0,0,Sum(Fields!Tarifa.Value))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -6330,6 +6331,7 @@
                                   <Value>=IIf(Sum(Fields!BIO.Value, "reconversion")=0,0,Sum(Fields!BIO.Value, "reconversion"))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -6436,6 +6438,7 @@
                                   <Value>=IIf(Sum(Fields!BIO.Value, "reconversion")-Sum(Fields!Tarifa.Value, "BiopagoCierre")=0,0,Sum(Fields!BIO.Value, "reconversion")-Sum(Fields!Tarifa.Value, "BiopagoCierre"))</Value>
                                   <Style>
                                     <FontSize>6pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>

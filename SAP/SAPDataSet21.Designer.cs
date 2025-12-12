@@ -25997,7 +25997,6 @@ namespace SAP {
                 this.columnFormaPago.AllowDBNull = false;
                 this.columnFormaPago.MaxLength = 20;
                 this.columnID_Vehiculo.AllowDBNull = false;
-                this.columnTarifa.AllowDBNull = false;
                 this.columnID_Usuario.AllowDBNull = false;
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 50;
@@ -40229,7 +40228,12 @@ namespace SAP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Tarifa {
                 get {
-                    return ((double)(this[this.tableBiopagoCierre.TarifaColumn]));
+                    try {
+                        return ((double)(this[this.tableBiopagoCierre.TarifaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Tarifa\' de la tabla \'BiopagoCierre\' es DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableBiopagoCierre.TarifaColumn] = value;
@@ -40256,6 +40260,18 @@ namespace SAP {
                 set {
                     this[this.tableBiopagoCierre.NombreColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTarifaNull() {
+                return this.IsNull(this.tableBiopagoCierre.TarifaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTarifaNull() {
+                this[this.tableBiopagoCierre.TarifaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -60633,7 +60649,7 @@ GROUP BY dbo.TipoVehiculos.Nombre, dbo.TipoVehiculos.Tarifa, dbo.Pagos.FormaPago
                       FROM            Pagos INNER JOIN
                       TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo INNER JOIN
                       Usuarios ON Pagos.ID_Usuario = Usuarios.ID_Usuario
-                      WHERE        (Pagos.ID_Usuario = @usuario) AND (Pagos.Fecha BETWEEN @fecha AND @fecha1) AND (Pagos.FormaPago = 'Transferencia')
+                      WHERE        (Pagos.ID_Usuario = @usuario) AND (Pagos.Fecha BETWEEN @fecha AND @fecha1) AND (Pagos.FormaPago = 'Biopago')
                     ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Usuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

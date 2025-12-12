@@ -44,17 +44,22 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
         {
             InitializeComponent();
             idacta = 0;
-            buscarCataporte(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.IDTurnoUsuario));
+            buscarCataporte(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
+
+            MessageBox.Show(Convert.ToString(idacta), "ACTA en Avance USER");
+
             BuscarTurno(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
             Denominaciones();
             indice = 1;
-            Recaudador.Text = "RECAUDADOR: " + SAP.Tesoreria.TesoreriaV2.Nombre;
-            Recaudador1.Text = "RECAUDADOR: " + SAP.Tesoreria.TesoreriaV2.Nombre;
+            Recaudador.Text = "Recaudador: " + SAP.Tesoreria.TesoreriaV2.Nombre + " (Turno:" + SAP.Tesoreria.TesoreriaV2.turno + ")";
+            Recaudador1.Text = "Recaudador: " + SAP.Tesoreria.TesoreriaV2.Nombre + " (Turno:" + SAP.Tesoreria.TesoreriaV2.turno + ")";
             CargarAvances();
         }
-        private void buscarCataporte(int usuario, int turno, int idTurnoUsuario)
+        private void buscarCataporte(int usuario, int turno)
         {
-            string sql = "SELECT ID_Declaracion, Turno FROM Declaraciones WHERE (ID_Usuario = @usuario) AND (Turno = @turno) AND (IDTurnoUsuario = @idTurnoUsuario) AND (Responsable = 0)";
+            string sql = "SELECT ID_Declaracion FROM Declaraciones A INNER JOIN Turno B ON  CONVERT(DATETIME2(0), A.FechaInicial) = CONVERT(DATETIME2(0), B.Fecha) and A.ID_Usuario = B.ID_Usuario " +
+                "WHERE (A.ID_Usuario = @usuario) AND (B.Turno = @turno) AND (Responsable = 0)";
+
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -62,12 +67,13 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("turno", turno);
-                cmd.Parameters.AddWithValue("idTurnoUsuario", idTurnoUsuario);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta = Convert.ToInt32(dr["ID_Declaracion"]);
-                    turno = Convert.ToInt32(dr["Turno"]);
+                    idacta = Convert.ToInt32(dr["ID_Declaracion"]);
+                    MessageBox.Show(Convert.ToString(idacta), "acat en Buscar CATAPORTE");
+
                 }
                 dr.Close();
                 return;
@@ -245,6 +251,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                     //AgregarDeclaracion1(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
                     FinJornada(Convert.ToString(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToString(SAP.Tesoreria.TesoreriaV2.turno));
                     FinJornada1(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
+                    buscarCataporte(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
+                    BuscarActa(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
                     CargarDeclaracion(SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta, Convert.ToInt32(SAP.Inicio.ID), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
                     MessageBox.Show("Declaracion cargado correctamente", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SAP.Tesoreria.Controles.Declaraciones.Declaracion frm = new SAP.Tesoreria.Controles.Declaraciones.Declaracion();
@@ -257,16 +265,39 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 }
             }
         }
+
+        private void BuscarActa(int usuario, int turno)
+        {
+            //string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and turno=@turno and Finalizado=0 AND ID_Usuario=@usuario";
+            string sql = "SELECT ID_Declaracion FROM Declaraciones A INNER JOIN Turno B ON  CONVERT(DATETIME2(0), A.FechaFinal) = CONVERT(DATETIME2(0), B.Fecha) and " +
+                "A.ID_Usuario = B.ID_Usuario WHERE (A.ID_Usuario=@usuario) AND (B.Turno=@turno) AND (Responsable=0)";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlDataReader dr;
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("turno", turno);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    idacta = Convert.ToInt32(dr["ID_Declaracion"]);
+                    MessageBox.Show(Convert.ToString(idacta), "acat en BuscarACTA");
+                }
+                dr.Close();
+                return;
+            }
+        }
+
         private void FinJornada1(int usuario, int turno)
         {
-            string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and turno=@turno and Finalizado=0 AND ID=@id";
+            string sql = "Update Turno Set Finalizado=1 Where ID_Usuario=@usuario and turno=@turno and Finalizado=0 AND ID_Usuario=@usuario";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("turno", turno);
-                cmd.Parameters.AddWithValue("id", Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
                 cmd.ExecuteReader();
                 return;
             }
@@ -307,7 +338,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
         }
         private void CargarDeclaracion(int declaracion, int responsable, int turno)
         {
-            string sql = "UPDATE Declaraciones SET FechaInicial=@fecha,FechaFinal=DATEADD(HOUR, 2,GETDATE()), Responsable=@tesorero, Turno=@turno WHERE ID_Declaracion=@declaracion";
+            //string sql = "UPDATE Declaraciones SET FechaInicial=@fecha,FechaFinal=DATEADD(HOUR, 2,GETDATE()), Responsable=@tesorero, Turno=@turno, IdTurnoUsuario=@id WHERE ID_Declaracion=@declaracion";
+            string sql = "UPDATE Declaraciones SET FechaFinal=GETDATE(), Responsable=@tesorero, Turno=@turno  WHERE ID_Declaracion=@declaracion";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -358,6 +390,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             Avance.Rows.Add("Transferencia", "0");
             Avance.Rows.Add("BIOPAGO", "0");
         }
+
         private void AgregarDeclaracion1(double centimos, double uno, double dos, double cinco, double diez, double veinte, double cincuenta, double cien, double doscientos, double quinientos, double tickets, double efectivo2, double pdv, double incidencia, int id, int id2, int tesorero, int turno, double diezmil1, double veintemil1, double cincuentamil1, double transf, double docientosmil, double quinientosmil, double unmillion, double bd1, double bd5, double bd10, double bd20, double bd50, double bd100, double bd02, double bd05, double bd025, double bd200, double bd500, double BIOPAGO, int idTurnoUsuario)
         {
             string sql = "Insert into CierreBalanceV2 (BilleteS05,BilleteS1,BilleteS2,BilleteS5,BilleteS10,BilleteS20,BilleteS50,BilleteS100,BilleteS200,BilleteS500,Tickets,Efectivo,PDV,Incidencia,ID_Usuario,Fecha,Responsable,TesoreroC,Turno,BilleteS10000,BilleteS20000,BilleteS50000,Transferencia,Eliminado,Buzon,BilleteS200000,BilleteS500000,BilleteS1000000,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500, BIO, IdTurnoUsuario) Values (@centimos,@uno,@dos,@cinco,@diez,@veinte,@cincuenta,@cien,@doscientos,@quinientos,@tickets,@efectivo,@pdv,@incidencia,@id,SYSDATETIME(),@id2,@tesorero,@turno,@diezmil,@veintemil,@cincuentamil,@transf,0,0,@docientosmil,@quinientosmil, @unmillon, @bd1,@bd5,@bd10,@bd20,@bd50,@bd100,@bd05,@bd02,@bd025,@bd200,@bd500,@BIOPAGO,@idTurnoUsuario)";
@@ -414,8 +447,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             SqlConnection cn = new SqlConnection(Inicio.conexion);
             cn.Open();
             SqlDataReader dr;
-            SqlCommand cmd = new SqlCommand("SELECT  ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, BilleteS10000, BilleteS20000, BilleteS50000, BilleteS200000,BilleteS500000,BilleteS1000000, Tickets, Efectivo, PDV, Incidencia, Transferencia, Eliminado,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500, BIO FROM CierreBalanceV2 WHERE(ID_Usuario = @usuario) AND(Fecha BETWEEN @fecha AND @fecha2) AND (Buzon = 0)", cn);
+            SqlCommand cmd = new SqlCommand("SELECT  ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, BilleteS10000, BilleteS20000, BilleteS50000, BilleteS200000,BilleteS500000,BilleteS1000000, Tickets, Efectivo, PDV, Incidencia, Transferencia, Eliminado,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD02,BilleteBD025,BilleteBD200,BilleteBD500, BIO FROM CierreBalanceV2 " +
+                "WHERE (ID_Usuario = @usuario) AND (Turno = @turno) AND (Fecha BETWEEN @fecha AND @fecha2) AND (Buzon = 0)", cn);
+
             cmd.Parameters.AddWithValue("usuario", Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador));
+            cmd.Parameters.AddWithValue("turno", Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
             cmd.Parameters.AddWithValue("fecha", Convert.ToDateTime(SAP.Tesoreria.TesoreriaV2.Apertura));
             cmd.Parameters.AddWithValue("fecha2", DateTime.Now.AddMinutes(50));
             dr = cmd.ExecuteReader();

@@ -14,11 +14,11 @@ namespace SAP.Tesoreria.Controles
         String ID2;
         String canal1;
         String Apertura;
+        DateTime fechaApertura;
         String Fecha2;
         String CanalP="";
-        string fecha4 = DateTime.Now.AddDays(-1).ToString("d") + " 00:00:00";
         int turnos=0;
-        int idUser = 0;
+        int idUsuario = 0;
         string control;
         public AperturaV2()
         {
@@ -64,7 +64,7 @@ namespace SAP.Tesoreria.Controles
             //    Agregar "; SELECT SCOPE_IDENTITY();" al final
             //    Esto hará que la consulta devuelva el ID recién insertado.
             string sql = "INSERT INTO Turno (ID_Usuario, Turno, Finalizado, Fecha) " +
-                         "VALUES (@usuario, @turno, 0, CONVERT(DATETIME2(0), SYSDATETIME()));" +
+                         "VALUES (@usuario, @turno, 0, SYSDATETIME());" +
                          "SELECT SCOPE_IDENTITY();";
 
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
@@ -97,9 +97,6 @@ namespace SAP.Tesoreria.Controles
         }
 
 
-
-
-
         private bool ValidarApertura(int usuario, int turno)
         {
             string sql = "SELECT * FROM Turno WHERE ID_Usuario = @usuario AND Turno=@turno AND Finalizado=0";
@@ -113,6 +110,50 @@ namespace SAP.Tesoreria.Controles
                 return !(val == 0);
             }
         }
+
+
+        // Cambiamos el tipo de retorno de 'void' a 'DateTime?' (DateTime anulable)
+        // Devolvemos DateTime.MinValue si no se encuentra la fecha.
+        private DateTime BuscarFechaApertura(int usuario, int turno, int idTurnoUsuario)
+        {
+            // 1. Declarar la variable de retorno con un valor por defecto seguro.
+            //DateTime fechaApertura = DateTime.MinValue;
+
+            // La consulta SQL es correcta para seleccionar solo el campo 'Fecha'.
+            string sql = "SELECT Fecha FROM Turno WHERE ID_Usuario=@usuario AND Turno=@turno AND ID=@idTurnoUsuario AND Finalizado=0";
+
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("idTurnoUsuario", idTurnoUsuario);
+
+                // Usamos ExecuteReader para leer el resultado
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    // 2. OBTENER EL VALOR COMO TIPO DATETIME DIRECTAMENTE.
+                    //    dr.GetDateTime(0) obtiene el valor de la primera columna (índice 0), 
+                    //    que es 'Fecha', y lo asigna como un objeto DateTime. 
+                    //    Esto preserva la precisión de los milisegundos.
+                    ////fechaApertura = dr.GetDateTime(0);
+
+                    // Opcional: También podrías usar: 
+                    fechaApertura = (DateTime)dr["Fecha"];
+                }
+
+                dr.Close();
+            }
+            // 3. Devolver el valor DateTime
+            Apertura = fechaApertura.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            return fechaApertura;
+        }
+
+
         private void Canal_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -120,6 +161,7 @@ namespace SAP.Tesoreria.Controles
                 this.SelectNextControl((Control)sender, true, true, true, true);
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -132,8 +174,9 @@ namespace SAP.Tesoreria.Controles
                         {
                             if (!ValidarApertura(Convert.ToInt32(ID_Usuario), turnos))
                             {
-                                int idUser = NewAperturaUser(Convert.ToInt32(ID_Usuario), turnos);
-                                CargarDeclaracion(Convert.ToInt32(ID_Usuario), turnos,idUser);
+                                int idTurnoUsuario = NewAperturaUser(Convert.ToInt32(ID_Usuario), turnos);
+                                BuscarFechaApertura(Convert.ToInt32(ID_Usuario), turnos, idTurnoUsuario);
+                                CargarDeclaracion(Convert.ToInt32(ID_Usuario), turnos, idTurnoUsuario);
                                 MessageBox.Show("Usuario Aperturado Satisfactoriamente,", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
@@ -164,6 +207,7 @@ namespace SAP.Tesoreria.Controles
                 MessageBox.Show("Error, al ejecutar la apertura del canal por favor intente de nuevo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /*
         private void CerrarCanal(string fecha, int usuario, int canal)
         {
             string sql = "Update Recaudadore Set FechaFin=@fechacierre, Estatus='Pendiente' Where ID_Usuario=@usuario and Canal=@canal and Estatus='Activo' or Estatus='Pendiente'";
@@ -193,6 +237,7 @@ namespace SAP.Tesoreria.Controles
                 return;
             }
         }
+
         private void avances(int usuario, int canal)
         {
             string sql = "Insert into Avances (ID_Usuario,Canal,Fecha) Values (@usuario,@canal,SYSDATETIME())";
@@ -205,7 +250,8 @@ namespace SAP.Tesoreria.Controles
                 cmd.ExecuteReader();
                 return;
             }
-        }
+        }*/
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (Cedula.Text != "")
@@ -355,17 +401,19 @@ namespace SAP.Tesoreria.Controles
                 return;
             }
         }
-        private void CargarDeclaracion(int usuario, int turno, int idUser)
+        private void CargarDeclaracion(int usuario, int turno, int idTurnoUsuario)
         {
             //rm-->string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable) Values (DATEADD(HOUR, -2,GETDATE()),SYSDATETIME(),@usuario,0)";
-            string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable,Turno,IDTurnoUsuario) Values (SYSDATETIME(),SYSDATETIME(),@usuario,0,@turno,@idUser)";
+            string sql = "Insert into Declaraciones(FechaInicial,FechaFinal,ID_Usuario,Responsable,Turno,IDTurnoUsuario) Values " +
+                "(@apertura,SYSDATETIME(),@usuario,0,@turno,@idTurnoUsuario)";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("turno", turno);
-                cmd.Parameters.AddWithValue("idUser", idUser);
+                cmd.Parameters.AddWithValue("idTurnoUsuario", idTurnoUsuario);
+                cmd.Parameters.AddWithValue("apertura", fechaApertura);
                 cmd.ExecuteReader();
                 return;
             }
