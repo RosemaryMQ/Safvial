@@ -49,6 +49,7 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
@@ -62,7 +63,10 @@
             this.efectivoCierreTableAdapter = new SAP.SAPDataSetTableAdapters.EfectivoCierreTableAdapter();
             this.ticketCierreTableAdapter = new SAP.SAPDataSetTableAdapters.TicketCierreTableAdapter();
             this.noPagoCierreTableAdapter = new SAP.SAPDataSetTableAdapters.NoPagoCierreTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
+            this.sAPDataSetLocal = new SAP.SAPDataSetLocal();
+            this.biopagoCierreDeclaracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.biopagoCierreDeclaracionTableAdapter = new SAP.SAPDataSetLocalTableAdapters.BiopagoCierreDeclaracionTableAdapter();
+            this.tableAdapterManager1 = new SAP.SAPDataSetLocalTableAdapters.TableAdapterManager();
             this.tipoVehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sAPDataSet2 = new SAP.SAPDataSet2();
             this.declaracionV3BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -90,10 +94,6 @@
             this.biopagoCierreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.biopagoCierreTableAdapter = new SAP.SAPDataSet2TableAdapters.BiopagoCierreTableAdapter();
             this.tableAdapterManager = new SAP.SAPDataSet2TableAdapters.TableAdapterManager();
-            this.sAPDataSetLocal = new SAP.SAPDataSetLocal();
-            this.biopagoCierreDeclaracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.biopagoCierreDeclaracionTableAdapter = new SAP.SAPDataSetLocalTableAdapters.BiopagoCierreDeclaracionTableAdapter();
-            this.tableAdapterManager1 = new SAP.SAPDataSetLocalTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.pDVCierreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efectivoCierreBindingSource)).BeginInit();
@@ -102,6 +102,8 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreDeclaracionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVehiculosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.declaracionV3BindingSource)).BeginInit();
@@ -116,8 +118,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabulacionDegloseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabulacionFormaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreDeclaracionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pDVCierreBindingSource
@@ -229,6 +229,22 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(804, 636);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DimGray;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(543, 39);
+            this.label1.TabIndex = 1044;
+            this.label1.Text = "CATAPORTE JORNADA";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -426,21 +442,31 @@
             // 
             this.noPagoCierreTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // sAPDataSetLocal
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(543, 39);
-            this.label1.TabIndex = 1044;
-            this.label1.Text = "CATAPORTE JORNADA";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sAPDataSetLocal.DataSetName = "SAPDataSetLocal";
+            this.sAPDataSetLocal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // biopagoCierreDeclaracionBindingSource
+            // 
+            this.biopagoCierreDeclaracionBindingSource.DataMember = "BiopagoCierreDeclaracion";
+            this.biopagoCierreDeclaracionBindingSource.DataSource = this.sAPDataSetLocal;
+            // 
+            // biopagoCierreDeclaracionTableAdapter
+            // 
+            this.biopagoCierreDeclaracionTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.CierreBalanceV2TableAdapter = null;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.DeclaracionesTableAdapter = null;
+            this.tableAdapterManager1.Turno1TableAdapter = null;
+            this.tableAdapterManager1.TurnoTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = SAP.SAPDataSetLocalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.Usuarios1TableAdapter = null;
+            this.tableAdapterManager1.UsuariosTableAdapter = null;
             // 
             // tipoVehiculosBindingSource
             // 
@@ -569,30 +595,6 @@
             this.tableAdapterManager.ReporteUserTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SAP.SAPDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // sAPDataSetLocal
-            // 
-            this.sAPDataSetLocal.DataSetName = "SAPDataSetLocal";
-            this.sAPDataSetLocal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // biopagoCierreDeclaracionBindingSource
-            // 
-            this.biopagoCierreDeclaracionBindingSource.DataMember = "BiopagoCierreDeclaracion";
-            this.biopagoCierreDeclaracionBindingSource.DataSource = this.sAPDataSetLocal;
-            // 
-            // biopagoCierreDeclaracionTableAdapter
-            // 
-            this.biopagoCierreDeclaracionTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.CierreBalanceV2TableAdapter = null;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.DeclaracionesTableAdapter = null;
-            this.tableAdapterManager1.TurnoTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = SAP.SAPDataSetLocalTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.UsuariosTableAdapter = null;
-            // 
             // DeclaracionParametrizado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,6 +616,8 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreDeclaracionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVehiculosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sAPDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.declaracionV3BindingSource)).EndInit();
@@ -628,8 +632,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabulacionDegloseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabulacionFormaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sAPDataSetLocal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.biopagoCierreDeclaracionBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

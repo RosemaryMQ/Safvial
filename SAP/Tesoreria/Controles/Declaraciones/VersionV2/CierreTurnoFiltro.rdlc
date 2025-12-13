@@ -10702,7 +10702,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
-            <Top>20.13098cm</Top>
+            <Top>24.25848cm</Top>
             <Left>10.59438cm</Left>
             <Height>1.30421cm</Height>
             <Width>8.21842cm</Width>
@@ -10749,7 +10749,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox28</rd:DefaultName>
-            <Top>20.13098cm</Top>
+            <Top>24.25848cm</Top>
             <Left>28.48346cm</Left>
             <Height>1.30421cm</Height>
             <Width>8.25471cm</Width>
@@ -11399,7 +11399,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreTransf")</Value>
+                                  <Value>=IIf(Sum(Fields!Tarifa.Value, "CierreTransf") is Nothing,0,Sum(Fields!Tarifa.Value, "CierreTransf"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -12286,7 +12286,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>BIOPAGO</Value>
+                                  <Value>Biopago</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -12610,10 +12610,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")),0,Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -12633,6 +12633,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -12644,10 +12645,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")),0,Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -12678,10 +12679,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value)</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value)),0,Sum(Fields!Tarifa.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -12712,10 +12713,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")),0,Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -12749,7 +12750,7 @@
                                   <Value>=Sum(Fields!Tarifa.Value, "CierrePINCDiaAnterior")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -12783,7 +12784,7 @@
                                   <Value>=Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")+Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")+Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")+Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")+Sum(Fields!Tarifa.Value, "CierrePINCDiaAnterior")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0.00;(#,0.00);'-'</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -13068,7 +13069,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>BIOPAGO</Value>
+                                  <Value>Biopago</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -13392,7 +13393,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")),0,Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -13426,7 +13427,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")),0,Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -13460,7 +13461,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Tarifa.Value</Value>
+                                  <Value>=IIF(IsNothing(Fields!Tarifa.Value),0,Fields!Tarifa.Value)</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -13494,7 +13495,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")),0,Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -13528,7 +13529,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguientehoy")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguientehoy")),0,Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguientehoy"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -13562,7 +13563,8 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguientehoy")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguientehoy")),0,
+Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")+Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguientehoy"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -13850,7 +13852,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>BIOPAGO</Value>
+                                  <Value>Biopago</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -14174,7 +14176,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente")),0,Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -14208,7 +14210,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente")),0,Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -14242,7 +14244,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value)</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value)),0,Sum(Fields!Tarifa.Value))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -14276,7 +14278,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente")),0,Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -14310,7 +14312,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguiente")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguiente")),0,Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -14344,7 +14346,8 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguiente")</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguiente")),0,
+Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePINCDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <Format>#,0.00;(#,0.00)</Format>
@@ -14392,14 +14395,11 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>CierreEfectivoDiaSiguiente</DataSetName>
-            <Top>21.69841cm</Top>
-            <Left>10.34767cm</Left>
+            <Top>15.3952cm</Top>
+            <Left>10.03055cm</Left>
             <Height>1.72917cm</Height>
             <Width>27.0444cm</Width>
             <ZIndex>6</ZIndex>
-            <Visibility>
-              <Hidden>true</Hidden>
-            </Visibility>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -14461,7 +14461,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>= "Relación de Cierre de Turno para el día " + FormatDateTime(Parameters!FechaInicio.Value)</Value>
+                                  <Value>= "Relación de Tabulaciones en el SISTEMA para el Cierre de Turno del día " + FormatDateTime(Parameters!FechaInicio.Value)</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -15062,6 +15062,7 @@
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>dd/MM/yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -15075,26 +15076,6 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15291,6 +15272,7 @@
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                    <Format>dd/MM/yyyy</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -15304,26 +15286,6 @@
                             <Border>
                               <Style>Solid</Style>
                             </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -15509,6 +15471,235 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox225">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=FormatDateTime(Parameters!FechaInicio.Value) + " (*) "</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox225</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox226">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente")),0,Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente"))</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox226</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox232">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente")),0, Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente"))</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox232</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox234">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente")), 0 , Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente"))</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox234</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox235">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente")),0,Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente"))</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox235</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox236">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente")), 0 , Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente") + Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente"))</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox236</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox227">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -15570,7 +15761,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePDV")-Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")), 0, Sum(Fields!Tarifa.Value, "CierrePDV")-Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy"))</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierrePDV")-Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente")), 0, Sum(Fields!Tarifa.Value, "CierrePDV")-Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -15605,7 +15796,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopago")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")</Value>
+                                  <Value>=Sum(Fields!Tarifa.Value, "CierreBiopago")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente")</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -15640,7 +15831,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreEfectivo")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")), 0, Sum(Fields!Tarifa.Value, "CierreEfectivo")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy"))</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreEfectivo")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente")), 0, Sum(Fields!Tarifa.Value, "CierreEfectivo")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -15675,7 +15866,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreTransf")-Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")), 0, Sum(Fields!Tarifa.Value, "CierreTransf")-Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy"))</Value>
+                                  <Value>=IIF(IsNothing(Sum(Fields!Tarifa.Value, "CierreTransf")-Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente")), 0, Sum(Fields!Tarifa.Value, "CierreTransf")-Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -15710,10 +15901,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=(Sum(Fields!Tarifa.Value, "CierrePDV")-Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy"))
-+(Sum(Fields!Tarifa.Value, "CierreBiopago")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy"))
-+(Sum(Fields!Tarifa.Value, "CierreEfectivo")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy"))
-+(Sum(Fields!Tarifa.Value, "CierreTransf")-Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy"))</Value>
+                                  <Value>=(Sum(Fields!Tarifa.Value, "CierrePDV")-Sum(Fields!Tarifa.Value, "CierrePDVDiaAnterior")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierrePDVDiaSiguiente"))
++(Sum(Fields!Tarifa.Value, "CierreBiopago")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreBiopagoDiaSiguiente"))
++(Sum(Fields!Tarifa.Value, "CierreEfectivo")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreEfectivoDiaSiguiente"))
++(Sum(Fields!Tarifa.Value, "CierreTransf")-Sum(Fields!Tarifa.Value, "CierreTransfDiaAnterior")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguientehoy")-Sum(Fields!Tarifa.Value, "CierreTransfDiaSiguiente"))</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -15761,13 +15952,14 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>CierreTurno</DataSetName>
-            <Top>15.0077cm</Top>
+            <Top>18.1827cm</Top>
             <Left>10.65988cm</Left>
-            <Height>3.79375cm</Height>
-            <Width>25.78416cm</Width>
+            <Height>4.39375cm</Height>
+            <Width>25.78417cm</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -15795,8 +15987,40 @@
               </RightBorder>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox237">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="* Tickets tabulados con fecha del día :" + FormatDateTime(Parameters!FechaInicio.Value) + " pero que pertenecen al turno diurno del día siguiente:" + Parameters!FechaDiaSiguiente.Value</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox237</rd:DefaultName>
+            <Top>22.64701cm</Top>
+            <Left>10.65988cm</Left>
+            <Height>0.6cm</Height>
+            <Width>25.78417cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>10.44221in</Height>
+        <Height>10.32447in</Height>
         <Style />
       </Body>
       <Width>18.99101in</Width>

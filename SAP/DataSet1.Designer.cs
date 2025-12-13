@@ -1991,7 +1991,7 @@ namespace SAP.DataSet1TableAdapters {
                          SUM(CASE WHEN Nombre = '5 Ejes' THEN 1 ELSE 0 END) AS Ejes5, SUM(CASE WHEN Nombre = '6 Ejes o Mas' THEN 1 ELSE 0 END) AS Ejes6
 FROM            Pagos INNER JOIN
                          TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
-WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00' AND @fecha1 + '  23:59:59') and (Pagos.FormaPago <> 'Exonerado')
+WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00.000' AND @fecha1 + '  23:59:59.999') and (Pagos.FormaPago <> 'Exonerado')
 GROUP BY CONVERT(VARCHAR(10), Pagos.Fecha, 103)
 ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(10), Pagos.Fecha, 103))";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
@@ -2184,7 +2184,7 @@ SELECT        MONTH(CONVERT(VARCHAR(10), Pagos.Fecha, 103)) AS Mes, CONVERT(VARC
                          SUM(CASE WHEN Nombre = '5 Ejes' THEN 1 ELSE 0 END) AS Ejes5, SUM(CASE WHEN Nombre = '6 Ejes o Mas' THEN 1 ELSE 0 END) AS Ejes6
 FROM            Pagos INNER JOIN
                          TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
-WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00' AND @fecha1 + '  23:59:59') and (Pagos.FormaPago = 'Exonerado')
+WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00.000' AND @fecha1 + '  23:59:59.999') and (Pagos.FormaPago = 'Exonerado')
 GROUP BY CONVERT(VARCHAR(10), Pagos.Fecha, 103)
 ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(10), Pagos.Fecha, 103))
 

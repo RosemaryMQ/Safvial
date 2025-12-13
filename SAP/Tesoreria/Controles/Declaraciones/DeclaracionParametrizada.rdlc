@@ -1451,7 +1451,7 @@
             </Style>
           </Tablix>
           <Line Name="Line2">
-            <Top>19.78739cm</Top>
+            <Top>20.89864cm</Top>
             <Left>0.61955cm</Left>
             <Height>0cm</Height>
             <Width>3.97463cm</Width>
@@ -1482,7 +1482,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox56</rd:DefaultName>
-            <Top>19.96378cm</Top>
+            <Top>20.91628cm</Top>
             <Left>0.61955cm</Left>
             <Height>0.6835cm</Height>
             <Width>3.91596cm</Width>
@@ -1498,7 +1498,7 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>20.82367cm</Top>
+            <Top>21.77617cm</Top>
             <Left>0.57247cm</Left>
             <Height>0cm</Height>
             <Width>3.97463cm</Width>
@@ -1529,7 +1529,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox56</rd:DefaultName>
-            <Top>21.00006cm</Top>
+            <Top>21.95256cm</Top>
             <Left>0.61955cm</Left>
             <Height>0.63501cm</Height>
             <Width>3.95107cm</Width>
@@ -2021,6 +2021,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -2293,7 +2294,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Usuario</DataSetName>
-            <Top>17.19885cm</Top>
+            <Top>17.6751cm</Top>
             <Left>0.5608cm</Left>
             <Height>0.44548cm</Height>
             <Width>3.95151cm</Width>
@@ -2401,7 +2402,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>reconversion</DataSetName>
-            <Top>17.64433cm</Top>
+            <Top>18.12058cm</Top>
             <Left>0.56084cm</Left>
             <Height>0.42796cm</Height>
             <Width>3.95149cm</Width>
@@ -2510,7 +2511,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Declaracion</DataSetName>
-            <Top>18.92821cm</Top>
+            <Top>19.40446cm</Top>
             <Left>0.5608cm</Left>
             <Height>0.42796cm</Height>
             <Width>3.95153cm</Width>
@@ -2624,7 +2625,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Canales</DataSetName>
-            <Top>19.35617cm</Top>
+            <Top>19.83242cm</Top>
             <Left>0.5608cm</Left>
             <Height>0.49417cm</Height>
             <Width>3.95151cm</Width>
@@ -3952,7 +3953,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>reconversion</DataSetName>
-            <Top>16.77089cm</Top>
+            <Top>17.24714cm</Top>
             <Left>0.5608cm</Left>
             <Height>0.42796cm</Height>
             <Width>3.9515cm</Width>
@@ -4497,7 +4498,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Declaracion</DataSetName>
-            <Top>18.50025cm</Top>
+            <Top>18.9765cm</Top>
             <Left>0.56072cm</Left>
             <Height>0.42796cm</Height>
             <Width>3.95161cm</Width>
@@ -4606,7 +4607,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Declaracion</DataSetName>
-            <Top>18.07229cm</Top>
+            <Top>18.54854cm</Top>
             <Left>0.56072cm</Left>
             <Height>0.42796cm</Height>
             <Width>3.97479cm</Width>
@@ -6383,8 +6384,117 @@
               </Border>
             </Style>
           </Tablix>
+          <Tablix Name="Tablix47">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.90148cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.05009cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.42796cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox129">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Biopago:</Value>
+                                  <Style>
+                                    <FontSize>5pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox130">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIf(Sum(Fields!BIO.Value, "reconversion") - Sum(Fields!Tarifa.Value, "BiopagoCierreDeclaracion") = 0, 0, Sum(Fields!BIO.Value, "reconversion") - Sum(Fields!Tarifa.Value, "BiopagoCierreDeclaracion"))</Value>
+                                  <Style>
+                                    <FontSize>6pt</FontSize>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Declaracion</DataSetName>
+            <Top>16.76305cm</Top>
+            <Left>0.53666cm</Left>
+            <Height>0.42796cm</Height>
+            <Width>3.95157cm</Width>
+            <ZIndex>52</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
         </ReportItems>
-        <Height>8.6167in</Height>
+        <Height>8.96566in</Height>
         <Style />
       </Body>
       <Width>1.9783in</Width>

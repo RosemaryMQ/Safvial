@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FlujoVehicularSinExoneradoTableAdapter" GeneratorDataComponentClassName="FlujoVehicularSinExoneradoTableAdapter" Name="FlujoVehicularSinExonerado" UserDataComponentName="FlujoVehicularSinExoneradoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SAP (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SAP (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MONTH(CONVERT(VARCHAR(10), Pagos.Fecha, 103)) AS Mes, CONVERT(VARCHAR(10), Pagos.Fecha, 103) AS Fecha, SUM(CASE WHEN Nombre = 'Liviano' THEN 1 ELSE 0 END) AS Livianos, 
@@ -18,7 +18,7 @@
                          SUM(CASE WHEN Nombre = '5 Ejes' THEN 1 ELSE 0 END) AS Ejes5, SUM(CASE WHEN Nombre = '6 Ejes o Mas' THEN 1 ELSE 0 END) AS Ejes6
 FROM            Pagos INNER JOIN
                          TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
-WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00' AND @fecha1 + '  23:59:59') and (Pagos.FormaPago &lt;&gt; 'Exonerado')
+WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00.000' AND @fecha1 + '  23:59:59.999') and (Pagos.FormaPago &lt;&gt; 'Exonerado')
 GROUP BY CONVERT(VARCHAR(10), Pagos.Fecha, 103)
 ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(10), Pagos.Fecha, 103))</CommandText>
                     <Parameters>
@@ -46,7 +46,7 @@ ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FlujoVehicularExoneradoTableAdapter" GeneratorDataComponentClassName="FlujoVehicularExoneradoTableAdapter" Name="FlujoVehicularExonerado" UserDataComponentName="FlujoVehicularExoneradoTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SAP (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SAP (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>
@@ -57,7 +57,7 @@ SELECT        MONTH(CONVERT(VARCHAR(10), Pagos.Fecha, 103)) AS Mes, CONVERT(VARC
                          SUM(CASE WHEN Nombre = '5 Ejes' THEN 1 ELSE 0 END) AS Ejes5, SUM(CASE WHEN Nombre = '6 Ejes o Mas' THEN 1 ELSE 0 END) AS Ejes6
 FROM            Pagos INNER JOIN
                          TipoVehiculos ON Pagos.ID_Vehiculo = TipoVehiculos.ID_Vehiculo
-WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00' AND @fecha1 + '  23:59:59') and (Pagos.FormaPago = 'Exonerado')
+WHERE        (Pagos.Fecha BETWEEN @fecha + ' 00:00:00.000' AND @fecha1 + '  23:59:59.999') and (Pagos.FormaPago = 'Exonerado')
 GROUP BY CONVERT(VARCHAR(10), Pagos.Fecha, 103)
 ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(10), Pagos.Fecha, 103))
 
@@ -93,7 +93,7 @@ ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FlujoVehicularSinExonerado" msprop:Generator_TableClassName="FlujoVehicularSinExoneradoDataTable" msprop:Generator_TableVarName="tableFlujoVehicularSinExonerado" msprop:Generator_TablePropName="FlujoVehicularSinExonerado" msprop:Generator_RowDeletingName="FlujoVehicularSinExoneradoRowDeleting" msprop:Generator_RowChangingName="FlujoVehicularSinExoneradoRowChanging" msprop:Generator_RowEvHandlerName="FlujoVehicularSinExoneradoRowChangeEventHandler" msprop:Generator_RowDeletedName="FlujoVehicularSinExoneradoRowDeleted" msprop:Generator_UserTableName="FlujoVehicularSinExonerado" msprop:Generator_RowChangedName="FlujoVehicularSinExoneradoRowChanged" msprop:Generator_RowEvArgName="FlujoVehicularSinExoneradoRowChangeEvent" msprop:Generator_RowClassName="FlujoVehicularSinExoneradoRow">
+        <xs:element name="FlujoVehicularSinExonerado" msprop:Generator_TableClassName="FlujoVehicularSinExoneradoDataTable" msprop:Generator_TableVarName="tableFlujoVehicularSinExonerado" msprop:Generator_RowChangedName="FlujoVehicularSinExoneradoRowChanged" msprop:Generator_TablePropName="FlujoVehicularSinExonerado" msprop:Generator_RowDeletingName="FlujoVehicularSinExoneradoRowDeleting" msprop:Generator_RowChangingName="FlujoVehicularSinExoneradoRowChanging" msprop:Generator_RowEvHandlerName="FlujoVehicularSinExoneradoRowChangeEventHandler" msprop:Generator_RowDeletedName="FlujoVehicularSinExoneradoRowDeleted" msprop:Generator_RowClassName="FlujoVehicularSinExoneradoRow" msprop:Generator_UserTableName="FlujoVehicularSinExonerado" msprop:Generator_RowEvArgName="FlujoVehicularSinExoneradoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:int" minOccurs="0" />
@@ -116,7 +116,7 @@ ORDER BY YEAR(CONVERT(VARCHAR(10), Pagos.Fecha, 103)), Mes, DAY(CONVERT(VARCHAR(
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FlujoVehicularExonerado" msprop:Generator_TableClassName="FlujoVehicularExoneradoDataTable" msprop:Generator_TableVarName="tableFlujoVehicularExonerado" msprop:Generator_TablePropName="FlujoVehicularExonerado" msprop:Generator_RowDeletingName="FlujoVehicularExoneradoRowDeleting" msprop:Generator_RowChangingName="FlujoVehicularExoneradoRowChanging" msprop:Generator_RowEvHandlerName="FlujoVehicularExoneradoRowChangeEventHandler" msprop:Generator_RowDeletedName="FlujoVehicularExoneradoRowDeleted" msprop:Generator_UserTableName="FlujoVehicularExonerado" msprop:Generator_RowChangedName="FlujoVehicularExoneradoRowChanged" msprop:Generator_RowEvArgName="FlujoVehicularExoneradoRowChangeEvent" msprop:Generator_RowClassName="FlujoVehicularExoneradoRow">
+        <xs:element name="FlujoVehicularExonerado" msprop:Generator_TableClassName="FlujoVehicularExoneradoDataTable" msprop:Generator_TableVarName="tableFlujoVehicularExonerado" msprop:Generator_RowChangedName="FlujoVehicularExoneradoRowChanged" msprop:Generator_TablePropName="FlujoVehicularExonerado" msprop:Generator_RowDeletingName="FlujoVehicularExoneradoRowDeleting" msprop:Generator_RowChangingName="FlujoVehicularExoneradoRowChanging" msprop:Generator_RowEvHandlerName="FlujoVehicularExoneradoRowChangeEventHandler" msprop:Generator_RowDeletedName="FlujoVehicularExoneradoRowDeleted" msprop:Generator_RowClassName="FlujoVehicularExoneradoRow" msprop:Generator_UserTableName="FlujoVehicularExonerado" msprop:Generator_RowEvArgName="FlujoVehicularExoneradoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:int" minOccurs="0" />

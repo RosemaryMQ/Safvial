@@ -7826,9 +7826,6 @@
             </TablixRowHierarchy>
             <KeepTogether>true</KeepTogether>
             <DataSetName>FlujoVehicularExonerado</DataSetName>
-            <PageBreak>
-              <BreakLocation>Start</BreakLocation>
-            </PageBreak>
             <Top>14.18812cm</Top>
             <Left>0.24933cm</Left>
             <Height>3.68379cm</Height>
@@ -7864,7 +7861,7 @@
         <Height>7.03619in</Height>
         <Style />
       </Body>
-      <Width>11.52976in</Width>
+      <Width>11.35268in</Width>
       <Page>
         <PageHeader>
           <Height>3.31775cm</Height>

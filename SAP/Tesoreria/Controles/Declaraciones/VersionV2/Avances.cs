@@ -12,6 +12,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         double efectivo;
         double pdv;
         double tickets;
+        double bio;
         double incidencia, credito = 0, debito = 0;
         double contador = 0;
         int indice = 0;
@@ -39,6 +40,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             indice = 1;
             CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             SAP.Inicio.acceso = 26;
@@ -109,6 +111,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                         STT.Text = string.Format("{0:n}", recaudo) + " Bs.S";
                         contador = contador + Convert.ToDouble(recaudo);
                     }
+                    else if (Vehiculo == "Biopago")
+                    {
+                        BS.Text = string.Format("{0:n}", recaudo) + " Bs.S";
+                        contador = contador + Convert.ToDouble(recaudo);
+                    }
                     else if (Vehiculo == "Pago Incompleto")
                     {
                         PGS.Text = string.Format("{0:n}", recaudo) + " Bs.S";
@@ -121,7 +128,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         }
         private void TabulacionTesoreria(int usuario, string fecha, string fecha1)
         {
-            string sql = "SELECT SUM(CierreBalanceV2.Efectivo) as Efectivo,SUM(CierreBalanceV2.PDV) as PDV,SUM(CierreBalanceV2.Tickets)as Tickets,SUM(CierreBalanceV2.Incidencia) as Incidencia,SUM(CierreBalanceV2.Transferencia) as Transferencia FROM CierreBalanceV2 WHERE CierreBalanceV2.ID_Usuario=@usuario and CierreBalanceV2.Fecha BETWEEN @fecha and @fecha1 AND CierreBalanceV2.Eliminado<>1 AND CierreBalanceV2.Buzon<>1;";
+            string sql = "SELECT SUM(CierreBalanceV2.Efectivo) as Efectivo,SUM(CierreBalanceV2.PDV) as PDV,SUM(CierreBalanceV2.Tickets)as Tickets,SUM(CierreBalanceV2.Incidencia) as Incidencia,SUM(CierreBalanceV2.Transferencia) as Transferencia, SUM(CierreBalanceV2.BIO) as BIO " +
+                "FROM CierreBalanceV2 WHERE CierreBalanceV2.ID_Usuario=@usuario and CierreBalanceV2.Fecha BETWEEN @fecha and @fecha1 AND CierreBalanceV2.Eliminado<>1 AND CierreBalanceV2.Buzon<>1;";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -143,7 +151,8 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                         PDVT.Text = string.Format("{0:n}", pdv) + " Bs.S";
                         TT.Text = string.Format("{0:n}", tickets) + " Bs.S";
                         TTS.Text = string.Format("{0:n}", Convert.ToDouble(dr["Transferencia"].ToString())) + " Bs.S";
-                        contador = (efectivo + pdv + tickets + Convert.ToDouble(dr["Transferencia"].ToString()));
+                        BT.Text = string.Format("{0:n}", Convert.ToDouble(dr["BIO"].ToString())) + " Bs.S";
+                        contador = (efectivo + pdv + tickets + Convert.ToDouble(dr["Transferencia"].ToString())+ Convert.ToDouble(dr["BIO"].ToString()));
                         TOT.Text = string.Format("{0:n}", contador) + " Bs.S";
                     }
                     else
@@ -239,6 +248,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             }
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void CargarAvances(int usuario,string fecha, string fecha1)
         {
             try
@@ -246,7 +260,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 SqlConnection cn = new SqlConnection(Inicio.conexion);
                 cn.Open();
                 SqlDataReader dr;
-                SqlCommand cmd = new SqlCommand("SELECT  ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, BilleteS10000, BilleteS20000, BilleteS50000, BilleteS200000,BilleteS500000,BilleteS1000000, Tickets, Efectivo, PDV, Incidencia, ID_Usuario,Transferencia,Eliminado,Buzon,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD025,BilleteBD200,BilleteBD500 FROM CierreBalanceV2 WHERE(ID_Usuario = @usuario) AND(Fecha BETWEEN @fecha AND @fecha2)", cn);
+                SqlCommand cmd = new SqlCommand("SELECT  ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, BilleteS10000, BilleteS20000, BilleteS50000, BilleteS200000,BilleteS500000,BilleteS1000000, Tickets, Efectivo, PDV, Incidencia, ID_Usuario,Transferencia,Eliminado,Buzon,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD025,BilleteBD200,BilleteBD500, BIO FROM CierreBalanceV2 WHERE(ID_Usuario = @usuario) AND(Fecha BETWEEN @fecha AND @fecha2)", cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("fecha", fecha);
                 cmd.Parameters.AddWithValue("fecha2", fecha1);
@@ -256,7 +270,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 while (dr.Read())
                 {
                     AvancesUser.Rows.Add(dr["ID_Cierre"].ToString(), dr["BilleteS05"].ToString(), dr["BilleteS1"].ToString(), dr["BilleteS2"].ToString(), dr["BilleteS5"].ToString(), dr["BilleteS10"].ToString(), dr["BilleteS20"].ToString(), dr["BilleteS50"].ToString(), dr["BilleteS100"].ToString(), dr["BilleteS200"].ToString(), dr["BilleteS500"].ToString(), dr["BilleteS10000"].ToString(), dr["BilleteS20000"].ToString(), dr["BilleteS50000"].ToString(), dr["BilleteS200000"].ToString(), dr["BilleteS500000"].ToString(), dr["BilleteS1000000"].ToString(), dr["Eliminado"].ToString(), "EDITAR", dr["Buzon"].ToString());
-                    BDLista.Rows.Add(dr["ID_Cierre"].ToString(), dr["BilleteBD025"].ToString(), dr["BilleteBD05"].ToString(), dr["BilleteBD1"].ToString(), dr["BilleteBD5"].ToString(), dr["BilleteBD10"].ToString(), dr["BilleteBD20"].ToString(), dr["BilleteBD50"].ToString(), dr["BilleteBD100"].ToString(), dr["BilleteBD200"].ToString(), dr["BilleteBD500"].ToString(), dr["PDV"].ToString(), dr["Incidencia"].ToString(), dr["Transferencia"].ToString(), dr["Eliminado"].ToString(), "EDITAR", dr["Buzon"].ToString());
+                    BDLista.Rows.Add(dr["ID_Cierre"].ToString(), dr["BilleteBD025"].ToString(), dr["BilleteBD05"].ToString(), dr["BilleteBD1"].ToString(), dr["BilleteBD5"].ToString(), dr["BilleteBD10"].ToString(), dr["BilleteBD20"].ToString(), dr["BilleteBD50"].ToString(), dr["BilleteBD100"].ToString(), dr["BilleteBD200"].ToString(), dr["BilleteBD500"].ToString(), dr["PDV"].ToString(), dr["Incidencia"].ToString(), dr["Transferencia"].ToString(), dr["BIO"].ToString(), dr["Eliminado"].ToString(), "EDITAR", dr["Buzon"].ToString());
                 }
                 dr.Close();
                 foreach (DataGridViewRow row in AvancesUser.Rows)

@@ -209,4 +209,3 @@ D:\Dev\Safvial\SAP\obj\Debug\SAP.application
 D:\Dev\Safvial\SAP\obj\Debug\SAP.csproj.CopyComplete
 D:\Dev\Safvial\SAP\obj\Debug\SAP.exe
 D:\Dev\Safvial\SAP\obj\Debug\SAP.pdb
-D:\Dev\Safvial\SAP\obj\Debug\SAP.csproj.AssemblyReference.cache

@@ -20,6 +20,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         private void CierreTurnoFiltro_Load(object sender, EventArgs e)
         {
 
+
+            MessageBox.Show("FechaPrimerTurno", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaPrimerTurno);
+            MessageBox.Show("FechaUltimoTurno", SAP.Tesoreria.Controles.Declaraciones.VersionV2.GenerarCierre.fechaUltimoTurno);
+
+
             try
             {
                 this.cierreTurnoFiltroTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
