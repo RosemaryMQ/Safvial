@@ -34,11 +34,11 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
         {
             InitializeComponent();
             usuario(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1));
-            TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
-            TabulacionTesoreria(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+            TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
+            TabulacionTesoreria(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
             TabulacionTesoreriaBuzon(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
             indice = 1;
-            CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+            CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             SAP.Inicio.acceso = 26;
             SAP.Common.WinForms.Autorizacion frm = new SAP.Common.WinForms.Autorizacion();
             frm.ShowDialog();
-            CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+            CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,9 +64,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 SAP.Inicio.acceso = 14;
                 SAP.Common.WinForms.Autorizacion frm = new SAP.Common.WinForms.Autorizacion();
                 frm.ShowDialog();
-                CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
-                TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
-                TabulacionTesoreria(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
+                TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
+                TabulacionTesoreria(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
                 TabulacionTesoreriaBuzon(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
             }
             else
@@ -79,9 +79,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
             
         }
     
-        private void TabulacionTipoPago(int usuario, string fecha, string fecha1)
+        private void TabulacionTipoPago(int usuario, string fecha, string fecha1, int turno)
         {
-            string sql = "SELECT Pagos.FormaPago,SUM(TipoVehiculos.Tarifa)as Recaudado FROM TipoVehiculos INNER JOIN Pagos ON TipoVehiculos.ID_Vehiculo=Pagos.ID_Vehiculo Where Pagos.ID_Usuario=@usuario AND Pagos.Fecha between @fecha and @fecha1 GROUP BY Pagos.FormaPago;";
+            string sql = "SELECT Pagos.FormaPago,SUM(TipoVehiculos.Tarifa)as Recaudado FROM TipoVehiculos INNER JOIN Pagos ON TipoVehiculos.ID_Vehiculo=Pagos.ID_Vehiculo Where Pagos.ID_Usuario=@usuario AND Pagos.Fecha between @fecha and @fecha1 AND Pagos.Turno=@turno  GROUP BY Pagos.FormaPago;";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -90,6 +90,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("fecha", fecha);
                 cmd.Parameters.AddWithValue("fecha1", fecha1);
+                cmd.Parameters.AddWithValue("turno", turno);
                 dr = cmd.ExecuteReader();
                 contador = 0;
                 while (dr.Read())
@@ -126,10 +127,10 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 return;
             }
         }
-        private void TabulacionTesoreria(int usuario, string fecha, string fecha1)
+        private void TabulacionTesoreria(int usuario, string fecha, string fecha1, int turno)
         {
             string sql = "SELECT SUM(CierreBalanceV2.Efectivo) as Efectivo,SUM(CierreBalanceV2.PDV) as PDV,SUM(CierreBalanceV2.Tickets)as Tickets,SUM(CierreBalanceV2.Incidencia) as Incidencia,SUM(CierreBalanceV2.Transferencia) as Transferencia, SUM(CierreBalanceV2.BIO) as BIO " +
-                "FROM CierreBalanceV2 WHERE CierreBalanceV2.ID_Usuario=@usuario and CierreBalanceV2.Fecha BETWEEN @fecha and @fecha1 AND CierreBalanceV2.Eliminado<>1 AND CierreBalanceV2.Buzon<>1;";
+                "FROM CierreBalanceV2 WHERE CierreBalanceV2.ID_Usuario=@usuario and CierreBalanceV2.Turno=@turno  and CierreBalanceV2.Fecha BETWEEN @fecha and @fecha1 AND CierreBalanceV2.Eliminado<>1 AND CierreBalanceV2.Buzon<>1;";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
@@ -138,9 +139,25 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("fecha", fecha);
                 cmd.Parameters.AddWithValue("fecha1", fecha1);
+                cmd.Parameters.AddWithValue("turno", turno);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
+                    object bioValue = dr["BIO"];
+                    if (bioValue != DBNull.Value)
+                    {
+                        // Si NO es DBNull, procedemos a convertir y formatear.
+                        // Usamos Convert.ToDouble() directamente sobre el objeto 'bioValue' para evitar el ToString() previo.
+                        // Esto es más limpio y menos propenso a errores.
+                        BT.Text = string.Format("{0:n}", Convert.ToDouble(bioValue)) + " Bs.S";
+                    }
+                    else
+                    {
+                        // Si es DBNull (NULL en la base de datos), asignamos un valor por defecto.
+                        // Puedes usar "0", un string vacío, o el texto que prefieras.
+                        BT.Text = "0,00 Bs.S";
+                        // O podrías usar: BT.Text = "";
+                    }
                     if (dr["Efectivo"].ToString() != "")
                     {
                         efectivo = Convert.ToDouble(dr["Efectivo"].ToString());
@@ -151,7 +168,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                         PDVT.Text = string.Format("{0:n}", pdv) + " Bs.S";
                         TT.Text = string.Format("{0:n}", tickets) + " Bs.S";
                         TTS.Text = string.Format("{0:n}", Convert.ToDouble(dr["Transferencia"].ToString())) + " Bs.S";
-                        BT.Text = string.Format("{0:n}", Convert.ToDouble(dr["BIO"].ToString())) + " Bs.S";
+                        //BT.Text = string.Format("{0:n}", Convert.ToDouble(dr["BIO"].ToString())) + " Bs.S";
                         contador = (efectivo + pdv + tickets + Convert.ToDouble(dr["Transferencia"].ToString())+ Convert.ToDouble(dr["BIO"].ToString()));
                         TOT.Text = string.Format("{0:n}", contador) + " Bs.S";
                     }
@@ -237,9 +254,9 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
                 SAP.Inicio.acceso = 14;
                 SAP.Common.WinForms.Autorizacion frm = new SAP.Common.WinForms.Autorizacion();
                 frm.ShowDialog();
-                CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
-                TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
-                TabulacionTesoreria(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                CargarAvances(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
+                TabulacionTipoPago(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
+                TabulacionTesoreria(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal, Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.turno));
                 TabulacionTesoreriaBuzon(Convert.ToInt32(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1), SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
             }
             else
@@ -253,17 +270,19 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2
 
         }
 
-        public void CargarAvances(int usuario,string fecha, string fecha1)
+        public void CargarAvances(int usuario,string fecha, string fecha1, int turno)
         {
             try
             {
                 SqlConnection cn = new SqlConnection(Inicio.conexion);
                 cn.Open();
                 SqlDataReader dr;
-                SqlCommand cmd = new SqlCommand("SELECT  ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, BilleteS10000, BilleteS20000, BilleteS50000, BilleteS200000,BilleteS500000,BilleteS1000000, Tickets, Efectivo, PDV, Incidencia, ID_Usuario,Transferencia,Eliminado,Buzon,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD025,BilleteBD200,BilleteBD500, BIO FROM CierreBalanceV2 WHERE(ID_Usuario = @usuario) AND(Fecha BETWEEN @fecha AND @fecha2)", cn);
+                SqlCommand cmd = new SqlCommand("SELECT  ID_Cierre, BilleteS05, BilleteS1, BilleteS2, BilleteS5, BilleteS10, BilleteS20, BilleteS50, BilleteS100, BilleteS200, BilleteS500, BilleteS10000, BilleteS20000, BilleteS50000, BilleteS200000,BilleteS500000,BilleteS1000000, Tickets, Efectivo, PDV, Incidencia, ID_Usuario,Transferencia,Eliminado,Buzon,BilleteBD1,BilleteBD5,BilleteBD10,BilleteBD20,BilleteBD50,BilleteBD100,BilleteBD05,BilleteBD025,BilleteBD200,BilleteBD500, BIO " +
+                    "FROM CierreBalanceV2 WHERE(ID_Usuario = @usuario) AND (Turno=@turno) AND(Fecha BETWEEN @fecha AND @fecha2)", cn);
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("fecha", fecha);
                 cmd.Parameters.AddWithValue("fecha2", fecha1);
+                cmd.Parameters.AddWithValue("turno", turno);
                 dr = cmd.ExecuteReader();
                 AvancesUser.Rows.Clear();
                 BDLista.Rows.Clear();

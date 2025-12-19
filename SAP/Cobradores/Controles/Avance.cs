@@ -16,6 +16,7 @@ namespace SAP.Cobradores.Controles
         string RutaArchivo = "";
         string fecha;
         int sede = SAP.Inicio.sede;
+        int turno = Convert.ToInt32(SAP.Inicio.Turno);
         String canal = SAP.Inicio.Canal;
         DateTime system;
         public Avance()
@@ -155,10 +156,10 @@ namespace SAP.Cobradores.Controles
                 Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("Canal", Convert.ToString((int)Settings.Default["Canal"]));
                 this.reportViewer1.LocalReport.SetParameters(frm);
 
-                this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(SAP.Inicio.ID),Convert.ToDateTime(fecha), system, "Efectivo");
-                this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Punto de Venta");
+                this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(SAP.Inicio.ID),Convert.ToDateTime(fecha), system, "Efectivo", turno);
+                this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Punto de Venta", turno);
                 //this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4);
-                this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Pago Incompleto");
+                this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Pago Incompleto", turno);
                 //this.exoneradosCierreTableAdapter.Exonerados(this.sAPDataSet.ExoneradosCierre, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma6);
                 this.resumenTransfTableAdapter.Fill(this.sAPDataSet2.ResumenTransf, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Transferencia");
                 this.resumenBiopagoTableAdapter.Fill(this.sAPDataSet2.ResumenBiopago, Convert.ToInt32(SAP.Inicio.ID), Convert.ToDateTime(fecha), system, "Biopago");

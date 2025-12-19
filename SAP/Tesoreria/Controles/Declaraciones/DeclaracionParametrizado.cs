@@ -19,6 +19,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
         //String Forma3 = "Saldo Pre-pagado";
         String Forma4 = "Ticket";
         String Forma5 = "Pago Incompleto";
+        String Forma6 = "Biopago";
         String id = SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario1;
         int sede = SAP.Inicio.sede;
         public static string turno="";
@@ -34,6 +35,7 @@ namespace SAP.Tesoreria.Controles.Declaraciones
 
         private void DeclaracionParametrizado_Load(object sender, EventArgs e)
         {
+
             try
             {
                 Microsoft.Reporting.WinForms.ReportParameter frm = new Microsoft.Reporting.WinForms.ReportParameter("acta", Convert.ToString(SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta));
@@ -46,13 +48,13 @@ namespace SAP.Tesoreria.Controles.Declaraciones
                 this.biopagoCierreDeclaracionTableAdapter.Connection.ConnectionString = SAP.Inicio.conexion;
 
                 this.tipoVehiculosTableAdapter.Recaudacion(this.sAPDataSet2.TipoVehiculos, Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Convert.ToInt32(id));
-                this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma1);
-                this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma2);
+                this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma1, turnocod);
+                this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma2, turnocod);
                 this.buzonRecaudadorTableAdapter.Fill(this.sAPDataSet2.BuzonRecaudador, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
-                this.biopagoCierreDeclaracionTableAdapter.Fill(this.sAPDataSetLocal.BiopagoCierreDeclaracion, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
+                this.biopagoCierreDeclaracionTableAdapter.Fill(this.sAPDataSetLocal.BiopagoCierreDeclaracion, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), turnocod);
                 //this.prepagadoCierreTableAdapter.Fill(this.prepagadoDataSet.PrepagadoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma3, sede);
-                this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4);
-                this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma5);
+                this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4, turnocod);
+                this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma5, turnocod);
                 this.declaracionV3TableAdapter.Declaracion(this.sAPDataSet2.DeclaracionV3, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
                 this.usuariosTableAdapter.Usuario(this.sAPDataSet2.Usuarios, Convert.ToInt32(id));
                 this.usuarioCanalTableAdapter.Fill(this.sAPDataSet2.UsuarioCanal, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
@@ -79,13 +81,13 @@ namespace SAP.Tesoreria.Controles.Declaraciones
 
 
                 this.tipoVehiculosTableAdapter.Recaudacion(this.sAPDataSet2.TipoVehiculos, Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Convert.ToInt32(id));
-                this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma1);
-                this.biopagoCierreDeclaracionTableAdapter.Fill(this.sAPDataSetLocal.BiopagoCierreDeclaracion, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
-                this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma2);
+                this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma1, turnocod);
+                this.biopagoCierreDeclaracionTableAdapter.Fill(this.sAPDataSetLocal.BiopagoCierreDeclaracion, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), turnocod);
+                this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma2, turnocod);
                 this.buzonRecaudadorTableAdapter.Fill(this.sAPDataSet2.BuzonRecaudador, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
                 //this.prepagadoCierreTableAdapter.Fill(this.prepagadoDataSet.PrepagadoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma3, sede);
-                this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4);
-                this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma5);
+                this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4, turnocod);
+                this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma5, turnocod);
                 this.declaracionV3TableAdapter.Declaracion(this.sAPDataSet2.DeclaracionV3, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
                 this.usuarioCanalTableAdapter.Fill(this.sAPDataSet2.UsuarioCanal, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
                 this.cierreBalanceV2TableAdapter.Fill(this.sAPDataSet2.CierreBalanceV2, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
@@ -122,13 +124,13 @@ namespace SAP.Tesoreria.Controles.Declaraciones
 
 
             this.tipoVehiculosTableAdapter.Recaudacion(this.sAPDataSet2.TipoVehiculos, Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Convert.ToInt32(id));
-            this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma1);
-            this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma2);
-            this.biopagoCierreDeclaracionTableAdapter.Fill(this.sAPDataSetLocal.BiopagoCierreDeclaracion, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
+            this.efectivoCierreTableAdapter.Efectivo(this.sAPDataSet.EfectivoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma1, turnocod);
+            this.pDVCierreTableAdapter.PDV(this.sAPDataSet.PDVCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma2, turnocod);
+            this.biopagoCierreDeclaracionTableAdapter.Fill(this.sAPDataSetLocal.BiopagoCierreDeclaracion, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), turnocod);
             this.buzonRecaudadorTableAdapter.Fill(this.sAPDataSet2.BuzonRecaudador, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
             //this.prepagadoCierreTableAdapter.Fill(this.prepagadoDataSet.PrepagadoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma3, sede);
-            this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4);
-            this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma5);
+            this.ticketCierreTableAdapter.Tickets(this.sAPDataSet.TicketCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma4, turnocod);
+            this.noPagoCierreTableAdapter.NoPago(this.sAPDataSet.NoPagoCierre, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2), Forma5, turnocod);
             this.declaracionV3TableAdapter.Declaracion(this.sAPDataSet2.DeclaracionV3, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));
             this.usuariosTableAdapter.Usuario(this.sAPDataSet2.Usuarios, Convert.ToInt32(id));
             this.usuarioCanalTableAdapter.Fill(this.sAPDataSet2.UsuarioCanal, Convert.ToInt32(id), Convert.ToDateTime(fecha), Convert.ToDateTime(fecha2));

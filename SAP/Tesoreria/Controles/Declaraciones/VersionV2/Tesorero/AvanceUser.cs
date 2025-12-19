@@ -45,9 +45,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
             InitializeComponent();
             idacta = 0;
             buscarCataporte(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.Identificador), Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
-
-            MessageBox.Show(Convert.ToString(idacta), "ACTA en Avance USER");
-
             BuscarTurno(Convert.ToInt32(SAP.Tesoreria.TesoreriaV2.turno));
             Denominaciones();
             indice = 1;
@@ -72,7 +69,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 {
                     SAP.Tesoreria.Controles.ListaDeclaraciones.nroacta = Convert.ToInt32(dr["ID_Declaracion"]);
                     idacta = Convert.ToInt32(dr["ID_Declaracion"]);
-                    MessageBox.Show(Convert.ToString(idacta), "acat en Buscar CATAPORTE");
 
                 }
                 dr.Close();
@@ -282,7 +278,6 @@ namespace SAP.Tesoreria.Controles.Declaraciones.VersionV2.Tesorero
                 while (dr.Read())
                 {
                     idacta = Convert.ToInt32(dr["ID_Declaracion"]);
-                    MessageBox.Show(Convert.ToString(idacta), "acat en BuscarACTA");
                 }
                 dr.Close();
                 return;

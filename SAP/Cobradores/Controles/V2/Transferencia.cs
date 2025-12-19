@@ -49,6 +49,54 @@ namespace SAP.Cobradores.Controles.V2
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            try
+            {
+                if (referencia.Text != "" && referencia.TextLength > 4)
+                {
+                    Accion.Text = "Transmitiendo informacion...";
+                    SAP.Cobradores.RecaudacionV2.TipoTabulacion = 1;
+                    int idUser = Convert.ToInt32(SAP.Inicio.ID);
+                    int idVehiculo = Convert.ToInt32(SAP.Cobradores.Controles.V2.FormaPago.codigovehiculo);
+                    string forma = SAP.Cobradores.Controles.V2.FormaPago.Forma;
+                    int canal = Convert.ToInt32(SAP.Inicio.Canal);
+                    int turno = Convert.ToInt32(SAP.Inicio.Turno);
+
+                    bool exito = await CargarPago(idUser, idVehiculo, forma, canal, turno);
+                    if (!exito)
+                    {
+                        exito = await CargarPago(idUser, idVehiculo, forma, canal, turno);
+                    }
+                    if (exito)
+                    {
+                        Accion.Text = "Imprimiendo ticket...";
+                        SAP.Cobradores.Controles.FacturaV2 frm1 = new SAP.Cobradores.Controles.FacturaV2();
+                        frm1.Show();
+                        this.Close(); // Esto cierra el formulario actual
+                    }
+                    else
+                    {
+                        Accion.Text = "";
+                        MessageBox.Show("Error, Falla de conexion con el servidor ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        button1.Enabled = true; // Solo habilitar si falló
+                    }
+                }
+                else
+                {
+                    Accion.Text = "";
+                    MessageBox.Show("El campo de referencia no puede estar vacio y debe ser mayor a 4 digitos. ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                Accion.Text = "";
+                MessageBox.Show("Error crítico: " + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1.Enabled = true;
+            }
+        }
+        /*
+        private async void button1_Click(object sender, EventArgs e)
+        {
             try
             {
                 if (referencia.Text!="" && referencia.TextLength > 4)
@@ -90,11 +138,57 @@ namespace SAP.Cobradores.Controles.V2
                 MessageBox.Show("Error, Falla de conexion con el servidor ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        */
 
         private async void referencia_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
+                button1.Enabled = false;
+                try
+                {
+                    if (referencia.Text != "" && referencia.TextLength > 4)
+                    {
+                        Accion.Text = "Transmitiendo informacion...";
+                        SAP.Cobradores.RecaudacionV2.TipoTabulacion = 1;
+                        int idUser = Convert.ToInt32(SAP.Inicio.ID);
+                        int idVehiculo = Convert.ToInt32(SAP.Cobradores.Controles.V2.FormaPago.codigovehiculo);
+                        string forma = SAP.Cobradores.Controles.V2.FormaPago.Forma;
+                        int canal = Convert.ToInt32(SAP.Inicio.Canal);
+                        int turno = Convert.ToInt32(SAP.Inicio.Turno);
+
+                        bool exito = await CargarPago(idUser, idVehiculo, forma, canal, turno);
+                        if (!exito)
+                        {
+                            exito = await CargarPago(idUser, idVehiculo, forma, canal, turno);
+                        }
+                        if (exito)
+                        {
+                            Accion.Text = "Imprimiendo ticket...";
+                            SAP.Cobradores.Controles.FacturaV2 frm1 = new SAP.Cobradores.Controles.FacturaV2();
+                            frm1.Show();
+                            this.Close(); // Esto cierra el formulario actual
+                        }
+                        else
+                        {
+                            Accion.Text = "";
+                            MessageBox.Show("Error, Falla de conexion con el servidor ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            button1.Enabled = true; // Solo habilitar si falló
+                        }
+                    }
+                    else
+                    {
+                        Accion.Text = "";
+                        MessageBox.Show("El campo de referencia no puede estar vacio y debe ser mayor a 4 digitos. ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Accion.Text = "";
+                    MessageBox.Show("Error crítico: " + ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    button1.Enabled = true;
+                }
+                /*
                 try
                 {
                     if (referencia.Text != "" && referencia.TextLength > 4)
@@ -134,7 +228,7 @@ namespace SAP.Cobradores.Controles.V2
                 {
                     Accion.Text = "";
                     MessageBox.Show("Error, Falla de conexion con el servidor ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }*/
             }
             if (e.KeyCode == Keys.Escape)
             {
