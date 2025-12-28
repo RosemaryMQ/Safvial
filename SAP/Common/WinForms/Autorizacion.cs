@@ -165,6 +165,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "NOCTURNO";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 2;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Nocturno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -176,6 +177,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "COMPLETO 1";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 3;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Completo Grupo 1", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -187,6 +189,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "COMPLETO 2";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 4;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Completo Grupo 2", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -198,6 +201,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "TURNO 1";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 5;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -209,6 +213,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "TURNO 2";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 6;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -220,6 +225,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "TURNO 3";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 7;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -231,6 +237,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "Turno 12h 00:00 - 12:00";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 1;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Turno 12h 00:00 - 12:00", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -242,6 +249,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "Turno 12h 12:00 - 23:59";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 1;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Turno 12h 12:00 - 23:59", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -253,6 +261,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "DIURNO";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 1;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -508,6 +517,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 2, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "NOCTURNO";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 2;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Nocturno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -519,6 +529,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 3, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "COMPLETO 1";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 3;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Completo Grupo 1", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -530,6 +541,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 4, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "COMPLETO 2";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 4;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Completo Grupo 2", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -541,6 +553,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 5, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "TURNO 1";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 5;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -552,6 +565,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 6, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "TURNO 2";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 6;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -563,6 +577,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 7, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "TURNO 3";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 7;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -574,6 +589,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 8, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "Turno 12h 00:00 - 12:00";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 1;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Turno 12h 00:00 - 12:00", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -585,6 +601,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 9, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "Turno 12h 12:00 - 23:59";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 1;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Turno 12h 12:00 - 23:59", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -596,6 +613,7 @@ namespace SAP.Common.WinForms
                                 CambiarTurnoR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoTR(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 CambiarTurnoP(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
+                                CambiarTurnoD(SAP.Tesoreria.Controles.ListaDeclaraciones.ID_Usuario, 1, SAP.Tesoreria.Controles.ListaDeclaraciones.fechainicial, SAP.Tesoreria.Controles.ListaDeclaraciones.fechafinal);
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turno = "DIURNO";
                                 SAP.Tesoreria.Controles.Declaraciones.DeclaracionParametrizado.turnocod = 1;
                                 MessageBox.Show("El cambio de turno ha sido procesado exitosamente, el turno asignado es: Diurno", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1061,6 +1079,21 @@ namespace SAP.Common.WinForms
         private void CambiarTurnoTR(int codigo, int turno, string fecha, string fecha1)
         {
             string sql = "UPDATE Turno SET Turno=@turno WHERE ID_Usuario=@Codigo AND Fecha Between @fecha and @fecha1;";
+            using (SqlConnection cn = new SqlConnection(Inicio.conexion))
+            {
+                cn.Open();
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.Parameters.AddWithValue("turno", turno);
+                cmd.Parameters.AddWithValue("Codigo", codigo);
+                cmd.Parameters.AddWithValue("fecha", fecha);
+                cmd.Parameters.AddWithValue("fecha1", fecha1);
+                cmd.ExecuteReader();
+                return;
+            }
+        }
+        private void CambiarTurnoD(int codigo, int turno, string fecha, string fecha1)
+        {
+            string sql = "UPDATE Declaraciones SET Turno=@turno WHERE ID_Usuario=@Codigo AND FechaInicial = @fecha and FechaFinal = @fecha1 and Turno >0 ;";
             using (SqlConnection cn = new SqlConnection(Inicio.conexion))
             {
                 cn.Open();
